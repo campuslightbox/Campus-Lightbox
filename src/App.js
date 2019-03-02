@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { Container } from 'semantic-ui-react';
+import Login from './components/Login';
 import Navbar from './components/Navbar';
 
 const App = () => (
-  <Container>
+  <Fragment>
     <Navbar />
-  </Container>
+    <Container>
+      <Login />
+    </Container>
+  </Fragment>
 );
 
 export default App;
