@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Container } from 'semantic-ui-react';
 import Login from './components/Login';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 
 const App = () => (
   <Fragment>
