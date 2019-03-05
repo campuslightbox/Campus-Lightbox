@@ -2,15 +2,7 @@ import React from 'react';
 import { Grid, Button, List, Checkbox, Card} from 'semantic-ui-react';
 import './Filter.css';
 
-/*
- * Tentative filter list
- * 
- * Location: on campus / off campus / online / hotline - list
- * Type: professional / peer / group / others - list
- * Availability: appointment only / recurring / walk-in
- *
- */
-
+// TODO: move this somewhere else
 const filterList = {
     location: {
         title: 'Location',
@@ -30,38 +22,29 @@ const filterList = {
     }
 }
 
-var checkboxFilter = {
-    location: [],
-    type: [],
-    availability: [],
-}
+class Filter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            location: [],
+            type: [],
+            availability: [],
+            additionalTags: []
+        };
+    }
 
-class FilterGroup extends React.Component {
     capitalize = (text) => {
         return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
-    createList = () => {
-        return this.props.content.map((item) => 
-            <List.Item key={item}><Checkbox label={this.capitalize(item)} /></List.Item>
+    createList = (content) => {
+        return content.map((item) => 
+            <List.Item key={item}>
+                <Checkbox label={this.capitalize(item)} />
+            </List.Item>
         );
     }
 
-    render = () => (
-        <Card>
-            <Card.Content>
-                <Card.Header>{this.capitalize(this.props.title)}</Card.Header>
-            </Card.Content>
-            <Card.Content>
-                <List verticalAlign='middle'>
-                    {this.createList()}
-                </List>
-            </Card.Content>
-        </Card>
-    )
-}
-
-class Filter extends React.Component {
     createGroups = () => {
         let groups = [];
 
@@ -69,7 +52,18 @@ class Filter extends React.Component {
             if (filterList.hasOwnProperty(category)) {
                 groups.push(
                     <Grid.Column>
-                        <FilterGroup title={filterList[category].title} content={filterList[category].content}/>
+                        <Card>
+                            <Card.Content>
+                                <Card.Header>
+                                    {this.capitalize(filterList[category].title)}
+                                </Card.Header>
+                            </Card.Content>
+                            <Card.Content>
+                                <List verticalAlign='middle'>
+                                    {this.createList(filterList[category].content)}
+                                </List>
+                            </Card.Content>
+                        </Card>
                     </Grid.Column>
                 );
             }
