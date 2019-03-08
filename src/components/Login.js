@@ -36,7 +36,7 @@ export default () => (
         </Form>
       </Segment>
       <Message>
-        Not registered yet? <a href="#">Sign Up</a>
+        Not registered yet? <a href="google.ca">Sign Up</a>
       </Message>
     </Grid.Column>
   </Grid>

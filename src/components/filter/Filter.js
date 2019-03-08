@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Button, List, Checkbox, Card} from 'semantic-ui-react';
 import './Filter.css';
+import * as _ from 'underscore';
 
 // TODO: move this somewhere else
 const filterList = {
@@ -37,39 +38,58 @@ class Filter extends React.Component {
         return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
-    createList = (content) => {
+    createGroups = () => {
+        return _.map(filterList, (val, category) => {
+            return (
+                <Grid.Column key={val.content}>
+                    <Card>
+                        <Card.Content>
+                            <Card.Header>
+                                {this.capitalize(val.title)}
+                            </Card.Header>
+                        </Card.Content>
+                        <Card.Content>
+                            <List verticalAlign='middle'>
+                                {this.createList(category, val.content)}
+                            </List>
+                        </Card.Content>
+                    </Card>
+                </Grid.Column>
+            );
+        });
+    }
+
+    createList = (category, content) => {
         return content.map((item) => 
             <List.Item key={item}>
-                <Checkbox label={this.capitalize(item)} />
+                <Checkbox 
+                    onClick={() => this.onFilterClick(category, item)} 
+                    label={this.capitalize(item)}
+                />
             </List.Item>
         );
     }
 
-    createGroups = () => {
-        let groups = [];
+    onFilterClick = (category, item) => {
+        // Find if the filter user clicked on is already selected
+        let existingItem = _.find(this.state[category], (currItem) => {
+            return currItem === item;
+        })
 
-        for (var category in filterList) {
-            if (filterList.hasOwnProperty(category)) {
-                groups.push(
-                    <Grid.Column>
-                        <Card>
-                            <Card.Content>
-                                <Card.Header>
-                                    {this.capitalize(filterList[category].title)}
-                                </Card.Header>
-                            </Card.Content>
-                            <Card.Content>
-                                <List verticalAlign='middle'>
-                                    {this.createList(filterList[category].content)}
-                                </List>
-                            </Card.Content>
-                        </Card>
-                    </Grid.Column>
-                );
-            }
+        let newState = _.clone(this.state);
+
+        if (existingItem) {
+            // Already selected, unselect it
+            newState[category] = _.filter(newState[category], (currItem) => {
+                return currItem !== existingItem;
+            });
+        } else {
+            // Not selected, select it
+            newState[category].push(item);
         }
 
-        return groups;
+        this.setState(newState);
+        this.props.onFilterChange(newState);
     }
 
     render = () => (
