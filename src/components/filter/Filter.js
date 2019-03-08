@@ -60,14 +60,20 @@ class Filter extends React.Component {
     }
 
     createList = (category, content) => {
-        return content.map((item) => 
-            <List.Item key={item}>
-                <Checkbox 
+        return content.map((item) => {
+            // Find if the item is currently selecteds
+            let existingItem = _.find(this.state[category], (currItem) => {
+                return currItem === item
+            });
+
+            return (<List.Item key={item}>
+                <Checkbox
+                    checked={existingItem ? true : false}
                     onClick={() => this.onFilterClick(category, item)} 
                     label={this.capitalize(item)}
                 />
-            </List.Item>
-        );
+            </List.Item>);
+        });
     }
 
     onFilterClick = (category, item) => {
@@ -92,11 +98,21 @@ class Filter extends React.Component {
         this.props.onFilterChange(newState);
     }
 
+    onClearFilter = () => {
+        let newState = _.mapObject(this.state, () => []);
+        
+        this.setState(newState);
+        this.props.onFilterChange(newState);
+    }
+
     render = () => (
         <Grid columns='equal' stackable>
             {this.createGroups()}
             <Grid.Column>
-                <Button content="Clear Filter" primary />
+                <Button 
+                    onClick={this.onClearFilter}
+                    content="Clear Filter" 
+                    primary />
             </Grid.Column>
         </Grid>
     )
