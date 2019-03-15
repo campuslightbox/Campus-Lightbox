@@ -6,6 +6,9 @@ import _ from 'underscore';
 const style={
     infoCard: {
         width: 260,
+    },
+    link: {
+        color: 'blue',
     }
 }
 
@@ -25,10 +28,10 @@ class InfoCard extends React.Component {
                 <Card.Description>If you're feeling persistently stressed, anxious, or sad, make an appointment with a Wellness Advisor.</Card.Description>
             </Card.Content>
             <Card.Content extra>
-                <a>
-                    <Icon name='tag' />
-                    On campus, Professional
-                </a>
+                <Card.Meta><Icon name='location arrow' /> On Campus</Card.Meta>
+                <Card.Meta><Icon name='phone' /> 604-822-3811</Card.Meta>
+                <Card.Meta><Icon name='clock outline' />9am - 3pm<Icon name='caret down' /></Card.Meta>
+                <Card.Meta><Icon name='tag' /> Professional, Walk-in</Card.Meta>
             </Card.Content>
         </Card>
     )
