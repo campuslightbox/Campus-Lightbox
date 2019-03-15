@@ -20,15 +20,16 @@ class MainContainer extends React.Component {
     }
 
     render = () => (
-        <Container>
-            <Grid stackable>
-                <Filter
-                    onFilterChange={this.onFilterChange}
-                    width={4}
-                />
-                <CardContainer
-                    width={12}
-                />
+        <Container style={{marginTop: 36}}>
+            <Grid stackable compact>
+                <Grid.Column width={4}>
+                    <Filter
+                        onFilterChange={this.onFilterChange}
+                    />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                    <CardContainer />
+                </Grid.Column>
             </Grid>
         </Container>
     )

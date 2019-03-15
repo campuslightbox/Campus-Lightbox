@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, List, Checkbox, Card} from 'semantic-ui-react';
+import { Grid, Button, List, Checkbox, Card, Segment } from 'semantic-ui-react';
 import './Filter.css';
 import _ from 'underscore';
 
@@ -106,15 +106,15 @@ class Filter extends React.Component {
     }
 
     render = () => (
-        <Grid.Column width={this.props.width}>
+        <Segment basic>
             {this.createGroups()}
             <Grid.Row>
                 <Button 
                     onClick={this.onClearFilter}
-                    content="Clear Filter" 
+                    content="Clear Filter"
                     primary />
             </Grid.Row>
-        </Grid.Column>
+        </Segment>
     )
 }
 

@@ -8,8 +8,6 @@ const App = () => (
     <Fragment>
         <Navbar />
         <Header />
-        <div> ></div>
-        <div> ></div>
         <MainContainer />
         <Footer />
     </Fragment>

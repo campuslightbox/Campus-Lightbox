@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Grid, Card, Label } from 'semantic-ui-react';
+import { Segment, Container, Grid, Card } from 'semantic-ui-react';
 import './CardContainer.css';
+import InfoCard from '../../components/infoCard/InfoCard';
 
 class CardContainer extends React.Component {
     constructor(props) {
@@ -8,18 +9,15 @@ class CardContainer extends React.Component {
     }
 
     render = () => (
-        <Grid.Column width={this.props.width}>
-            <Card>
-                <Card.Content>
-                    <Card.Header>
-                        <Label>Title</Label>
-                    </Card.Header>
-                </Card.Content>
-                <Card.Content>
-                    <p>A long long long paragraph goes here</p>
-                </Card.Content>
-            </Card>
-        </Grid.Column>
+        <Segment basic>
+            <Card.Group>
+                <InfoCard />
+                <InfoCard />
+                <InfoCard />
+                <InfoCard />
+                <InfoCard />
+            </Card.Group>
+        </Segment>
     )
 }
 
