@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Button, List, Checkbox, Card} from 'semantic-ui-react';
 import './Filter.css';
-import * as _ from 'underscore';
+import _ from 'underscore';
 
 // TODO: move this somewhere else
 const filterList = {
@@ -41,7 +41,7 @@ class Filter extends React.Component {
     createGroups = () => {
         return _.map(filterList, (val, category) => {
             return (
-                <Grid.Column key={val.content}>
+                <Grid.Row key={val.content} className="filter-row">
                     <Card>
                         <Card.Content>
                             <Card.Header>
@@ -54,7 +54,7 @@ class Filter extends React.Component {
                             </List>
                         </Card.Content>
                     </Card>
-                </Grid.Column>
+                </Grid.Row>
             );
         });
     }
@@ -106,15 +106,15 @@ class Filter extends React.Component {
     }
 
     render = () => (
-        <Grid columns='equal' stackable>
+        <Grid.Column width={this.props.width}>
             {this.createGroups()}
-            <Grid.Column>
+            <Grid.Row>
                 <Button 
                     onClick={this.onClearFilter}
                     content="Clear Filter" 
                     primary />
-            </Grid.Column>
-        </Grid>
+            </Grid.Row>
+        </Grid.Column>
     )
 }
 
