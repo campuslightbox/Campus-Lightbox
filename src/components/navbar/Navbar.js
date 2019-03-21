@@ -2,16 +2,8 @@ import React, { Component } from 'react'
 import { Icon, Menu, Button, Modal, Header } from 'semantic-ui-react'
 
 export default class MenuHeader extends Component {
-  state = { activeItem: 'home' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render() {
-
     return (
-      <Menu secondary>
-        <Menu.Menu position='right'>
-          <Menu.Item>
             <Modal dimmer="blurring" trigger={<Button color="red"><Icon name='heart outline' />Get Help Now</Button>} closeIcon>
               <Modal.Header>Get Help Now</Modal.Header>
               <Modal.Content image>
@@ -25,9 +17,6 @@ export default class MenuHeader extends Component {
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-          </Menu.Item>
-        </Menu.Menu>
-      </Menu>
     )
   }
 }
