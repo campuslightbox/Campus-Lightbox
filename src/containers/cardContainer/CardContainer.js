@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Container, Grid, Card } from 'semantic-ui-react';
+import { Segment, Card } from 'semantic-ui-react';
 import './CardContainer.css';
 import InfoCard from '../../components/infoCard/InfoCard';
 

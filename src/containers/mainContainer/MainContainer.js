@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Card, Label, Divider } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 import Filter from '../../components/filter/Filter';
 import CardContainer from '../cardContainer/CardContainer';
 
