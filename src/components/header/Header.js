@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Icon, Button, Modal } from 'semantic-ui-react'
-import Navbar from '../../components/navbar/Navbar';
+import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
 import './css/bootstrap.min.css';
 import './css/etline-font.css';
 import './css/flexslider.css';
@@ -21,7 +21,7 @@ class Header extends Component {
                         <div className="row">
                             
                                 <div className="text-right offset-10">
-                                    <Navbar />
+                                    <GetHelpModal />
                                 </div>
                             
                         </div>
