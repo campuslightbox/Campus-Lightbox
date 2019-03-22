@@ -2,12 +2,6 @@ import React from 'react'
 import {
   Container,
   Divider,
-  Dropdown,
-  Grid,
-  Header,
-  Image,
-  List,
-  Menu,
   Segment,
   Button,
   Icon

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Menu, Button, Modal, Header } from 'semantic-ui-react'
+import { Icon, Button, Modal, Header } from 'semantic-ui-react'
 
 export default class MenuHeader extends Component {
   render() {

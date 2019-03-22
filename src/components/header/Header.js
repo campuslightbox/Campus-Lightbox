@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Icon, Button, Modal } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
 import './css/bootstrap.min.css';
 import './css/etline-font.css';
