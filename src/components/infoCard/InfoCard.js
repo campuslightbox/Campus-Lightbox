@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button, Card, Image, Icon, Popup } from 'semantic-ui-react';
 import 'components/infoCard/InfoCard.css';
+import Tags from 'static/Tags';
+
+import _ from 'underscore';
 
 const style={
     infoCard: {
@@ -14,6 +17,8 @@ const style={
 class InfoCard extends React.Component {
     constructor(props) {
         super(props);
+
+        this.allTags = Tags.getAllTags();
 
         this.state = {
             side: "front",
@@ -39,24 +44,28 @@ class InfoCard extends React.Component {
             <Card.Content key="front-content">
                 <Card.Header>{this.props.name}</Card.Header>
                 <Card.Description>{this.props.description}</Card.Description>
-                <Card.Meta style={{marginTop: 8}}>
-                    {this.renderTagIcon('doctor', 'Professional')}
-                    {this.renderTagIcon('location arrow', 'On Campus')}
-                    {this.renderTagIcon('sync alternate', 'Recurring')}
-                    {this.renderTagIcon('calendar', 'Appointment Only')}
-                    {this.renderTagIcon('venus mars', 'Sexual Health')}
-                    {this.renderTagIcon('book', 'Academic')}
-                </Card.Meta>
             </Card.Content>,
             <Card.Content key="front-extra" extra>
                 <Card.Meta><Icon name='circle' color="green"/>9am - 3pm<Icon name='caret down'/></Card.Meta>
+                <Card.Meta style={{marginTop: 8}}>
+                    {_.map(this.props.tags, tag => this.renderTagIcon(tag))}
+                </Card.Meta>
                 <Button onClick={this.onContactButtonClick} style={{marginTop: 18}} fluid>View Details</Button>
             </Card.Content>
         ];
     }
 
-    renderTagIcon = (iconName, content) => {
-        return (<Popup trigger={<Icon name={iconName} />} content={content} size='small' basic/>);
+    renderTagIcon = (tag) => {
+        const displayName = this.allTags[tag].displayName;
+        const iconName = this.allTags[tag].iconName;
+
+        return <Popup
+            trigger={<Icon name={iconName} />}
+            content={displayName}
+            key={tag}
+            size='small'
+            basic
+        />;
     }
 
     renderBack = () => {

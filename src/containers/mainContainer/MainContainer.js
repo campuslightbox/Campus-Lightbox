@@ -12,9 +12,6 @@ class MainContainer extends React.Component {
         this.state = {
             filter: {}
         };
-
-        // Load resources
-        console.log(Resources);
     }
 
     onFilterChange = (newFilter) => {

@@ -32,7 +32,7 @@ export default [
         name: "UBC Counselling Service", 
         description: "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
         logo: "https://ubyssey.storage.googleapis.com/media/images/2016/11/jack-skate-1-2_A1HlLVn-medium.jpg",
-        tags: ["on campus", "professional", "walk-in", "recurring", "appointment"],
+        tags: ["onCampus", "professional", "appointment", "recurring", "walkIn"],
         phone:"604-822-3811",
         social: {
             "website": "https://students.ubc.ca/health/counselling-services",
@@ -50,7 +50,7 @@ export default [
         name: "UBC Yoga Club", 
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
         logo: "https://ubcyogaclub.files.wordpress.com/2014/12/10486_10151094924483521_1103997231_n-1.png",
-        tags: ["on campus", "general awareness"], 
+        tags: ["onCampus", "generalAwareness"], 
         social: {
             "website": "ubcyogaclub.com",
         }, 
@@ -64,7 +64,7 @@ export default [
         name: "UBC Chaplains", 
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/11173354_939496622751482_114544511837677719_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=1eb4418bec882fffd6fd47326e0353a6&oe=5D04DB48",
-        tags: ["spiritual", "on-campus", "professional", "walk-in"],
+        tags: ["onCampus", "professional", "walkIn", "spiritual"],
         phone:"",
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
@@ -76,7 +76,7 @@ export default [
         name: "UBC Student Health Service", 
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
         logo: "https://thethunderbird.ca/wp-content/uploads//2016/11/StudentHealth1-1-1024x680.jpg",
-        tags: ["walk-in", "appointment", "on campus", "professional"],
+        tags: ["onCampus", "professional", "appointment", "walkIn"],
         phone:" 604-822-7011",
         social: {
             "website": "https://students.ubc.ca/health/student-health-service",
