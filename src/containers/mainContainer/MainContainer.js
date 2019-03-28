@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
-import Filter from '../../components/filter/Filter';
-import CardContainer from '../cardContainer/CardContainer';
+import Filter from 'components/filter/Filter';
+import CardContainer from 'containers/cardContainer/CardContainer';
 
-import './MainContainer.css';
+import 'containers/mainContainer/MainContainer.css';
 
 class MainContainer extends React.Component {
     constructor(props) {
@@ -11,6 +11,8 @@ class MainContainer extends React.Component {
         this.state = {
             filter: {}
         };
+
+        // Load resources
     }
 
     onFilterChange = (newFilter) => {

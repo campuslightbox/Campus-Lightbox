@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Button, List, Checkbox, Card, Segment } from 'semantic-ui-react';
-import './Filter.css';
+import 'components/filter/Filter.css';
 import _ from 'underscore';
 
 // TODO: move this somewhere else

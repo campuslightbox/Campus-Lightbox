@@ -1,7 +1,7 @@
 import React from 'react';
 import { Segment, Card, Label } from 'semantic-ui-react';
-import './CardContainer.css';
-import InfoCard from '../../components/infoCard/InfoCard';
+import 'containers/cardContainer/CardContainer.css';
+import InfoCard from 'components/infoCard/InfoCard';
 
 class CardContainer extends React.Component {
     constructor(props) {

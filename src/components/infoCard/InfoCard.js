@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, List, Card, Label, Image, Icon, Grid, Popup } from 'semantic-ui-react';
-import './InfoCard.css';
+import 'components/infoCard/InfoCard.css';
 import _ from 'underscore';
 
 const style={
@@ -88,7 +88,7 @@ class InfoCard extends React.Component {
 
     render = () => (
         <Card style={style.infoCard}>
-            {this.state.side == "front" ? this.renderFront() : this.renderBack()}
+            {this.state.side === "front" ? this.renderFront() : this.renderBack()}
         </Card>
     )
 }
