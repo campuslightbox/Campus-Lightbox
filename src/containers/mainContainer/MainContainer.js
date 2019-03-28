@@ -28,7 +28,7 @@ class MainContainer extends React.Component {
                     />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                    <CardContainer />
+                    <CardContainer filter={this.state.filter}/>
                 </Grid.Column>
             </Grid>
         </Container>
