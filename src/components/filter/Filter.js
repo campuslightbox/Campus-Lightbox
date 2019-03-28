@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Button, List, Checkbox, Card, Segment } from 'semantic-ui-react';
 import 'components/filter/Filter.css';
-import * as Tags from 'static/Tags';
+import Tags from 'static/Tags';
 import _ from 'underscore';
 
 // TODO: move this somewhere else
@@ -27,12 +27,19 @@ const filterList = {
 class Filter extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            location: [],
-            type: [],
-            availability: [],
-            additionalTags: []
-        };
+        
+        this.filterList = this.transformTagsToFilterList(Tags.getAllTags());
+        console.log(Tags.getCategories())
+
+
+        this.state = _.reduce(Tags.getCategories(), (obj, category) => {
+            obj[category] = [];
+            return obj;
+        }, {});
+    }
+
+    transformTagsToFilterList(tags) {
+
     }
 
     capitalize = (text) => {
@@ -40,6 +47,7 @@ class Filter extends React.Component {
     }
 
     createGroups = () => {
+
         return _.map(filterList, (val, category) => {
             return (
                 <Grid.Row key={val.content} className="filter-row">
