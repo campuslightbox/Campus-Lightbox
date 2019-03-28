@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, List, Card, Label, Image, Icon, Grid, Popup } from 'semantic-ui-react';
+import { Button, Card, Image, Icon, Popup } from 'semantic-ui-react';
 import 'components/infoCard/InfoCard.css';
-import _ from 'underscore';
 
 const style={
     infoCard: {
@@ -32,12 +31,14 @@ class InfoCard extends React.Component {
     renderFront = () => {
         return [
             <Image
-                src='https://ubyssey.storage.googleapis.com/media/images/2016/11/jack-skate-1-2_A1HlLVn-medium.jpg'
+                src={this.props.logo || 'https://i0.wp.com/www.littlebitesofbeauty.com/wp-content/uploads/2015/06/default-placeholder.png?zoom=2&resize=1170%2C658&ssl=1'}
                 size='medium'
+                key="front-image"
+                style={{objectFit: "cover", height: 200}}
             />,
-            <Card.Content>
-                <Card.Header>UBC Counselling</Card.Header>
-                <Card.Description>If you're feeling persistently stressed, anxious, or sad, make an appointment with a Wellness Advisor.</Card.Description>
+            <Card.Content key="front-content">
+                <Card.Header>{this.props.name}</Card.Header>
+                <Card.Description>{this.props.description}</Card.Description>
                 <Card.Meta style={{marginTop: 8}}>
                     {this.renderTagIcon('doctor', 'Professional')}
                     {this.renderTagIcon('location arrow', 'On Campus')}
@@ -47,7 +48,7 @@ class InfoCard extends React.Component {
                     {this.renderTagIcon('book', 'Academic')}
                 </Card.Meta>
             </Card.Content>,
-            <Card.Content extra>
+            <Card.Content key="front-extra" extra>
                 <Card.Meta><Icon name='circle' color="green"/>9am - 3pm<Icon name='caret down'/></Card.Meta>
                 <Button onClick={this.onContactButtonClick} style={{marginTop: 18}} fluid>View Details</Button>
             </Card.Content>
@@ -60,19 +61,18 @@ class InfoCard extends React.Component {
 
     renderBack = () => {
         return [
-            <Card.Content>
+            <Card.Content key="back-header">
                 <Card.Header style={{color: '#0E6EB8', float: 'left'}}>UBC Counselling</Card.Header>
             </Card.Content>,
-            <Card.Content>
+            <Card.Content key="back-contact">
                 <Card.Header>Phone number</Card.Header>
-                <Card.Description>Main: 999-999-9999</Card.Description>
-                <Card.Description>After hours: 999-999-9999</Card.Description>
+                <Card.Description>{this.props.phone}</Card.Description>
             </Card.Content>,
-            <Card.Content>
+            <Card.Content key="back-address">
                 <Card.Header>Address</Card.Header>
                 <Card.Description>999 Alison Road, Vancouver</Card.Description>
             </Card.Content>,
-            <Card.Content>
+            <Card.Content key="back-hours">
                 <Card.Header>Hours of Operation</Card.Header>
                 <Card.Description>Monday: 9:00 - 15:00</Card.Description>
                 <Card.Description>Tuesday: 9:00 - 15:00</Card.Description>

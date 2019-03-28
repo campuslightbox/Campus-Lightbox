@@ -3,9 +3,7 @@ import {
   Container,
   Divider,
   Segment,
-  Button,
-  Icon,
-  Header
+  Button
 } from 'semantic-ui-react'
 
 const FixedMenuLayout = () => (

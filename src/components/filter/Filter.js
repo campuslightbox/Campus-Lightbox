@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Button, List, Checkbox, Card, Segment } from 'semantic-ui-react';
 import 'components/filter/Filter.css';
+import * as Tags from 'static/Tags';
 import _ from 'underscore';
 
 // TODO: move this somewhere else
@@ -15,11 +16,11 @@ const filterList = {
     },
     availability: {
         title: 'Availability', 
-        content: ['appointment only', 'recurring', 'walk-in']
+        content: ['appointment', 'recurring', 'walk-in']
     },
     additionalTags: {
         title: "Additonal Tags",
-        content: ['sexual health/assault', 'financial', 'academic']
+        content: ['sexual health/assault', 'financial', 'academic', 'spiritual']
     }
 }
 
