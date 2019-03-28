@@ -4,33 +4,11 @@ import 'components/filter/Filter.css';
 import Tags from 'static/Tags';
 import _ from 'underscore';
 
-// TODO: move this somewhere else
-const filterList = {
-    location: {
-        title: 'Location',
-        content: ['on campus', 'off campus', 'online', 'hotline']
-    },
-    type: {
-        title: 'Type',
-        content: ['medical', 'professional', 'peer', 'general awareness']
-    },
-    availability: {
-        title: 'Availability', 
-        content: ['appointment', 'recurring', 'walk-in']
-    },
-    additionalTags: {
-        title: "Additonal Tags",
-        content: ['sexual health/assault', 'financial', 'academic', 'spiritual']
-    }
-}
-
 class Filter extends React.Component {
     constructor(props) {
         super(props);
         
         this.filterList = this.transformTagsToFilterList(Tags.getAllTags());
-        console.log(Tags.getCategories())
-
 
         this.state = _.reduce(Tags.getCategories(), (obj, category) => {
             obj[category] = [];
@@ -39,7 +17,15 @@ class Filter extends React.Component {
     }
 
     transformTagsToFilterList(tags) {
+        _.each(tags, (val, key) => {
+            val["tag"] = key;
+        });
 
+        return _.groupBy(_.values(tags), 'category');
+    }
+
+    getDisplayNameForCategory(category) {
+        return (category === "additional") ? "Additional Tags" : this.capitalize(category);
     }
 
     capitalize = (text) => {
@@ -48,18 +34,18 @@ class Filter extends React.Component {
 
     createGroups = () => {
 
-        return _.map(filterList, (val, category) => {
+        return _.map(this.filterList, (val, category) => {
             return (
-                <Grid.Row key={val.content} className="filter-row">
+                <Grid.Row key={category} className="filter-row">
                     <Card>
                         <Card.Content>
                             <Card.Header>
-                                {this.capitalize(val.title)}
+                                {this.getDisplayNameForCategory(category)}
                             </Card.Header>
                         </Card.Content>
                         <Card.Content>
                             <List verticalAlign='middle'>
-                                {this.createList(category, val.content)}
+                                {this.createList(category, val)}
                             </List>
                         </Card.Content>
                     </Card>
@@ -68,18 +54,18 @@ class Filter extends React.Component {
         });
     }
 
-    createList = (category, content) => {
-        return content.map((item) => {
+    createList = (category, items) => {
+        return items.map(item => {
             // Find if the item is currently selecteds
             let existingItem = _.find(this.state[category], (currItem) => {
-                return currItem === item
+                return currItem === item.tag
             });
 
-            return (<List.Item key={item}>
+            return (<List.Item key={item.tag}>
                 <Checkbox
                     checked={existingItem ? true : false}
-                    onClick={() => this.onFilterClick(category, item)} 
-                    label={this.capitalize(item)}
+                    onClick={() => this.onFilterClick(category, item.tag)} 
+                    label={item.displayName}
                 />
             </List.Item>);
         });
