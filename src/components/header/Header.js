@@ -1,47 +1,29 @@
 import React, { Component } from 'react';
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
-import './css/bootstrap.min.css';
-import './css/etline-font.css';
-import './css/flexslider.css';
-import './css/normalize.min.css';
-import './css/queries.css';
-import './css/styles.css';
+import { Button} from 'semantic-ui-react'
+import './style.css';
 
 
-class Header extends Component {
+class Header extends React.Component {
     render() {
         return (
-            <div className="Header">
-
-                <section className="hero">
-
-                    <div className="container-fluis">
-
-                        <div className="row">
-                            
-                                <div className="text-right offset-10">
-                                    <GetHelpModal />
-                                </div>
-                            
+                <section className = "b1">
+                    <div className="row">
+                        <div className="text-left offset-10">
+                            <GetHelpModal />
                         </div>
-
-                        <div className="row">
-                            <div className="col-md-6 col-md-offset-3">
-                                <div className="hero-content text-center">
-                                    <h1>Campus Lightbox</h1>
-                                    <p className="intro">an initiative by Project Aurora</p>
-                                    <a href="#" className="btn btn-accent btn-large btn-margin-right">Peer</a>
-                                    <a href="#" className="btn btn-accent btn-large btn-margin-right">Professional</a>
-                                    <a href="#" className="btn btn-accent btn-large ">Phone</a>
-                                </div>
-                            </div>
+                    </div>
+                    <div className = "in1" >
+                        <div className = "stuff" >
+                            <h1> Campus Lightbox </h1>
+                        <h2>an initiative by Project Aurora</h2>
+                            <a className="btn" href="#">Peer</a>
+                            <a className = "btn" href = "#">Professional</a>
+                            <a className="btn" href="#">Phone</a>
                         </div>
                     </div>
                 </section>
-
-
-            </div>
-        );
+        )
     }
 }
 

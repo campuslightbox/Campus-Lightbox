@@ -1,0 +1,54 @@
+.b1{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: table;
+  background-size: cover;
+  background-image: url(bg.jpg);
+}
+.b1 .in1{
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+.stuff{
+  padding-top: 30px;
+  max-width: 800px;
+  height: 550px;
+  margin: auto;
+  text-align: center;
+}
+.stuff h1{
+  position: center;
+  font-family: 'Century Gothic',sans-serif;
+  font-weight:normal;
+  color: #f9f3f4;
+  font-size: 500%;
+  text-shadow: 1px 1px 2px black;
+}
+
+.stuff h2{
+  font-size: medium;
+  position: center;
+  font-family: 'Century Gothic',sans-serif;
+  font-weight:normal;
+  color: #f9f3f4;
+  text-shadow: 1px 1px 2px black;
+  padding-bottom: 20px;
+}
+
+
+.stuff .btn{
+  border-radius: 9px;
+  color: #f9f3f4;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Century Gothic',sans-serif;
+  border: 3px solid;
+  padding: 7px 13px;
+  font-weight: bold;
+  margin: 5px;
+}
+.stuff .btn:hover{
+  color: #C0C0C0;
+}
