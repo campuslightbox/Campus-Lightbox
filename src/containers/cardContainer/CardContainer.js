@@ -10,23 +10,20 @@ class CardContainer extends React.Component {
         // Filtering: OR within the same category, AND between categories
 
         // Check if filter is empty
-        const numFilters = _.reduce(this.props.filter, (sum, filterArr) => {
-            return sum + filterArr.length;
-        }, 0);
-
-        if (numFilters <= 0) {
+        const activeFilters = _.omit(this.props.filter, function(filters, category) {
+            return filters.length <= 0;
+        });
+        
+        // No filters applied, return everything
+        if (_.isEmpty(activeFilters)) {
             return allResources;
         }
 
-        let categoryMatches = _.map(this.props.filter, (filters, category) => {
+        let categoryMatches = _.map(activeFilters, (filters, category) => {
             return _.filter(allResources, resource => {
                 return _.intersection(resource.tags, filters).length > 0
             });
         });
-
-        // Drop empty categories
-        categoryMatches = categoryMatches.filter(arr => arr.length > 0);
-        console.log(categoryMatches);
 
         const categoryWithNames = _.map(categoryMatches, category => {
             return _.map(category, resource => {
@@ -35,8 +32,6 @@ class CardContainer extends React.Component {
         });
 
         const commonNames = _.intersection(...categoryWithNames);
-
-        console.log(commonNames);
 
         // We know categoryMatches is not empty, access it to get resources in object format
         return  _.filter(categoryMatches[0], resource => {

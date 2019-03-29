@@ -33,7 +33,6 @@ class Filter extends React.Component {
     }
 
     createGroups = () => {
-
         return _.map(this.filterList, (val, category) => {
             return (
                 <Grid.Row key={category} className="filter-row">

@@ -15,7 +15,7 @@ const tags = {
     recurring:          {category: "availability", displayName: "Recurring", iconName: "sync alternate"},
     walkIn:             {category: "availability", displayName: "Walk-in", iconName: "blind"},
 
-    sexualHealthAssult: {category: "additional", displayName: "Sexual Health / Assault", iconName: "venus mars"},
+    sexualHealthAssault:{category: "additional", displayName: "Sexual Health / Assault", iconName: "venus mars"},
     financial:          {category: "additional", displayName: "Financial", iconName: "dollar"},
     academic:           {category: "additional", displayName: "Academic", iconName: "book"},
     spiritual:          {category: "additional", displayName: "Spiritual", iconName: "lightbulb"},
