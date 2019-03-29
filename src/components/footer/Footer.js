@@ -18,18 +18,21 @@ const FixedMenuLayout = () => (
 
           <Grid.Column width={5} alignItems="center">
             <Header inverted as='h4' content='Brought to you by:' />
-            <Modal trigger={<Button>© Project Aurora</Button>}>
-    <Modal.Header>Select a Photo</Modal.Header>
+            <Modal trigger={<Button>© Project Aurora</Button>} closeIcon>
+    <Modal.Header>Abous Us</Modal.Header>
     <Modal.Content image>
-      <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
       <Modal.Description>
-        <Header>Default Profile Image</Header>
-        <p>We've found the following gravatar image associated with your e-mail address.</p>
-        <p>Is it okay to use this photo?</p>
+        <Header>Project Aurora</Header>
+        <p>Campus Lightbox was envisioned and created by Project Aurora.</p>
+        <p>We are a group of UBC students seeking to dismantle the barriers between 
+          campus mental health resources and those who are in need of it.</p>
+        <p>We hope to continue the much-­needed conversation about student 
+          wellness on college campuses across the country and to empower students 
+          to take charge of their mental health.</p>
       </Modal.Description>
     </Modal.Content>
   </Modal>
-            <Button size='large' circular icon='mail' href='mailto:mentalhealthubc@gmail.com' />
+            <Button icon='mail' href='mailto:mentalhealthubc@gmail.com' />
           </Grid.Column>
 
           <Grid.Column width={4}>
