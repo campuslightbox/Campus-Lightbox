@@ -24,10 +24,13 @@ const FixedMenuLayout = () => (
       <Modal.Description>
         <Header>Project Aurora</Header>
         <p>Campus Lightbox was envisioned and created by Project Aurora.</p>
-        <p>We are a group of UBC students seeking to dismantle the barriers between 
+        <p>We are a group of UBC students seeking to dismantle the barriers between
+        <br />
           campus mental health resources and those who are in need of it.</p>
         <p>We hope to continue the much-­needed conversation about student 
-          wellness on college campuses across the country and to empower students 
+          wellness
+          <br />
+          on college campuses across the country and to empower students 
           to take charge of their mental health.</p>
       </Modal.Description>
     </Modal.Content>
