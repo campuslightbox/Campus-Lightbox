@@ -11,13 +11,31 @@
   width: 100%;
   max-width: none;
 }
+
+
 .stuff{
-  padding-top: 30px;
+  padding-top: 70px;
   max-width: 800px;
-  height: 550px;
+  height: 600px;
   margin: auto;
   text-align: center;
 }
+
+.ButtonClass{
+    position: center;
+    padding-bottom: 0px;
+    padding-top: 130px;
+}
+
+.stuff h4{
+    font-size: large;
+    position: center;
+    font-family: 'Century Gothic',sans-serif;
+    font-weight:normal;
+    color: #f9f3f4;
+    text-shadow: 1px 1px 1px black;
+}
+
 .stuff h1{
   position: center;
   font-family: 'Century Gothic',sans-serif;
@@ -27,16 +45,16 @@
   text-shadow: 1px 1px 2px black;
 }
 
-.stuff h2{
-  font-size: medium;
-  position: center;
-  font-family: 'Century Gothic',sans-serif;
-  font-weight:normal;
-  color: #f9f3f4;
-  text-shadow: 1px 1px 2px black;
-  padding-bottom: 20px;
-}
 
+.stuff h3{
+    font-size: large;
+    position: center;
+    font-family: 'Century Gothic',sans-serif;
+    font-weight:normal;
+    color: #f9f3f4;
+    text-shadow: 1px 1px 2px black;
+    padding-bottom: 10px;
+}
 
 .stuff .btn{
   border-radius: 9px;
@@ -46,9 +64,16 @@
   font-family: 'Century Gothic',sans-serif;
   border: 3px solid;
   padding: 7px 13px;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: medium;
   margin: 5px;
 }
 .stuff .btn:hover{
   color: #C0C0C0;
+}
+
+.helpbutton{
+    position: absolute;
+    top:0;
+    right:0;
 }
