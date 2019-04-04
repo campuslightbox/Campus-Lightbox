@@ -5,8 +5,7 @@ import {
   Button,
   Grid,
   Header,
-  Modal,
-  Image
+  Modal
 } from 'semantic-ui-react'
 
 const FixedMenuLayout = () => (
@@ -18,12 +17,11 @@ const FixedMenuLayout = () => (
 
           <Grid.Column width={5} alignItems="center">
             <Header inverted as='h4' content='Brought to you by:' />
-            <Modal trigger={<Button>© Project Aurora</Button>} closeIcon>
-    <Modal.Header>Abous Us</Modal.Header>
+            <Modal trigger={<Button>© Project Aurora</Button>} closeIcon size='large'>
+    <Modal.Header><center>Abous Us</center></Modal.Header>
     <Modal.Content image>
       <Modal.Description>
-        <Header>Project Aurora</Header>
-        <p>Campus Lightbox was envisioned and created by Project Aurora.</p>
+        <center><p>Campus Lightbox was envisioned and created by <b>Project Aurora.</b></p>
         <p>We are a group of UBC students seeking to dismantle the barriers between
         <br />
           campus mental health resources and those who are in need of it.</p>
@@ -31,29 +29,32 @@ const FixedMenuLayout = () => (
           wellness
           <br />
           on college campuses across the country and to empower students 
-          to take charge of their mental health.</p>
+          to take charge of their mental health.</p></center>
       </Modal.Description>
     </Modal.Content>
   </Modal>
-            <Button icon='mail' href='mailto:mentalhealthubc@gmail.com' />
+            <Button icon='mail' href='mailto:info@projectaurora.com' />
           </Grid.Column>
 
           <Grid.Column width={4}>
             <Header inverted as='h4' content='Follow us:' />
-            <div>
+            <p>
               <a href="https://www.facebook.com/Project-Aurora-1190802371087781/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='facebook' icon='facebook' /></a>
               <a href="https://www.instagram.com/proj_aurora/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='instagram' icon='instagram' /></a>
+                </p>
+                <p>
               <a href="https://twitter.com/ProjectAurora6" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='twitter' icon='twitter' /></a>
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='linkedin' icon='linkedin' /></a>
-            </div>
+                </p>
+            
           </Grid.Column>
 
           <Grid.Column width={7}>
-            <Header inverted as='h4' content='Notice of Non­Affiliation and Disclaimer:' />
+            <Header inverted as='h4' content='Notice of Non­ Affiliation and Disclaimer:' />
             <p>
               <h6>We are not affiliated,
         associated, authorized, endorsed by, or in any way officially connected with the
