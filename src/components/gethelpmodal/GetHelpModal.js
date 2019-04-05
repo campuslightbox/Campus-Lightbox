@@ -23,8 +23,6 @@ export default class MenuHeader extends Component {
                                         24/7 <Icon name="phone" /> (604-872-3311)
                                         BC-Wide: (1-800-784-2433)
                                     </Table.Cell>
-                                    <Table.Cell>“Here to Listen, Here to Help” - Crisis Center is committed to helping people help themselves and others deal with crisis
-                                    </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>
@@ -32,15 +30,11 @@ export default class MenuHeader extends Component {
                                         24/7 <Icon name="phone" />
                                         (604-255-6344)
                                     </Table.Cell>
-                                    <Table.Cell>WAVAW provides support services to survivors of sexulized volence who have shared experiences of gender marginalization.
-                                    </Table.Cell>
                                 </Table.Row>
                                 <Table.Row>
                                     <Table.Cell>UBC Campus Security
                                         24/7 <Icon name="phone" />
                                         (604-822-2222)
-                                    </Table.Cell>
-                                    <Table.Cell>The UBC Campus Security focuses on the delivery of safety and security services to everyone within the UBC community
                                     </Table.Cell>
                                 </Table.Row>
                             </Table.Body>
