@@ -32,7 +32,7 @@ export default [
         name: "UBC Counselling Service", 
         description: "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
         logo: "https://ubyssey.storage.googleapis.com/media/images/2016/11/jack-skate-1-2_A1HlLVn-medium.jpg",
-        tags: ["onCampus", "professional", "appointment", "recurring", "walkIn"],
+        tags: ["onCampus", "professional", "appointment", "walkIn"],
         phone:"604-822-3811",
         social: {
             "website": "https://students.ubc.ca/health/counselling-services",
@@ -76,7 +76,7 @@ export default [
         name: "UBC Student Health Service", 
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
         logo: "https://thethunderbird.ca/wp-content/uploads//2016/11/StudentHealth1-1-1024x680.jpg",
-        tags: ["onCampus", "professional", "appointment", "walkIn"],
+        tags: ["onCampus", "medical", "appointment", "walkIn"],
         phone:" 604-822-7011",
         social: {
             "website": "https://students.ubc.ca/health/student-health-service",
@@ -90,6 +90,27 @@ export default [
             "thursday": "9:00am-4:00pm",
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
+        },
+    },
+    {
+        name: "Centre for Accessibility", 
+        description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
+        logo: "https://ubyssey.storage.googleapis.com/media/images/2016/10/20161026Cherihan_Hassun-medium.jpg",
+        tags: ["onCampus", "professional", "appointment", "walkIn"],
+        phone:" 604-822-5844",
+        social: {
+            "website": "https://students.ubc.ca/about-student-services/centre-for-accessibility",
+        },
+        email: "info.accessibility@ubc.ca",
+        address: "Brock Hall\nURoom 1203\n1874 East Mall\nVancouver, BC V6T 1Z1",
+        hours: {
+            "monday": "8:30am-4:30pm",
+            "tuesday": "8:30am-5:00pm",
+            "wednesday": "8:30am-4:30pm",
+            "thursday": "8:30am-4:00pm",
+            "friday": "8:30am-4:30pm",
+            "saturday": "closed",
+            "sunday": "closed",
         },
     }
 ];

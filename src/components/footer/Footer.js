@@ -38,18 +38,16 @@ const FixedMenuLayout = () => (
 
           <Grid.Column width={4}>
             <Header inverted as='h4' content='Follow us:' />
-            <p>
+            <Button.Group>
               <a href="https://www.facebook.com/Project-Aurora-1190802371087781/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='facebook' icon='facebook' /></a>
               <a href="https://www.instagram.com/proj_aurora/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='instagram' icon='instagram' /></a>
-            </p>
-            <p>
               <a href="https://twitter.com/ProjectAurora6" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='twitter' icon='twitter' /></a>
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
                 <Button size='large' circular color='linkedin' icon='linkedin' /></a>
-            </p>
+                </Button.Group>
 
           </Grid.Column>
 
