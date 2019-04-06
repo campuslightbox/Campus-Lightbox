@@ -61,7 +61,7 @@ export default [
         }
     },
     {
-        name: "UBC Chaplains", 
+        name: "University Multifaith Chaplains Association", 
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/11173354_939496622751482_114544511837677719_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=1eb4418bec882fffd6fd47326e0353a6&oe=5D04DB48",
         tags: ["onCampus", "professional", "walkIn", "spiritual"],
@@ -96,7 +96,7 @@ export default [
         name: "Centre for Accessibility", 
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
         logo: "https://ubyssey.storage.googleapis.com/media/images/2016/10/20161026Cherihan_Hassun-medium.jpg",
-        tags: ["onCampus", "professional", "appointment", "walkIn"],
+        tags: ["onCampus", "professional", "appointment", "walkIn"], // filters to be added: disability
         phone:" 604-822-5844",
         social: {
             "website": "https://students.ubc.ca/about-student-services/centre-for-accessibility",
@@ -109,6 +109,48 @@ export default [
             "wednesday": "8:30am-4:30pm",
             "thursday": "8:30am-4:00pm",
             "friday": "8:30am-4:30pm",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
+    },
+    {
+        name: "University Village Medical Clinic - UBC Village", 
+        description: "Walk-in medical clinic located on Allison Road in UBC Village.",
+        logo: "http://www.universityvillageclinic.com/DSC_0206resize.jpg",
+        tags: ["onCampus", "medical", "walkIn"],
+        phone:" 604-222-2273 (ext. 2)",
+        social: {
+            "website": "http://www.universityvillageclinic.com/",
+        },
+        email: "",
+        address: "#228 2155 Allison Road\nVancouver, BC V6T 1T5",
+        hours: {
+            "monday": "8:00am-6:00pm",
+            "tuesday": "8:00am-6:00pm",
+            "wednesday": "8:00am-6:00pm",
+            "thursday": "8:00am-6:00pm",
+            "friday": "8:00am-6:00pm",
+            "saturday": "10:00am-4:00pm",
+            "sunday": "closed",
+        },
+    },
+    {
+        name: "University Village Medical Clinic - Wesbrook Village", 
+        description: "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
+        logo: "http://www.universityvillageclinic.com/DSC_0226resize.jpg",
+        tags: ["onCampus", "medical", "walkIn"],
+        phone:" 604-222-2273 (ext. 1)",
+        social: {
+            "website": "http://www.universityvillageclinic.com/",
+        },
+        email: "",
+        address: "5933 Birney Avenue\nVancouver, BC V6T 1W5",
+        hours: {
+            "monday": "8:00am-6:00pm",
+            "tuesday": "8:00am-4:00pm",
+            "wednesday": "8:00am-4:00pm",
+            "thursday": "8:00am-4:00pm",
+            "friday": "8:00am-4:00pm",
             "saturday": "closed",
             "sunday": "closed",
         },
