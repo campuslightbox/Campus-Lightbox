@@ -154,5 +154,47 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+    },
+    {
+        name: "Nurses on Campus", 
+        description: "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
+        logo: "http://robstef.com/wrk/uploads/2018/03/IMG_2794_2opt.jpg",
+        tags: ["onCampus", "medical", "walkIn"],
+        phone:" 604-822-7011",
+        social: {
+            "website": "https://students.ubc.ca/health/student-health-service/nurse-campus",
+        },
+        email: "student.health@ubc.ca",
+        address: "Dependent on Schedule - Refer to website",
+        hours: {
+            "monday": "12:00pm-6:00pm",
+            "tuesday": "10:00am-6:00pm",
+            "wednesday": "12:00pm-6:00pm",
+            "thursday": "12:00pm-6:00pm",
+            "friday": "closed",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
+    },
+    {
+        name: "UBC Psychology Clinic", 
+        description: "The UBC Psychology Clinic offers professional psychological services in the form of (mostly) individual therapy and group treatment.",
+        logo: "https://www.indstate.edu/cas/sites/arts.indstate.edu/files/Psych-Clinic/Psych1_0.jpg",
+        tags: ["onCampus", "professional", "appointment"],
+        phone:" 604-822-3005",
+        social: {
+            "website": "https://clinic.psych.ubc.ca/",
+        },
+        email: "clinic@psych.ubc.ca",
+        address: "Douglas T. Kenny Building\n2136 West Mall\nVancouver, BC V6T 1Z4",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
     }
 ];
