@@ -196,5 +196,47 @@ export default [
             "saturday": "n/a",
             "sunday": "n/a",
         },
+    },
+    {
+        name: "Wellness Centre", 
+        description: "Speak with and ask Wellness Peer Educators about everyday concerns related to health, relationships, and workload.",
+        logo: "https://i.imgur.com/KwUsppr.jpg",
+        tags: ["onCampus", "peer", "walkIn"],
+        phone:" 604-822-8450",
+        social: {
+            "website": "https://students.ubc.ca/health/wellness-centre",
+        },
+        email: "wellness.centre@ubc.ca",
+        address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
+        hours: {
+            "monday": "10:00pm-5:00pm",
+            "tuesday": "10:00pm-4:00pm",
+            "wednesday": "10:00pm-5:00pm",
+            "thursday": "10:00pm-5:00pm",
+            "friday": "10:00pm-5:00pm",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
+    },
+    {
+        name: "AMS Speakeasy", 
+        description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff and helps connect students to other resources.",
+        logo: "https://cdn-az.allevents.in/banners/81acff4f3843844b6f526bf5ca6ee7af",
+        tags: ["onCampus", "walkIn"],
+        phone:" 604-822-9246",
+        social: {
+            "website": "https://www.ams.ubc.ca/student-services/speakeasy/",
+        },
+        email: "speak@ams.ubc.ca",
+        address: "UBC AMS Nest\nRoom 3125",
+        hours: {
+            "monday": "10:00pm-6:00pm",
+            "tuesday": "10:00pm-6:00pm",
+            "wednesday": "10:00pm-6:00pm",
+            "thursday": "10:00pm-6:00pm",
+            "friday": "10:00pm-6:00pm",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
     }
 ];
