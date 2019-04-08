@@ -24,8 +24,9 @@ class Header extends React.Component {
                     </div>
                     <div className = "in1" >
                         <div className = "stuff">
-                            <h1> Campus Lightbox </h1>
-                            <h3>Click on a resource type to get started</h3>
+                            <h1> <img src={require("./logo2.png")}
+                                      alt = "Campus Lightbox" /> </h1>
+                            <h3>Click a resource button to get started</h3>
                             <a className="btn" href="#">Peer</a>
                             <a className = "btn" href = "#">Professional</a>
                             <a className="btn" href="#">Phone</a>

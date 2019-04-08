@@ -14,7 +14,7 @@
 
 
 .stuff{
-  padding-top: 70px;
+  padding-top: 40px;
   max-width: 800px;
   height: 600px;
   margin: auto;
@@ -24,7 +24,7 @@
 .ButtonClass{
     position: center;
     padding-bottom: 0px;
-    padding-top: 130px;
+    padding-top: 110px;
 }
 
 .stuff h4{
@@ -54,6 +54,7 @@
     color: #f9f3f4;
     text-shadow: 1px 1px 2px black;
     padding-bottom: 10px;
+    padding-top: 0px;
 }
 
 .stuff .btn{
@@ -62,14 +63,17 @@
   text-decoration: none;
   text-shadow: 1px 1px 2px black;
   font-family: 'Century Gothic',sans-serif;
-  border: 3px solid;
+  border: 2px solid;
   padding: 7px 13px;
   font-weight: normal;
   font-size: medium;
-  margin: 5px;
+  margin: 10px;
 }
 .stuff .btn:hover{
-  color: #C0C0C0;
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
 }
 
 .helpbutton{
