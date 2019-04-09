@@ -51,6 +51,7 @@ export default [
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
         logo: "https://ubcyogaclub.files.wordpress.com/2014/12/10486_10151094924483521_1103997231_n-1.png",
         tags: ["onCampus", "generalAwareness"], 
+        phone:"n/a",
         social: {
             "website": "ubcyogaclub.com",
         }, 
@@ -65,7 +66,7 @@ export default [
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/11173354_939496622751482_114544511837677719_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=1eb4418bec882fffd6fd47326e0353a6&oe=5D04DB48",
         tags: ["onCampus", "professional", "walkIn", "spiritual"],
-        phone:"",
+        phone:"n/a",
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
             "facebook": "https://www.facebook.com/UMCAssociation/",
@@ -77,7 +78,7 @@ export default [
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
         logo: "https://thethunderbird.ca/wp-content/uploads//2016/11/StudentHealth1-1-1024x680.jpg",
         tags: ["onCampus", "medical", "appointment", "walkIn"],
-        phone:" 604-822-7011",
+        phone:"604-822-7011",
         social: {
             "website": "https://students.ubc.ca/health/student-health-service",
         },
@@ -97,7 +98,7 @@ export default [
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
         logo: "https://ubyssey.storage.googleapis.com/media/images/2016/10/20161026Cherihan_Hassun-medium.jpg",
         tags: ["onCampus", "professional", "appointment", "walkIn"], // filters to be added: disability
-        phone:" 604-822-5844",
+        phone:"604-822-5844",
         social: {
             "website": "https://students.ubc.ca/about-student-services/centre-for-accessibility",
         },
@@ -118,11 +119,11 @@ export default [
         description: "Walk-in medical clinic located on Allison Road in UBC Village.",
         logo: "http://www.universityvillageclinic.com/DSC_0206resize.jpg",
         tags: ["onCampus", "medical", "walkIn"],
-        phone:" 604-222-2273 (ext. 2)",
+        phone:"604-222-2273 (ext. 2)",
         social: {
             "website": "http://www.universityvillageclinic.com/",
         },
-        email: "",
+        email: "n/a",
         address: "#228 2155 Allison Road\nVancouver, BC V6T 1T5",
         hours: {
             "monday": "8:00am-6:00pm",
@@ -139,11 +140,11 @@ export default [
         description: "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
         logo: "http://www.universityvillageclinic.com/DSC_0226resize.jpg",
         tags: ["onCampus", "medical", "walkIn"],
-        phone:" 604-222-2273 (ext. 1)",
+        phone:"604-222-2273 (ext. 1)",
         social: {
             "website": "http://www.universityvillageclinic.com/",
         },
-        email: "",
+        email: "n/a",
         address: "5933 Birney Avenue\nVancouver, BC V6T 1W5",
         hours: {
             "monday": "8:00am-6:00pm",
@@ -160,7 +161,7 @@ export default [
         description: "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
         logo: "http://robstef.com/wrk/uploads/2018/03/IMG_2794_2opt.jpg",
         tags: ["onCampus", "medical", "walkIn"],
-        phone:" 604-822-7011",
+        phone:"604-822-7011",
         social: {
             "website": "https://students.ubc.ca/health/student-health-service/nurse-campus",
         },
@@ -181,7 +182,7 @@ export default [
         description: "The UBC Psychology Clinic offers professional psychological services in the form of (mostly) individual therapy and group treatment.",
         logo: "https://www.indstate.edu/cas/sites/arts.indstate.edu/files/Psych-Clinic/Psych1_0.jpg",
         tags: ["onCampus", "professional", "appointment"],
-        phone:" 604-822-3005",
+        phone:"604-822-3005",
         social: {
             "website": "https://clinic.psych.ubc.ca/",
         },
@@ -202,7 +203,7 @@ export default [
         description: "Speak with and ask Wellness Peer Educators about everyday concerns related to health, relationships, and workload.",
         logo: "https://i.imgur.com/KwUsppr.jpg",
         tags: ["onCampus", "peer", "walkIn"],
-        phone:" 604-822-8450",
+        phone:"604-822-8450",
         social: {
             "website": "https://students.ubc.ca/health/wellness-centre",
         },
@@ -223,7 +224,7 @@ export default [
         description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff and helps connect students to other resources.",
         logo: "https://cdn-az.allevents.in/banners/81acff4f3843844b6f526bf5ca6ee7af",
         tags: ["onCampus", "walkIn"],
-        phone:" 604-822-9246",
+        phone:"604-822-9246",
         social: {
             "website": "https://www.ams.ubc.ca/student-services/speakeasy/",
         },
@@ -244,7 +245,7 @@ export default [
         description: "Crisis/short-term assistance, support groups, and advocacy for survivors of sexualized violence.",
         logo: "http://amssasc.ca/wp-content/uploads/2015/08/logo.png",
         tags: ["onCampus", "professional", "appointment", "walkIn"], //add: sexualHealth
-        phone:" 604-827-5180",
+        phone:"604-827-5180",
         social: {
             "website": "https://amssasc.ca/",
             "facebook": "https://www.facebook.com/AMSSASCUBC/"
@@ -266,7 +267,7 @@ export default [
         description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/17021860_100910457107461_488025490832043254_n.png?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=d9d7b240caa7db4bf74865e18af22bf8&oe=5D33684F",
         tags: ["onCampus", "peer", "recurring", "walkIn"], //add: substanceAbuse
-        phone:" 604-827-1728",
+        phone:"604-827-1728",
         social: {
             "website": "https://www.ams.ubc.ca/student-services/vice/",
             "facebook": "https://www.facebook.com/UBC.AMS.Vice/"
@@ -285,16 +286,16 @@ export default [
     },
     {
         name: "AMS The Pride Collective", 
-        description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/17021860_100910457107461_488025490832043254_n.png?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=d9d7b240caa7db4bf74865e18af22bf8&oe=5D33684F",
-        tags: ["onCampus", "recurring", "walkIn"], //add: LGBTQ+
-        phone:" 604-827-1728",
+        description: "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
+        logo: "https://static.wixstatic.com/media/f781ec_124a33daa3f74bc1b5df27c0f6718405.jpeg",
+        tags: ["onCampus", "recurring"], //add: LGBTQ+
+        phone:"n/a",
         social: {
-            "website": "https://www.ams.ubc.ca/student-services/vice/",
-            "facebook": "https://www.facebook.com/UBC.AMS.Vice/"
+            "website": "https://www.prideubc.com/",
+            "facebook": "https://www.facebook.com/prideubc/"
         },
-        email: "vice@ams.ubc.ca",
-        address: "UBC AMS Nest\nRoom 3107",
+        email: "prideubc@gmail.com",
+        address: "UBC AMS Nest\nRoom 2103",
         hours: {
             "monday": "n/a",
             "tuesday": "n/a",
