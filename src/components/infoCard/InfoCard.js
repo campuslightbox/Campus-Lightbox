@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Card, Image, Icon, Popup } from 'semantic-ui-react';
-import 'components/infoCard/InfoCard.css';
 import Tags from 'static/Tags';
 
 import _ from 'underscore';
@@ -9,6 +8,14 @@ import moment from 'moment';
 const style={
     infoCard: {
         width: 260,
+    },
+    infoCardSection: {
+        flexGrow: 0,
+    },
+    infoCardLast: {
+        flexGrow: 1,
+        border: 'none',
+        padding: 0,
     },
     link: {
         color: 'blue',
@@ -125,7 +132,7 @@ class InfoCard extends React.Component {
 
     renderName = () => {
         return (
-            <Card.Content key="back-header">
+            <Card.Content key="back-header" style={style.infoCardSection}>
                 <Card.Header style={{color: '#0E6EB8', float: 'left'}}>{this.props.name}</Card.Header>
             </Card.Content>
         );
@@ -133,7 +140,7 @@ class InfoCard extends React.Component {
 
     renderPhoneNumber = () => {
         return (
-            <Card.Content key="back-contact">
+            <Card.Content key="back-contact" style={style.infoCardSection}>
                 <Card.Header>Phone number</Card.Header>
                 <Card.Description>{this.props.phone}</Card.Description>
             </Card.Content>
@@ -142,7 +149,7 @@ class InfoCard extends React.Component {
 
     renderAddress = () => {
         return (
-            <Card.Content key="back-address">
+            <Card.Content key="back-address" style={style.infoCardSection}>
                 <Card.Header>Address</Card.Header>
                 {this.props.address && <Card.Description>{this.props.address}</Card.Description>}
             </Card.Content>
@@ -151,7 +158,7 @@ class InfoCard extends React.Component {
 
     renderSocialAndEmail = () => {
         return (
-            <Card.Content key="back-social-email">
+            <Card.Content key="back-social-email" style={style.infoCardSection}>
                 <Card.Header>Social</Card.Header>
                 <Card.Description>
                     <Button.Group basic size="tiny">
@@ -197,11 +204,18 @@ class InfoCard extends React.Component {
         }
 
         return (
-            <Card.Content key="back-hours">
+            <Card.Content key="back-hours" style={style.infoCardSection}>
                 <Card.Header>Hours of Operation</Card.Header>
                 {content}
             </Card.Content>
         );
+    }
+
+    renderLastElement = () => {
+        // Hack to make sure button sticks to the bottom of the card
+        return (
+            <Card.Content key="back-last" style={style.infoCardLast} />
+        )
     }
 
     _capitalize = (text) => {
@@ -230,6 +244,8 @@ class InfoCard extends React.Component {
         if (this.props.hours) {
             views.push(this.renderHours());
         }
+
+        views.push(this.renderLastElement());
 
         return views;
     }
