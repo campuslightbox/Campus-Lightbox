@@ -37,8 +37,8 @@ class Header extends React.Component {
                     </div>
                     <div className = "in1" >
                         <div className = "stuff">
-                            <h1> <img src={require("./logo2.png")}
-                                      alt = "Campus Lightbox" /> </h1>
+                            <h1> <img style={{width: 400, height: 148}} src={require("./logo2.png")}
+                                      alt = "Campus Lightbox" size="small"/> </h1>
                             <h3>Click a resource button to get started</h3>
                             <Button inverted size="large" style={style.button}
                                 onClick={() => this.onFilterClicked("peer")}>Peer</Button>
