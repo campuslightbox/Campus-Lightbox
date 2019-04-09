@@ -458,5 +458,26 @@ export default [
         hours: {
             "others": "Depends on your faculty, refer to website.",
         },
+    },
+    {
+        name: "Enrollment Services", 
+        description: "Get help with budgeting, loans, understanding UBC processes, financial planning.",
+        logo: "https://i.imgur.com/V3UEw2R.jpg",
+        tags: ["onCampus", "online", "professional", "walkIn", "financial"],
+        phone:"1-877-272-1422",
+        social: {
+            "website": "https://students.ubc.ca/about-student-services/enrolment-services-advisors",
+        },
+        email: "Depends on your faculty, refer to website.",
+        address: "Enrolment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
+        hours: {
+            "monday": "9:30am-4:00pm",
+            "tuesday": "10:00am-4:00pm",
+            "wednesday": "9:30am-4:00pm",
+            "thursday": "9:30am-4:00pm",
+            "friday": "9:30am-4:00pm",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
     }
 ];
