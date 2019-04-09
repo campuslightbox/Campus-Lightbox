@@ -150,20 +150,24 @@ class InfoCard extends React.Component {
     }
 
     renderSocialAndEmail = () => {
-        // TODO: make hyperlinks
         return (
             <Card.Content key="back-social-email">
                 <Card.Header>Social</Card.Header>
                 <Card.Description>
                     <Button.Group basic size="tiny">
-                        {this.props.email && <Popup trigger={<Button icon='mail outline'/>}
-                            content='Copy email to clipboard' basic size='small'/>}
-                        {this.props.social && this.props.social.website && <Popup trigger={<Button icon='world'/>}
+                        {this.props.social && this.props.social.website && <Popup trigger={<Button icon='world' onClick={() => window.open(this.props.social.website)}/>}
                             content='Visit website' basic size='small'/>}
-                        {this.props.social && this.props.social.facebook && <Popup trigger={<Button icon='facebook'/>}
+                        {this.props.social && this.props.social.facebook && <Popup trigger={<Button icon='facebook' onClick={() => window.open(this.props.social.facebook)}/>}
                             content='Visit Facebook' basic size='small'/>}
                     </Button.Group>
                 </Card.Description>
+                {
+                    this.props.email &&
+                    <Card.Description style={{marginTop: 4}}>
+                        <Icon name='mail outline'/>
+                        {this.props.email}
+                    </Card.Description>
+                }
             </Card.Content>
         );
     }
