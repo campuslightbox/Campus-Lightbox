@@ -443,5 +443,20 @@ export default [
         hours: {
             "others": "24/7",
         },
+    },
+    {
+        name: "UBC Academic Advising", 
+        description: "Help with program planning, degree requirements, and other course-related questions.",
+        logo: "https://i.imgur.com/CQajm70.jpg",
+        tags: ["onCampus", "online", "professional", "appointment", "academic"],
+        phone:"Depends on your faculty, refer to website.",
+        social: {
+            "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
+        },
+        email: "Depends on your faculty, refer to website.",
+        address: "Depends on your faculty, refer to website.",
+        hours: {
+            "others": "Depends on your faculty, refer to website.",
+        },
     }
 ];
