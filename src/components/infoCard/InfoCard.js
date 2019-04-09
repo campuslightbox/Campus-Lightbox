@@ -59,7 +59,11 @@ class InfoCard extends React.Component {
         // Check if resource is 24/7
         if (this.props.tags.indexOf('allday') > -1) {
             return (
-                <Card.Meta><Icon name='circle' color="green"/>Open 24 / 7<Icon name='caret down'/></Card.Meta>
+                <Card.Meta>
+                    <Icon name='circle' color="green"/>
+                    Open 24 / 7
+                    <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
+                </Card.Meta>
             );
         }
 
@@ -78,18 +82,29 @@ class InfoCard extends React.Component {
             const iconColor = isOpen ? 'green' : 'red';
 
             return (
-                <Card.Meta><Icon name='circle' color={iconColor}/>{this.props.hours[todayDay]}<Icon name='caret down'/></Card.Meta>
+                <Card.Meta>
+                    <Icon name='circle' color={iconColor}/>
+                    {this.props.hours[todayDay]}
+                    <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
+                </Card.Meta>
             );
         } else {
             if (this.props.hours.others) {
                 // Resource has alternative hours
                 return (
-                    <Card.Meta>View Hours Information<Icon name='caret down'/></Card.Meta>
+                    <Card.Meta>
+                        View Hours Information
+                        <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
+                    </Card.Meta>
                 );
             } else {
                 // Resource is closed
                 return (
-                    <Card.Meta><Icon name='circle' color="red"/>Closed<Icon name='caret down'/></Card.Meta>
+                    <Card.Meta>
+                        <Icon name='circle' color="red"/>
+                        Closed
+                        <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
+                    </Card.Meta>
                 );
             }
         }
