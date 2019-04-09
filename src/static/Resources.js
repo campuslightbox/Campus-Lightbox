@@ -51,7 +51,6 @@ export default [
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
         logo: "https://ubcyogaclub.files.wordpress.com/2014/12/10486_10151094924483521_1103997231_n-1.png",
         tags: ["onCampus", "generalAwareness"], 
-        phone:"n/a",
         social: {
             "website": "ubcyogaclub.com",
         }, 
@@ -66,7 +65,6 @@ export default [
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/11173354_939496622751482_114544511837677719_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=1eb4418bec882fffd6fd47326e0353a6&oe=5D04DB48",
         tags: ["onCampus", "professional", "walkIn", "spiritual"],
-        phone:"n/a",
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
             "facebook": "https://www.facebook.com/UMCAssociation/",
@@ -123,7 +121,6 @@ export default [
         social: {
             "website": "http://www.universityvillageclinic.com/",
         },
-        email: "n/a",
         address: "#228 2155 Allison Road\nVancouver, BC V6T 1T5",
         hours: {
             "monday": "8:00am-6:00pm",
@@ -144,7 +141,6 @@ export default [
         social: {
             "website": "http://www.universityvillageclinic.com/",
         },
-        email: "n/a",
         address: "5933 Birney Avenue\nVancouver, BC V6T 1W5",
         hours: {
             "monday": "8:00am-6:00pm",
@@ -188,9 +184,6 @@ export default [
         },
         email: "clinic@psych.ubc.ca",
         address: "Douglas T. Kenny Building\n2136 West Mall\nVancouver, BC V6T 1Z4",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "Wellness Centre", 
@@ -268,48 +261,36 @@ export default [
         },
         email: "vice@ams.ubc.ca",
         address: "UBC AMS Nest\nRoom 3107",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "AMS The Pride Collective", 
         description: "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
         logo: "https://static.wixstatic.com/media/f781ec_124a33daa3f74bc1b5df27c0f6718405.jpeg",
         tags: ["onCampus", "recurring", "lgbt"],
-        phone:"n/a",
         social: {
             "website": "https://www.prideubc.com/",
             "facebook": "https://www.facebook.com/prideubc/",
         },
         email: "prideubc@gmail.com",
         address: "UBC AMS Nest\nRoom 2103",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "Women’s Center", 
         description: "Support and resources for women on campus, including informational brochures, menstrual products, safer sex products, pregnancy tests, and more.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/947350_691791094293185_3385537979808396418_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=d4c2ef5b46dfce60eda2b55fdaa64ebb&oe=5D36A399",
         tags: ["onCampus", "walkIn", "womensHealth"],
-        phone:"n/a",
         social: {
             "website": "http://www.ubcwomenscentre.com",
             "facebook": "https://www.facebook.com/ubcwomenscentre/",
         },
         email: "ubcwomenscentre@gmail.com",
         address: "UBC AMS Nest\nRoom 2113",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "The Kaleidoscope", 
         description: "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/527664_372531339461153_287434995_n.jpg?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=03a81708aeb0a15b50d92e23325e6858&oe=5D38F31C",
         tags: ["onCampus", "peer", "recurring"],
-        phone:"n/a",
         social: {
             "website": "http://the-kaleidoscope.com/",
             "facebook": "https://www.facebook.com/kaleidoscopeUBC",
@@ -325,7 +306,6 @@ export default [
         description: "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
         logo: "https://pbs.twimg.com/profile_images/603349697504227328/G301mIfo_400x400.png",
         tags: ["onCampus", "peer", "recurring", "selfHarm"],
-        phone:"n/a",
         social: {
             "website": "https://vivreshare.org/support-group/",
             "facebook": "https://www.facebook.com/vivreSHARE",
@@ -341,30 +321,20 @@ export default [
         description: "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
         logo: "https://imgur.com/2JnBmrV.png",
         tags: ["onCampus", "generalAwareness", "events"],
-        phone:"n/a",
         social: {
             "website": "http://blogs.ubc.ca/ubcmhac/",
             "facebook": "https://www.facebook.com/UBCMHAC/",
         },
         email: "ubcmhac@gmail.com",
         address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "UBC Jack Chapter", 
         description: "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
         logo: "https://jack.org/getattachment/d7c13f45-be16-4bda-9550-567ea206dc55/og-img.aspx",
         tags: ["onCampus", "generalAwareness", "events"],
-        phone:"n/a",
         social: {
             "website": "http://legacy.jack.org/chapters/university-british-columbia",
-        },
-        email: "n/a",
-        address: "n/a",
-        hours: {
-            "others": "n/a",
         },
     },
     {
@@ -372,23 +342,17 @@ export default [
         description: "Zen meditation practice on campus. Advice & counsel on Zen Buddhist meditation and awakening to life.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/11951669_953683761359332_8598845998263703923_o.png?_nc_cat=111&_nc_ht=scontent.fyvr3-1.fna&oh=4eae0a61171e45dd6964962772080219&oe=5D48FA18",
         tags: ["onCampus", "generalAwareness", "recurring"],
-        phone:"n/a",
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
             "facebook": "https://www.facebook.com/UBCZen/",
         },
-        email: "n/a",
         address: "Check Facebook page for times & locations",
-        hours: {
-            "others": "n/a",
-        },
     },
     {
         name: "UBC Meditation Community", 
         description: "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/14242253_513839475493343_1512661762216198297_o.png?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=bfa7077d728c835546de79b61c090e16&oe=5D075F2E",
         tags: ["onCampus", "generalAwareness", "recurring"],
-        phone:"n/a",
         social: {
             "website": "http://blogs.ubc.ca/meditation/",
             "facebook": "https://www.facebook.com/UBCMeditationCommunity/",
@@ -408,8 +372,6 @@ export default [
         social: {
             "website": "https://crisiscentre.bc.ca/",
         },
-        email: "n/a",
-        address: "n/a",
         hours: {
             "others": "24/7, 365 days a year",
         },
@@ -438,8 +400,6 @@ export default [
         social: {
             "website": "http://www.studentcare.ca/rte/en/UniversityofBritishColumbiaAMSGSS_EmpowerMe_EmpowerMe",
         },
-        email: "n/a",
-        address: "n/a",
         hours: {
             "others": "24/7",
         },

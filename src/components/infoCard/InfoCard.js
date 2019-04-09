@@ -21,7 +21,7 @@ class InfoCard extends React.Component {
         this.allTags = Tags.getAllTags();
 
         this.state = {
-            side: "front",
+            side: "back",
         }
     }
 
@@ -50,7 +50,6 @@ class InfoCard extends React.Component {
                 <Card.Meta style={{marginTop: 8}}>
                     {_.map(this.props.tags, tag => this.renderTagIcon(tag))}
                 </Card.Meta>
-                <Button onClick={this.onContactButtonClick} style={{marginTop: 18}} fluid>View Details</Button>
             </Card.Content>
         ];
     }
@@ -68,19 +67,34 @@ class InfoCard extends React.Component {
         />;
     }
 
-    renderBack = () => {
-        return [
+    renderName = () => {
+        return (
             <Card.Content key="back-header">
                 <Card.Header style={{color: '#0E6EB8', float: 'left'}}>{this.props.name}</Card.Header>
-            </Card.Content>,
+            </Card.Content>
+        );
+    }
+
+    renderPhoneNumber = () => {
+        return (
             <Card.Content key="back-contact">
                 <Card.Header>Phone number</Card.Header>
                 <Card.Description>{this.props.phone}</Card.Description>
-            </Card.Content>,
+            </Card.Content>
+        );
+    }
+
+    renderAddress = () => {
+        return (
             <Card.Content key="back-address">
                 <Card.Header>Address</Card.Header>
-                <Card.Description>{this.props.address}</Card.Description>
-            </Card.Content>,
+                {this.props.address && <Card.Description>{this.props.address}</Card.Description>}
+            </Card.Content>
+        );
+    }
+
+    renderHours = () => {
+        return (
             <Card.Content key="back-hours">
                 <Card.Header>Hours of Operation</Card.Header>
                 <Card.Description>Monday: 9:00 - 15:00</Card.Description>
@@ -90,14 +104,36 @@ class InfoCard extends React.Component {
                 <Card.Description>Friday: 9:00 - 15:00</Card.Description>
                 <Card.Description>Saturday: Closed</Card.Description>
                 <Card.Description>Sunday: Closed</Card.Description>
-                <Button icon onClick={this.onCloseButtonClick} style={{marginTop: 18}} fluid><Icon name='close'/> Go Back</Button>
-            </Card.Content>,
-        ];
+            </Card.Content>
+        );
+    }
+
+    renderBack = () => {
+        const views = [this.renderName()];
+
+        if (this.props.phone) {
+            views.push(this.renderPhoneNumber());
+        }
+
+        if (this.props.address) {
+            views.push(this.renderAddress());
+        }
+
+        if (this.props.hours) {
+            views.push(this.renderHours());
+        }
+
+        return views;
     }
 
     render = () => (
         <Card style={style.infoCard}>
             {this.state.side === "front" ? this.renderFront() : this.renderBack()}
+            {
+                this.state.side === "front" ? 
+                    <Button attached='bottom' onClick={this.onContactButtonClick}>View Details</Button> : 
+                    <Button attached='bottom' icon onClick={this.onCloseButtonClick}><Icon name='close'/> Go Back</Button>
+            }
         </Card>
     )
 }
