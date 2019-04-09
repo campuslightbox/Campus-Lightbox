@@ -436,5 +436,27 @@ export default [
             "saturday": "n/a",
             "sunday": "n/a",
         },
+    },
+    {
+        name: "UBC Meditation Community", 
+        description: "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
+        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/14242253_513839475493343_1512661762216198297_o.png?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=bfa7077d728c835546de79b61c090e16&oe=5D075F2E",
+        tags: ["onCampus", "recurring"], //add: generalAwareness
+        phone:"n/a",
+        social: {
+            "website": "http://blogs.ubc.ca/meditation/",
+            "facebook": "https://www.facebook.com/UBCMeditationCommunity/",
+        },
+        email: "ubcmeditation@gmail.com",
+        address: "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+        hours: {
+            "monday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "tuesday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "wednesday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "thursday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "friday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "saturday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "sunday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+        },
     }
 ];
