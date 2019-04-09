@@ -7,29 +7,18 @@ import Resources from 'static/Resources';
 import 'containers/mainContainer/MainContainer.css';
 
 class MainContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            filter: {}
-        };
-    }
-
-    onFilterChange = (newFilter) => {
-        this.setState({
-            filter: newFilter
-        });
-    }
-
     render = () => (
         <Container style={{marginTop: 36}}>
             <Grid stackable compact="true">
                 <Grid.Column width={4}>
                     <Filter
-                        onFilterChange={this.onFilterChange}
+                        filter={this.props.filter}
+                        onFilterChange={this.props.onFilterChange}
+                        onClearFilter={this.props.onClearFilter}
                     />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                    <CardContainer resources={Resources} filter={this.state.filter}/>
+                    <CardContainer resources={Resources} filter={this.props.filter}/>
                 </Grid.Column>
             </Grid>
         </Container>

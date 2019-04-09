@@ -9,11 +9,6 @@ class Filter extends React.Component {
         super(props);
         
         this.filterList = this.transformTagsToFilterList(Tags.getAllTags());
-
-        this.state = _.reduce(Tags.getCategories(), (obj, category) => {
-            obj[category] = [];
-            return obj;
-        }, {});
     }
 
     transformTagsToFilterList(tags) {
@@ -22,14 +17,6 @@ class Filter extends React.Component {
         });
 
         return _.groupBy(_.values(tags), 'category');
-    }
-
-    getDisplayNameForCategory(category) {
-        return (category === "additional") ? "Additional Tags" : this.capitalize(category);
-    }
-
-    capitalize = (text) => {
-        return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
     createGroups = () => {
@@ -53,50 +40,29 @@ class Filter extends React.Component {
         });
     }
 
+    getDisplayNameForCategory(category) {
+        return (category === "additional") ? "Additional Tags" : this._capitalize(category);
+    }
+
+    _capitalize = (text) => {
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
     createList = (category, items) => {
         return items.map(item => {
             // Find if the item is currently selecteds
-            let existingItem = _.find(this.state[category], (currItem) => {
+            let existingItem = _.find(this.props.filter[category], (currItem) => {
                 return currItem === item.tag
             });
 
             return (<List.Item key={item.tag}>
                 <Checkbox
                     checked={existingItem ? true : false}
-                    onClick={() => this.onFilterClick(category, item.tag)} 
+                    onClick={() => this.props.onFilterChange(category, item.tag)} 
                     label={item.displayName}
                 />
             </List.Item>);
         });
-    }
-
-    onFilterClick = (category, item) => {
-        // Find if the filter user clicked on is already selected
-        let existingItem = _.find(this.state[category], (currItem) => {
-            return currItem === item;
-        })
-
-        let newState = _.clone(this.state);
-
-        if (existingItem) {
-            // Already selected, unselect it
-            newState[category] = _.filter(newState[category], (currItem) => {
-                return currItem !== existingItem;
-            });
-        } else {
-            // Not selected, select it
-            newState[category].push(item);
-        }
-
-        this.setState(newState);
-        this.props.onFilterChange(newState);
-    }
-
-    onClearFilter = () => {
-        let newState = _.mapObject(this.state, () => []);
-        
-        this.setState(newState);
-        this.props.onFilterChange(newState);
     }
 
     render = () => (
@@ -104,7 +70,7 @@ class Filter extends React.Component {
             {this.createGroups()}
             <Grid.Row>
                 <Button 
-                    onClick={this.onClearFilter}
+                    onClick={this.props.onClearFilter}
                     content="Clear Filter"
                     primary />
             </Grid.Row>

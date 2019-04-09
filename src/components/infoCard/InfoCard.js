@@ -5,7 +5,7 @@ import Tags from 'static/Tags';
 import _ from 'underscore';
 import moment from 'moment';
 
-const style={
+const style= {
     infoCard: {
         width: 260,
     },
@@ -130,7 +130,7 @@ class InfoCard extends React.Component {
     renderName = () => {
         return (
             <Card.Content key="back-header" style={style.infoCardSection}>
-                <Card.Header style={{color: '#0E6EB8', float: 'left'}}>{this.props.name}</Card.Header>
+                <Card.Header style={{float: 'left'}}>{this.props.name}</Card.Header>
             </Card.Content>
         );
     }
@@ -141,7 +141,7 @@ class InfoCard extends React.Component {
         return (
             <Card.Content key="back-contact" style={style.infoCardSection}>
                 <Card.Header>Phone number</Card.Header>
-                <Card.Description><a href={link} target="_blank">{this.props.phone}</a></Card.Description>
+                <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.phone}</a></Card.Description>
             </Card.Content>
         );
     }
@@ -152,7 +152,7 @@ class InfoCard extends React.Component {
         return (
             <Card.Content key="back-address" style={style.infoCardSection}>
                 <Card.Header>Address</Card.Header>
-                {this.props.address && <Card.Description><a href={link} target="_blank">{this.props.address}</a></Card.Description>}
+                {this.props.address && <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.address}</a></Card.Description>}
             </Card.Content>
         );
     }
@@ -175,7 +175,7 @@ class InfoCard extends React.Component {
                     this.props.email &&
                     <Card.Description style={{marginTop: 4}}>
                         <Icon name='mail outline'/>
-                        <a href={'mailto:' + this.props.email} target="_blank">{this.props.email}</a>
+                        <a href={'mailto:' + this.props.email} target="_blank" rel="noopener noreferrer">{this.props.email}</a>
                     </Card.Description>
                 }
             </Card.Content>
