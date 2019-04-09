@@ -305,5 +305,27 @@ export default [
             "saturday": "n/a",
             "sunday": "n/a",
         },
+    },
+    {
+        name: "Women’s Center", 
+        description: "Support and resources for women on campus, including informational brochures, menstrual products, safer sex products, pregnancy tests, and more.",
+        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/947350_691791094293185_3385537979808396418_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=d4c2ef5b46dfce60eda2b55fdaa64ebb&oe=5D36A399",
+        tags: ["onCampus", "walkIn"], //add: WomensHealth
+        phone:"n/a",
+        social: {
+            "website": "http://www.ubcwomenscentre.com",
+            "facebook": "https://www.facebook.com/ubcwomenscentre/"
+        },
+        email: "ubcwomenscentre@gmail.com",
+        address: "UBC AMS Nest\nRoom 2113",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
     }
 ];
