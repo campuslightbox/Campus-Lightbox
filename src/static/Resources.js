@@ -238,5 +238,49 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+    },
+    {
+        name: "AMS Sexual Assault Support Centre (SASC)", 
+        description: "Crisis/short-term assistance, support groups, and advocacy for survivors of sexualized violence.",
+        logo: "http://amssasc.ca/wp-content/uploads/2015/08/logo.png",
+        tags: ["onCampus", "professional", "appointment", "walkIn"], //sexual health
+        phone:" 604-827-5180",
+        social: {
+            "website": "https://amssasc.ca/",
+            "facebook": "https://www.facebook.com/AMSSASCUBC/"
+        },
+        email: "sasc@ams.ubc.ca",
+        address: "UBC AMS Nest\nRoom 3127",
+        hours: {
+            "monday": "8:00am-10:00pm",
+            "tuesday": "8:00am-10:00pm",
+            "wednesday": "8:00am-10:00pm",
+            "thursday": "8:00am-10:00pm",
+            "friday": "8:00am-10:00pm",
+            "saturday": "8:00am-10:00pm",
+            "sunday": "8:00am-10:00pm",
+        },
+    },
+    {
+        name: "AMS VICE", 
+        description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
+        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/17021860_100910457107461_488025490832043254_n.png?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=d9d7b240caa7db4bf74865e18af22bf8&oe=5D33684F",
+        tags: ["onCampus", "peer", "recurring", "walkIn"], //Substance Abuse
+        phone:" 604-827-1728",
+        social: {
+            "website": "https://www.ams.ubc.ca/student-services/vice/",
+            "facebook": "https://www.facebook.com/UBC.AMS.Vice/"
+        },
+        email: "vice@ams.ubc.ca",
+        address: "UBC AMS Nest\nRoom 3107",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
     }
 ];
