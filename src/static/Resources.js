@@ -24,6 +24,7 @@
             "sunday": "",
             "others": "",
         },
+        notes: ""
     }
 */
 
@@ -162,7 +163,6 @@ export default [
             "website": "https://students.ubc.ca/health/student-health-service/nurse-campus",
         },
         email: "student.health@ubc.ca",
-        address: "Dependent on Schedule - Refer to website",
         hours: {
             "monday": "12:00pm-6:00pm",
             "tuesday": "10:00am-6:00pm",
@@ -172,6 +172,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+        notes: "Address depends on schedule - refer to website"
     },
     {
         name: "UBC Psychology Clinic", 
@@ -296,7 +297,7 @@ export default [
             "facebook": "https://www.facebook.com/kaleidoscopeUBC",
         },
         email: "info@the-kaleidoscope.com",
-        address: "Weekly Meeting Location\nBuchanan Block D312",
+        address: "Buchanan Block D312\n1866 Main Mall\nVancouver, BC V6T 1Z1",
         hours: {
             "wednesday": "5:30pm-6:30pm",
         },
@@ -346,7 +347,7 @@ export default [
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
             "facebook": "https://www.facebook.com/UBCZen/",
         },
-        address: "Check Facebook page for times & locations",
+        notes: "Check Facebook page for times & locations",
     },
     {
         name: "UBC Meditation Community", 
@@ -358,7 +359,7 @@ export default [
             "facebook": "https://www.facebook.com/UBCMeditationCommunity/",
         },
         email: "ubcmeditation@gmail.com",
-        address: "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+        notes: "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
         hours: {
             "others": "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
         },
@@ -409,15 +410,10 @@ export default [
         description: "Help with program planning, degree requirements, and other course-related questions.",
         logo: "https://i.imgur.com/CQajm70.jpg",
         tags: ["onCampus", "online", "professional", "appointment", "academic"],
-        phone:"Depends on your faculty, refer to website.",
         social: {
             "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
         },
-        email: "Depends on your faculty, refer to website.",
-        address: "Depends on your faculty, refer to website.",
-        hours: {
-            "others": "Depends on your faculty, refer to website.",
-        },
+        notes: "For contact information, address, and hours please refer to your faculty website"
     },
     {
         name: "Enrollment Services", 
@@ -428,7 +424,6 @@ export default [
         social: {
             "website": "https://students.ubc.ca/about-student-services/enrolment-services-advisors",
         },
-        email: "Depends on your faculty, refer to website.",
         address: "Enrolment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
         hours: {
             "monday": "9:30am-4:00pm",
@@ -439,5 +434,6 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+        notes: "See your faculty website for email"
     }
 ];

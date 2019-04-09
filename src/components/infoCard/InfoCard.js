@@ -16,9 +16,6 @@ const style={
         flexGrow: 1,
         border: 'none',
         padding: 0,
-    },
-    link: {
-        color: 'blue',
     }
 }
 
@@ -139,19 +136,23 @@ class InfoCard extends React.Component {
     }
 
     renderPhoneNumber = () => {
+        const link = 'tel://1-' + this.props.phone;
+
         return (
             <Card.Content key="back-contact" style={style.infoCardSection}>
                 <Card.Header>Phone number</Card.Header>
-                <Card.Description>{this.props.phone}</Card.Description>
+                <Card.Description><a href={link} target="_blank">{this.props.phone}</a></Card.Description>
             </Card.Content>
         );
     }
 
     renderAddress = () => {
+        const link = 'https://maps.google.com/?q=' + this.props.address;
+
         return (
             <Card.Content key="back-address" style={style.infoCardSection}>
                 <Card.Header>Address</Card.Header>
-                {this.props.address && <Card.Description>{this.props.address}</Card.Description>}
+                {this.props.address && <Card.Description><a href={link} target="_blank">{this.props.address}</a></Card.Description>}
             </Card.Content>
         );
     }
@@ -162,7 +163,9 @@ class InfoCard extends React.Component {
                 <Card.Header>Social</Card.Header>
                 <Card.Description>
                     <Button.Group basic size="tiny">
-                        {this.props.social && this.props.social.website && <Popup trigger={<Button icon='world' onClick={() => window.open(this.props.social.website)}/>}
+                        {
+                            this.props.social && this.props.social.website && 
+                            <Popup trigger={<Button icon='world' onClick={() => window.open(this.props.social.website)}/>}
                             content='Visit website' basic size='small'/>}
                         {this.props.social && this.props.social.facebook && <Popup trigger={<Button icon='facebook' onClick={() => window.open(this.props.social.facebook)}/>}
                             content='Visit Facebook' basic size='small'/>}
@@ -172,7 +175,7 @@ class InfoCard extends React.Component {
                     this.props.email &&
                     <Card.Description style={{marginTop: 4}}>
                         <Icon name='mail outline'/>
-                        {this.props.email}
+                        <a href={'mailto:' + this.props.email} target="_blank">{this.props.email}</a>
                     </Card.Description>
                 }
             </Card.Content>
@@ -211,6 +214,19 @@ class InfoCard extends React.Component {
         );
     }
 
+    renderNotes = () => {
+        if (!this.props.notes) {
+            return;
+        }
+
+        return (
+            <Card.Content key="back-notes" style={style.infoCardSection}>
+                <Card.Header>Notes</Card.Header>
+                {this.props.notes}
+            </Card.Content>
+        );
+    }
+
     renderLastElement = () => {
         // Hack to make sure button sticks to the bottom of the card
         return (
@@ -243,6 +259,10 @@ class InfoCard extends React.Component {
 
         if (this.props.hours) {
             views.push(this.renderHours());
+        }
+
+        if (this.props.notes) {
+            views.push(this.renderNotes());
         }
 
         views.push(this.renderLastElement());
