@@ -4,6 +4,7 @@ import 'components/infoCard/InfoCard.css';
 import Tags from 'static/Tags';
 
 import _ from 'underscore';
+import moment from 'moment';
 
 const style={
     infoCard: {
@@ -123,12 +124,14 @@ class InfoCard extends React.Component {
             content.push(<Card.Description key='others'>{this.props.hours.others}</Card.Description>);
         } else {
             const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-            _.each(days, dayInWeek => {
+            _.each(days, (dayInWeek, index) => {
                 const hoursForDay = this.props.hours[dayInWeek];
+                const isToday = (index + 1) === moment().isoWeekday();
 
                 content.push(
                     <Card.Description key={dayInWeek}>
                         {this._capitalize(dayInWeek).slice(0, 3)}: {(!hoursForDay || hoursForDay === 'closed') ? 'Closed' : hoursForDay}
+                        {isToday && <Icon name='circle' color="green" size='small' style={{marginLeft:4}}/>}
                     </Card.Description>
                 );
             });
