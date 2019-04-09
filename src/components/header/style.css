@@ -3,6 +3,8 @@
   height: 100%;
   margin: auto;
   display: table;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-image: url(bg.jpg);
 }
