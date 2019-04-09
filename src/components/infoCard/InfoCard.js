@@ -93,6 +93,25 @@ class InfoCard extends React.Component {
         );
     }
 
+    renderSocialAndEmail = () => {
+        // TODO: make hyperlinks
+        return (
+            <Card.Content key="back-social-email">
+                <Card.Header>Social</Card.Header>
+                <Card.Description>
+                    <Button.Group basic size="tiny">
+                        {this.props.email && <Popup trigger={<Button icon='mail outline'/>}
+                            content='Copy email to clipboard' basic size='small'/>}
+                        {this.props.social && this.props.social.website && <Popup trigger={<Button icon='world'/>}
+                            content='Visit website' basic size='small'/>}
+                        {this.props.social && this.props.social.facebook && <Popup trigger={<Button icon='facebook'/>}
+                            content='Visit Facebook' basic size='small'/>}
+                    </Button.Group>
+                </Card.Description>
+            </Card.Content>
+        );
+    }
+
     renderHours = () => {
         return (
             <Card.Content key="back-hours">
@@ -117,6 +136,10 @@ class InfoCard extends React.Component {
 
         if (this.props.address) {
             views.push(this.renderAddress());
+        }
+
+        if (this.props.email || this.props.social) {
+            views.push(this.renderSocialAndEmail());
         }
 
         if (this.props.hours) {
