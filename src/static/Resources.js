@@ -371,5 +371,27 @@ export default [
             "saturday": "Check website for more info",
             "sunday": "Check website for more info",
         },
+    },
+    {
+        name: "Mental Health Awareness Club", 
+        description: "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
+        logo: "https://imgur.com/2JnBmrV.png",
+        tags: ["onCampus"], //add: events, generalAwareness
+        phone:"n/a",
+        social: {
+            "website": "http://blogs.ubc.ca/ubcmhac/",
+            "facebook": "https://www.facebook.com/UBCMHAC/"
+        },
+        email: "ubcmhac@gmail.com",
+        address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
     }
 ];
