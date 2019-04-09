@@ -22,7 +22,7 @@ class InfoCard extends React.Component {
         this.allTags = Tags.getAllTags();
 
         this.state = {
-            side: "back",
+            side: "front",
         }
     }
 
@@ -47,12 +47,52 @@ class InfoCard extends React.Component {
                 <Card.Description>{this.props.description}</Card.Description>
             </Card.Content>,
             <Card.Content key="front-extra" extra>
-                <Card.Meta><Icon name='circle' color="green"/>9am - 3pm<Icon name='caret down'/></Card.Meta>
+                {this.props.hours && this.renderTodayHours()}
                 <Card.Meta style={{marginTop: 8}}>
                     {_.map(this.props.tags, tag => this.renderTagIcon(tag))}
                 </Card.Meta>
             </Card.Content>
         ];
+    }
+
+    renderTodayHours = () => {
+        // Check if resource is 24/7
+        if (this.props.tags.indexOf('allday') > -1) {
+            return (
+                <Card.Meta><Icon name='circle' color="green"/>Open 24 / 7<Icon name='caret down'/></Card.Meta>
+            );
+        }
+
+        const todayDay = moment().format('dddd').toLowerCase();
+
+        if (this.props.hours[todayDay]) {
+            const hoursString = this.props.hours[todayDay];
+
+            const openString = hoursString.split('-')[0];
+            const closeString = hoursString.split('-')[1];
+
+            const todayOpen = moment(openString, "h:mma");
+            const todayClose = moment(closeString, "h:mma");
+            const isOpen = moment().isBetween(todayOpen, todayClose);
+
+            const iconColor = isOpen ? 'green' : 'red';
+
+            return (
+                <Card.Meta><Icon name='circle' color={iconColor}/>{this.props.hours[todayDay]}<Icon name='caret down'/></Card.Meta>
+            );
+        } else {
+            if (this.props.hours.others) {
+                // Resource has alternative hours
+                return (
+                    <Card.Meta>View Hours Information<Icon name='caret down'/></Card.Meta>
+                );
+            } else {
+                // Resource is closed
+                return (
+                    <Card.Meta><Icon name='circle' color="red"/>Closed<Icon name='caret down'/></Card.Meta>
+                );
+            }
+        }
     }
 
     renderTagIcon = (tag) => {
@@ -130,8 +170,8 @@ class InfoCard extends React.Component {
 
                 content.push(
                     <Card.Description key={dayInWeek}>
-                        {this._capitalize(dayInWeek).slice(0, 3)}: {(!hoursForDay || hoursForDay === 'closed') ? 'Closed' : hoursForDay}
-                        {isToday && <Icon name='circle' color="green" size='small' style={{marginLeft:4}}/>}
+                        {this._capitalize(dayInWeek).slice(0, 3)}: {!hoursForDay ? 'Closed' : hoursForDay}
+                        {isToday && <Icon name='star' size='small' style={{marginLeft:4}}/>}
                     </Card.Description>
                 );
             });

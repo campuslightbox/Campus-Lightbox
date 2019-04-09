@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Card, Label } from 'semantic-ui-react';
+import { Segment, Card } from 'semantic-ui-react';
 import 'containers/cardContainer/CardContainer.css';
 import InfoCard from 'components/infoCard/InfoCard';
 
@@ -44,7 +44,6 @@ class CardContainer extends React.Component {
 
         return (
             <Segment basic>
-                <Label style={{marginBottom: 16}}>{'DEBUG: ' + JSON.stringify(this.props.filter)}</Label>
                 <Card.Group>
                     {_.map(filteredResource, (resource, index) => <InfoCard key={index + ''} {...resource}/>)}
                 </Card.Group>
