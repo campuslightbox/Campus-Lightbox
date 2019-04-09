@@ -327,5 +327,27 @@ export default [
             "saturday": "n/a",
             "sunday": "n/a",
         },
+    },
+    {
+        name: "The Kaleidoscope", 
+        description: "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
+        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/527664_372531339461153_287434995_n.jpg?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=03a81708aeb0a15b50d92e23325e6858&oe=5D38F31C",
+        tags: ["onCampus", "peer", "recurring"],
+        phone:"n/a",
+        social: {
+            "website": "http://the-kaleidoscope.com/",
+            "facebook": "https://www.facebook.com/kaleidoscopeUBC"
+        },
+        email: "info@the-kaleidoscope.com",
+        address: "Weekly Meeting Location\nBuchanan Block D312",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "5:30pm-6:30pm",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
     }
 ];
