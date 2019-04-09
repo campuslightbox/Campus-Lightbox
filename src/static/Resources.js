@@ -248,7 +248,7 @@ export default [
         phone:"604-827-5180",
         social: {
             "website": "https://amssasc.ca/",
-            "facebook": "https://www.facebook.com/AMSSASCUBC/"
+            "facebook": "https://www.facebook.com/AMSSASCUBC/",
         },
         email: "sasc@ams.ubc.ca",
         address: "UBC AMS Nest\nRoom 3127",
@@ -270,7 +270,7 @@ export default [
         phone:"604-827-1728",
         social: {
             "website": "https://www.ams.ubc.ca/student-services/vice/",
-            "facebook": "https://www.facebook.com/UBC.AMS.Vice/"
+            "facebook": "https://www.facebook.com/UBC.AMS.Vice/",
         },
         email: "vice@ams.ubc.ca",
         address: "UBC AMS Nest\nRoom 3107",
@@ -292,7 +292,7 @@ export default [
         phone:"n/a",
         social: {
             "website": "https://www.prideubc.com/",
-            "facebook": "https://www.facebook.com/prideubc/"
+            "facebook": "https://www.facebook.com/prideubc/",
         },
         email: "prideubc@gmail.com",
         address: "UBC AMS Nest\nRoom 2103",
@@ -314,7 +314,7 @@ export default [
         phone:"n/a",
         social: {
             "website": "http://www.ubcwomenscentre.com",
-            "facebook": "https://www.facebook.com/ubcwomenscentre/"
+            "facebook": "https://www.facebook.com/ubcwomenscentre/",
         },
         email: "ubcwomenscentre@gmail.com",
         address: "UBC AMS Nest\nRoom 2113",
@@ -336,7 +336,7 @@ export default [
         phone:"n/a",
         social: {
             "website": "http://the-kaleidoscope.com/",
-            "facebook": "https://www.facebook.com/kaleidoscopeUBC"
+            "facebook": "https://www.facebook.com/kaleidoscopeUBC",
         },
         email: "info@the-kaleidoscope.com",
         address: "Weekly Meeting Location\nBuchanan Block D312",
@@ -358,7 +358,7 @@ export default [
         phone:"n/a",
         social: {
             "website": "https://vivreshare.org/support-group/",
-            "facebook": "https://www.facebook.com/vivreSHARE"
+            "facebook": "https://www.facebook.com/vivreSHARE",
         },
         email: "info@vivreshare.org",
         address: "Buchanan D304\n1866 Main Mall\nVancouver, BC V6T 1Z1",
@@ -380,10 +380,53 @@ export default [
         phone:"n/a",
         social: {
             "website": "http://blogs.ubc.ca/ubcmhac/",
-            "facebook": "https://www.facebook.com/UBCMHAC/"
+            "facebook": "https://www.facebook.com/UBCMHAC/",
         },
         email: "ubcmhac@gmail.com",
         address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
+    },
+    {
+        name: "UBC Jack Chapter", 
+        description: "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
+        logo: "https://jack.org/getattachment/d7c13f45-be16-4bda-9550-567ea206dc55/og-img.aspx",
+        tags: ["onCampus"], //add: events, generalAwareness
+        phone:"n/a",
+        social: {
+            "website": "http://legacy.jack.org/chapters/university-british-columbia",
+        },
+        email: "n/a",
+        address: "n/a",
+        hours: {
+            "monday": "n/a",
+            "tuesday": "n/a",
+            "wednesday": "n/a",
+            "thursday": "n/a",
+            "friday": "n/a",
+            "saturday": "n/a",
+            "sunday": "n/a",
+        },
+    },
+    {
+        name: "Zen at UBC", 
+        description: "Zen meditation practice on campus. Advice & counsel on Zen Buddhist meditation and awakening to life.",
+        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/11951669_953683761359332_8598845998263703923_o.png?_nc_cat=111&_nc_ht=scontent.fyvr3-1.fna&oh=4eae0a61171e45dd6964962772080219&oe=5D48FA18",
+        tags: ["onCampus", "recurring"], //add: generalAwareness
+        phone:"n/a",
+        social: {
+            "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
+            "facebook": "https://www.facebook.com/UBCZen/",
+        },
+        email: "n/a",
+        address: "Check Facebook page for times & locations",
         hours: {
             "monday": "n/a",
             "tuesday": "n/a",
