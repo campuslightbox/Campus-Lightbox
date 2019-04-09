@@ -349,5 +349,27 @@ export default [
             "saturday": "n/a",
             "sunday": "n/a",
         },
+    },
+    {
+        name: "SHARE UBC", 
+        description: "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
+        logo: "https://pbs.twimg.com/profile_images/603349697504227328/G301mIfo_400x400.png",
+        tags: ["onCampus", "peer", "recurring"], //add: selfHarm
+        phone:"n/a",
+        social: {
+            "website": "https://vivreshare.org/support-group/",
+            "facebook": "https://www.facebook.com/vivreSHARE"
+        },
+        email: "info@vivreshare.org",
+        address: "Buchanan D304\n1866 Main Mall\nVancouver, BC V6T 1Z1",
+        hours: {
+            "monday": "Check website for more info",
+            "tuesday": "Check website for more info",
+            "wednesday": "Check website for more info",
+            "thursday": "Check website for more info",
+            "friday": "Check website for more info",
+            "saturday": "Check website for more info",
+            "sunday": "Check website for more info",
+        },
     }
 ];
