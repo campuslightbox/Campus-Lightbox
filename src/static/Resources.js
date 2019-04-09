@@ -426,7 +426,22 @@ export default [
         email: "admin@wavaw.ca",
         address: "WAVAW Rape Crisis Centre\n1476 BC-7\nVancouver, BC V6H 4E8",
         hours: {
-            "others": "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+            "others": "24/7",
+        },
+    },
+    {
+        name: "Empower Me", 
+        description: "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
+        logo: "https://i.imgur.com/tgSZPd4.png",
+        tags: ["online", "professional"], //add: phone, 247
+        phone:"1-844-741-6389",
+        social: {
+            "website": "http://www.studentcare.ca/rte/en/UniversityofBritishColumbiaAMSGSS_EmpowerMe_EmpowerMe",
+        },
+        email: "n/a",
+        address: "n/a",
+        hours: {
+            "others": "24/7",
         },
     }
 ];
