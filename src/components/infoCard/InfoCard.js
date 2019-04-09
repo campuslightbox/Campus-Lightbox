@@ -113,18 +113,41 @@ class InfoCard extends React.Component {
     }
 
     renderHours = () => {
+        if (!this.props.hours) {
+            return;
+        }
+
+        const content = [];
+
+        if (this.props.hours.others) {
+            content.push(<Card.Description key='others'>{this.props.hours.others}</Card.Description>);
+        } else {
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+            _.each(days, dayInWeek => {
+                const hoursForDay = this.props.hours[dayInWeek];
+
+                content.push(
+                    <Card.Description key={dayInWeek}>
+                        {this._capitalize(dayInWeek).slice(0, 3)}: {(!hoursForDay || hoursForDay === 'closed') ? 'Closed' : hoursForDay}
+                    </Card.Description>
+                );
+            });
+        }
+
         return (
             <Card.Content key="back-hours">
                 <Card.Header>Hours of Operation</Card.Header>
-                <Card.Description>Monday: 9:00 - 15:00</Card.Description>
-                <Card.Description>Tuesday: 9:00 - 15:00</Card.Description>
-                <Card.Description>Wednesday: 9:00 - 15:00</Card.Description>
-                <Card.Description>Thursday: 9:00 - 15:00</Card.Description>
-                <Card.Description>Friday: 9:00 - 15:00</Card.Description>
-                <Card.Description>Saturday: Closed</Card.Description>
-                <Card.Description>Sunday: Closed</Card.Description>
+                {content}
             </Card.Content>
         );
+    }
+
+    _capitalize = (text) => {
+        if (!text || text.length < 1) {
+            return;
+        } else {
+            return text.charAt(0).toUpperCase() + text.slice(1);
+        }
     }
 
     renderBack = () => {

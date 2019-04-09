@@ -27,9 +27,9 @@ class Header extends React.Component {
                             <h1> <img src={require("./logo2.png")}
                                       alt = "Campus Lightbox" /> </h1>
                             <h3>Click a resource button to get started</h3>
-                            <a className="btn" href="#">Peer</a>
-                            <a className = "btn" href = "#">Professional</a>
-                            <a className="btn" href="#">Phone</a>
+                            <a className="btn">Peer</a>
+                            <a className = "btn">Professional</a>
+                            <a className="btn">Phone</a>
 
                             <div className="ButtonClass">
                                 <Button onClick={this.onItemClick}  inverted

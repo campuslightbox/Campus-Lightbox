@@ -15,7 +15,7 @@ const FixedMenuLayout = () => (
 
         <Grid stackable>
 
-          <Grid.Column width={5} alignItems="center">
+          <Grid.Column width={5} alignitems="center">
             <Header inverted as='h4' content='Brought to you by:' />
             <Modal trigger={<Button>© Project Aurora</Button>} closeIcon size='large'>
               <Modal.Header><center>Abous Us</center></Modal.Header>
@@ -53,12 +53,10 @@ const FixedMenuLayout = () => (
 
           <Grid.Column width={7}>
             <Header inverted as='h4' content='Notice of Non­ Affiliation and Disclaimer:' />
-            <p>
-              <h6>We are not affiliated,
+            <h6>We are not affiliated,
         associated, authorized, endorsed by, or in any way officially connected with the
         the University of British Columbia, or any of its subsidiaries or its affiliates.
         The official University of British Columbia website can be found here.</h6>
-            </p>
           </Grid.Column>
         </Grid>
       </Container>
