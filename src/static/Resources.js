@@ -189,13 +189,7 @@ export default [
         email: "clinic@psych.ubc.ca",
         address: "Douglas T. Kenny Building\n2136 West Mall\nVancouver, BC V6T 1Z4",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -275,13 +269,7 @@ export default [
         email: "vice@ams.ubc.ca",
         address: "UBC AMS Nest\nRoom 3107",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -297,13 +285,7 @@ export default [
         email: "prideubc@gmail.com",
         address: "UBC AMS Nest\nRoom 2103",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -319,13 +301,7 @@ export default [
         email: "ubcwomenscentre@gmail.com",
         address: "UBC AMS Nest\nRoom 2113",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -341,13 +317,7 @@ export default [
         email: "info@the-kaleidoscope.com",
         address: "Weekly Meeting Location\nBuchanan Block D312",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
             "wednesday": "5:30pm-6:30pm",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
         },
     },
     {
@@ -363,13 +333,7 @@ export default [
         email: "info@vivreshare.org",
         address: "Buchanan D304\n1866 Main Mall\nVancouver, BC V6T 1Z1",
         hours: {
-            "monday": "Check website for more info",
-            "tuesday": "Check website for more info",
-            "wednesday": "Check website for more info",
-            "thursday": "Check website for more info",
-            "friday": "Check website for more info",
-            "saturday": "Check website for more info",
-            "sunday": "Check website for more info",
+            "others": "Check website for more info",
         },
     },
     {
@@ -385,13 +349,7 @@ export default [
         email: "ubcmhac@gmail.com",
         address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -406,13 +364,7 @@ export default [
         email: "n/a",
         address: "n/a",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -428,13 +380,7 @@ export default [
         email: "n/a",
         address: "Check Facebook page for times & locations",
         hours: {
-            "monday": "n/a",
-            "tuesday": "n/a",
-            "wednesday": "n/a",
-            "thursday": "n/a",
-            "friday": "n/a",
-            "saturday": "n/a",
-            "sunday": "n/a",
+            "others": "n/a",
         },
     },
     {
@@ -450,13 +396,37 @@ export default [
         email: "ubcmeditation@gmail.com",
         address: "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
         hours: {
-            "monday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "tuesday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "wednesday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "thursday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "friday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "saturday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
-            "sunday": "Check http://blogs.ubc.ca/meditation/schedule/ for more info",
+            "others": "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+        },
+    },
+    {
+        name: "Crisis Centre", 
+        description: "Emotional support for people in crisis/distress. ",
+        logo: "https://www.thekeltyfoundation.org/uploads/image_CCBC_logo_positive_alt%20cropped.jpg",
+        tags: ["professional"], //add: phone, 247, emergency
+        phone:"1-800-784-2433",
+        social: {
+            "website": "https://crisiscentre.bc.ca/",
+        },
+        email: "n/a",
+        address: "n/a",
+        hours: {
+            "others": "24/7, 365 days a year",
+        },
+    },
+    {
+        name: "Women Against Violence Against Women", 
+        description: "Support services for survivors of sexualized violence or gender marginalization.",
+        logo: "https://i.imgur.com/yEtXB1X.jpg",
+        tags: ["professional"], //add: phone, 247, womensHealth, sexualHealth
+        phone:"1-877-392-7583",
+        social: {
+            "website": "https://www.wavaw.ca/",
+        },
+        email: "admin@wavaw.ca",
+        address: "WAVAW Rape Crisis Centre\n1476 BC-7\nVancouver, BC V6H 4E8",
+        hours: {
+            "others": "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
         },
     }
 ];
