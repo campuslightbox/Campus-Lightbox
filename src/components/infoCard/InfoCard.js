@@ -71,7 +71,7 @@ class InfoCard extends React.Component {
     renderBack = () => {
         return [
             <Card.Content key="back-header">
-                <Card.Header style={{color: '#0E6EB8', float: 'left'}}>UBC Counselling</Card.Header>
+                <Card.Header style={{color: '#0E6EB8', float: 'left'}}>{this.props.name}</Card.Header>
             </Card.Content>,
             <Card.Content key="back-contact">
                 <Card.Header>Phone number</Card.Header>
@@ -79,7 +79,7 @@ class InfoCard extends React.Component {
             </Card.Content>,
             <Card.Content key="back-address">
                 <Card.Header>Address</Card.Header>
-                <Card.Description>999 Alison Road, Vancouver</Card.Description>
+                <Card.Description>{this.props.address}</Card.Description>
             </Card.Content>,
             <Card.Content key="back-hours">
                 <Card.Header>Hours of Operation</Card.Header>

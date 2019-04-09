@@ -97,7 +97,7 @@ export default [
         name: "Centre for Accessibility", 
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
         logo: "https://ubyssey.storage.googleapis.com/media/images/2016/10/20161026Cherihan_Hassun-medium.jpg",
-        tags: ["onCampus", "professional", "appointment", "walkIn"], // filters to be added: disability
+        tags: ["onCampus", "professional", "appointment", "walkIn", "disability"],
         phone:"604-822-5844",
         social: {
             "website": "https://students.ubc.ca/about-student-services/centre-for-accessibility",
@@ -238,7 +238,7 @@ export default [
         name: "AMS Sexual Assault Support Centre (SASC)", 
         description: "Crisis/short-term assistance, support groups, and advocacy for survivors of sexualized violence.",
         logo: "http://amssasc.ca/wp-content/uploads/2015/08/logo.png",
-        tags: ["onCampus", "professional", "appointment", "walkIn"], //add: sexualHealth
+        tags: ["onCampus", "professional", "appointment", "walkIn", "sexualHealthAssault"],
         phone:"604-827-5180",
         social: {
             "website": "https://amssasc.ca/",
@@ -260,7 +260,7 @@ export default [
         name: "AMS VICE", 
         description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/17021860_100910457107461_488025490832043254_n.png?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=d9d7b240caa7db4bf74865e18af22bf8&oe=5D33684F",
-        tags: ["onCampus", "peer", "recurring", "walkIn"], //add: substanceAbuse
+        tags: ["onCampus", "peer", "recurring", "walkIn", "substanceAbuse"],
         phone:"604-827-1728",
         social: {
             "website": "https://www.ams.ubc.ca/student-services/vice/",
@@ -276,7 +276,7 @@ export default [
         name: "AMS The Pride Collective", 
         description: "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
         logo: "https://static.wixstatic.com/media/f781ec_124a33daa3f74bc1b5df27c0f6718405.jpeg",
-        tags: ["onCampus", "recurring"], //add: LGBTQ+
+        tags: ["onCampus", "recurring", "lgbt"],
         phone:"n/a",
         social: {
             "website": "https://www.prideubc.com/",
@@ -292,7 +292,7 @@ export default [
         name: "Women’s Center", 
         description: "Support and resources for women on campus, including informational brochures, menstrual products, safer sex products, pregnancy tests, and more.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/947350_691791094293185_3385537979808396418_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=d4c2ef5b46dfce60eda2b55fdaa64ebb&oe=5D36A399",
-        tags: ["onCampus", "walkIn"], //add: WomensHealth
+        tags: ["onCampus", "walkIn", "womensHealth"],
         phone:"n/a",
         social: {
             "website": "http://www.ubcwomenscentre.com",
@@ -324,7 +324,7 @@ export default [
         name: "SHARE UBC", 
         description: "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
         logo: "https://pbs.twimg.com/profile_images/603349697504227328/G301mIfo_400x400.png",
-        tags: ["onCampus", "peer", "recurring"], //add: selfHarm
+        tags: ["onCampus", "peer", "recurring", "selfHarm"],
         phone:"n/a",
         social: {
             "website": "https://vivreshare.org/support-group/",
@@ -340,7 +340,7 @@ export default [
         name: "Mental Health Awareness Club", 
         description: "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
         logo: "https://imgur.com/2JnBmrV.png",
-        tags: ["onCampus"], //add: events, generalAwareness
+        tags: ["onCampus", "generalAwareness", "events"],
         phone:"n/a",
         social: {
             "website": "http://blogs.ubc.ca/ubcmhac/",
@@ -356,7 +356,7 @@ export default [
         name: "UBC Jack Chapter", 
         description: "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
         logo: "https://jack.org/getattachment/d7c13f45-be16-4bda-9550-567ea206dc55/og-img.aspx",
-        tags: ["onCampus"], //add: events, generalAwareness
+        tags: ["onCampus", "generalAwareness", "events"],
         phone:"n/a",
         social: {
             "website": "http://legacy.jack.org/chapters/university-british-columbia",
@@ -371,7 +371,7 @@ export default [
         name: "Zen at UBC", 
         description: "Zen meditation practice on campus. Advice & counsel on Zen Buddhist meditation and awakening to life.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/11951669_953683761359332_8598845998263703923_o.png?_nc_cat=111&_nc_ht=scontent.fyvr3-1.fna&oh=4eae0a61171e45dd6964962772080219&oe=5D48FA18",
-        tags: ["onCampus", "recurring"], //add: generalAwareness
+        tags: ["onCampus", "generalAwareness", "recurring"],
         phone:"n/a",
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
@@ -387,7 +387,7 @@ export default [
         name: "UBC Meditation Community", 
         description: "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/14242253_513839475493343_1512661762216198297_o.png?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=bfa7077d728c835546de79b61c090e16&oe=5D075F2E",
-        tags: ["onCampus", "recurring"], //add: generalAwareness
+        tags: ["onCampus", "generalAwareness", "recurring"],
         phone:"n/a",
         social: {
             "website": "http://blogs.ubc.ca/meditation/",
@@ -403,7 +403,7 @@ export default [
         name: "Crisis Centre", 
         description: "Emotional support for people in crisis/distress. ",
         logo: "https://www.thekeltyfoundation.org/uploads/image_CCBC_logo_positive_alt%20cropped.jpg",
-        tags: ["professional"], //add: phone, 247, emergency
+        tags: ["hotline", "professional", "allday"],
         phone:"1-800-784-2433",
         social: {
             "website": "https://crisiscentre.bc.ca/",
@@ -418,7 +418,7 @@ export default [
         name: "Women Against Violence Against Women", 
         description: "Support services for survivors of sexualized violence or gender marginalization.",
         logo: "https://i.imgur.com/yEtXB1X.jpg",
-        tags: ["professional"], //add: phone, 247, womensHealth, sexualHealth
+        tags: ["hotline", "professional", "allday", "sexualHealthAssault", "womensHealth"],
         phone:"1-877-392-7583",
         social: {
             "website": "https://www.wavaw.ca/",
@@ -433,7 +433,7 @@ export default [
         name: "Empower Me", 
         description: "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
         logo: "https://i.imgur.com/tgSZPd4.png",
-        tags: ["online", "professional"], //add: phone, 247
+        tags: ["online", "hotline", "professional", "allday"],
         phone:"1-844-741-6389",
         social: {
             "website": "http://www.studentcare.ca/rte/en/UniversityofBritishColumbiaAMSGSS_EmpowerMe_EmpowerMe",
