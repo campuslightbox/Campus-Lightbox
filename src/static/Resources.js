@@ -359,9 +359,9 @@ export default [
             "facebook": "https://www.facebook.com/UBCMeditationCommunity/",
         },
         email: "ubcmeditation@gmail.com",
-        notes: "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+        notes: "Refer to website for a schedule of locations and times",
         hours: {
-            "others": "http://blogs.ubc.ca/meditation/schedule/ has a schedule of locations and times",
+            "others": "Refer to website for a schedule of locations and times",
         },
     },
     {
