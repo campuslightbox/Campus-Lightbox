@@ -6,6 +6,10 @@ import './style.css';
 const style = {
     button: {
         margin: 8,
+        paddingTop: 20,
+        paddingBottom: 20,
+        paddingRight: 30,
+        paddingLeft: 30
     }
 }
 
@@ -16,7 +20,7 @@ class Header extends React.Component {
 
     scrollToContent = () => {
         window.scroll({
-            top: 600,
+            top: 950,
             left: 0,
             behavior: 'smooth'
         });
@@ -37,16 +41,17 @@ class Header extends React.Component {
                     </div>
                     <div className = "in1" >
                         <div className = "stuff">
-                            <img style={{ width: 400 }} resizeMode="center" src={require("./logo2.png")}
+                            <img className="titleImage" resizeMode="center" src={require("./logo2.png")}
                                       alt = "Campus Lightbox"/>
-                            <h3>Click a resource button to get started</h3>
+                            <h3>- Your 1 Stop Guide to UBC Mental Health Resources -</h3>
+                            <div className="resourceButtons">
                             <Button inverted size="large" style={style.button}
                                 onClick={() => this.onFilterClicked("peer")}>Peer</Button>
                             <Button inverted size="large" style={style.button}
                                 onClick={() => this.onFilterClicked("professional")}>Professional</Button>
                             <Button inverted size="large" style={style.button}
                                 onClick={() => this.onFilterClicked("hotline")}>Phone</Button>
-
+                            </div>
                             <div className="ButtonClass">
                                 <Button onClick={this.onScrollDownClicked} inverted
                                     circular color='orange' icon='angle down' />
