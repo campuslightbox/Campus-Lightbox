@@ -4,15 +4,15 @@ const tags = {
     onCampus:           {category: "location", displayName: "On Campus", iconName: "location arrow"},
     offCampus:          {category: "location", displayName: "Off Campus", iconName: "bicycle"},
     online:             {category: "location", displayName: "Online", iconName: "computer"},
-    hotline:            {category: "location", displayName: "Hotline", iconName: "phone"},
+    hotline:            {category: "location", displayName: "Telephone", iconName: "phone"},
 
     medical:            {category: "type", displayName: "Medical", iconName: "heartbeat"},
     professional:       {category: "type", displayName: "Professional", iconName: "doctor"},
     peer:               {category: "type", displayName: "Peer", iconName: "group"},
     generalAwareness:   {category: "type", displayName: "General Awareness", iconName: "bullhorn"},
 
-    appointment:        {category: "availability", displayName: "Appointment Available", iconName: "calendar"},
-    recurring:          {category: "availability", displayName: "Recurring", iconName: "sync alternate"},
+    appointment:        {category: "availability", displayName: "Appointment-Based", iconName: "calendar"},
+    recurring:          {category: "availability", displayName: "Recurring Meetings", iconName: "sync alternate"},
     walkIn:             {category: "availability", displayName: "Walk-in", iconName: "blind"},
     events:             {category: "availability", displayName: "Events", iconName: "clipboard outline"},
     allday:             {category: "availability", displayName: "24/7", iconName: "battery full"},

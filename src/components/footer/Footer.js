@@ -52,9 +52,9 @@ const FixedMenuLayout = () => (
           </Grid.Column>
 
           <Grid.Column width={7}>
-            <Header inverted as='h4' content='Notice of Non­ Affiliation and Disclaimer:' />
+            <Header inverted as='h4' content='Notice of Non­-Affiliation and Disclaimer:' />
             <h6>We are not affiliated,
-        associated, authorized, endorsed by, or in any way officially connected with the
+        associated, authorized, endorsed by, or in any way officially connected with
         the University of British Columbia, or any of its subsidiaries or its affiliates.
         The official University of British Columbia website can be found here.</h6>
           </Grid.Column>

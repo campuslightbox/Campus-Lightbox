@@ -9,7 +9,7 @@ const style = {
         paddingTop: 20,
         paddingBottom: 20,
         paddingRight: 30,
-        paddingLeft: 30
+        paddingLeft: 30,
     }
 }
 
@@ -20,7 +20,7 @@ class Header extends React.Component {
 
     scrollToContent = () => {
         window.scroll({
-            top: 950,
+            top: 915,
             left: 0,
             behavior: 'smooth'
         });
@@ -43,7 +43,10 @@ class Header extends React.Component {
                         <div className = "stuff">
                             <img className="titleImage" resizeMode="center" src={require("./logo2.png")}
                                       alt = "Campus Lightbox"/>
-                            <h3>- Your 1 Stop Guide to UBC Mental Health Resources -</h3>
+                            <h3>~ Your 1 Stop Guide to UBC Mental Health Resources ~</h3>
+                            <div className="select">
+                                <h4>Select From One of the Following Options</h4>
+                            </div>
                             <div className="resourceButtons">
                             <Button inverted size="large" style={style.button}
                                 onClick={() => this.onFilterClicked("peer")}>Peer</Button>
