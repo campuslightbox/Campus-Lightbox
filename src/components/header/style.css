@@ -36,7 +36,8 @@ img {
 .ButtonClass{
     position: center;
     padding-bottom: 0px;
-    padding-top: 60px;
+    padding-top: 30px;
+    -webkit-animation-delay: 4s;
 }
 
 .stuff h4{
@@ -44,7 +45,7 @@ img {
     position: center;
     font-family: 'Muli', sans-serif;
     font-weight:normal;
-    color: black;
+    color: white;
 }
 
 
@@ -53,9 +54,10 @@ img {
     position: center;
     font-family: 'Muli', sans-serif;
     font-weight: bold;
-    color: black;
-    padding-bottom: 15px;
-    padding-top: 0px;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 0px;
+    padding-top: 15px;
 }
 
 .select{
@@ -67,8 +69,20 @@ img {
   padding-top: 0px;
 }
 
-.resourceButtons {
-  color: black;
+.resourceButton1 {
+  -webkit-animation-delay: 1s; 
+}
+
+.resourceButton2 {
+  -webkit-animation-delay: 1.5s; 
+}
+
+.resourceButton3 {
+  -webkit-animation-delay: 2s; 
+}
+
+span {
+  display:inline-block;
 }
 
 /* .stuff .btn{

@@ -13,7 +13,7 @@ const tags = {
 
     appointment:        {category: "availability", displayName: "Appointment-Based", iconName: "calendar"},
     recurring:          {category: "availability", displayName: "Recurring Meetings", iconName: "sync alternate"},
-    walkIn:             {category: "availability", displayName: "Walk-in", iconName: "blind"},
+    walkIn:             {category: "availability", displayName: "Walk-in", iconName: "street view"},
     events:             {category: "availability", displayName: "Events", iconName: "clipboard outline"},
     allday:             {category: "availability", displayName: "24/7", iconName: "battery full"},
 
