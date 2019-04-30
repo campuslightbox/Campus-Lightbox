@@ -290,16 +290,16 @@ export default [
     {
         name: "The Kaleidoscope", 
         description: "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/527664_372531339461153_287434995_n.jpg?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=03a81708aeb0a15b50d92e23325e6858&oe=5D38F31C",
+        logo: "https://imgur.com/JlTjfNK.png",
         tags: ["onCampus", "peer", "recurring"],
         social: {
             "website": "http://the-kaleidoscope.com/",
             "facebook": "https://www.facebook.com/kaleidoscopeUBC",
         },
         email: "info@the-kaleidoscope.com",
-        address: "Buchanan Block D312\n1866 Main Mall\nVancouver, BC V6T 1Z1",
+        address: "Time and location varies by term",
         hours: {
-            "wednesday": "5:30pm-6:30pm",
+            "others": "Email or message us on Facebook to receive a response within 24 hours.",
         },
     },
     {
@@ -347,7 +347,9 @@ export default [
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
             "facebook": "https://www.facebook.com/UBCZen/",
         },
-        notes: "Check Facebook page for times & locations",
+        hours: {
+            "others": "Check Facebook page for times & locations",
+        },
     },
     {
         name: "UBC Meditation Community", 
@@ -359,7 +361,6 @@ export default [
             "facebook": "https://www.facebook.com/UBCMeditationCommunity/",
         },
         email: "ubcmeditation@gmail.com",
-        notes: "Refer to website for a schedule of locations and times",
         hours: {
             "others": "Refer to website for a schedule of locations and times",
         },
@@ -413,7 +414,9 @@ export default [
         social: {
             "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
         },
-        notes: "For contact information, address, and hours please refer to your faculty website"
+        hours: {
+            "others": "For contact information, address, and hours please refer to your faculty website",
+        },
     },
     {
         name: "Enrollment Services", 
