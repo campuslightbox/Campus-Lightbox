@@ -230,7 +230,7 @@ export default [
     },
     {
         name: "AMS Sexual Assault Support Centre (SASC)", 
-        description: "Crisis/short-term assistance, support groups, and advocacy for survivors of sexualized violence.",
+        description: "Free and confidential emotional and crisis support, hospital, legal, and police accompaniment, education, and empowerment to people of all genders who are survivors of sexualized violence as well as their friends and family.",
         logo: "http://amssasc.ca/wp-content/uploads/2015/08/logo.png",
         tags: ["onCampus", "professional", "appointment", "walkIn", "sexualHealthAssault"],
         phone:"604-827-5180",
