@@ -102,7 +102,7 @@ export default [
             "website": "https://students.ubc.ca/about-student-services/centre-for-accessibility",
         },
         email: "info.accessibility@ubc.ca",
-        address: "Brock Hall\nURoom 1203\n1874 East Mall\nVancouver, BC V6T 1Z1",
+        address: "Brock Hall\nRoom 1203\n1874 East Mall\nVancouver, BC V6T 1Z1",
         hours: {
             "monday": "8:30am-4:30pm",
             "tuesday": "8:30am-5:00pm",
