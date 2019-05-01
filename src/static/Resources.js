@@ -54,7 +54,8 @@ export default [
         logo: YogaClubLogo,
         tags: ["onCampus", "generalAwareness"], 
         social: {
-            "website": "ubcyogaclub.com",
+            "website": "https://www.ubcyogaclub.com",
+            "facebook": "https://www.facebook.com/theubcyogaclub",
         }, 
         email: "info.ubcyogaclub@gmail.com",
         address: "AMS Student Nest\n6133 University Blvd\nVancouver, BC V6T 1Z1", 
