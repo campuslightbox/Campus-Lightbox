@@ -27,12 +27,13 @@
         notes: ""
     }
 */
-
+import YogaClubLogo from './logos/YogaClub.png';
+import UBCCounsellingServiceLogo from './logos/UBCCounsellingService.jpg';
 export default [
     {
         name: "UBC Counselling Service", 
         description: "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
-        logo: "https://ubyssey.storage.googleapis.com/media/images/2016/11/jack-skate-1-2_A1HlLVn-medium.jpg",
+        logo: UBCCounsellingServiceLogo,
         tags: ["onCampus", "professional", "appointment", "walkIn"],
         phone:"604-822-3811",
         social: {
@@ -50,7 +51,7 @@ export default [
     {
         name: "UBC Yoga Club", 
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
-        logo: "https://ubcyogaclub.files.wordpress.com/2014/12/10486_10151094924483521_1103997231_n-1.png",
+        logo: YogaClubLogo,
         tags: ["onCampus", "generalAwareness"], 
         social: {
             "website": "ubcyogaclub.com",
