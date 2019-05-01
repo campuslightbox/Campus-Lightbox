@@ -91,6 +91,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
+        notes: "No Saturday service May 1 - Aug 31"
     },
     {
         name: "Centre for Accessibility", 
@@ -114,7 +115,7 @@ export default [
         },
     },
     {
-        name: "University Village Medical Clinic - UBC Village", 
+        name: "University Village Medical & Dental Clinic - UBC Village", 
         description: "Walk-in medical clinic located on Allison Road in UBC Village.",
         logo: "http://www.universityvillageclinic.com/DSC_0206resize.jpg",
         tags: ["onCampus", "medical", "walkIn"],
@@ -188,24 +189,26 @@ export default [
     },
     {
         name: "Wellness Centre", 
-        description: "Speak with and ask Wellness Peer Educators about everyday concerns related to health, relationships, and workload.",
-        logo: "https://i.imgur.com/KwUsppr.jpg",
+        description: "Speak with a Wellness Peer Educator about everyday concerns related to health, relationships, and workload.",
+        logo: "https://imgur.com/dwgqJR2.png",
         tags: ["onCampus", "peer", "walkIn"],
         phone:"604-822-8450",
         social: {
             "website": "https://students.ubc.ca/health/wellness-centre",
+            "facebook": "https://www.facebook.com/UBCWellnessCentre/",
         },
         email: "wellness.centre@ubc.ca",
         address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
         hours: {
-            "monday": "10:00am-5:00pm",
-            "tuesday": "10:00am-4:00pm",
-            "wednesday": "10:00am-5:00pm",
-            "thursday": "10:00am-5:00pm",
-            "friday": "10:00am-5:00pm",
+            "monday": "closed",
+            "tuesday": "11:00am-3:00pm",
+            "wednesday": "11:00am-3:00pm",
+            "thursday": "11:00am-3:00pm",
+            "friday": "closed",
             "saturday": "closed",
             "sunday": "closed",
         },
+        notes: "Hours may vary based on time of year, double check our website for more details. Closed June 3-7th, 2019, August 19-23, 2019 and Re-opening for the academic year August 26th, hours TBC"
     },
     {
         name: "AMS Speakeasy", 
@@ -249,6 +252,7 @@ export default [
             "saturday": "8:00am-10:00pm",
             "sunday": "8:00am-10:00pm",
         },
+        notes: "Open on most holidays, drop ins available, appointments for support prefered if possible."
     },
     {
         name: "AMS VICE", 
@@ -340,13 +344,14 @@ export default [
     },
     {
         name: "Zen at UBC", 
-        description: "Zen meditation practice on campus. Advice & counsel on Zen Buddhist meditation and awakening to life.",
+        description: "Zen meditation practice on campus. Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
         logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/11951669_953683761359332_8598845998263703923_o.png?_nc_cat=111&_nc_ht=scontent.fyvr3-1.fna&oh=4eae0a61171e45dd6964962772080219&oe=5D48FA18",
         tags: ["onCampus", "generalAwareness", "recurring"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
             "facebook": "https://www.facebook.com/UBCZen/",
         },
+        email: "gareth@zen.ca",
         hours: {
             "others": "Check Facebook page for times & locations",
         },
