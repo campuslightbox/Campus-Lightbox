@@ -7,6 +7,16 @@ import {
   Header,
   Modal
 } from 'semantic-ui-react'
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139413334-1');
+
+const trackGA = (buttonName) => {
+  ReactGA.event({
+      category: 'User',
+      action: 'Clicked ' + buttonName + ' Button'
+    });
+}
 
 const FixedMenuLayout = () => (
   <div>
@@ -17,7 +27,7 @@ const FixedMenuLayout = () => (
 
           <Grid.Column width={5} alignitems="center">
             <Header inverted as='h4' content='Brought to you by:' />
-            <Modal trigger={<Button>© Project Aurora</Button>} closeIcon size='large'>
+            <Modal trigger={<Button onClick={() => trackGA("About Project Aurora")}>© Project Aurora</Button>} closeIcon size='large'>
               <Modal.Header><center>Abous Us</center></Modal.Header>
               <Modal.Content image>
                 <Modal.Description>
@@ -33,20 +43,20 @@ const FixedMenuLayout = () => (
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-            <Button icon='mail' href='mailto:info@projectaurora.com' />
+            <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.com' />
           </Grid.Column>
 
           <Grid.Column width={4}>
             <Header inverted as='h4' content='Follow us:' />
             <Button.Group>
               <a href="https://www.facebook.com/Project-Aurora-1190802371087781/" target="_blank" rel="noopener noreferrer">
-                <Button size='large' circular color='facebook' icon='facebook' /></a>
+                <Button onClick={() => trackGA("Facebook")} size='large' circular color='facebook' icon='facebook' /></a>
               <a href="https://www.instagram.com/proj_aurora/" target="_blank" rel="noopener noreferrer">
-                <Button size='large' circular color='instagram' icon='instagram' /></a>
+                <Button  onClick={() => trackGA("Instagram")} size='large' circular color='instagram' icon='instagram' /></a>
               <a href="https://twitter.com/ProjectAurora6" target="_blank" rel="noopener noreferrer">
-                <Button size='large' circular color='twitter' icon='twitter' /></a>
+                <Button onClick={() => trackGA("Twitter")} size='large' circular color='twitter' icon='twitter' /></a>
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
-                <Button size='large' circular color='linkedin' icon='linkedin' /></a>
+                <Button onClick={() => trackGA("LinkedIn")} size='large' circular color='linkedin' icon='linkedin' /></a>
                 </Button.Group>
 
           </Grid.Column>

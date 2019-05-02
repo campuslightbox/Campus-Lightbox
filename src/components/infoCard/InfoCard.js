@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Card, Image, Icon, Popup } from 'semantic-ui-react';
 import Tags from 'static/Tags';
-
 import _ from 'underscore';
 import moment from 'moment';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139413334-1');
 
 const style= {
     infoCard: {
@@ -31,6 +33,10 @@ class InfoCard extends React.Component {
     }
 
     onContactButtonClick = () => {
+        ReactGA.event({
+            category: 'User',
+            action: 'Clicked View Details'
+          });
         this.setState({side: "back"});
     }
 

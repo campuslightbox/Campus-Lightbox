@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
 import { Icon, Button, Modal, Header, Table } from 'semantic-ui-react'
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139413334-1');
 
 export default class MenuHeader extends Component {
+    trackGA = (buttonName) => {
+        ReactGA.event({
+            category: 'User',
+            action: 'Clicked ' + buttonName + ' Button'
+          });
+    }
+
     render() {
         return (
-            <Modal dimmer="blurring" trigger={<Button color="red"><Icon name='heart outline' />Get Help Now</Button>} closeIcon>
+            <Modal dimmer="blurring" trigger={<Button onClick={() => this.trackGA("Get Help Now")} color="red"><Icon name='heart outline' />Get Help Now</Button>} closeIcon>
                 <Modal.Header>Get Help Now</Modal.Header>
                 <Modal.Content image>
                     <div className='image'>

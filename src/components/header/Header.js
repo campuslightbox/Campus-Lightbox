@@ -3,6 +3,9 @@ import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
 import './style.css';
 import '../animate.css';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139413334-1');
 
 const style = {
     button: {
@@ -16,6 +19,10 @@ const style = {
 
 class Header extends React.Component {
     onScrollDownClicked = () => {
+        ReactGA.event({
+            category: 'User',
+            action: 'Clicked Scroll Down Button'
+          });
         this.scrollToContent();
     }
 
@@ -27,6 +34,10 @@ class Header extends React.Component {
     }
 
     onFilterClicked = (filterName) => {
+        ReactGA.event({
+            category: 'User',
+            action: 'Clicked Top Preset Filer: ' + filterName
+          });
         this.props.onPresetFilterChange(filterName);
         this.scrollToContent();
     }
