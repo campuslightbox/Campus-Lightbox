@@ -35,6 +35,10 @@ class App extends React.Component {
             });
         } else {
             // Not selected, select it
+            ReactGA.event({
+                category: 'User',
+                action: 'Clicked on a filter: ' + item
+              });
             newState.filter[category].push(item);
         }
 
