@@ -5,7 +5,7 @@ Campus Lightbox is Your 1 Stop Guide to UBC Mental Health Resources.
 
 ## Visit Our Website
 
-Our website is currently hosted at  [www.campuslightbox.com](https://www.campuslightbox.com)
+Our website is currently hosted at  [www.campuslightbox.com](https://campuslightbox.com)
 
 ## About Us
 Campus Lightbox was envisioned and created by Project Aurora.
