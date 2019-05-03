@@ -7,7 +7,7 @@ Campus Lightbox is Your 1 Stop Guide to UBC Mental Health Resources.
 
 Our website is currently hosted at [www.campuslightbox.com](https://campuslightbox.com)
 
-### Tech
+## Tech
 
 Campus Lightbox uses a number of open source projects to work properly:
 
@@ -16,7 +16,7 @@ Campus Lightbox uses a number of open source projects to work properly:
 
 
 
-### Development
+## Development
 ### `npm start`
 
 Runs the app in development mode.<br>
@@ -28,13 +28,13 @@ You will see the build errors and lint warnings in the console.
 Want to contribute? Great!
 Send our team an email at [admin@projectaurora.com](mailto:admin@projectaurora.com) for the possibility of joining our team.
 
-#### Deploying a new version of the Website
+## Deploying a new version of the Website
 For production release:
 ### `npm run deply`
 
 Then visit the repo's settings, under GitHub Pages and set the Custom domain to: campuslightbox . com
    
-   ## About Us
+## About Us
 Campus Lightbox was envisioned and created by Project Aurora.
 
 We are a group of UBC students seeking to dismantle the barriers between
