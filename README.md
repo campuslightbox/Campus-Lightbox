@@ -25,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will automatically reload if you make changes to the code.<br>
 You will see the build errors and lint warnings in the console.
 
-Want to contribute? Great!
+Want to contribute? Great!<br>
 Send our team an email at [admin@projectaurora.com](mailto:admin@projectaurora.com) for the possibility of joining our team.
 
 ## Deploying a new version of the Website
