@@ -54,7 +54,7 @@ class Header extends React.Component {
                         <div className = "stuff">
                             <img className="titleImage" resizeMode="center" src={require("./CLB_PrimaryLogo.png")}
                                       alt = "Campus Lightbox"/>
-                            <h3>Your 1 Stop Guide to UBC Mental Health Resources</h3>
+                            <h3>Your Guide to UBC Mental Health Resources</h3>
                             <div className="select">
                                 <h4>Select From One of the Following Options</h4>
                             </div>
