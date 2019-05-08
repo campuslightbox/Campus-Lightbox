@@ -1,4 +1,6 @@
 /*
+    ##last updated: May, 7, 2019##
+    
     Empty template:
     {
         name: "", 
@@ -214,7 +216,7 @@ export default [
     },
     {
         name: "AMS Speakeasy", 
-        description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff and helps connect students to other resources.",
+        description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
         logo: "https://cdn-az.allevents.in/banners/81acff4f3843844b6f526bf5ca6ee7af",
         tags: ["onCampus", "walkIn"],
         phone:"604-822-9246",
@@ -232,6 +234,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+        notes: "Schedule a private and confidential appointment at: calendly.com/speakeasyvice"
     },
     {
         name: "AMS Sexual Assault Support Centre (SASC)", 
