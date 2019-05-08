@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.15b657bc.chunk.css",
+    "main.css": "/static/css/main.e4e30a29.chunk.css",
     "main.js": "/static/js/main.668c7b52.chunk.js",
     "main.js.map": "/static/js/main.668c7b52.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -9,10 +9,10 @@
     "static/js/2.3c7e5f88.chunk.js": "/static/js/2.3c7e5f88.chunk.js",
     "static/js/2.3c7e5f88.chunk.js.map": "/static/js/2.3c7e5f88.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1d1a1325084be77d5ddddd062f99cdb2.js": "/precache-manifest.1d1a1325084be77d5ddddd062f99cdb2.js",
+    "precache-manifest.86daef7919f8d862d4bba3355bd87a68.js": "/precache-manifest.86daef7919f8d862d4bba3355bd87a68.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.621b5bde.chunk.css.map": "/static/css/2.621b5bde.chunk.css.map",
-    "static/css/main.15b657bc.chunk.css.map": "/static/css/main.15b657bc.chunk.css.map",
+    "static/css/main.e4e30a29.chunk.css.map": "/static/css/main.e4e30a29.chunk.css.map",
     "static/media/CLB_PrimaryLogo.png": "/static/media/CLB_PrimaryLogo.6273f73c.png",
     "static/media/UBCCounsellingService.jpg": "/static/media/UBCCounsellingService.a211b82d.jpg",
     "static/media/YogaClub.png": "/static/media/YogaClub.48ed2ae5.png",
