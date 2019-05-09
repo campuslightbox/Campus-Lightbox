@@ -37,7 +37,7 @@ img {
     position: center;
     padding-bottom: 0px;
     padding-top: 30px;
-    -webkit-animation-delay: 2s;
+    -webkit-animation-delay: 2.5s;
 }
 
 .stuff h4{
@@ -70,15 +70,15 @@ img {
 }
 
 .resourceButton1 {
-  -webkit-animation-delay: 0.5s; 
-}
-
-.resourceButton2 {
   -webkit-animation-delay: 1s; 
 }
 
-.resourceButton3 {
+.resourceButton2 {
   -webkit-animation-delay: 1.5s; 
+}
+
+.resourceButton3 {
+  -webkit-animation-delay: 2s; 
 }
 
 span {
