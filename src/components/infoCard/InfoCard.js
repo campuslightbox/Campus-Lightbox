@@ -35,7 +35,7 @@ class InfoCard extends React.Component {
     onContactButtonClick = () => {
         ReactGA.event({
             category: 'User',
-            action: 'Clicked View Details'
+            action: 'Clicked View Details: ' + this.props.name
           });
         this.setState({side: "back"});
     }
