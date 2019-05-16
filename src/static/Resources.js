@@ -31,6 +31,30 @@
 */
 import YogaClubLogo from './logos/YogaClub.png';
 import UBCCounsellingServiceLogo from './logos/UBCCounsellingService.jpg';
+import JackLogo from './logos/Jack.jpg';
+import UMCALogo from './logos/UMCA.jpg';
+import UBCStudentHealthLogo from './logos/UBCStudentHealth.jpg';
+import CentreForAccessibilityLogo from './logos/CentreForAccessibility.jpg';
+import VillageMedicalLogo from './logos/UBCVillageMedical.jpg';
+import WesbrookVillageMedicalLogo from './logos/WesbrookVillageMedical.jpg';
+import NursesLogo from './logos/Nurses.jpg';
+import PsychologyClinicLogo from './logos/PsychologyClinic.jpg';
+import WellnessCentreLogo from './logos/WellnessCentre.png';
+import AMSSpeakeasyLogo from './logos/AMSSpeakeasy.jpeg';
+import SASCLogo from './logos/SASC.png';
+import VICELogo from './logos/VICE.png';
+import PrideLogo from './logos/Pride.jpeg';
+import WomenCentreLogo from './logos/WomenCentre.jpg';
+import KaleidoscopeLogo from './logos/Kaleidoscope.png';
+import SHARELogo from './logos/SHARE.png';
+import MHACLogo from './logos/MHAC.png';
+import ZenLogo from './logos/Zen.png';
+import MeditationLogo from './logos/Meditation.png';
+import CrisisLogo from './logos/Crisis.jpg';
+import WomenViolenceLogo from './logos/WomenViolence.jpg';
+import EmpowerLogo from './logos/Empower.png';
+import AcademicLogo from './logos/Academic.jpg';
+import EnrollmentLogo from './logos/Enrollment.jpg';
 export default [
     {
         name: "UBC Counselling Service", 
@@ -68,7 +92,7 @@ export default [
     {
         name: "University Multifaith Chaplains Association", 
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/11173354_939496622751482_114544511837677719_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=1eb4418bec882fffd6fd47326e0353a6&oe=5D04DB48",
+        logo: UMCALogo,
         tags: ["onCampus", "professional", "walkIn", "spiritual"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
@@ -77,9 +101,9 @@ export default [
         address: "University Multifaith Chaplains Association\nUBC Life Room 1303\n6000 Student Union Blvd\nVancouver, BC V6T 1Z1",
     },
     {
-        name: "UBC Student Health Service", 
+        name: "UBC Student Health Services", 
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
-        logo: "https://thethunderbird.ca/wp-content/uploads//2016/11/StudentHealth1-1-1024x680.jpg",
+        logo: UBCStudentHealthLogo,
         tags: ["onCampus", "medical", "appointment", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -100,7 +124,7 @@ export default [
     {
         name: "Centre for Accessibility", 
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
-        logo: "https://ubyssey.storage.googleapis.com/media/images/2016/10/20161026Cherihan_Hassun-medium.jpg",
+        logo: CentreForAccessibilityLogo,
         tags: ["onCampus", "professional", "appointment", "walkIn", "disability"],
         phone:"604-822-5844",
         social: {
@@ -121,7 +145,7 @@ export default [
     {
         name: "University Village Medical & Dental Clinic - UBC Village", 
         description: "Walk-in medical clinic located on Allison Road in UBC Village.",
-        logo: "http://www.universityvillageclinic.com/DSC_0206resize.jpg",
+        logo: VillageMedicalLogo,
         tags: ["onCampus", "medical", "walkIn"],
         phone:"604-222-2273 (ext. 2)",
         social: {
@@ -141,7 +165,7 @@ export default [
     {
         name: "University Village Medical Clinic - Wesbrook Village", 
         description: "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
-        logo: "http://www.universityvillageclinic.com/DSC_0226resize.jpg",
+        logo: WesbrookVillageMedicalLogo,
         tags: ["onCampus", "medical", "walkIn"],
         phone:"604-222-2273 (ext. 1)",
         social: {
@@ -161,7 +185,7 @@ export default [
     {
         name: "Nurses on Campus", 
         description: "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
-        logo: "http://robstef.com/wrk/uploads/2018/03/IMG_2794_2opt.jpg",
+        logo: NursesLogo,
         tags: ["onCampus", "medical", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -182,7 +206,7 @@ export default [
     {
         name: "UBC Psychology Clinic", 
         description: "The UBC Psychology Clinic offers professional psychological services in the form of (mostly) individual therapy and group treatment.",
-        logo: "https://www.indstate.edu/cas/sites/arts.indstate.edu/files/Psych-Clinic/Psych1_0.jpg",
+        logo: PsychologyClinicLogo,
         tags: ["onCampus", "professional", "appointment"],
         phone:"604-822-3005",
         social: {
@@ -194,7 +218,7 @@ export default [
     {
         name: "Wellness Centre", 
         description: "Speak with a Wellness Peer Educator about everyday concerns related to health, relationships, and workload.",
-        logo: "https://imgur.com/dwgqJR2.png",
+        logo: WellnessCentreLogo,
         tags: ["onCampus", "peer", "walkIn"],
         phone:"604-822-8450",
         social: {
@@ -217,7 +241,7 @@ export default [
     {
         name: "AMS Speakeasy", 
         description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
-        logo: "https://cdn-az.allevents.in/banners/81acff4f3843844b6f526bf5ca6ee7af",
+        logo: AMSSpeakeasyLogo,
         tags: ["onCampus", "walkIn"],
         phone:"604-822-9246",
         social: {
@@ -239,7 +263,7 @@ export default [
     {
         name: "AMS Sexual Assault Support Centre (SASC)", 
         description: "Free and confidential emotional and crisis support, hospital, legal, and police accompaniment, education, and empowerment to people of all genders who are survivors of sexualized violence as well as their friends and family.",
-        logo: "http://amssasc.ca/wp-content/uploads/2015/08/logo.png",
+        logo: SASCLogo,
         tags: ["onCampus", "professional", "appointment", "walkIn", "sexualHealthAssault"],
         phone:"604-827-5180",
         social: {
@@ -262,7 +286,7 @@ export default [
     {
         name: "AMS VICE", 
         description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/17021860_100910457107461_488025490832043254_n.png?_nc_cat=106&_nc_ht=scontent.fyvr3-1.fna&oh=d9d7b240caa7db4bf74865e18af22bf8&oe=5D33684F",
+        logo: VICELogo,
         tags: ["onCampus", "peer", "recurring", "walkIn", "substanceAbuse"],
         phone:"604-827-1728",
         social: {
@@ -275,7 +299,7 @@ export default [
     {
         name: "AMS The Pride Collective", 
         description: "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
-        logo: "https://static.wixstatic.com/media/f781ec_124a33daa3f74bc1b5df27c0f6718405.jpeg",
+        logo: PrideLogo,
         tags: ["onCampus", "recurring", "lgbt"],
         social: {
             "website": "https://www.prideubc.com/",
@@ -287,7 +311,7 @@ export default [
     {
         name: "Women’s Center", 
         description: "Support and resources for women on campus, including informational brochures, menstrual products, safer sex products, pregnancy tests, and more.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t1.0-9/947350_691791094293185_3385537979808396418_n.jpg?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=d4c2ef5b46dfce60eda2b55fdaa64ebb&oe=5D36A399",
+        logo: WomenCentreLogo,
         tags: ["onCampus", "walkIn", "womensHealth"],
         social: {
             "website": "http://www.ubcwomenscentre.com",
@@ -299,7 +323,7 @@ export default [
     {
         name: "The Kaleidoscope", 
         description: "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
-        logo: "https://imgur.com/JlTjfNK.png",
+        logo: KaleidoscopeLogo,
         tags: ["onCampus", "peer", "recurring"],
         social: {
             "website": "http://the-kaleidoscope.com/",
@@ -314,7 +338,7 @@ export default [
     {
         name: "SHARE UBC", 
         description: "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
-        logo: "https://pbs.twimg.com/profile_images/603349697504227328/G301mIfo_400x400.png",
+        logo: SHARELogo,
         tags: ["onCampus", "peer", "recurring", "selfHarm"],
         social: {
             "website": "https://vivreshare.org/support-group/",
@@ -329,7 +353,7 @@ export default [
     {
         name: "Mental Health Awareness Club", 
         description: "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
-        logo: "https://imgur.com/2JnBmrV.png",
+        logo: MHACLogo,
         tags: ["onCampus", "generalAwareness", "events"],
         social: {
             "website": "http://blogs.ubc.ca/ubcmhac/",
@@ -341,7 +365,7 @@ export default [
     {
         name: "UBC Jack Chapter", 
         description: "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
-        logo: "https://jack.org/getattachment/d7c13f45-be16-4bda-9550-567ea206dc55/og-img.aspx",
+        logo: JackLogo,
         tags: ["onCampus", "generalAwareness", "events"],
         social: {
             "website": "http://legacy.jack.org/chapters/university-british-columbia",
@@ -350,7 +374,7 @@ export default [
     {
         name: "Zen at UBC", 
         description: "Zen meditation practice on campus. Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/11951669_953683761359332_8598845998263703923_o.png?_nc_cat=111&_nc_ht=scontent.fyvr3-1.fna&oh=4eae0a61171e45dd6964962772080219&oe=5D48FA18",
+        logo: ZenLogo,
         tags: ["onCampus", "generalAwareness", "recurring"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
@@ -364,7 +388,7 @@ export default [
     {
         name: "UBC Meditation Community", 
         description: "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
-        logo: "https://scontent.fyvr3-1.fna.fbcdn.net/v/t31.0-8/14242253_513839475493343_1512661762216198297_o.png?_nc_cat=108&_nc_ht=scontent.fyvr3-1.fna&oh=bfa7077d728c835546de79b61c090e16&oe=5D075F2E",
+        logo: MeditationLogo,
         tags: ["onCampus", "generalAwareness", "recurring"],
         social: {
             "website": "http://blogs.ubc.ca/meditation/",
@@ -378,7 +402,7 @@ export default [
     {
         name: "Crisis Centre", 
         description: "Emotional support for people in crisis/distress. ",
-        logo: "https://www.thekeltyfoundation.org/uploads/image_CCBC_logo_positive_alt%20cropped.jpg",
+        logo: CrisisLogo,
         tags: ["hotline", "professional", "allday"],
         phone:"1-800-784-2433",
         social: {
@@ -391,7 +415,7 @@ export default [
     {
         name: "Women Against Violence Against Women", 
         description: "Support services for survivors of sexualized violence or gender marginalization.",
-        logo: "https://i.imgur.com/yEtXB1X.jpg",
+        logo: WomenViolenceLogo,
         tags: ["hotline", "professional", "allday", "sexualHealthAssault", "womensHealth"],
         phone:"1-877-392-7583",
         social: {
@@ -406,7 +430,7 @@ export default [
     {
         name: "Empower Me", 
         description: "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
-        logo: "https://i.imgur.com/tgSZPd4.png",
+        logo: EmpowerLogo,
         tags: ["online", "hotline", "professional", "allday"],
         phone:"1-844-741-6389",
         social: {
@@ -419,7 +443,7 @@ export default [
     {
         name: "UBC Academic Advising", 
         description: "Help with program planning, degree requirements, and other course-related questions.",
-        logo: "https://i.imgur.com/CQajm70.jpg",
+        logo: AcademicLogo,
         tags: ["onCampus", "online", "professional", "appointment", "academic"],
         social: {
             "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
@@ -431,7 +455,7 @@ export default [
     {
         name: "Enrollment Services", 
         description: "Get help with budgeting, loans, understanding UBC processes, financial planning.",
-        logo: "https://i.imgur.com/V3UEw2R.jpg",
+        logo: EnrollmentLogo,
         tags: ["onCampus", "online", "professional", "walkIn", "financial"],
         phone:"1-877-272-1422",
         social: {
