@@ -52,7 +52,7 @@ class Header extends React.Component {
                     </div>
                     <div className = "in1" >
                         <div className = "stuff">
-                            <img className="titleImage" resizeMode="center" src={require("./CLB_PrimaryLogo.png")}
+                            <img className="titleImage" resizemode="center" src={require("./CLB_PrimaryLogo.png")}
                                       alt = "Campus Lightbox"/>
                             <h3>Your Guide to UBC Mental Health Resources</h3>
                             <div className="select">
@@ -72,7 +72,7 @@ class Header extends React.Component {
                             </span>
                             <div className="ButtonClass animated fadeInDown">
                                 <Button onClick={this.onScrollDownClicked} inverted
-                                    circular color='white' icon='angle down' />
+                                    circular icon='angle down' />
                             <h4>Or scroll down for more options</h4>
                             </div>
                         </div>

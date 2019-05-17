@@ -25,8 +25,6 @@ class InfoCard extends React.Component {
     constructor(props) {
         super(props);
 
-        this.allTags = Tags.getAllTags();
-
         this.state = {
             side: "front",
         }
@@ -121,8 +119,8 @@ class InfoCard extends React.Component {
     }
 
     renderTagIcon = (tag) => {
-        const displayName = this.allTags[tag].displayName;
-        const iconName = this.allTags[tag].iconName;
+        const displayName = Tags.getDisplayNameForTag(tag);
+        const iconName = Tags.getIconNameForTag(tag);
 
         return <Popup
             trigger={<Icon name={iconName} />}

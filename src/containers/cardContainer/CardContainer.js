@@ -2,8 +2,10 @@ import React from 'react';
 import { Segment, Card } from 'semantic-ui-react';
 import 'containers/cardContainer/CardContainer.css';
 import InfoCard from 'components/infoCard/InfoCard';
+import Tags from 'static/Tags';
 
 import _ from 'underscore';
+import Fuse from 'fuse.js';
 
 class CardContainer extends React.Component {
     filterResource = (allResources) => {
@@ -39,13 +41,36 @@ class CardContainer extends React.Component {
         });
     }
 
+    searchResource = (allResources) => {
+        // Filter resources based on search clause
+        // TODO: complete this
+
+        if (!this.props.searchText) {
+            // Empty search string
+            return allResources;
+        }
+
+        // When searching, search by tag's display name
+        const resourcesForSearch = allResources.map(resource => {
+            return _.extend(resource, {tagsDisplayNames: resource.tags.map(tag => Tags.getDisplayNameForTag(tag))})
+        });
+
+        const options = {
+            keys: ['name', 'tagsDisplayNames'],
+            threshold: 0.15,
+        };
+        const fuse = new Fuse(resourcesForSearch, options);
+        return fuse.search(this.props.searchText);
+    }
+
     render = () => {
-        const filteredResource = this.filterResource(this.props.resources);
+        let resources = this.filterResource(this.props.resources);
+        resources = this.searchResource(resources);
 
         return (
             <Segment basic>
                 <Card.Group>
-                    {_.map(filteredResource, (resource, index) => <InfoCard key={index + ''} {...resource}/>)}
+                    {_.map(resources, (resource, index) => <InfoCard key={index.toString()} {...resource}/>)}
                 </Card.Group>
             </Segment>
         );

@@ -16,7 +16,8 @@ class App extends React.Component {
             filter: _.reduce(Tags.getCategories(), (obj, category) => {
                 obj[category] = [];
                 return obj;
-            }, {})
+            }, {}),
+            searchText: '',
         };
     }
 
@@ -49,6 +50,14 @@ class App extends React.Component {
         this.setState({filter: _.mapObject(this.state.filter, () => [])});
     }
 
+    onSearchTextChange = (_, data) => {
+        this.setState({searchText: data.value});
+    }
+
+    onClearSearchText = () => {
+        this.setState({searchText: ''});
+    }
+
     onPresetFilterChange = (presetFilter) => {
         // If preset filter is changed, wipe out all filters except the selected one
         const newState = {filter: _.mapObject(this.state.filter, () => [])};
@@ -62,9 +71,12 @@ class App extends React.Component {
         <Fragment>
             <Header onPresetFilterChange={this.onPresetFilterChange}/>
             <MainContainer
+                onSearchTextChange={this.onSearchTextChange}
+                onClearSearchText={this.onClearSearchText}
                 onFilterChange={this.onFilterChange}
                 onClearFilter={this.onClearFilter}
                 filter={this.state.filter}
+                searchText={this.state.searchText}
             />
             <Footer />
         </Fragment>

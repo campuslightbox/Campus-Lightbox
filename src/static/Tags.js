@@ -32,5 +32,6 @@ export default {
     getAllTags: () => tags,
     getAllTagKeys: () => _.keys(tags),
     getCategories: () => _.uniq(_.map(_.values(tags), obj => obj.category)),
-
+    getDisplayNameForTag: (tag) => tags[tag].displayName,
+    getIconNameForTag: (tag) => tags[tag].iconName,
 }
