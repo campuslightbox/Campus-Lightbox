@@ -55,6 +55,7 @@ import WomenViolenceLogo from './logos/WomenViolence.jpg';
 import EmpowerLogo from './logos/Empower.png';
 import AcademicLogo from './logos/Academic.jpg';
 import EnrollmentLogo from './logos/Enrollment.jpg';
+
 export default [
     {
         name: "UBC Counselling Service", 

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://campuslightbox.com/",
   "dependencies": {
+    "fuse.js": "^3.4.4",
     "gh-pages": "^2.0.1",
     "moment": "^2.24.0",
     "react": "^16.8.2",
