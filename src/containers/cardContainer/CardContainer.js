@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Button, Header, Segment, Card } from 'semantic-ui-react';
+import { Header, Segment, Card } from 'semantic-ui-react';
 import 'containers/cardContainer/CardContainer.css';
 import InfoCard from 'components/infoCard/InfoCard';
 import Tags from 'static/Tags';
@@ -10,6 +10,14 @@ import ReactGA from 'react-ga';
 ReactGA.initialize('UA-139413334-1');
 
 class CardContainer extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            trackNoResults: 'enabled'
+        };
+    }
+
     filterResource = (allResources) => {
         // Filtering: OR within the same category, AND between categories
 
@@ -70,17 +78,21 @@ class CardContainer extends React.Component {
         resources = this.searchResource(resources);
 
         if (resources.length === 0) {
-            ReactGA.event({
-                category: 'No Reults',
-                action: 'No Results Found Based On Filters/Search'
-              });
+            if (this.state.trackNoResults === 'enabled') {
+                ReactGA.event({
+                    category: 'No Reults',
+                    action: 'No Results Found Based On Filters/Search'
+                });
+                this.setState({trackNoResults: 'disabled'});
+            }
+            
 
             return (
                 <Segment placeholder>
                     <Header icon>
                         Sorry, no results found.<br /><br />
                         Try a different search or filters.
-                     </Header>
+                    </Header>
                 </Segment>
             )
         }
