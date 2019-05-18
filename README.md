@@ -12,7 +12,7 @@ Our website is currently hosted at [www.campuslightbox.com](https://campuslightb
 Campus Lightbox uses a number of open source projects to work properly:
 
 * [React] - A JavaScript library for building user interfaces
-* [Semantic-UI] - Framework to build beautiful, responsive layouts using human-friendly HTML
+* [Semantic-UI] - Framework to build beautiful, responsive layouts
 
 
 
@@ -30,7 +30,7 @@ Send our team an email at [admin@projectaurora.com](mailto:admin@projectaurora.c
 
 ## Deploying a new version of the Website
 For production release:
-### `npm run deply`
+### `npm run deploy`
 
 Then visit the repo's settings, under GitHub Pages and set the Custom domain to: campuslightbox . com
    
