@@ -13,7 +13,7 @@ ReactGA.initialize('UA-139413334-1');
 
 const trackGA = (buttonName) => {
   ReactGA.event({
-      category: 'User',
+      category: 'Footer',
       action: 'Clicked ' + buttonName + ' Button'
     });
 }

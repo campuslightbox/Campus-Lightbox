@@ -20,7 +20,7 @@ const style = {
 class Header extends React.Component {
     onScrollDownClicked = () => {
         ReactGA.event({
-            category: 'User',
+            category: 'Header',
             action: 'Clicked Scroll Down Button'
           });
         this.scrollToContent();
@@ -35,7 +35,7 @@ class Header extends React.Component {
 
     onFilterClicked = (filterName) => {
         ReactGA.event({
-            category: 'User',
+            category: 'Header',
             action: 'Clicked Top Preset Filer: ' + filterName
           });
         this.props.onPresetFilterChange(filterName);

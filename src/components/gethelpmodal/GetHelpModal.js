@@ -7,7 +7,7 @@ ReactGA.initialize('UA-139413334-1');
 export default class MenuHeader extends Component {
     trackGA = (buttonName) => {
         ReactGA.event({
-            category: 'User',
+            category: 'Header',
             action: 'Clicked ' + buttonName + ' Button'
           });
     }

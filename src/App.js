@@ -18,6 +18,7 @@ class App extends React.Component {
                 return obj;
             }, {}),
             searchText: '',
+            trackSearch: 'enabled',
         };
     }
 
@@ -37,8 +38,8 @@ class App extends React.Component {
         } else {
             // Not selected, select it
             ReactGA.event({
-                category: 'User',
-                action: 'Clicked on a filter: ' + item
+                category: 'Filters',
+                action: 'Clicked On Filter: ' + item
               });
             newState.filter[category].push(item);
         }
@@ -50,7 +51,19 @@ class App extends React.Component {
         this.setState({filter: _.mapObject(this.state.filter, () => [])});
     }
 
+    searchTrackGA = () => {
+        ReactGA.event({
+            category: 'Search',
+            action: 'Used Search Bar'
+          });
+    }
+
     onSearchTextChange = (_, data) => {
+        if (this.state.trackSearch === 'enabled') {
+            this.searchTrackGA()
+        }
+        this.setState({trackSearch: 'disabled'});
+
         this.setState({searchText: data.value});
     }
 
