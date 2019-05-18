@@ -1,6 +1,6 @@
 # Campus LightBox
 
-Campus Lightbox is Your 1 Stop Guide to UBC Mental Health Resources.
+Campus Lightbox is Your Guide to UBC Mental Health Resources.
 
 
 ## Visit Our Website
