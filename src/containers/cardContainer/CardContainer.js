@@ -3,9 +3,11 @@ import { Icon, Button, Header, Segment, Card } from 'semantic-ui-react';
 import 'containers/cardContainer/CardContainer.css';
 import InfoCard from 'components/infoCard/InfoCard';
 import Tags from 'static/Tags';
-
 import _ from 'underscore';
 import Fuse from 'fuse.js';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139413334-1');
 
 class CardContainer extends React.Component {
     filterResource = (allResources) => {
@@ -68,6 +70,11 @@ class CardContainer extends React.Component {
         resources = this.searchResource(resources);
 
         if (resources.length === 0) {
+            ReactGA.event({
+                category: 'No Reults',
+                action: 'No Results Found Based On Filters/Search'
+              });
+
             return (
                 <Segment placeholder>
                     <Header icon>
