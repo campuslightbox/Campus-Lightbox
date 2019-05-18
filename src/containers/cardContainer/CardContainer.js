@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Card } from 'semantic-ui-react';
+import { Icon, Button, Header, Segment, Card } from 'semantic-ui-react';
 import 'containers/cardContainer/CardContainer.css';
 import InfoCard from 'components/infoCard/InfoCard';
 import Tags from 'static/Tags';
@@ -12,10 +12,10 @@ class CardContainer extends React.Component {
         // Filtering: OR within the same category, AND between categories
 
         // Check if filter is empty
-        const activeFilters = _.omit(this.props.filter, function(filters, category) {
+        const activeFilters = _.omit(this.props.filter, function (filters, category) {
             return filters.length <= 0;
         });
-        
+
         // No filters applied, return everything
         if (_.isEmpty(activeFilters)) {
             return allResources;
@@ -36,7 +36,7 @@ class CardContainer extends React.Component {
         const commonNames = _.intersection(...categoryWithNames);
 
         // We know categoryMatches is not empty, access it to get resources in object format
-        return  _.filter(categoryMatches[0], resource => {
+        return _.filter(categoryMatches[0], resource => {
             return _.indexOf(commonNames, resource.name) >= 0;
         });
     }
@@ -52,7 +52,7 @@ class CardContainer extends React.Component {
 
         // When searching, search by tag's display name
         const resourcesForSearch = allResources.map(resource => {
-            return _.extend(resource, {tagsDisplayNames: resource.tags.map(tag => Tags.getDisplayNameForTag(tag))})
+            return _.extend(resource, { tagsDisplayNames: resource.tags.map(tag => Tags.getDisplayNameForTag(tag)) })
         });
 
         const options = {
@@ -67,10 +67,21 @@ class CardContainer extends React.Component {
         let resources = this.filterResource(this.props.resources);
         resources = this.searchResource(resources);
 
+        if (resources.length === 0) {
+            return (
+                <Segment placeholder>
+                    <Header icon>
+                        Sorry, no results found.<br /><br />
+                        Try a different search or filters.
+                     </Header>
+                </Segment>
+            )
+        }
+
         return (
             <Segment basic>
                 <Card.Group>
-                    {_.map(resources, (resource, index) => <InfoCard key={index.toString()} {...resource}/>)}
+                    {_.map(resources, (resource, index) => <InfoCard key={index.toString()} {...resource} />)}
                 </Card.Group>
             </Segment>
         );
