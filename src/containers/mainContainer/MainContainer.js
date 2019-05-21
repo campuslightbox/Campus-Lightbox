@@ -10,6 +10,7 @@ import 'containers/mainContainer/MainContainer.css';
 class MainContainer extends React.Component {
     render = () => (
         <Container style={{marginTop: 36}}>
+            <div ref={this.props.refProp}></div> 
             <Grid stackable compact="true">
                 <Grid.Column width={4}>
                     <SearchBar

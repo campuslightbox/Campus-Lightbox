@@ -23,14 +23,7 @@ class Header extends React.Component {
             category: 'Header',
             action: 'Clicked Scroll Down Button'
           });
-        this.scrollToContent();
-    }
-
-    scrollToContent = () => {
-        window.scroll({
-            top: 915,
-            behavior: 'smooth'
-        });
+        this.props.scrollToContent();
     }
 
     onFilterClicked = (filterName) => {
@@ -39,7 +32,7 @@ class Header extends React.Component {
             action: 'Clicked Top Preset Filer: ' + filterName
           });
         this.props.onPresetFilterChange(filterName);
-        this.scrollToContent();
+        this.props.scrollToContent();
     }
 
     render() {

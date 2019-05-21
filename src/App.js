@@ -20,6 +20,7 @@ class App extends React.Component {
             searchText: '',
             trackSearch: 'enabled',
         };
+        this.resourcesRef = React.createRef()   // Create a ref object 
     }
 
     onFilterChange = (category, item) => {
@@ -80,9 +81,20 @@ class App extends React.Component {
         this.setState(newState);
     }
 
+    scrollToContent = () => {
+        window.scroll({
+            top: this.resourcesRef.current.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
     render = () => (
         <Fragment>
-            <Header onPresetFilterChange={this.onPresetFilterChange}/>
+            <Header 
+                 onPresetFilterChange={this.onPresetFilterChange}
+                 scrollToContent={this.scrollToContent}
+                 refProp={this.resourcesRef}
+            />
             <MainContainer
                 onSearchTextChange={this.onSearchTextChange}
                 onClearSearchText={this.onClearSearchText}
@@ -90,6 +102,7 @@ class App extends React.Component {
                 onClearFilter={this.onClearFilter}
                 filter={this.state.filter}
                 searchText={this.state.searchText}
+                refProp={this.resourcesRef}
             />
             <Footer />
         </Fragment>
