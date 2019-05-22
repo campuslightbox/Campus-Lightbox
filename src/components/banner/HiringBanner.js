@@ -2,6 +2,9 @@ import React from 'react';
 import { Segment, Icon, Button } from 'semantic-ui-react';
 
 const style = {
+    banner: {
+        marginBottom: 0,
+    },
     button: {
         marginLeft: 8,
     }
@@ -9,7 +12,7 @@ const style = {
 
 class HiringBanner extends React.Component {
     render = () => (
-        <Segment inverted textAlign='center' size="small">
+        <Segment inverted textAlign='center' size="small" style={style.banner}>
             <Icon name='wrench' />
             Want to be part of Project Aurora?  <b>We are hiring!</b>
             <Button
