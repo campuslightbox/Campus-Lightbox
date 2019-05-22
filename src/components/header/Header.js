@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
+import HiringBanner from '../../components/banner/HiringBanner';
 import './style.css';
 import '../animate.css';
 import ReactGA from 'react-ga';
@@ -38,6 +39,7 @@ class Header extends React.Component {
     render() {
         return (
                 <section className = "b1">
+                    <HiringBanner />
                     <div className="helpbutton">
                         <div className="modal">
                             <GetHelpModal />
