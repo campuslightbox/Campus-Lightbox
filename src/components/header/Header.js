@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
-import HiringBanner from '../../components/banner/HiringBanner';
+import Announcement from '../../components/banner/Announcement';
 import './style.css';
 import '../animate.css';
 import ReactGA from 'react-ga';
@@ -15,6 +15,9 @@ const style = {
         paddingBottom: 20,
         paddingRight: 30,
         paddingLeft: 30,
+    },
+    announcementButton: {
+        marginLeft: 8,
     }
 }
 
@@ -39,7 +42,14 @@ class Header extends React.Component {
     render() {
         return (
                 <section className = "b1">
-                    <HiringBanner />
+                    <Announcement
+                        icon={{name: "wrench"}}
+                        text={["Want to be part of Project Aurora? ", <b>We are hiring!</b>]}
+                        button={{
+                            content:"Join us",
+                            onClick: () => window.open("https://forms.gle/MtQ4ev8P6A8ojamy9")
+                        }}
+                    />
                     <div className="helpbutton">
                         <div className="modal">
                             <GetHelpModal />
