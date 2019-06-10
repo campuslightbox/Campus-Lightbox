@@ -10,7 +10,7 @@ ReactGA.initialize('UA-139413334-1');
 
 const styles = {
     button: {
-        width: '100%',
+        width: '70%',
         minWidth: 'calc(130px + 5vw)',
         height: 50,
         fontSize: 15,
