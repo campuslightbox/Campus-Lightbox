@@ -1,43 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 .b1{
-  margin: auto;
-  display: table;
+  position: relative;
+  display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
+	-webkit-background-size: cover !important;
   background-image: url(bg.jpg);
   width: 100%;
   height: 100vh;
-  max-height: 915px;
-}
-.b1 .in1{
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-}
-
-
-.stuff{
-  padding-top: 40px;
-  max-width: 800px;
-  height: 600px;
-  margin: auto;
+  min-height: 650px;
   text-align: center;
 }
 
-img {
-  position: center;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+.helpbutton{
+  line-height: 12px;
+  font-size: 8pt;
+  font-family: tahoma;
+  margin-top: 5px;
+  margin-right: 2%;
+  position:absolute;
+  top:0;
+  right:0;
 }
 
-.ButtonClass{
-    position: center;
-    padding-bottom: 0px;
-    padding-top: 30px;
-    -webkit-animation-delay: 2.5s;
+.stuff{
+  display: inline-block;
+  height: 100%;
+  padding-top: 40px;
+  max-width: 800px;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.titleImage {
+  margin-top: calc(5px + 2vh + 2vw);
+  width: 90%;
 }
 
 .stuff h4{
@@ -60,13 +63,36 @@ img {
     padding-top: 15px;
 }
 
+.guide{
+  position: center;
+  padding-bottom: calc(2px + 1vh + 1vw);
+  padding-top: calc(2px + 2vh + 2vw);
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: calc(10px + 1.5vw);
+}
+
 .select{
+  padding-bottom: calc(2px + 2vh + 2vw);
+  padding-top: calc(2px + 1vh + 1vw);
+  font-size: calc(11px + 1vw);
+
   position: center;
   font-family: 'Muli', sans-serif;
-  color: black;
-  /* text-shadow: 1px 1px 1px rgb(58, 58, 58); */
-  padding-bottom: 10px;
-  padding-top: 0px;
+  font-weight: normal;
+  color: white;
+}
+
+.ButtonClass{
+  position: center;
+  margin-top: 30px;
+  -webkit-animation-delay: 2.5s;
+}
+
+.buttonsAll {
+  display: flex; 
+  justify-content: space-between;
 }
 
 .resourceButton1 {
@@ -81,30 +107,41 @@ img {
   -webkit-animation-delay: 2s; 
 }
 
-span {
-  display:inline-block;
+/* screenwidth less than 1024px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
 }
 
-/* .stuff .btn{
-  border-radius: 0px;
-  color: #f9f3f4;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px rgb(58, 58, 58);
-  font-family: 'Century Gothic',sans-serif;
-  border: 2px solid;
-  padding: 7px 13px;
-  font-weight: normal;
-  font-size: medium;
-  margin: 10px;
+/* screenwidth less than 900px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
 }
-.stuff .btn:hover{
-    color: #ffffff !important;
-    background: #f6b93b;
-    border-color: #f6b93b !important;
-    transition: all 0.4s ease 0s;
-} */
 
-.helpbutton{
-    position: absolute;
-    right:0;
+/* mobile wide/smaller tablets
+---------------------------------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+}
+
+/* mobile narrow
+-------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+  .buttonsAll {
+    display: block; 
+  }
+
+  .resourceButton1 {
+    display:block;
+    margin-bottom: 1em;
+  }
+  
+  .resourceButton2 {
+    display:block;
+    margin-bottom: 1em;
+  }
+  
+  .resourceButton3 {
+    display:block;
+  }
 }

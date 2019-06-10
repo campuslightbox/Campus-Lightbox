@@ -8,13 +8,12 @@ import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-139413334-1');
 
-const style = {
+const styles = {
     button: {
-        margin: 8,
-        paddingTop: 20,
-        paddingBottom: 20,
-        paddingRight: 30,
-        paddingLeft: 30,
+        width: '100%',
+        minWidth: 'calc(130px + 5vw)',
+        height: 50,
+        fontSize: 15,
     },
     announcementButton: {
         marginLeft: 8,
@@ -42,46 +41,46 @@ class Header extends React.Component {
     render() {
         return (
                 <section className = "b1">
-                    <Announcement
+                    {/* <Announcement
                         icon={{name: "wrench"}}
                         text={["Want to be part of Project Aurora? ", <b>We are hiring!</b>]}
                         button={{
                             content:"Join us",
                             onClick: () => window.open("https://forms.gle/MtQ4ev8P6A8ojamy9")
                         }}
-                    />
+                    /> */}
                     <div className="helpbutton">
-                        <div className="modal">
                             <GetHelpModal />
-                        </div>
                     </div>
-                    <div className = "in1" >
                         <div className = "stuff">
-                            <img className="titleImage" resizemode="center" src={require("./CLB_PrimaryLogo.png")}
+                            <img className="titleImage" src={require("./CLB_PrimaryLogo.png")}
                                       alt = "Campus Lightbox"/>
-                            <h3>Your Guide to UBC Mental Health Resources</h3>
-                            <div className="select">
-                                <h4>Select From One of the Following Options</h4>
+                            <div className="guide">
+                            Your Guide to UBC Mental Health Resources
                             </div>
+                            <div className="select">
+                                Select From One of the Following Options
+                            </div>
+                            <div className="buttonsAll">
                             <span className="resourceButton1 animated fadeIn">
-                            <Button inverted size="large" style={style.button}
+                            <Button inverted style={styles.button}
                                 onClick={() => this.onFilterClicked("peer")}>Peer</Button>
                             </span>
                             <span className="resourceButton2 animated fadeIn">
-                            <Button inverted size="large" style={style.button}
+                            <Button inverted style={styles.button}
                                 onClick={() => this.onFilterClicked("professional")}>Professional</Button>
                             </span>
                             <span className="resourceButton3 animated fadeIn">
-                            <Button inverted size="large" style={style.button}
+                            <Button inverted style={styles.button}
                                 onClick={() => this.onFilterClicked("hotline")}>Phone</Button>
                             </span>
+                            </div>
                             <div className="ButtonClass animated fadeInDown">
                                 <Button onClick={this.onScrollDownClicked} inverted
                                     circular icon='angle down' />
                             <h4>Or scroll down for more options</h4>
                             </div>
                         </div>
-                    </div>
                 </section>
         )
     }

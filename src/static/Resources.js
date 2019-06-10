@@ -243,7 +243,7 @@ export default [
         name: "AMS Speakeasy", 
         description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
         logo: AMSSpeakeasyLogo,
-        tags: ["onCampus", "walkIn"],
+        tags: ["onCampus", "walkIn", "peer"],
         phone:"604-822-9246",
         social: {
             "website": "https://www.ams.ubc.ca/student-services/speakeasy/",
