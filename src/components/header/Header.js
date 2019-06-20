@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
-import Announcement from '../../components/banner/Announcement';
 import './style.css';
 import '../animate.css';
 import ReactGA from 'react-ga';

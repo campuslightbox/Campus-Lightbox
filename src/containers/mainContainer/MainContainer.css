@@ -1,0 +1,8 @@
+.filter-search-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-search-bar {
+    flex-grow: 1;
+}
