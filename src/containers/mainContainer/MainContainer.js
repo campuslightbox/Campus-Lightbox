@@ -16,8 +16,35 @@ const styles = {
     }
 }
 
-
 class MainContainer extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            filterOpen: false,
+        };
+    }
+
+    renderFilterModal = () => {
+        return (
+            <Filter
+                filter={this.props.filter}
+                open={this.state.filterOpen}
+                onFilterChange={this.props.onFilterChange}
+                onClearFilter={this.props.onClearFilter}
+                onCloseFilter={this.closeMobileFilter}
+            />
+        )
+    }
+
+    openMobileFilter = () => {
+        this.setState({filterOpen: true});
+    }
+
+    closeMobileFilter = () => {
+        this.setState({filterOpen: false});
+    }
+
     render = () => (
         <Container style={{marginTop: 36}}>
             <div ref={this.props.refProp}></div> 
@@ -39,7 +66,8 @@ class MainContainer extends React.Component {
                     <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                         {/* Mobile and tablet */}
                         <div className="filter-search-container">
-                            <Button style={styles.filterButton} color='green' icon='options' />
+                            {this.renderFilterModal()}
+                            <Button style={styles.filterButton} color='green' icon='options' onClick={this.openMobileFilter}/>
                             <div className="mobile-search-bar">
                                 <SearchBar
                                     inline={true}

@@ -52,9 +52,6 @@ class CardContainer extends React.Component {
     }
 
     searchResource = (allResources) => {
-        // Filter resources based on search clause
-        // TODO: complete this
-
         if (!this.props.searchText) {
             // Empty search string
             return allResources;
@@ -83,7 +80,7 @@ class CardContainer extends React.Component {
                     category: 'No Reults',
                     action: 'No Results Found Based On Filters/Search'
                 });
-                this.setState({trackNoResults: 'disabled'});
+                this.setState({trackNoResults: 'disabled'}); // TODO: this triggers a warning about how setState should not be called in render
             }
             
 
