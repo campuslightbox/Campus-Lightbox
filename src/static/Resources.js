@@ -72,7 +72,7 @@ export default [
             "tuesday": "8:30am-3:30pm",
             "wednesday": "8:30am-6:00pm",
             "thursday": "10:00am-3:30pm",
-            "friday": "9:30am-4:30pm",
+            "friday": "8:30am-3:30pm",
         }
     },
     {
