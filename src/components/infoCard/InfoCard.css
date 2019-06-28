@@ -1,0 +1,22 @@
+.bottom-button > .ui.attached.button {
+	box-shadow: none!important;
+}
+
+.ui.card>extra, .ui.cards>.card>.extra {
+	border-top: none!important;
+}
+
+.ui.card>:first-child, .ui.cards>.card>:first-child {
+	border-radius: 10px 10px 0px 0px!important;
+}
+
+.ui.card, .ui.cards>.card {
+	width: 260px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 801px) {
+	.ui.card, .ui.cards>.card {
+		width: 100%;
+	}
+}

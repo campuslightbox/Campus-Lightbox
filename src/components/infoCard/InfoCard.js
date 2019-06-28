@@ -1,23 +1,42 @@
 import React from 'react';
-import { Button, Card, Image, Icon, Popup } from 'semantic-ui-react';
+import { Button, Card, Image, Icon, Popup, Label } from 'semantic-ui-react';
 import Tags from 'static/Tags';
 import _ from 'underscore';
 import moment from 'moment';
 import ReactGA from 'react-ga';
 
+import './InfoCard.css';
+
 ReactGA.initialize('UA-139413334-1');
 
-const style= {
+const styles= {
     infoCard: {
-        width: 260,
+        borderRadius: 10,
     },
     infoCardSection: {
         flexGrow: 0,
+    },
+    infoCardImage: {
+        objectFit: 'cover',
+        height: 200,
+        width: '100%',
+    },
+    infoCardFrontContent: {
+        border: 'none',
     },
     infoCardLast: {
         flexGrow: 1,
         border: 'none',
         padding: 0,
+    },
+    tag: {
+        color: 'white',
+        borderRadius: 10,
+        paddingTop: 6,
+        paddingBottom: 6,
+        paddingLeft: 8,
+        paddingRight: 8,
+        marginTop: 4,
     }
 }
 
@@ -48,16 +67,16 @@ class InfoCard extends React.Component {
                 src={this.props.logo || 'https://i0.wp.com/www.littlebitesofbeauty.com/wp-content/uploads/2015/06/default-placeholder.png?zoom=2&resize=1170%2C658&ssl=1'}
                 size='medium'
                 key="front-image"
-                style={{objectFit: "cover", height: 200}}
+                style={styles.infoCardImage}
             />,
-            <Card.Content key="front-content">
+            <Card.Content key="front-content" style={styles.infoCardFrontContent}>
                 <Card.Header>{this.props.name}</Card.Header>
                 <Card.Description>{this.props.description}</Card.Description>
             </Card.Content>,
-            <Card.Content key="front-extra" extra>
+            <Card.Content key="front-extra" style={styles.infoCardFrontContent} extra>
                 {this.props.hours && this.renderTodayHours()}
                 <Card.Meta style={{marginTop: 8}}>
-                    {_.map(this.props.tags, tag => this.renderTagIcon(tag))}
+                    {_.map(this.props.tags, tag => this.renderTag(tag))}
                 </Card.Meta>
             </Card.Content>
         ];
@@ -70,7 +89,6 @@ class InfoCard extends React.Component {
                 <Card.Meta>
                     <Icon name='circle' color="green"/>
                     Open 24 / 7
-                    <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
                 </Card.Meta>
             );
         }
@@ -92,8 +110,7 @@ class InfoCard extends React.Component {
             return (
                 <Card.Meta>
                     <Icon name='circle' color={iconColor}/>
-                    {this.props.hours[todayDay]}
-                    <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
+                    {' ' + this.props.hours[todayDay]}
                 </Card.Meta>
             );
         } else {
@@ -118,22 +135,18 @@ class InfoCard extends React.Component {
         }
     }
 
-    renderTagIcon = (tag) => {
+    renderTag = (tag) => {
         const displayName = Tags.getDisplayNameForTag(tag);
-        const iconName = Tags.getIconNameForTag(tag);
+        const color = Tags.getColorForTag(tag);
 
-        return <Popup
-            trigger={<Icon name={iconName} />}
-            content={displayName}
-            key={tag}
-            size='small'
-            basic
-        />;
+        return <Label as='a' key={displayName} style={_.extend({backgroundColor: color, borderColor: color}, styles.tag)}>
+            {displayName}
+        </Label>;
     }
 
     renderName = () => {
         return (
-            <Card.Content key="back-header" style={style.infoCardSection}>
+            <Card.Content key="back-header" style={styles.infoCardSection}>
                 <Card.Header style={{float: 'left'}}>{this.props.name}</Card.Header>
             </Card.Content>
         );
@@ -143,7 +156,7 @@ class InfoCard extends React.Component {
         const link = 'tel://1-' + this.props.phone;
 
         return (
-            <Card.Content key="back-contact" style={style.infoCardSection}>
+            <Card.Content key="back-contact" style={styles.infoCardSection}>
                 <Card.Header>Phone number</Card.Header>
                 <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.phone}</a></Card.Description>
             </Card.Content>
@@ -154,7 +167,7 @@ class InfoCard extends React.Component {
         const link = 'https://maps.google.com/?q=' + this.props.address;
 
         return (
-            <Card.Content key="back-address" style={style.infoCardSection}>
+            <Card.Content key="back-address" style={styles.infoCardSection}>
                 <Card.Header>Address</Card.Header>
                 {this.props.address && <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.address}</a></Card.Description>}
             </Card.Content>
@@ -163,7 +176,7 @@ class InfoCard extends React.Component {
 
     renderSocialAndEmail = () => {
         return (
-            <Card.Content key="back-social-email" style={style.infoCardSection}>
+            <Card.Content key="back-social-email" style={styles.infoCardSection}>
                 <Card.Header>Social</Card.Header>
                 <Card.Description>
                     <Button.Group basic size="tiny">
@@ -211,7 +224,7 @@ class InfoCard extends React.Component {
         }
 
         return (
-            <Card.Content key="back-hours" style={style.infoCardSection}>
+            <Card.Content key="back-hours" style={styles.infoCardSection}>
                 <Card.Header>Hours of Operation</Card.Header>
                 {content}
             </Card.Content>
@@ -224,7 +237,7 @@ class InfoCard extends React.Component {
         }
 
         return (
-            <Card.Content key="back-notes" style={style.infoCardSection}>
+            <Card.Content key="back-notes" style={styles.infoCardSection}>
                 <Card.Header>Notes</Card.Header>
                 {this.props.notes}
             </Card.Content>
@@ -234,7 +247,7 @@ class InfoCard extends React.Component {
     renderLastElement = () => {
         // Hack to make sure button sticks to the bottom of the card
         return (
-            <Card.Content key="back-last" style={style.infoCardLast} />
+            <Card.Content key="back-last" style={styles.infoCardLast} />
         )
     }
 
@@ -275,11 +288,15 @@ class InfoCard extends React.Component {
     }
 
     render = () => (
-        <Card style={style.infoCard}>
+        <Card style={styles.infoCard}>
             {this.state.side === "front" ? this.renderFront() : this.renderBack()}
             {
                 this.state.side === "front" ? 
-                    <Button attached='bottom' onClick={this.onContactButtonClick}>View Details</Button> : 
+                    <div className='bottom-button'>
+                        <Button attached='bottom' basic onClick={this.onContactButtonClick}>
+                            <Icon name='angle right'/> View Details
+                        </Button>
+                    </div> : 
                     <Button attached='bottom' icon onClick={this.onCloseButtonClick}><Icon name='close'/> Go Back</Button>
             }
         </Card>
