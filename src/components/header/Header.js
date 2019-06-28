@@ -77,7 +77,6 @@ class Header extends React.Component {
                             <div className="ButtonClass animated fadeInDown">
                                 <Button onClick={this.onScrollDownClicked} inverted
                                     circular icon='angle down' />
-                            <h4>Or scroll down for more options</h4>
                             </div>
                         </div>
                 </section>
