@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Image, Icon, Popup, Label } from 'semantic-ui-react';
+import { Button, Card, Image, Icon, Label, Grid, Divider } from 'semantic-ui-react';
 import Tags from 'static/Tags';
 import _ from 'underscore';
 import moment from 'moment';
@@ -8,37 +8,6 @@ import ReactGA from 'react-ga';
 import './InfoCard.css';
 
 ReactGA.initialize('UA-139413334-1');
-
-const styles= {
-    infoCard: {
-        borderRadius: 10,
-    },
-    infoCardSection: {
-        flexGrow: 0,
-    },
-    infoCardImage: {
-        objectFit: 'cover',
-        height: 200,
-        width: '100%',
-    },
-    infoCardFrontContent: {
-        border: 'none',
-    },
-    infoCardLast: {
-        flexGrow: 1,
-        border: 'none',
-        padding: 0,
-    },
-    tag: {
-        color: 'white',
-        borderRadius: 10,
-        paddingTop: 6,
-        paddingBottom: 6,
-        paddingLeft: 8,
-        paddingRight: 8,
-        marginTop: 4,
-    }
-}
 
 class InfoCard extends React.Component {
     constructor(props) {
@@ -96,15 +65,7 @@ class InfoCard extends React.Component {
         const todayDay = moment().format('dddd').toLowerCase();
 
         if (this.props.hours[todayDay]) {
-            const hoursString = this.props.hours[todayDay];
-
-            const openString = hoursString.split('-')[0];
-            const closeString = hoursString.split('-')[1];
-
-            const todayOpen = moment(openString, "h:mma");
-            const todayClose = moment(closeString, "h:mma");
-            const isOpen = moment().isBetween(todayOpen, todayClose);
-
+            const isOpen = this._isOpen();
             const iconColor = isOpen ? 'green' : 'red';
 
             return (
@@ -128,7 +89,6 @@ class InfoCard extends React.Component {
                     <Card.Meta>
                         <Icon name='circle' color="red"/>
                         Closed
-                        <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
                     </Card.Meta>
                 );
             }
@@ -144,10 +104,12 @@ class InfoCard extends React.Component {
         </Label>;
     }
 
-    renderName = () => {
+    renderNameBack = () => {
         return (
-            <Card.Content key="back-header" style={styles.infoCardSection}>
-                <Card.Header style={{float: 'left'}}>{this.props.name}</Card.Header>
+            <Card.Content key="back-header" style={_.extend({padding: '14px 10px 14px 10px'}, styles.infoCardSection)}>
+                <Card.Header style={{float: 'left'}}>
+                    {this.props.name}
+                </Card.Header>
             </Card.Content>
         );
     }
@@ -157,7 +119,6 @@ class InfoCard extends React.Component {
 
         return (
             <Card.Content key="back-contact" style={styles.infoCardSection}>
-                <Card.Header>Phone number</Card.Header>
                 <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.phone}</a></Card.Description>
             </Card.Content>
         );
@@ -167,34 +128,31 @@ class InfoCard extends React.Component {
         const link = 'https://maps.google.com/?q=' + this.props.address;
 
         return (
-            <Card.Content key="back-address" style={styles.infoCardSection}>
-                <Card.Header>Address</Card.Header>
+            <Card.Content style={styles.infoCardSection}>
                 {this.props.address && <Card.Description><a href={link} target="_blank" rel="noopener noreferrer">{this.props.address}</a></Card.Description>}
             </Card.Content>
         );
     }
 
-    renderSocialAndEmail = () => {
+    renderEmail = () => {
+        return <Card.Content style={styles.infoCardSection}>
+            {this.props.email && <a href={'mailto:' + this.props.email} target="_blank" rel="noopener noreferrer">{this.props.email}</a>}
+        </Card.Content>
+    }
+
+    renderSocial = () => {
         return (
             <Card.Content key="back-social-email" style={styles.infoCardSection}>
-                <Card.Header>Social</Card.Header>
                 <Card.Description>
-                    <Button.Group basic size="tiny">
-                        {
-                            this.props.social && this.props.social.website && 
-                            <Popup trigger={<Button icon='world' onClick={() => window.open(this.props.social.website)}/>}
-                            content='Visit website' basic size='small'/>}
-                        {this.props.social && this.props.social.facebook && <Popup trigger={<Button icon='facebook' onClick={() => window.open(this.props.social.facebook)}/>}
-                            content='Visit Facebook' basic size='small'/>}
-                    </Button.Group>
+                    {
+                        this.props.social && this.props.social.website && 
+                        <Button circular color='grey' icon='world' onClick={() => window.open(this.props.social.website)}/>
+                    }
+                    {
+                        this.props.social && this.props.social.facebook && 
+                        <Button circular color='facebook' icon='facebook' onClick={() => window.open(this.props.social.facebook)}/>
+                    }
                 </Card.Description>
-                {
-                    this.props.email &&
-                    <Card.Description style={{marginTop: 4}}>
-                        <Icon name='mail outline'/>
-                        <a href={'mailto:' + this.props.email} target="_blank" rel="noopener noreferrer">{this.props.email}</a>
-                    </Card.Description>
-                }
             </Card.Content>
         );
     }
@@ -213,21 +171,28 @@ class InfoCard extends React.Component {
             _.each(days, (dayInWeek, index) => {
                 const hoursForDay = this.props.hours[dayInWeek];
                 const isToday = (index + 1) === moment().isoWeekday();
+                const isOpen = this._isOpen();
+                const iconColor = isOpen ? 'green' : 'red';
 
                 content.push(
-                    <Card.Description key={dayInWeek}>
-                        {this._capitalize(dayInWeek).slice(0, 3)}: {!hoursForDay ? 'Closed' : hoursForDay}
-                        {isToday && <Icon name='star' size='small' style={{marginLeft:4}}/>}
-                    </Card.Description>
+                    <div key={dayInWeek}>
+                        <div style={styles.hoursLabel}>{this._capitalize(dayInWeek).slice(0, 3) + ': '}</div>
+                        <div style={styles.hours}>{!hoursForDay ? 'Closed' : hoursForDay}</div>
+                        <div style={{display: 'inline-block'}}>{isToday && 
+                            <Icon name='circle' color={iconColor} size='small' style={{marginLeft: 6}}/>}
+                        </div>
+                    </div>
                 );
             });
         }
 
         return (
-            <Card.Content key="back-hours" style={styles.infoCardSection}>
-                <Card.Header>Hours of Operation</Card.Header>
-                {content}
-            </Card.Content>
+            <Grid.Row key="back-hours" style={styles.backRow}>
+                <Divider style={styles.divider} />
+                <Card.Content style={styles.infoCardSection}>
+                    {content}
+                </Card.Content>
+            </Grid.Row>
         );
     }
 
@@ -237,10 +202,12 @@ class InfoCard extends React.Component {
         }
 
         return (
-            <Card.Content key="back-notes" style={styles.infoCardSection}>
-                <Card.Header>Notes</Card.Header>
-                {this.props.notes}
-            </Card.Content>
+            <Grid.Row key="back-notes" style={styles.backRow}>
+                <Divider style={styles.divider} />
+                <Card.Content style={styles.infoCardSection}>
+                    {this.props.notes}
+                </Card.Content>
+            </Grid.Row>
         );
     }
 
@@ -260,18 +227,58 @@ class InfoCard extends React.Component {
     }
 
     renderBack = () => {
-        const views = [this.renderName()];
+        const views = [];
 
         if (this.props.phone) {
-            views.push(this.renderPhoneNumber());
+            views.push(
+                <Grid.Row key="back-phone" style={styles.backRow}>
+                    <Grid.Column width={4} style={styles.backLabel}>
+                        Phone:
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        {this.renderPhoneNumber()}
+                    </Grid.Column>
+                </Grid.Row>
+            );
         }
 
         if (this.props.address) {
-            views.push(this.renderAddress());
+            views.push(
+                <Grid.Row key="back-address" style={styles.backRow}>
+                    <Grid.Column width={4} style={styles.backLabel}>
+                        Address:
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        {this.renderAddress()}
+                    </Grid.Column>
+                </Grid.Row>
+            );
         }
 
-        if (this.props.email || this.props.social) {
-            views.push(this.renderSocialAndEmail());
+        if (this.props.email) {
+            views.push(
+                <Grid.Row key="back-email" style={styles.backRow}>
+                    <Grid.Column width={4} style={styles.backLabel}>
+                        Email:
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        {this.renderEmail()}
+                    </Grid.Column>
+                </Grid.Row>
+            );
+        }
+
+        if (this.props.social) {
+            views.push(
+                <Grid.Row key="back-social" style={styles.backRow}>
+                    <Grid.Column width={4} style={styles.backLabel}>
+                        Social:
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        {this.renderSocial()}
+                    </Grid.Column>
+                </Grid.Row>
+            );
         }
 
         if (this.props.hours) {
@@ -284,7 +291,31 @@ class InfoCard extends React.Component {
 
         views.push(this.renderLastElement());
 
-        return views;
+        return [
+            this.renderNameBack(),
+            <Card.Content key="back-content" style={styles.backHeader}>
+                <Grid>
+                    {views}
+                </Grid>
+            </Card.Content>
+        ]
+    }
+
+    _isOpen = () => {
+        const todayDay = moment().format('dddd').toLowerCase();
+
+        if (this.props.hours[todayDay]) {
+            const hoursString = this.props.hours[todayDay];
+
+            const openString = hoursString.split('-')[0];
+            const closeString = hoursString.split('-')[1];
+
+            const todayOpen = moment(openString, "h:mma");
+            const todayClose = moment(closeString, "h:mma");
+            return moment().isBetween(todayOpen, todayClose);
+        } else {
+            return false;
+        }
     }
 
     render = () => (
@@ -297,10 +328,67 @@ class InfoCard extends React.Component {
                             <Icon name='angle right'/> View Details
                         </Button>
                     </div> : 
-                    <Button attached='bottom' icon onClick={this.onCloseButtonClick}><Icon name='close'/> Go Back</Button>
+                    <div className='bottom-button'>
+                        <Button attached='bottom' basic onClick={this.onCloseButtonClick}>
+                            <Icon name='angle right'/> See Less
+                        </Button>
+                    </div>
             }
         </Card>
     )
+}
+
+const styles= {
+    infoCard: {
+        borderRadius: 10,
+    },
+    infoCardSection: {
+        flexGrow: 0,
+    },
+    infoCardImage: {
+        objectFit: 'cover',
+        height: 200,
+    },
+    infoCardFrontContent: {
+        border: 'none',
+    },
+    infoCardLast: {
+        flexGrow: 1,
+        border: 'none',
+        padding: 0,
+    },
+    tag: {
+        padding: '6px 8px 6px 8px',
+        color: 'white',
+        borderRadius: 10,
+        marginTop: 4,
+    },
+    backRow: {
+        padding: '8px 10px 8px 10px',
+        wordBreak: 'break-word',
+        color: '#666666',
+        width: '100%',
+    },
+    backLabel: {
+        padding: 0,
+    },
+    backHeader: {
+        border: 'none',
+    },
+    hoursLabel: {
+        width: 35,
+        marginRight: 40,
+        display: 'inline-block',
+        color: '#666666',
+    },
+    hours: {
+        display: 'inline-block',
+        color: '#666666',
+    },
+    divider: {
+        width: '100%',
+        margin: '0px 0px 8px 0px',
+    }
 }
 
 export default InfoCard;
