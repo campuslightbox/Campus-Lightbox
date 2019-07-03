@@ -43,10 +43,10 @@ class InfoCard extends React.Component {
                 <Card.Description>{this.props.description}</Card.Description>
             </Card.Content>,
             <Card.Content key="front-extra" style={styles.infoCardFrontContent} extra>
-                {this.props.hours && this.renderTodayHours()}
-                <Card.Meta style={{marginTop: 8}}>
+                <Card.Meta style={{marginBottom: 8}}>
                     {_.map(this.props.tags, tag => this.renderTag(tag))}
                 </Card.Meta>
+                {this.props.hours && this.renderTodayHours()}
             </Card.Content>
         ];
     }
