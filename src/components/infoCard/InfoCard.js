@@ -75,16 +75,8 @@ class InfoCard extends React.Component {
                 </Card.Meta>
             );
         } else {
-            if (this.props.hours.others) {
-                // Resource has alternative hours
-                return (
-                    <Card.Meta>
-                        View Hours Information
-                        <Button icon='caret down' size='mini' basic style={{padding: 4, marginLeft: 6}} onClick={this.onContactButtonClick}/>
-                    </Card.Meta>
-                );
-            } else {
-                // Resource is closed
+            if (!this.props.hours.others) {
+                // Resource does not have alternative hours, so it is closed
                 return (
                     <Card.Meta>
                         <Icon name='circle' color="red"/>
