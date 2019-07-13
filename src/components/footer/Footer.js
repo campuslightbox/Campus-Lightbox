@@ -43,7 +43,7 @@ const FixedMenuLayout = () => (
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-            <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.com' />
+            <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' />
           </Grid.Column>
 
           <Grid.Column width={4}>
