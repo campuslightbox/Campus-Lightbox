@@ -141,7 +141,7 @@ class Filter extends React.Component {
     )
 
     renderMobileFilter = () => (
-        <Modal open={this.props.open}>
+        <Modal open={this.props.open} onClose={this.props.onCloseFilter}>
             <Modal.Header>
                 <div className='filter-header'>
                     <Header as='h2' style={styles.filterHeader}>Filters</Header>
@@ -166,11 +166,9 @@ class Filter extends React.Component {
     render = () => (
         <div>
             <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
-                {/* Laptop */}
                 {this.renderLaptopFilter()}
             </MediaQuery>
             <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
-                {/* Mobile and tablet */}
                 {this.renderMobileFilter()}
             </MediaQuery>
         </div>
