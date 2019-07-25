@@ -19,4 +19,11 @@
 	.ui.card, .ui.cards>.card {
 		width: 100%;
 	}
+
+	.banner-logo {
+		height: 72px;
+		top: 4px;
+		left: 4px;
+		position: absolute;
+	}
 }

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Card, Image, Icon, Label, Grid, Divider } from 'semantic-ui-react';
 import Tags from 'static/Tags';
+import MediaQuery from 'react-responsive';
 import _ from 'underscore';
 import moment from 'moment';
 import ReactGA from 'react-ga';
+
+import MediaQueryHelper from 'static/MediaQueryHelper';
 
 import './InfoCard.css';
 
@@ -32,12 +35,23 @@ class InfoCard extends React.Component {
 
     renderFront = () => {
         return [
-            <Image
-                src={this.props.logo || 'https://i0.wp.com/www.littlebitesofbeauty.com/wp-content/uploads/2015/06/default-placeholder.png?zoom=2&resize=1170%2C658&ssl=1'}
-                size='medium'
-                key="front-image"
-                style={styles.infoCardImage}
-            />,
+            <MediaQuery key="front-laptop-image" minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
+                <Image
+                    src={this.props.logo || 'https://i0.wp.com/www.littlebitesofbeauty.com/wp-content/uploads/2015/06/default-placeholder.png?zoom=2&resize=1170%2C658&ssl=1'}
+                    size='medium'
+                    key="front-image"
+                    style={styles.infoCardImage}
+                />
+            </MediaQuery>,
+            <MediaQuery key="front-mobile-image" maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
+                <Image
+                    src={this.props.background || 'http://justfunfacts.com/wp-content/uploads/2018/03/mountains.jpg'}
+                    size='medium'
+                    key="front-image"
+                    style={styles.infoCardImageMobile}
+                />
+                {this.props.logo && <img className="banner-logo" src={this.props.logo}/>}
+            </MediaQuery>,
             <Card.Content key="front-content" style={styles.infoCardFrontContent}>
                 <Card.Header>{this.props.name}</Card.Header>
                 <Card.Description>{this.props.description}</Card.Description>
@@ -340,6 +354,13 @@ const styles= {
     infoCardImage: {
         objectFit: 'cover',
         height: 200,
+        width: '100%',
+    },
+    infoCardImageMobile: {
+        objectFit: 'cover',
+        height: 80,
+        width: '100%',
+        opacity: 0.5,
     },
     infoCardFrontContent: {
         border: 'none',

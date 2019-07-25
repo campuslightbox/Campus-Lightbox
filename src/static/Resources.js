@@ -61,6 +61,7 @@ export default [
         name: "UBC Counselling Service", 
         description: "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
         logo: UBCCounsellingServiceLogo,
+        background: '',
         tags: ["professional", "appointment", "walkIn"],
         phone:"604-822-3811",
         social: {
@@ -79,6 +80,7 @@ export default [
         name: "UBC Yoga Club", 
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
         logo: YogaClubLogo,
+        background: 'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NvA9hQs0eimlu5m80/videoblocks-relax-stones-on-the-beach-and-sea-on-background-zen-symbol-from-stones-on-the-sand_rttxgy8jb_thumbnail-full01.png',
         tags: ["generalAwareness"], 
         social: {
             "website": "https://www.ubcyogaclub.com",
@@ -94,6 +96,7 @@ export default [
         name: "University Multifaith Chaplains Association", 
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: UMCALogo,
+        background: '',
         tags: ["professional", "walkIn", "spiritual"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
@@ -105,6 +108,7 @@ export default [
         name: "UBC Student Health Services", 
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
         logo: UBCStudentHealthLogo,
+        background: '',
         tags: ["medical", "appointment", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -126,6 +130,7 @@ export default [
         name: "Centre for Accessibility", 
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
         logo: CentreForAccessibilityLogo,
+        background: '',
         tags: ["professional", "appointment", "walkIn", "disability"],
         phone:"604-822-5844",
         social: {
@@ -147,6 +152,7 @@ export default [
         name: "University Village Medical & Dental Clinic - UBC Village", 
         description: "Walk-in medical clinic located on Allison Road in UBC Village.",
         logo: VillageMedicalLogo,
+        background: '',
         tags: ["medical", "walkIn"],
         phone:"604-222-2273 (ext. 2)",
         social: {
@@ -167,6 +173,7 @@ export default [
         name: "University Village Medical Clinic - Wesbrook Village", 
         description: "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
         logo: WesbrookVillageMedicalLogo,
+        background: '',
         tags: ["medical", "walkIn"],
         phone:"604-222-2273 (ext. 1)",
         social: {
@@ -187,6 +194,7 @@ export default [
         name: "Nurses on Campus", 
         description: "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
         logo: NursesLogo,
+        background: '',
         tags: ["medical", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -208,6 +216,7 @@ export default [
         name: "UBC Psychology Clinic", 
         description: "The UBC Psychology Clinic offers professional psychological services in the form of (mostly) individual therapy and group treatment.",
         logo: PsychologyClinicLogo,
+        background: '',
         tags: ["professional", "appointment"],
         phone:"604-822-3005",
         social: {
@@ -220,6 +229,7 @@ export default [
         name: "Wellness Centre", 
         description: "Speak with a Wellness Peer Educator about everyday concerns related to health, relationships, and workload.",
         logo: WellnessCentreLogo,
+        background: '',
         tags: ["peer", "walkIn"],
         phone:"604-822-8450",
         social: {
@@ -243,6 +253,7 @@ export default [
         name: "AMS Speakeasy", 
         description: "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
         logo: AMSSpeakeasyLogo,
+        background: '',
         tags: ["walkIn", "peer"],
         phone:"604-822-9246",
         social: {
@@ -265,6 +276,7 @@ export default [
         name: "AMS Sexual Assault Support Centre (SASC)", 
         description: "Free and confidential emotional and crisis support, hospital, legal, and police accompaniment, education, and empowerment to people of all genders who are survivors of sexualized violence as well as their friends and family.",
         logo: SASCLogo,
+        background: '',
         tags: ["professional", "appointment", "walkIn", "sexualHealthAssault"],
         phone:"604-827-5180",
         social: {
@@ -288,6 +300,7 @@ export default [
         name: "AMS VICE", 
         description: "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
         logo: VICELogo,
+        background: '',
         tags: ["peer", "recurring", "walkIn", "substanceAbuse"],
         phone:"604-827-1728",
         social: {
@@ -301,6 +314,7 @@ export default [
         name: "AMS The Pride Collective", 
         description: "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
         logo: PrideLogo,
+        background: '',
         tags: ["recurring", "lgbt"],
         social: {
             "website": "https://www.prideubc.com/",
@@ -313,6 +327,7 @@ export default [
         name: "Women’s Center", 
         description: "Support and resources for women on campus, including informational brochures, menstrual products, safer sex products, pregnancy tests, and more.",
         logo: WomenCentreLogo,
+        background: '',
         tags: ["walkIn", "womensHealth"],
         social: {
             "website": "http://www.ubcwomenscentre.com",
@@ -325,6 +340,7 @@ export default [
         name: "The Kaleidoscope", 
         description: "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
         logo: KaleidoscopeLogo,
+        background: '',
         tags: ["peer", "recurring"],
         social: {
             "website": "http://the-kaleidoscope.com/",
@@ -340,6 +356,7 @@ export default [
         name: "SHARE UBC", 
         description: "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
         logo: SHARELogo,
+        background: '',
         tags: ["peer", "recurring", "selfHarm"],
         social: {
             "website": "https://vivreshare.org/support-group/",
@@ -355,6 +372,7 @@ export default [
         name: "Mental Health Awareness Club", 
         description: "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
         logo: MHACLogo,
+        background: '',
         tags: ["generalAwareness", "events"],
         social: {
             "website": "http://blogs.ubc.ca/ubcmhac/",
@@ -367,6 +385,7 @@ export default [
         name: "UBC Jack Chapter", 
         description: "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
         logo: JackLogo,
+        background: '',
         tags: ["generalAwareness", "events"],
         social: {
             "website": "http://legacy.jack.org/chapters/university-british-columbia",
@@ -376,6 +395,7 @@ export default [
         name: "Zen at UBC", 
         description: "Zen meditation practice on campus. Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
         logo: ZenLogo,
+        background: '',
         tags: ["generalAwareness", "recurring"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
@@ -390,6 +410,7 @@ export default [
         name: "UBC Meditation Community", 
         description: "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
         logo: MeditationLogo,
+        background: '',
         tags: ["generalAwareness", "recurring"],
         social: {
             "website": "http://blogs.ubc.ca/meditation/",
@@ -404,6 +425,7 @@ export default [
         name: "Crisis Centre", 
         description: "Emotional support for people in crisis/distress. ",
         logo: CrisisLogo,
+        background: '',
         tags: ["hotline", "professional", "allday"],
         phone:"1-800-784-2433",
         social: {
@@ -417,6 +439,7 @@ export default [
         name: "Women Against Violence Against Women", 
         description: "Support services for survivors of sexualized violence or gender marginalization.",
         logo: WomenViolenceLogo,
+        background: '',
         tags: ["hotline", "professional", "allday", "sexualHealthAssault", "womensHealth"],
         phone:"1-877-392-7583",
         social: {
@@ -432,6 +455,7 @@ export default [
         name: "Empower Me", 
         description: "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
         logo: EmpowerLogo,
+        background: '',
         tags: ["online", "hotline", "professional", "allday"],
         phone:"1-844-741-6389",
         social: {
@@ -445,6 +469,7 @@ export default [
         name: "UBC Academic Advising", 
         description: "Help with program planning, degree requirements, and other course-related questions.",
         logo: AcademicLogo,
+        background: '',
         tags: ["online", "professional", "appointment", "academic"],
         social: {
             "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
@@ -457,6 +482,7 @@ export default [
         name: "Enrollment Services", 
         description: "Get help with budgeting, loans, understanding UBC processes, financial planning.",
         logo: EnrollmentLogo,
+        background: '',
         tags: ["online", "professional", "walkIn", "financial"],
         phone:"1-877-272-1422",
         social: {
