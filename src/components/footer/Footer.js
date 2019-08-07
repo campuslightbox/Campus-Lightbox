@@ -28,7 +28,7 @@ const FixedMenuLayout = () => (
           <Grid.Column width={5} alignitems="center">
             <Header inverted as='h4' content='Brought to you by:' />
             <Modal trigger={<Button onClick={() => trackGA("About Project Aurora")}>© Project Aurora</Button>} closeIcon size='large'>
-              <Modal.Header><center>Abous Us</center></Modal.Header>
+              <Modal.Header><center>About Us</center></Modal.Header>
               <Modal.Content image>
                 <Modal.Description>
                   <center><p>Campus Lightbox was envisioned and created by <b>Project Aurora.</b></p>
@@ -66,7 +66,7 @@ const FixedMenuLayout = () => (
             <h6>We are not affiliated,
         associated, authorized, endorsed by, or in any way officially connected with
         the University of British Columbia, or any of its subsidiaries or its affiliates.
-        The official University of British Columbia website can be found here.</h6>
+        The official University of British Columbia website can be found <a href="https://www.ubc.ca/" target="_blank" style={{color:"white",textDecoration:"none"}}>here</a>.</h6>
           </Grid.Column>
         </Grid>
       </Container>
