@@ -30,38 +30,46 @@
     }
 */
 import YogaClubLogo from './logos/YogaClub.png';
-import UBCCounsellingServiceLogo from './logos/UBCCounsellingService.jpg';
-import JackLogo from './logos/Jack.jpg';
-import UMCALogo from './logos/UMCA.jpg';
-import UBCStudentHealthLogo from './logos/UBCStudentHealth.jpg';
-import CentreForAccessibilityLogo from './logos/CentreForAccessibility.jpg';
-import VillageMedicalLogo from './logos/UBCVillageMedical.jpg';
-import WesbrookVillageMedicalLogo from './logos/WesbrookVillageMedical.jpg';
-import NursesLogo from './logos/Nurses.jpg';
-import PsychologyClinicLogo from './logos/PsychologyClinic.jpg';
+import UBCCounsellingServiceLogo from './logos/UBCCounsellingService.png';
+import JackLogo from './logos/Jack.png';
+import UMCALogo from './logos/UMCA.png';
+import UBCStudentHealthLogo from './logos/UBCStudentHealth.png';
+import CentreForAccessibilityLogo from './logos/CentreForAccessibility.png';
+import VillageMedicalLogo from './logos/UBCVillageMedical.png';
+import WesbrookVillageMedicalLogo from './logos/WesbrookVillageMedical.png';
+import NursesLogo from './logos/Nurses.png';
+import PsychologyClinicLogo from './logos/PsychologyClinic.png';
 import WellnessCentreLogo from './logos/WellnessCentre.png';
-import AMSSpeakeasyLogo from './logos/AMSSpeakeasy.jpeg';
+import AMSSpeakeasyLogo from './logos/AMSSpeakeasy.png';
 import SASCLogo from './logos/SASC.png';
 import VICELogo from './logos/VICE.png';
-import PrideLogo from './logos/Pride.jpeg';
-import WomenCentreLogo from './logos/WomenCentre.jpg';
+import PrideLogo from './logos/Pride.png';
+import WomenCentreLogo from './logos/WomenCentre.png';
 import KaleidoscopeLogo from './logos/Kaleidoscope.png';
 import SHARELogo from './logos/SHARE.png';
 import MHACLogo from './logos/MHAC.png';
 import ZenLogo from './logos/Zen.png';
 import MeditationLogo from './logos/Meditation.png';
-import CrisisLogo from './logos/Crisis.jpg';
-import WomenViolenceLogo from './logos/WomenViolence.jpg';
+import CrisisLogo from './logos/Crisis.png';
+import WomenViolenceLogo from './logos/WomenViolence.png';
 import EmpowerLogo from './logos/Empower.png';
-import AcademicLogo from './logos/Academic.jpg';
-import EnrollmentLogo from './logos/Enrollment.jpg';
+import AcademicLogo from './logos/Academic.png';
+import EnrollmentLogo from './logos/Enrollment.png';
+
+import YogaClubBG from './logos/YogaClubBG.png';
+import AcademicBG from './logos/AcademicBG.jpg';
+import EnrollmentBG from './logos/EnrollmentBG.jpg';
+import VillageMedicalBG from './logos/UBCVillageMedicalBG.jpg';
+import WesbrookVillageMedicalBG from './logos/WesbrookVillageMedicalBG.jpg';
+import UBCCounsellingServiceBG from './logos/UBCCounsellingServiceBG.jpg';
+import CentreForAccessibilityBG from './logos/CentreForAccessibilityBG.jpg';
 
 export default [
     {
         name: "UBC Counselling Service", 
         description: "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
         logo: UBCCounsellingServiceLogo,
-        background: '',
+        background: UBCCounsellingServiceBG,
         tags: ["professional", "appointment", "walkIn"],
         phone:"604-822-3811",
         social: {
@@ -80,7 +88,7 @@ export default [
         name: "UBC Yoga Club", 
         description: "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health", 
         logo: YogaClubLogo,
-        background: 'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NvA9hQs0eimlu5m80/videoblocks-relax-stones-on-the-beach-and-sea-on-background-zen-symbol-from-stones-on-the-sand_rttxgy8jb_thumbnail-full01.png',
+        background: YogaClubBG,
         tags: ["generalAwareness"], 
         social: {
             "website": "https://www.ubcyogaclub.com",
@@ -130,7 +138,7 @@ export default [
         name: "Centre for Accessibility", 
         description: "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
         logo: CentreForAccessibilityLogo,
-        background: '',
+        background: CentreForAccessibilityBG,
         tags: ["professional", "appointment", "walkIn", "disability"],
         phone:"604-822-5844",
         social: {
@@ -152,7 +160,7 @@ export default [
         name: "University Village Medical & Dental Clinic - UBC Village", 
         description: "Walk-in medical clinic located on Allison Road in UBC Village.",
         logo: VillageMedicalLogo,
-        background: '',
+        background: VillageMedicalBG,
         tags: ["medical", "walkIn"],
         phone:"604-222-2273 (ext. 2)",
         social: {
@@ -173,7 +181,7 @@ export default [
         name: "University Village Medical Clinic - Wesbrook Village", 
         description: "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
         logo: WesbrookVillageMedicalLogo,
-        background: '',
+        background: WesbrookVillageMedicalBG,
         tags: ["medical", "walkIn"],
         phone:"604-222-2273 (ext. 1)",
         social: {
@@ -469,7 +477,7 @@ export default [
         name: "UBC Academic Advising", 
         description: "Help with program planning, degree requirements, and other course-related questions.",
         logo: AcademicLogo,
-        background: '',
+        background: AcademicBG,
         tags: ["online", "professional", "appointment", "academic"],
         social: {
             "website": "https://students.ubc.ca/enrolment/academic-supports/academic-advising",
@@ -482,7 +490,7 @@ export default [
         name: "Enrollment Services", 
         description: "Get help with budgeting, loans, understanding UBC processes, financial planning.",
         logo: EnrollmentLogo,
-        background: '',
+        background: EnrollmentBG,
         tags: ["online", "professional", "walkIn", "financial"],
         phone:"1-877-272-1422",
         social: {

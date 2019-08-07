@@ -63,15 +63,15 @@ class Header extends React.Component {
                             <div className="buttonsAll">
                             <span className="resourceButton1 animated fadeIn">
                             <Button inverted style={styles.button}
-                                onClick={() => this.onFilterClicked("peer")}>Peer</Button>
+                                onClick={() => this.onFilterClicked("peer")}>Peer Support</Button>
                             </span>
                             <span className="resourceButton2 animated fadeIn">
                             <Button inverted style={styles.button}
-                                onClick={() => this.onFilterClicked("professional")}>Professional</Button>
+                                onClick={() => this.onFilterClicked("professional")}>Professional Help</Button>
                             </span>
                             <span className="resourceButton3 animated fadeIn">
                             <Button inverted style={styles.button}
-                                onClick={() => this.onFilterClicked("hotline")}>Phone</Button>
+                                onClick={() => this.onFilterClicked("hotline")}>Phone Hotline</Button>
                             </span>
                             </div>
                             <div className="ButtonClass animated fadeInDown">
