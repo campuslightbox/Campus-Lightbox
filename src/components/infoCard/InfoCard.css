@@ -14,6 +14,13 @@
 	width: 260px;
 }
 
+.banner-logo {
+	height: 72px;
+	top: 4px;
+	left: 4px;
+	position: absolute;
+}
+
 /* Mobile */
 @media only screen and (max-width: 801px) {
 	.ui.card, .ui.cards>.card {

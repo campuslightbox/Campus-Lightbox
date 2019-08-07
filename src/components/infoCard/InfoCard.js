@@ -25,23 +25,24 @@ class InfoCard extends React.Component {
         ReactGA.event({
             category: 'User',
             action: 'Clicked View Details: ' + this.props.name
-          });
-        this.setState({side: "back"});
+        });
+        this.setState({ side: "back" });
     }
 
     onCloseButtonClick = () => {
-        this.setState({side: "front"});
+        this.setState({ side: "front" });
     }
 
     renderFront = () => {
         return [
             <MediaQuery key="front-laptop-image" minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                 <Image
-                    src={this.props.logo || 'https://i0.wp.com/www.littlebitesofbeauty.com/wp-content/uploads/2015/06/default-placeholder.png?zoom=2&resize=1170%2C658&ssl=1'}
+                    src={this.props.background || 'http://justfunfacts.com/wp-content/uploads/2018/03/mountains.jpg'}
                     size='medium'
                     key="front-image"
-                    style={styles.infoCardImage}
+                    style={styles.infoCardImageMobile}
                 />
+                {this.props.logo && <img className="banner-logo" src={this.props.logo} />}
             </MediaQuery>,
             <MediaQuery key="front-mobile-image" maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                 <Image
@@ -50,14 +51,14 @@ class InfoCard extends React.Component {
                     key="front-image"
                     style={styles.infoCardImageMobile}
                 />
-                {this.props.logo && <img className="banner-logo" src={this.props.logo}/>}
+                {this.props.logo && <img className="banner-logo" src={this.props.logo} />}
             </MediaQuery>,
             <Card.Content key="front-content" style={styles.infoCardFrontContent}>
                 <Card.Header>{this.props.name}</Card.Header>
                 <Card.Description>{this.props.description}</Card.Description>
             </Card.Content>,
             <Card.Content key="front-extra" style={styles.infoCardFrontContent} extra>
-                <Card.Meta style={{marginBottom: 8}}>
+                <Card.Meta style={{ marginBottom: 8 }}>
                     {_.map(this.props.tags, tag => this.renderTag(tag))}
                 </Card.Meta>
                 {this.props.hours && this.renderTodayHours()}
@@ -70,7 +71,7 @@ class InfoCard extends React.Component {
         if (this.props.tags.indexOf('allday') > -1) {
             return (
                 <Card.Meta>
-                    <Icon name='circle' color="green"/>
+                    <Icon name='circle' color="green" />
                     Open 24 / 7
                 </Card.Meta>
             );
@@ -84,7 +85,7 @@ class InfoCard extends React.Component {
 
             return (
                 <Card.Meta>
-                    <Icon name='circle' color={iconColor}/>
+                    <Icon name='circle' color={iconColor} />
                     {' ' + this.props.hours[todayDay]}
                 </Card.Meta>
             );
@@ -93,7 +94,7 @@ class InfoCard extends React.Component {
                 // Resource does not have alternative hours, so it is closed
                 return (
                     <Card.Meta>
-                        <Icon name='circle' color="red"/>
+                        <Icon name='circle' color="red" />
                         Closed
                     </Card.Meta>
                 );
@@ -105,15 +106,15 @@ class InfoCard extends React.Component {
         const displayName = Tags.getDisplayNameForTag(tag);
         const color = Tags.getColorForTag(tag);
 
-        return <Label as='a' key={displayName} style={_.extend({backgroundColor: color, borderColor: color}, styles.tag)}>
+        return <Label as='a' key={displayName} style={_.extend({ backgroundColor: color, borderColor: color }, styles.tag)}>
             {displayName}
         </Label>;
     }
 
     renderNameBack = () => {
         return (
-            <Card.Content key="back-header" style={_.extend({padding: '14px 10px 14px 10px'}, styles.infoCardSection)}>
-                <Card.Header style={{float: 'left'}}>
+            <Card.Content key="back-header" style={_.extend({ padding: '14px 10px 14px 10px' }, styles.infoCardSection)}>
+                <Card.Header style={{ float: 'left' }}>
                     {this.props.name}
                 </Card.Header>
             </Card.Content>
@@ -151,12 +152,12 @@ class InfoCard extends React.Component {
             <Card.Content key="back-social-email" style={styles.infoCardSection}>
                 <Card.Description>
                     {
-                        this.props.social && this.props.social.website && 
-                        <Button circular color='grey' icon='world' onClick={() => window.open(this.props.social.website)}/>
+                        this.props.social && this.props.social.website &&
+                        <Button circular color='grey' icon='world' onClick={() => window.open(this.props.social.website)} />
                     }
                     {
-                        this.props.social && this.props.social.facebook && 
-                        <Button circular color='facebook' icon='facebook' onClick={() => window.open(this.props.social.facebook)}/>
+                        this.props.social && this.props.social.facebook &&
+                        <Button circular color='facebook' icon='facebook' onClick={() => window.open(this.props.social.facebook)} />
                     }
                 </Card.Description>
             </Card.Content>
@@ -184,8 +185,8 @@ class InfoCard extends React.Component {
                     <div key={dayInWeek}>
                         <div style={styles.hoursLabel}>{this._capitalize(dayInWeek).slice(0, 3) + ': '}</div>
                         <div style={styles.hours}>{!hoursForDay ? 'Closed' : hoursForDay}</div>
-                        <div style={{display: 'inline-block'}}>{isToday && 
-                            <Icon name='circle' color={iconColor} size='small' style={{marginLeft: 6}}/>}
+                        <div style={{ display: 'inline-block' }}>{isToday &&
+                            <Icon name='circle' color={iconColor} size='small' style={{ marginLeft: 6 }} />}
                         </div>
                     </div>
                 );
@@ -328,15 +329,15 @@ class InfoCard extends React.Component {
         <Card style={styles.infoCard}>
             {this.state.side === "front" ? this.renderFront() : this.renderBack()}
             {
-                this.state.side === "front" ? 
+                this.state.side === "front" ?
                     <div className='bottom-button'>
                         <Button attached='bottom' basic onClick={this.onContactButtonClick}>
-                            <Icon name='angle right'/> View Details
+                            <Icon name='angle right' /> View Details
                         </Button>
-                    </div> : 
+                    </div> :
                     <div className='bottom-button'>
                         <Button attached='bottom' basic onClick={this.onCloseButtonClick}>
-                            <Icon name='angle right'/> See Less
+                            <Icon name='angle right' /> See Less
                         </Button>
                     </div>
             }
@@ -344,7 +345,7 @@ class InfoCard extends React.Component {
     )
 }
 
-const styles= {
+const styles = {
     infoCard: {
         borderRadius: 10,
     },
