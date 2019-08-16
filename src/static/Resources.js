@@ -55,6 +55,7 @@ import WomenViolenceLogo from './logos/WomenViolence.png';
 import EmpowerLogo from './logos/Empower.png';
 import AcademicLogo from './logos/Academic.png';
 import EnrollmentLogo from './logos/Enrollment.png';
+import SVPROLOGO from './logos/SVPRO.png';
 
 import YogaClubBG from './logos/YogaClubBG.png';
 import AcademicBG from './logos/AcademicBG.jpg';
@@ -507,5 +508,29 @@ export default [
             "sunday": "closed",
         },
         notes: "See your faculty website for email"
+    },
+    {
+        name: "Sexual Violence Prevention & Response (SVPRO)", 
+        description: "Creating a safe space to help explore the available, most suitable options for anyone who has experienced sexual violence regardless of where it took place.",
+        logo: SVPROLOGO,
+        background: "",
+        tags: ["hotline", "professional", "walkIn","sexualHealthAssault"],
+        phone:"604-822-1588",
+        social: {
+            "website":"https://svpro.ubc.ca/",
+        },
+        email:"gethelp@svpro.ubc.ca",
+        address: "6363 Agronomy Road\nRoom 4071 \nVancouver, BC V6T 1T2",
+        hours: {
+            "monday": "8:30am-4:30pm",
+            "tuesday": "8:30am-4:30pm",
+            "wednesday": "8:30am-4:30pm",
+            "thursday": "8:30am-4:30pm",
+            "friday": "8:30am-4:30pm",
+            "saturday": "closed",
+            "sunday": "closed",
+        },
+        notes: "Call during business hours to explore the options available. If the call goes unanswered, a message can be left and the call will be returned by the next working day."
+
     }
 ];
