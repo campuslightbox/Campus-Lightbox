@@ -82,7 +82,6 @@ class CardContainer extends React.Component {
                 });
                 this.setState({trackNoResults: 'disabled'}); // TODO: this triggers a warning about how setState should not be called in render
             }
-            
 
             return (
                 <Segment placeholder>

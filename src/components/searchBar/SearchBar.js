@@ -1,8 +1,8 @@
 import React from 'react';
-import { Input, Segment } from 'semantic-ui-react';
+import { Input } from 'semantic-ui-react';
 
 class SearchBar extends React.Component {
-    renderContent = () => (
+    render = () => (
         <Input 
             fluid
             action={{icon: 'cancel', onClick: this.props.onClearSearchText}}
@@ -12,14 +12,6 @@ class SearchBar extends React.Component {
             onChange={this.props.onSearchTextChange}
         />
     )
-
-    render = () => {
-        if (this.props.inline) {
-            return this.renderContent()
-        } else {
-            return <Segment basic>{this.renderContent()}</Segment>
-        }
-    }
 }
 
 export default SearchBar;
