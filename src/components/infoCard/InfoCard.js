@@ -9,6 +9,7 @@ import ReactGA from 'react-ga';
 import MediaQueryHelper from 'static/MediaQueryHelper';
 
 import './InfoCard.css';
+import background from './mountains.jpg';
 
 ReactGA.initialize('UA-139413334-1');
 
@@ -37,7 +38,7 @@ class InfoCard extends React.Component {
         return [
             <MediaQuery key="front-laptop-image" minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                 <Image
-                    src={this.props.background || 'http://justfunfacts.com/wp-content/uploads/2018/03/mountains.jpg'}
+                    src={this.props.background || background}
                     size='medium'
                     key="front-image"
                     style={styles.infoCardImageMobile}
@@ -46,7 +47,7 @@ class InfoCard extends React.Component {
             </MediaQuery>,
             <MediaQuery key="front-mobile-image" maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                 <Image
-                    src={this.props.background || 'http://justfunfacts.com/wp-content/uploads/2018/03/mountains.jpg'}
+                    src={this.props.background || background}
                     size='medium'
                     key="front-image"
                     style={styles.infoCardImageMobile}
