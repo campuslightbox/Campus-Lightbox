@@ -339,7 +339,6 @@ export default [
         background: '',
         tags: ["walkIn", "womensHealth"],
         social: {
-            "website": "http://www.ubcwomenscentre.com",
             "facebook": "https://www.facebook.com/ubcwomenscentre/",
         },
         email: "ubcwomenscentre@gmail.com",
@@ -402,7 +401,7 @@ export default [
     },
     {
         name: "Zen at UBC", 
-        description: "Zen meditation practice on campus. Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
+        description: "Zen meditation practice on campus. One-on-one/Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
         logo: ZenLogo,
         background: '',
         tags: ["generalAwareness", "recurring"],

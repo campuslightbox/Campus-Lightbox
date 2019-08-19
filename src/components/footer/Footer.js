@@ -43,17 +43,20 @@ const FixedMenuLayout = () => (
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-            <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' />
+            {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
+            <br />
+            <br />
+            Email us: <a href="mailto:admin@projectaurora.ca" target="_blank" style={{color:"white",textDecoration:"none"}}>admin@projectaurora.ca</a>
           </Grid.Column>
 
           <Grid.Column width={4}>
             <Header inverted as='h4' content='Follow us:' />
             <Button.Group>
-              <a href="https://www.facebook.com/Project-Aurora-1190802371087781/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("Facebook")} size='large' circular color='facebook' icon='facebook' /></a>
-              <a href="https://www.instagram.com/proj_aurora/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
                 <Button  onClick={() => trackGA("Instagram")} size='large' circular color='instagram' icon='instagram' /></a>
-              <a href="https://twitter.com/ProjectAurora6" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("Twitter")} size='large' circular color='twitter' icon='twitter' /></a>
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("LinkedIn")} size='large' circular color='linkedin' icon='linkedin' /></a>
