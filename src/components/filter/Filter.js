@@ -71,25 +71,6 @@ class Filter extends React.Component {
         return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
-    createMobileGroups = () => {
-        return _.map(this.filterList, (val, category) => {
-            return (
-                <div key={category}>
-                    <h5 className="mobile-group-title">{this.getMobileDisplayNameForCategory(category)}</h5>
-                    <List horizontal style={styles.filterSection}>
-                        {this.createMobileList(category, val)}
-                    </List>
-                </div>
-
-            );
-        });
-    }
-
-    getMobileDisplayNameForCategory(category) {
-        const displayName = (category === "additional") ? "Additional Tags" : category;
-        return displayName.toUpperCase();
-    }
-
     createList = (category, items) => {
         return items.map(item => {
             // Find if the item is currently selecteds
@@ -106,39 +87,6 @@ class Filter extends React.Component {
             </List.Item>);
         });
     }
-
-    createMobileList = (category, items) => {
-        return items.map(item => {
-            // Find if the item is currently selecteds
-            let existingItem = _.find(this.props.filter[category], (currItem) => {
-                return currItem === item.tag
-            });
-
-            return (<List.Item key={item.tag} style={styles.filterList}>
-                <Button
-                    compact
-                    toggle
-                    size="small"
-                    style={styles.filterButton}
-                    active={existingItem ? true : false}
-                    onClick={() => this.props.onFilterChange(category, item.tag)}
-                    content={item.displayName}
-                />
-            </List.Item>);
-        });
-    }
-
-    renderLaptopFilter = () => (
-        <Segment basic>
-            {this.createGroups()}
-            <Grid.Row>
-                <Button
-                    onClick={this.props.onClearFilter}
-                    content="Clear Filter"
-                    primary />
-            </Grid.Row>
-        </Segment>
-    )
 
     renderMobileFilter = () => (
         <Modal open={this.props.open} onClose={this.props.onCloseFilter}>
@@ -162,13 +110,61 @@ class Filter extends React.Component {
             </Modal.Content>
         </Modal>
     )
+    
+    createMobileGroups = () => {
+        return _.map(this.filterList, (val, category) => {
+            return (
+                <div key={category}>
+                    <h5 className="mobile-group-title">{this.getMobileDisplayNameForCategory(category)}</h5>
+                    <List horizontal style={styles.filterSection}>
+                        {this.createMobileList(category, val)}
+                    </List>
+                </div>
+
+            );
+        });
+    }
+
+    getMobileDisplayNameForCategory(category) {
+        const displayName = (category === "additional") ? "Additional Tags" : category;
+        return displayName.toUpperCase();
+    }
+
+    createMobileList = (category, items) => {
+        return items.map(item => {
+            // Find if the item is currently selecteds
+            let existingItem = _.find(this.props.filter[category], (currItem) => {
+                return currItem === item.tag
+            });
+
+            return (<List.Item key={item.tag} style={styles.filterList}>
+                <Button
+                    compact
+                    toggle
+                    size="small"
+                    style={styles.filterButton}
+                    active={existingItem ? true : false}
+                    onClick={() => this.props.onFilterChange(category, item.tag)}
+                    content={item.displayName}
+                />
+            </List.Item>);
+        });
+    }
 
     render = () => (
         <div>
             <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
-                {this.renderLaptopFilter()}
+                {/* Laptop */}
+                {this.createGroups()}
+                <Grid.Row>
+                    <Button
+                        onClick={this.props.onClearFilter}
+                        content="Clear Filter"
+                        primary />
+                </Grid.Row>
             </MediaQuery>
             <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
+                {/* Mobile and tablet */}
                 {this.renderMobileFilter()}
             </MediaQuery>
         </div>

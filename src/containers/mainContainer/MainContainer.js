@@ -50,11 +50,13 @@ class MainContainer extends React.Component {
                                 onClearSearchText={this.props.onClearSearchText}
                             />
                         </Segment>
-                        <Filter
-                            filter={this.props.filter}
-                            onFilterChange={this.props.onFilterChange}
-                            onClearFilter={this.props.onClearFilter}
-                        />
+                        <Segment basic>
+                            <Filter
+                                filter={this.props.filter}
+                                onFilterChange={this.props.onFilterChange}
+                                onClearFilter={this.props.onClearFilter}
+                            />
+                        </Segment>
                     </MediaQuery>
                     <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                         {/* Mobile and tablet */}
