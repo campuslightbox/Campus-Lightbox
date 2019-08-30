@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 
 import SearchBar from 'components/searchBar/SearchBar';
 import Filter from 'components/filter/Filter';
+import FeedbackModal from 'components/feedbackModal/FeedbackModal';
 import CardContainer from 'containers/cardContainer/CardContainer';
 import Resources from 'static/Resources';
 import MediaQueryHelper from 'static/MediaQueryHelper';
@@ -39,6 +40,7 @@ class MainContainer extends React.Component {
     render = () => (
         <Container style={styles.container}>
             <div ref={this.props.refProp}></div> 
+            <FeedbackModal />
             <Grid stackable compact="true">
                 <Grid.Column width={4}>
                     <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>

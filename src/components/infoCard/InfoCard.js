@@ -43,7 +43,7 @@ class InfoCard extends React.Component {
                     key="front-image"
                     style={styles.infoCardImageMobile}
                 />
-                {this.props.logo && <img className="banner-logo" src={this.props.logo} />}
+                {this.props.logo && <img className="banner-logo" alt="logo" src={this.props.logo} />}
             </MediaQuery>,
             <MediaQuery key="front-mobile-image" maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
                 <Image
@@ -52,7 +52,7 @@ class InfoCard extends React.Component {
                     key="front-image"
                     style={styles.infoCardImageMobile}
                 />
-                {this.props.logo && <img className="banner-logo" src={this.props.logo} />}
+                {this.props.logo && <img className="banner-logo" alt="logo" src={this.props.logo} />}
             </MediaQuery>,
             <Card.Content key="front-content" style={styles.infoCardFrontContent}>
                 <Card.Header>{this.props.name}</Card.Header>
