@@ -518,7 +518,7 @@ export default [
         social: {
             "website":"https://svpro.ubc.ca/",
         },
-        email:"gethelp@svpro.ubc.ca",
+        email:"svpro.vancouver@ubc.ca",
         address: "6363 Agronomy Road\nRoom 4071 \nVancouver, BC V6T 1T2",
         hours: {
             "monday": "8:30am-4:30pm",
