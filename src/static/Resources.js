@@ -133,7 +133,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
-        notes: "No Saturday service May 1 - Aug 31"
+        notes: "On Wednesday, September 11, we will be closed between 11:30 am to 1:30 pm. We will resume service at 1:30 pm."
     },
     {
         name: "Centre for Accessibility", 
@@ -248,15 +248,15 @@ export default [
         email: "wellness.centre@ubc.ca",
         address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
         hours: {
-            "monday": "closed",
-            "tuesday": "11:00am-3:00pm",
-            "wednesday": "11:00am-3:00pm",
-            "thursday": "11:00am-3:00pm",
-            "friday": "closed",
+            "monday": "10:00am-5:00pm",
+            "tuesday": "10:00am-4:00pm",
+            "wednesday": "10:00am-5:00pm",
+            "thursday": "10:00am-5:00pm",
+            "friday": "10:00am-5:00pm",
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "Hours may vary based on time of year, double check our website for more details. Closed June 3-7th, 2019, August 19-23, 2019 and Re-opening for the academic year August 26th, hours TBC"
+        notes: "Hours may vary based on time of year, double check our website for more details."
     },
     {
         name: "AMS Speakeasy", 
@@ -492,7 +492,7 @@ export default [
         logo: EnrollmentLogo,
         background: EnrollmentBG,
         tags: ["online", "professional", "walkIn", "financial"],
-        phone:"1-877-272-1422",
+        phone:"604-822-9836",
         social: {
             "website": "https://students.ubc.ca/about-student-services/enrolment-services-advisors",
         },
