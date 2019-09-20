@@ -18,7 +18,7 @@ class InfoCard extends React.Component {
         super(props);
 
         this.state = {
-            side: "front",
+            side: "back",
         }
     }
 

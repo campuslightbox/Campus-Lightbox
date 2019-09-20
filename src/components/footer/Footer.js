@@ -8,6 +8,7 @@ import {
   Modal
 } from 'semantic-ui-react'
 import ReactGA from 'react-ga';
+import FeedbackModal from 'components/feedbackModal/FeedbackModal';
 
 ReactGA.initialize('UA-139413334-1');
 
@@ -16,6 +17,12 @@ const trackGA = (buttonName) => {
       category: 'Footer',
       action: 'Clicked ' + buttonName + ' Button'
     });
+}
+
+const styles = {
+    socialGroup: {
+        marginBottom: 12,
+    },
 }
 
 const FixedMenuLayout = () => (
@@ -49,9 +56,9 @@ const FixedMenuLayout = () => (
             Email us: <a href="mailto:admin@projectaurora.ca" target="_blank" style={{color:"white",textDecoration:"none"}}>admin@projectaurora.ca</a>
           </Grid.Column>
 
-          <Grid.Column width={4}>
+          <Grid.Column width={4} alignitems="center">
             <Header inverted as='h4' content='Follow us:' />
-            <Button.Group>
+            <Button.Group style={styles.socialGroup}>
               <a href="https://www.facebook.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("Facebook")} size='large' circular color='facebook' icon='facebook' /></a>
               <a href="https://www.instagram.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
@@ -60,8 +67,8 @@ const FixedMenuLayout = () => (
                 <Button onClick={() => trackGA("Twitter")} size='large' circular color='twitter' icon='twitter' /></a>
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("LinkedIn")} size='large' circular color='linkedin' icon='linkedin' /></a>
-                </Button.Group>
-
+            </Button.Group>
+            <FeedbackModal />
           </Grid.Column>
 
           <Grid.Column width={7}>

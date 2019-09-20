@@ -44,7 +44,7 @@ class FeedbackModal extends React.Component {
 
         window.emailjs.send(
             'mailgun',
-            'template_SXphDtLl',
+            'template_qCO0QsXD',
             {
                 name: this.state.name || "(Empty)",
                 email: this.state.email || "(Empty)",
