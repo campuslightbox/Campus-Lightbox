@@ -2,6 +2,9 @@ import React from 'react';
 import { Modal, Button, Form, Message } from 'semantic-ui-react';
 
 const styles = {
+    title: {
+        fontSize: 20,
+    },
     textValue: {
         fontSize: 14,
     }
@@ -14,7 +17,8 @@ class FeedbackModal extends React.Component {
         this.state = {
             name: "",
             email: "",
-            feedback: "",
+            subject: "",
+            message: "",
             sent: false,
             error: false,
         }
@@ -28,7 +32,8 @@ class FeedbackModal extends React.Component {
         this.setState({
             name: "",
             email: "",
-            feedback: "",
+            subject: "",
+            message: "",
             sent: false,
             error: false,
         });
@@ -41,9 +46,10 @@ class FeedbackModal extends React.Component {
             'mailgun',
             'template_SXphDtLl',
             {
-                name: this.state.name || "Anonymous",
-                email: this.state.email || "Anonymous",
-                feedback: this.state.feedback,
+                name: this.state.name || "(Empty)",
+                email: this.state.email || "(Empty)",
+                subject: this.state.subject,
+                message: this.state.message,
             })
             .then(res => {
                 this.setState({
@@ -61,38 +67,43 @@ class FeedbackModal extends React.Component {
     }
 
     render = () => (
-        <Modal trigger={<Button color='orange'>Give Us Feedback</Button>} onClose={this.onClose}>
+        <Modal trigger={<Button color='orange'>Give Us Feedback</Button>} onClose={this.onClose} closeIcon>
+            <Modal.Header style={styles.title}>Have feedback, questions, comments, or want to reach out to us? Send us a message here, or email us at admin@projectaurora.ca.</Modal.Header>
             <Modal.Content>
                 <Modal.Description>
                     <Form success={this.state.sent} error={this.state.error}>
-                        <Form.TextArea
-                            label='Feedback'
-                            name="feedback"
-                            value={this.state.feedback}
-                            placeholder='Tell us what you think...'
-                            style={styles.textValue}
-                            onChange={this.onChange}
-                        />
-                        <Form.Group widths='equal'>
+                        <Form.Group>
                             <Form.Input
-                                fluid
-                                label='Name'
+                                width={4}
+                                label='Name (Optional)'
                                 name="name"
                                 value={this.state.name}
-                                placeholder='Optional'
                                 style={styles.textValue}
                                 onChange={this.onChange}
                             />
                             <Form.Input
-                                fluid
-                                label='Email'
+                                width={14}
+                                label='Your Email Address (Required if you would like a response. If not, Optional)'
                                 name="email"
                                 value={this.state.email}
-                                placeholder='Optional'
                                 style={styles.textValue}
                                 onChange={this.onChange}
                             />
                         </Form.Group>
+                        <Form.Input
+                            label="Subject"
+                            name="subject"
+                            value={this.state.subject}
+                            style={styles.textValue}
+                            onChange={this.onChange}
+                        />
+                        <Form.TextArea
+                            label='Message'
+                            name="message"
+                            value={this.state.message}
+                            style={styles.textValue}
+                            onChange={this.onChange}
+                        />
                         <Message
                             success
                             header='Feedback Sent!'
@@ -106,7 +117,7 @@ class FeedbackModal extends React.Component {
                         <Button
                             type='submit'
                             color="green"
-                            disabled={!this.state.feedback}
+                            disabled={!this.state.message || !this.state.subject}
                             onClick={this.onSubmitFeedback}
                         >Submit</Button>
                     </Form>
