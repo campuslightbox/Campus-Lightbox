@@ -133,7 +133,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
-        notes: "On Wednesday, September 11, we will be closed between 11:30 am to 1:30 pm. We will resume service at 1:30 pm."
+        
     },
     {
         name: "Centre for Accessibility", 
