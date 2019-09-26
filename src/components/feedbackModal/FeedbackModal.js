@@ -17,8 +17,8 @@ class FeedbackModal extends React.Component {
         this.state = {
             name: "",
             email: "",
-            subject: "",
-            message: "",
+            subject: this.props.subject,
+            message: this.props.message,
             sent: false,
             error: false,
         }
@@ -67,7 +67,7 @@ class FeedbackModal extends React.Component {
     }
 
     render = () => (
-        <Modal trigger={<Button color='orange'>Give Us Feedback</Button>} onClose={this.onClose} closeIcon>
+        <Modal trigger={this.props.trigger} onClose={this.onClose} closeIcon>
             <Modal.Header style={styles.title}>Have feedback, questions, comments, or want to reach out to us? Send us a message here, or email us at admin@projectaurora.ca.</Modal.Header>
             <Modal.Content>
                 <Modal.Description>
@@ -125,6 +125,12 @@ class FeedbackModal extends React.Component {
             </Modal.Content>
         </Modal>
     )
+}
+
+FeedbackModal.defaultProps = {
+    trigger: <Button color='orange'>Feedback</Button>,
+    subject: "",
+    message: "",
 }
 
 export default FeedbackModal;

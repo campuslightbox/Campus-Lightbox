@@ -21,6 +21,15 @@
 	position: absolute;
 }
 
+#report-button>button {
+	box-shadow: none!important;
+	padding:4px 0px 0px 4px!important;
+}
+
+#report-button i:hover{
+	color: #db2828!important;
+}
+
 /* Mobile */
 @media only screen and (max-width: 801px) {
 	.ui.card, .ui.cards>.card {

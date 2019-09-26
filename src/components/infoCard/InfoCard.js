@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Card, Image, Icon, Label, Grid, Divider } from 'semantic-ui-react';
+import { Button, Card, Image, Icon, Label, Grid, Divider, Popup } from 'semantic-ui-react';
 import Tags from 'static/Tags';
 import MediaQuery from 'react-responsive';
 import _ from 'underscore';
 import moment from 'moment';
 import ReactGA from 'react-ga';
 
+import FeedbackModal from 'components/feedbackModal/FeedbackModal';
 import MediaQueryHelper from 'static/MediaQueryHelper';
 
 import './InfoCard.css';
@@ -18,7 +19,7 @@ class InfoCard extends React.Component {
         super(props);
 
         this.state = {
-            side: "back",
+            side: "front",
         }
     }
 
@@ -114,12 +115,30 @@ class InfoCard extends React.Component {
 
     renderNameBack = () => {
         return (
-            <Card.Content key="back-header" style={_.extend({ padding: '14px 10px 14px 10px' }, styles.infoCardSection)}>
-                <Card.Header style={{ float: 'left' }}>
+            <Card.Content key="back-header" style={_.extend(styles.backNameHeader, styles.infoCardSection)}>
+                <Card.Header>
+                    {this.renderReportButton()}
                     {this.props.name}
                 </Card.Header>
             </Card.Content>
         );
+    }
+
+    renderReportButton = () => {
+        return <div id="report-button">
+            <FeedbackModal 
+                trigger={
+                    <Button basic icon floated='right' size="small" onClick={() => {console.log("report")}}>
+                        <Popup 
+                            size='tiny'
+                            content='Report incorrect information'
+                            trigger={<Icon name='flag' />} 
+                        />
+                    </Button>
+                }
+                subject={"Inaccurate information regarding \"" + this.props.name + "\""}
+            />
+        </div>
     }
 
     renderPhoneNumber = () => {
@@ -389,6 +408,12 @@ const styles = {
     },
     backHeader: {
         border: 'none',
+    },
+    backNameHeader: {
+        padding: '14px 10px 14px 10px',
+    },
+    reportButton: {
+        backgroundColor: 'blue',
     },
     hoursLabel: {
         width: 35,

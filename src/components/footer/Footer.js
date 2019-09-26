@@ -68,7 +68,7 @@ const FixedMenuLayout = () => (
               <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
                 <Button onClick={() => trackGA("LinkedIn")} size='large' circular color='linkedin' icon='linkedin' /></a>
             </Button.Group>
-            <FeedbackModal />
+            <FeedbackModal trigger={<Button color='orange'>Give Us Feedback</Button>}/>
           </Grid.Column>
 
           <Grid.Column width={7}>
