@@ -55,7 +55,7 @@ import WomenViolenceLogo from './logos/WomenViolence.png';
 import EmpowerLogo from './logos/Empower.png';
 import AcademicLogo from './logos/Academic.png';
 import EnrollmentLogo from './logos/Enrollment.png';
-import SVPROLOGO from './logos/SVPRO.png';
+import SVPROLogo from './logos/SVPRO.png';
 
 import YogaClubBG from './logos/YogaClubBG.png';
 import AcademicBG from './logos/AcademicBG.jpg';
@@ -64,6 +64,9 @@ import VillageMedicalBG from './logos/UBCVillageMedicalBG.jpg';
 import WesbrookVillageMedicalBG from './logos/WesbrookVillageMedicalBG.jpg';
 import UBCCounsellingServiceBG from './logos/UBCCounsellingServiceBG.jpg';
 import CentreForAccessibilityBG from './logos/CentreForAccessibilityBG.jpg';
+import UMCABG from './logos/UMCABG.jpg';
+import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
+import NursesBG from './logos/NursesBG.jpg';
 
 export default [
     {
@@ -105,7 +108,7 @@ export default [
         name: "University Multifaith Chaplains Association", 
         description: "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
         logo: UMCALogo,
-        background: '',
+        background: UMCABG,
         tags: ["professional", "walkIn", "spiritual"],
         social: {
             "website": "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
@@ -117,7 +120,7 @@ export default [
         name: "UBC Student Health Services", 
         description: "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
         logo: UBCStudentHealthLogo,
-        background: '',
+        background: UBCStudentHealthBG,
         tags: ["medical", "appointment", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -133,7 +136,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
-        notes: "On Wednesday, September 11, we will be closed between 11:30 am to 1:30 pm. We will resume service at 1:30 pm."
+        
     },
     {
         name: "Centre for Accessibility", 
@@ -203,7 +206,7 @@ export default [
         name: "Nurses on Campus", 
         description: "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
         logo: NursesLogo,
-        background: '',
+        background: NursesBG,
         tags: ["medical", "walkIn"],
         phone:"604-822-7011",
         social: {
@@ -511,7 +514,7 @@ export default [
     {
         name: "Sexual Violence Prevention & Response (SVPRO)", 
         description: "Creating a safe space to help explore the available, most suitable options for anyone who has experienced sexual violence regardless of where it took place.",
-        logo: SVPROLOGO,
+        logo: SVPROLogo,
         background: "",
         tags: ["hotline", "professional", "walkIn","sexualHealthAssault"],
         phone:"604-822-1588",
