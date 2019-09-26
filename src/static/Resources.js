@@ -374,9 +374,9 @@ export default [
             "facebook": "https://www.facebook.com/vivreSHARE",
         },
         email: "info@vivreshare.org",
-        address: "Buchanan D304\n1866 Main Mall\nVancouver, BC V6T 1Z1",
+        address: "IBLC Room 461\nVancouver, BC V6T 1Z1",
         hours: {
-            "others": "Check website for more info",
+            "others": "First Monday of each month (Oct 7, Nov 4, Dec 2) from 6 - 7:30pm",
         },
     },
     {
