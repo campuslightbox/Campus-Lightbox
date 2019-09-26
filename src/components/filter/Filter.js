@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, List, Checkbox, Card, Segment, Modal, Header } from 'semantic-ui-react';
+import { Grid, Button, List, Checkbox, Card, Modal, Header } from 'semantic-ui-react';
 import MediaQuery from 'react-responsive';
 import _ from 'underscore';
 
