@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "776559786b8a9dfe9dede08d795fa597",
+    "revision": "13356d27921b37ad448a87fde76bfabb",
     "url": "/index.html"
   },
   {
-    "revision": "4b0e40dab089e899b9e2",
+    "revision": "e07601bb3fe67613c8e6",
     "url": "/static/css/2.621b5bde.chunk.css"
   },
   {
-    "revision": "e9cfdfd8016d27cb5141",
-    "url": "/static/css/main.a08ce661.chunk.css"
+    "revision": "1660db07429565943a6f",
+    "url": "/static/css/main.e1a49045.chunk.css"
   },
   {
-    "revision": "4b0e40dab089e899b9e2",
-    "url": "/static/js/2.bedfbe33.chunk.js"
+    "revision": "e07601bb3fe67613c8e6",
+    "url": "/static/js/2.052821f9.chunk.js"
   },
   {
-    "revision": "e9cfdfd8016d27cb5141",
-    "url": "/static/js/main.328198ba.chunk.js"
+    "revision": "1660db07429565943a6f",
+    "url": "/static/js/main.8c38e905.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -84,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Nurses.0a60a9d9.png"
   },
   {
+    "revision": "2aff8fc0c32eb5ef207c534a7cb07fe1",
+    "url": "/static/media/NursesBG.2aff8fc0.jpg"
+  },
+  {
     "revision": "6d25286aab43367f2ec1bb151603682e",
     "url": "/static/media/Pride.6d25286a.png"
   },
@@ -116,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/UBCStudentHealth.20d0996c.png"
   },
   {
+    "revision": "02ae957463c297041062ebf172d4de99",
+    "url": "/static/media/UBCStudentHealthBG.02ae9574.jpg"
+  },
+  {
     "revision": "90be22e9cf51923b46b452f07f5c37f8",
     "url": "/static/media/UBCVillageMedical.90be22e9.png"
   },
@@ -126,6 +134,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fbff20199d15085a4256217d890f2c85",
     "url": "/static/media/UMCA.fbff2019.png"
+  },
+  {
+    "revision": "22481710a2c6023458de0b02b32d1da1",
+    "url": "/static/media/UMCABG.22481710.jpg"
   },
   {
     "revision": "3db8378a9ce8a72005e4ccfeff2fc33f",
