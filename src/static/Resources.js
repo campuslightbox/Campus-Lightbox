@@ -56,6 +56,7 @@ import EmpowerLogo from './logos/Empower.png';
 import AcademicLogo from './logos/Academic.png';
 import EnrollmentLogo from './logos/Enrollment.png';
 import SVPROLogo from './logos/SVPRO.png';
+import SRCLogo from "./logos/SRC_circle3.png"
 
 import YogaClubBG from './logos/YogaClubBG.png';
 import AcademicBG from './logos/AcademicBG.jpg';
@@ -533,6 +534,20 @@ export default [
             "sunday": "closed",
         },
         notes: "Call during business hours to explore the options available. If the call goes unanswered, a message can be left and the call will be returned by the next working day."
+
+    },
+    {
+        name: "Student Recovery Community at UBC", 
+        description: "Community of students in recovery or pursuing recovery from drugs, alcohol, and addictive behaviour. We recognize and support multiple pathways of recovery!",
+        logo: SRCLogo,
+        background: "",
+        tags: ["substanceAbuse", "peer"],
+        social: {
+            "facebook":"https://www.facebook.com/RecoveryUBC/",
+            "instagram":"https://www.instagram.com/recovery_ubc/"
+        },
+        email:"sfudjack@alumni.ubc.ca"
+        
 
     }
 ];
