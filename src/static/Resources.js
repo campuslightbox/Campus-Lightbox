@@ -57,6 +57,7 @@ import AcademicLogo from './logos/Academic.png';
 import EnrollmentLogo from './logos/Enrollment.png';
 import SVPROLogo from './logos/SVPRO.png';
 import SRCLogo from "./logos/SRC_circle3.png"
+import MHNLogo from "./logos/MHNLogo2.png"
 
 import YogaClubBG from './logos/YogaClubBG.png';
 import AcademicBG from './logos/AcademicBG.jpg';
@@ -549,5 +550,18 @@ export default [
         email:"sfudjack@alumni.ubc.ca"
         
 
+    },
+    {
+        name: "UBC Mental Health Network",
+        description:"We work to facilitate cross-collaboration and deliver mental health and wellness workshops across campus as well as in the lower mainland.",
+        logo:MHNLogo,
+        background:"",
+        tags:["peer", "generalAwareness","events"],
+        social: {
+            "website":"http://blogs.ubc.ca/ubcmhn",
+            "facebook":"https://www.facebook.com/mentalhealthnetworkubc/",
+            "twitter":"https://www.twitter.com/ubcmhn"
+        },
+        email:"mhnubc@gmail.com"
     }
 ];

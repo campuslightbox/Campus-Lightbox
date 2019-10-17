@@ -183,6 +183,10 @@ class InfoCard extends React.Component {
                         this.props.social && this.props.social.instagram &&
                         <Button circular color='instagram' icon='instagram' onClick={() => window.open(this.props.social.instagram)} />
                     }
+                    {
+                        this.props.social && this.props.social.twitter &&
+                        <Button circular color='twitter' icon='twitter' onClick={()=>window.open(this.props.social.twitter)} /> 
+                    }
                 </Card.Description>
             </Card.Content>
         );
