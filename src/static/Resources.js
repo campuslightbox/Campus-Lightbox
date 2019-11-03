@@ -58,7 +58,12 @@ import EnrollmentLogo from './logos/Enrollment.png';
 import SVPROLogo from './logos/SVPRO.png';
 import SRCLogo from "./logos/SRC_circle3.png"
 import MHNLogo from "./logos/MHNLogo2.png"
-
+import CounsellingBC from "./logos/counsellingbc.png"
+import AnxietyCanada from "./logos/Anxiety_Canada.png"
+import KeltysKey from "./logos/keltyskey.png"
+import BCPA from "./logos/BCPA.png"
+import Foundry from "./logos/Foundry.png"
+import HealthLinkBC from "./logos/HealthLinkBC.png"
 import YogaClubBG from './logos/YogaClubBG.png';
 import AcademicBG from './logos/AcademicBG.jpg';
 import EnrollmentBG from './logos/EnrollmentBG.jpg';
@@ -69,6 +74,7 @@ import CentreForAccessibilityBG from './logos/CentreForAccessibilityBG.jpg';
 import UMCABG from './logos/UMCABG.jpg';
 import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
 import NursesBG from './logos/NursesBG.jpg';
+
 
 export default [
     {
@@ -563,5 +569,84 @@ export default [
             "sunday": "closed",
         },
         notes: "See your faculty website for email"
+    },
+    {
+        name: "CounsellingBC.com",
+        description: "We provide individuals, couples, and families in BC with the counselling assistance via up-to-date information about resources that promote healing and recovery.",
+        logo: CounsellingBC,
+        background:"",
+        tags: ["online", "professional", "medical"],
+        social: {
+            "website": "https://counsellingbc.com/",
+            "facebook":"https://www.facebook.com/CounsellingBC/",
+            "instagram":"https://www.instagram.com/counsellingbc/"
+        }
+    },
+
+    {
+        name:"Anxiety Canada",
+        description:"The association’s mission is to promote awareness of anxiety disorders and support access to proven resources and treatment.",
+        logo:AnxietyCanada,
+        background:"",
+        tags:["online", "professional", "medical"],
+        phone:"604-620-0744",
+        social:{
+            "website":"https://anxietycanada.com/resources/find-help/",
+            "facebook":"https://www.facebook.com/AnxietyCanada/",
+            "instagram":"https://www.instagram.com/anxiety_canada/"
+
+        },
+        email:"info@anxietycanada.com",
+        notes: "Please note that we do not have dedicated psychologists to answer your telephone calls and provide counselling. We also do not provide direct referrals to specific mental health providers and specialists."
+
+    },
+    {
+        name:"Kelty's Key",
+        description: "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the support you need to feel better.",
+        logo: KeltysKey,
+        tags: ["online", "professional" ],
+        social: {
+            "website": "https://www.keltyskey.com/",
+            
+        }
+
+    }, 
+    {
+        name:"BC Psychological Association",
+        description:"Search through hundreds of mental health professionals to help address your specific concern.",
+        logo: BCPA,
+        tags: ["online", "professional","medical"],
+        phone: "604-730-0522",
+        social: {
+            "website": " https://www.psychologists.bc.ca/find_psychologist",
+            "facebook":"https://www.facebook.com/bcpsychologists/"
+        },
+        notes: "604-730-0522 or 1-800-730-0522 are BCPA Referral Line, where you can find names and contact information for psychologists in your area. Please call between 9:30 AM and 4:30 PM."
+    },
+    {
+        name:"Foundry",
+        description:"Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
+        // logo: Foundry, 
+        //need help to fix this logo - too big, and not transparent
+        email:"webinfo@foundrybc.ca",
+        tags:["online","professional", "walkIn","substanceAbuse"],
+        social: {
+            "website":"https://foundrybc.ca",
+            "facebook":"https://www.facebook.com/Foundrybc/",
+            "instagram":"https://www.instagram.com/foundry_bc/"
+        },
+        notes: "To find a Foundry centre near you, please visit the website for more information."
+
+    },
+    {
+        name: "Alcohol & Drug Information Referral Service (ADIRS)",
+        description:"Free, confidential information and referral services to British Columbians in need of support with any kind of substance use issue.",
+        logo: HealthLinkBC,
+        tags:["hotline","professional","substanceAbuse"],
+        phone:"604-660-9382",
+        social: {
+            "website":"https://www.healthlinkbc.ca/mental-health-substance-use/resources/adirs"
+        },
+        notes: "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available."
     }
 ];
