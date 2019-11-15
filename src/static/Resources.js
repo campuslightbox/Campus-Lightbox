@@ -74,7 +74,7 @@ import CentreForAccessibilityBG from './logos/CentreForAccessibilityBG.jpg';
 import UMCABG from './logos/UMCABG.jpg';
 import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
 import NursesBG from './logos/NursesBG.jpg';
-import HeadsUpGuys from "./logos/headsupguys.jpg"
+import HeadsUpGuys from "./logos/headsupguys.png"
 
 
 export default [
@@ -583,7 +583,19 @@ export default [
             "instagram":"https://www.instagram.com/counsellingbc/"
         }
     },
-
+    {
+        name:"HeadsUpGuys",
+        description: "HeadsUpGuys is a resource for supporting men in their fight against depression by providing tips, tools, information about professional services, and stories of success.",
+        logo: HeadsUpGuys,
+        email: "info@headsupguys.org",
+        tags:["online","professional","generalAwareness"],
+        social: {
+            "website":"https://headsupguys.org/",
+            "facebook":"https://www.facebook.com/HeadsUpGuys",
+            "twitter":"https://twitter.com/headsupguys",
+            "instagram":"https://www.instagram.com/headsupguys/"
+        }
+    },
     {
         name:"Anxiety Canada",
         description:"The association’s mission is to promote awareness of anxiety disorders and support access to proven resources and treatment.",
@@ -627,8 +639,7 @@ export default [
     {
         name:"Foundry",
         description:"Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
-        // logo: Foundry, 
-        //need help to fix this logo - too big, and not transparent
+        logo: Foundry,
         email:"webinfo@foundrybc.ca",
         tags:["online","professional", "walkIn","substanceAbuse"],
         social: {
@@ -649,20 +660,5 @@ export default [
             "website":"https://www.healthlinkbc.ca/mental-health-substance-use/resources/adirs"
         },
         notes: "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available."
-    },
-    {
-        name:"HeadsUpGuys",
-        description: "HeadsUpGuys is a resource for supporting men in their fight against depression by providing tips, tools, information about professional services, and stories of success.",
-        logo: HeadsUpGuys,
-        email: "info@headsupguys.org",
-        tags:["online","professional","generalAwareness"],
-        social: {
-            "website":"https://headsupguys.org/",
-            "facebook":"https://www.facebook.com/HeadsUpGuys",
-            "twitter":"https://twitter.com/headsupguys",
-            "instagram":"https://www.instagram.com/headsupguys/"
-            // Four social links seem a bit crowded here ? might need to change the styling?? or remove one of them?
-        }
-
     }
 ];
