@@ -75,6 +75,7 @@ import UMCABG from './logos/UMCABG.jpg';
 import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
 import NursesBG from './logos/NursesBG.jpg';
 import HeadsUpGuys from "./logos/headsupguys.png"
+import UBCAthleteHub from "./logos/UBCAthleteHub.png"
 
 
 export default [
@@ -619,10 +620,8 @@ export default [
         logo: KeltysKey,
         tags: ["online", "professional" ],
         social: {
-            "website": "https://www.keltyskey.com/",
-            
+            "website": "https://www.keltyskey.com/",    
         }
-
     }, 
     {
         name:"BC Psychological Association",
@@ -660,5 +659,15 @@ export default [
             "website":"https://www.healthlinkbc.ca/mental-health-substance-use/resources/adirs"
         },
         notes: "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available."
-    }
+    },
+    {
+        name:"UBC Athletes Hub",
+        description: "We aim to increase awareness of mental health issues, reduce the stigma of help-seeking, and promote health and wellness among varsity athletes at UBC.",
+        logo: UBCAthleteHub,
+        email: "john.ogrodniczuk@ubc.ca",
+        tags:["online","professional","generalAwareness"],
+        social: {
+            "website":"https://ubcathleteshub.ca/"
+        }
+    },
 ];
