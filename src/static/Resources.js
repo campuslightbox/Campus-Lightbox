@@ -627,8 +627,7 @@ export default [
     {
         name:"Foundry",
         description:"Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
-        // logo: Foundry, 
-        //need help to fix this logo - too big, and not transparent
+        logo: Foundry, 
         email:"webinfo@foundrybc.ca",
         tags:["online","professional", "walkIn","substanceAbuse"],
         social: {
