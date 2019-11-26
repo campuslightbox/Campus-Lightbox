@@ -74,8 +74,9 @@ import CentreForAccessibilityBG from './logos/CentreForAccessibilityBG.jpg';
 import UMCABG from './logos/UMCABG.jpg';
 import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
 import NursesBG from './logos/NursesBG.jpg';
-import HeadsUpGuys from "./logos/headsupguys.png"
-import UBCAthleteHub from "./logos/UBCAthleteHub.png"
+import HeadsUpGuys from "./logos/headsupguys.png";
+import UBCAthleteHub from "./logos/UBCAthleteHub.png";
+import MindHealthBC from "./logos/MindHealthBC.png"
 
 
 export default [
@@ -670,4 +671,16 @@ export default [
             "website":"https://ubcathleteshub.ca/"
         }
     },
+    {
+        name: "MindHealthBC",
+        description: "A one stop shop that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
+        logo: MindHealthBC,
+        background:"",
+        tags: ["online", "professional", "medical"],
+        social: {
+            "website": "http://www.mindhealthbc.ca/about-us",
+            "facebook":"https://www.facebook.com/mindhealthbc/",
+            "instagram":"https://www.instagram.com/mindhealthbc/"
+        }
+    }
 ];
