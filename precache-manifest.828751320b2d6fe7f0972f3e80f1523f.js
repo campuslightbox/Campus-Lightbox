@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1be05c92e83780de941a7e77732537c0",
+    "revision": "1885ce78fab034a4a95d7c433de6a35f",
     "url": "/index.html"
   },
   {
-    "revision": "fd845fe0e20517131840",
+    "revision": "9f71aa367c32feab4cb7",
     "url": "/static/css/2.621b5bde.chunk.css"
   },
   {
-    "revision": "41de9008dc57f0632a14",
+    "revision": "b5db1ecd1333878136bd",
     "url": "/static/css/main.e1a49045.chunk.css"
   },
   {
-    "revision": "fd845fe0e20517131840",
-    "url": "/static/js/2.184f2562.chunk.js"
+    "revision": "9f71aa367c32feab4cb7",
+    "url": "/static/js/2.3fec2fd5.chunk.js"
   },
   {
-    "revision": "41de9008dc57f0632a14",
-    "url": "/static/js/main.267716f2.chunk.js"
+    "revision": "b5db1ecd1333878136bd",
+    "url": "/static/js/main.bff62a68.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -92,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Meditation.d6379871.png"
   },
   {
+    "revision": "95a1e389d3977dc1c2620c80f75daff8",
+    "url": "/static/media/MindHealthBC.95a1e389.png"
+  },
+  {
     "revision": "0a60a9d908c1c0aeae6905e942947e35",
     "url": "/static/media/Nurses.0a60a9d9.png"
   },
@@ -122,6 +126,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89d8c2b9f00f0238680f978a3b0883d5",
     "url": "/static/media/SVPRO.89d8c2b9.png"
+  },
+  {
+    "revision": "0787c8a9fc06f19eb78c4b9629cf74cb",
+    "url": "/static/media/UBCAthleteHub.0787c8a9.png"
   },
   {
     "revision": "d16fa530006501afafbf5c53b7b61705",
