@@ -262,8 +262,6 @@ export default [
         email: "wellness.centre@ubc.ca",
         address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
         hours: {
-            "wednesday": "11:00am-3:00pm",
-            "thursday": "11:00am-3:00pm",
             "monday": "10:00am-5:00pm",
             "tuesday": "10:00am-4:00pm",
             "wednesday": "10:00am-5:00pm",
