@@ -75,9 +75,15 @@ import UMCABG from './logos/UMCABG.jpg';
 import UBCStudentHealthBG from './logos/UBCStudentHealthBG.jpg';
 import NursesBG from './logos/NursesBG.jpg';
 import HeadsUpGuys from "./logos/headsupguys.png";
-import UBCAthleteHub from "./logos/UBCAthleteHub.png";
-import MindHealthBC from "./logos/MindHealthBC.png"
-
+import UBCAthleteHub from "./logos/UBCAthleteHub2.png";
+import MindHealthBC from "./logos/MindHealthBC.png";
+import MHliteracy from "./logos/MHliteracy.png";
+import HeretoHelp from "./logos/heretohelp.png";
+import UBCScarfe from "./logos/ubcscarfe.jpg";
+import UBCgeneral from "./logos/UBClogo.png";
+import HenryChen from "./logos/HenryChen.png";
+import UBCHospital from "./logos/UBCHospital.png";
+import UBCwellbeing from "./logos/UBCwellbeing.png";
 
 export default [
     {
@@ -271,6 +277,21 @@ export default [
             "sunday": "closed",
         },
         notes: "Hours may vary based on time of year, double check our website for more details."
+    },
+    {
+        name:"Wellness Workshops",
+        description:"You can request a workshop for a group of students, staff, and/or faculty members. Choose from the workshop topics on this page.",
+        logo: WellnessCentreLogo,
+        background:"",
+        tags:["events", "generalAwareness"],
+        phone:"604-822-8450",
+        social: {
+            "website": "https://students.ubc.ca/health/wellness-centre/wellness-workshops#how-to-participate",
+        },
+        email: "wellness.centre@ubc.ca",
+        address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
+        notes: "Wellness workshops are available by request through the UBC Wellness Centre. You can also request a workshop for a specific group."
+        
     },
     {
         name: "AMS Speakeasy", 
@@ -682,5 +703,100 @@ export default [
             "facebook":"https://www.facebook.com/mindhealthbc/",
             "instagram":"https://www.instagram.com/mindhealthbc/"
         }
+    },
+    {
+        name: "UBC Mental Health Literacy", 
+        description: "This online modular-based resource can be used as a self-guided course or in individual modules by those wishing to develop their mental health literacy.",
+        logo: MHliteracy,
+        background:"",
+        tags: ["online", "generalAwareness", "allday"],
+        phone:"",
+        social: {
+            "website": "https://www.teachmentalhealth.org/"
+        },
+        email: "tmentalhealth@gmail.com",
+        notes: "Participation in this online course is FREE."
+    },
+    {
+        name: "HeretoHelp", 
+        description: "Find the information you need and explore strategies to manage mental health and substance use problems.",
+        logo: HeretoHelp,
+        background:"",
+        tags: ["online","generalAwareness","allday", "substanceAbuse"],
+        social: {
+            "website": "https://www.heretohelp.bc.ca/"
+        },
+        email: "bcpartners@heretohelp.bc.ca",
+    },
+    {
+        name:"UBC Scarfe Free Counselling Clinic",
+        description:"We offer help with stress-management (work, home, school stress), anxiety, depression, school and relationship issues.",
+        logo:UBCScarfe,
+        background:"",
+        tags: ["professional","appointment"],
+        social:{
+            "website":"https://ecps.educ.ubc.ca/counselling-centres/scarfe-free-counselling-clinic/"
+        },
+        phone:"604-827-1523",
+        address: "6174 University Blvd - 3F\nVancouver, BC V6T 1Z4",
+        notes:"Clinics run from September to April. Daytime and evening appointments available. Please note that all patients must complete a telephone intake prior to first visit."
+    },
+    {
+        name:"UBC Counsellor in Residence",
+        description:"If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can email us to make an appointment to see one of UBC’s Counsellors in Residence.",
+        logo: UBCgeneral,
+        background:"",
+        tags:["professional", "appointment"],
+        social:{
+            "website":"https://vancouver.housing.ubc.ca/counsellor-in-residence/"
+        },
+        email:"counsellor.residence@ubc.ca",
+        notes:"Please include your full name, student number, class schedule and residence/building in your email."
+    },
+    {
+        name:"Henry Chen Counselling",
+        description:"Henry Chen is a level 1 certified CBT (Cognitive Behavioural Therapy) practitioner. Please check the website for a list of counselling programs offered by Henry",
+        logo: HenryChen,
+        background:"",
+        tags:["professional","appointment","medical"],
+        social:{
+            "website":"https://jcmed.ca/counselling/"
+        },
+        phone:"604-261-6000",
+        address:"#360 - 650 West 41st Avenue \nVancouver,BC V5Z 2M9",
+        notes:" UBC students are free of charge at Henry's clinic."
+    },
+    {
+        name:"UBC Hospital - Koerner Pavilion",
+        description:"UBC Hospital offers specialized treatment for non-life-threatening emergencies and surgical care.",
+        logo:UBCHospital,
+        background:"",
+        tags:["professional", "medical","walkIn"],
+        social:{
+            "website":"http://www.vch.ca/Locations-Services/result?res_id=991"
+        },
+        phone:"604-822-7121",
+        address:"2211 Wesbrook Mall \n Vancouver,BC \n V6T 2B5",
+        hours: {
+            "monday": "8:00am-10:00pm",
+            "tuesday": "8:00am-10:00pm",
+            "wednesday": "8:00am-10:00pm",
+            "thursday": "8:00am-10:00pm",
+            "friday": "8:00am-10:00pm",
+            "saturday": "8:00am-10:00pm",
+            "sunday": "8:00am-10:00pm",
+        }
+    },
+    {
+        name:"UBC Thrive",
+        description:"Thrive is a mindset and a month-long series of events focused on helping everyone at UBC explore their path to mental health.",
+        logo:UBCwellbeing,
+        background:"",
+        tags:["events","generalAwareness"],
+        social:{
+            "website":"https://wellbeing.ubc.ca/wellbeing-campaigns-and-initiatives/thrive"
+        },
+        address:"UBC Wellbeing Design Lab \n 2321 - 2260 West Mall \n Vancouver, BC V6T 1Z4",
+        notes:"Be sure to check out the Thrive calendar for lots of great events and initiatives throughout November!"
     }
 ];
