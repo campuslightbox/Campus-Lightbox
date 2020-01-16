@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1885ce78fab034a4a95d7c433de6a35f",
+    "revision": "fd148e732014e0fe2b1431c7c86563a9",
     "url": "/index.html"
   },
   {
-    "revision": "9f71aa367c32feab4cb7",
+    "revision": "3004baaedefb829bc209",
     "url": "/static/css/2.621b5bde.chunk.css"
   },
   {
-    "revision": "b5db1ecd1333878136bd",
+    "revision": "2707a02be3938373254e",
     "url": "/static/css/main.e1a49045.chunk.css"
   },
   {
-    "revision": "9f71aa367c32feab4cb7",
-    "url": "/static/js/2.3fec2fd5.chunk.js"
+    "revision": "3004baaedefb829bc209",
+    "url": "/static/js/2.4140d1b2.chunk.js"
   },
   {
-    "revision": "b5db1ecd1333878136bd",
-    "url": "/static/js/main.bff62a68.chunk.js"
+    "revision": "2707a02be3938373254e",
+    "url": "/static/js/main.03797fe9.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -72,6 +72,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/HealthLinkBC.53024442.png"
   },
   {
+    "revision": "264a8cab57e0d6158b7e741fbce861c3",
+    "url": "/static/media/HenryChen.264a8cab.png"
+  },
+  {
     "revision": "4689459b0723fed92735e7b650db1732",
     "url": "/static/media/Jack.4689459b.png"
   },
@@ -86,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fe6fc959f316e06fe966d69bed7c06b9",
     "url": "/static/media/MHNLogo2.fe6fc959.png"
+  },
+  {
+    "revision": "e01db0b78f34163e92ff503a539531dd",
+    "url": "/static/media/MHliteracy.e01db0b7.png"
   },
   {
     "revision": "d637987164e30299ca5146d5e49130e9",
@@ -128,8 +136,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/SVPRO.89d8c2b9.png"
   },
   {
-    "revision": "0787c8a9fc06f19eb78c4b9629cf74cb",
-    "url": "/static/media/UBCAthleteHub.0787c8a9.png"
+    "revision": "7967ec70d554ff8f1d2e9baedc59c705",
+    "url": "/static/media/UBCAthleteHub2.7967ec70.png"
   },
   {
     "revision": "d16fa530006501afafbf5c53b7b61705",
@@ -154,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b3b36bfb6de1d295b0e1e178b98d40c0",
     "url": "/static/media/UBCVillageMedicalBG.b3b36bfb.jpg"
+  },
+  {
+    "revision": "f6d75fc33c5fc7d337a149fd1e229537",
+    "url": "/static/media/UBCwellbeing.f6d75fc3.png"
   },
   {
     "revision": "fbff20199d15085a4256217d890f2c85",
@@ -226,6 +238,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "71d52f4c95247ac4164044399dca45b1",
     "url": "/static/media/headsupguys.71d52f4c.png"
+  },
+  {
+    "revision": "d4aacb14c728aa881b55673f67fc976a",
+    "url": "/static/media/heretohelp.d4aacb14.png"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
