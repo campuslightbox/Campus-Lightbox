@@ -84,6 +84,7 @@ import UBCgeneral from "./logos/UBClogo.png";
 import HenryChen from "./logos/HenryChen.png";
 import UBCHospital from "./logos/UBCHospital.png";
 import UBCwellbeing from "./logos/UBCwellbeing.png";
+import UBCBodyBanter from "./logos/UBCBodyBanter.png"
 
 export default [
     {
@@ -798,5 +799,22 @@ export default [
         },
         address:"UBC Wellbeing Design Lab \n 2321 - 2260 West Mall \n Vancouver, BC V6T 1Z4",
         notes:"Be sure to check out the Thrive calendar for lots of great events and initiatives throughout November!"
+    },
+    {
+        name: "UBC Body Banter", 
+        description: "Empower students to change the conversation about body image through self-reflection, open communication, and collaborative action.",
+        logo: UBCBodyBanter,
+        background: '',
+        tags: ["peer", "recurring", "walkIn"],
+        social: {
+            "website": "http://bodybanter.com/",
+            "facebook": "https://www.facebook.com/ubcbodybanter",
+            "instagram": "https://www.instagram.com/ubcbodybanter"
+        },
+        address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
+        hours: {
+            "others": "Every Monday from 6 - 7 pm. Check Facebook page for any updates!"
+        },
+        //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
     }
 ];
