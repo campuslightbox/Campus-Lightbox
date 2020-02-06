@@ -84,7 +84,10 @@ import UBCgeneral from "./logos/UBClogo.png";
 import HenryChen from "./logos/HenryChen.png";
 import UBCHospital from "./logos/UBCHospital.png";
 import UBCwellbeing from "./logos/UBCwellbeing.png";
-import UBCBodyBanter from "./logos/UBCBodyBanter.png"
+import UBCBodyBanter from "./logos/UBCBodyBanter.png";
+import TAOapp from "./logos/TAOapp2.png"
+import { TableBody } from 'semantic-ui-react';
+import { normalizeUnits } from 'moment';
 
 export default [
     {
@@ -816,5 +819,16 @@ export default [
             "others": "Every Monday from 6 - 7 pm. Check Facebook page for any updates!"
         },
         //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
+    },
+    {
+        name: "Therapy Assistance Online (TAO)",
+        description:"A digital platform of tools and educational materials that help you feel happier, healthier, and more productive in hard times",
+        logo: TAOapp,
+        background:"",
+        tags:['online',"allday","generalAwareness","substanceAbuse"],
+        social:{
+            "website":"https://www.taoconnect.org/"
+        },
+        notes: "UBC students have FREE access to the tools if you sign up with your UBC email!"
     }
 ];
