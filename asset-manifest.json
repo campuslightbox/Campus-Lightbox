@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1a49045.chunk.css",
+    "main.css": "/static/css/main.071bc90c.chunk.css",
     "main.js": "/static/js/main.f56dff6f.chunk.js",
     "main.js.map": "/static/js/main.f56dff6f.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
@@ -9,10 +9,10 @@
     "static/js/2.98dea229.chunk.js": "/static/js/2.98dea229.chunk.js",
     "static/js/2.98dea229.chunk.js.map": "/static/js/2.98dea229.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.367361d6f844126f0e5bc27e112f94f1.js": "/precache-manifest.367361d6f844126f0e5bc27e112f94f1.js",
+    "precache-manifest.62bae120ba931cc82f0142fc23cb6ca0.js": "/precache-manifest.62bae120ba931cc82f0142fc23cb6ca0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.621b5bde.chunk.css.map": "/static/css/2.621b5bde.chunk.css.map",
-    "static/css/main.e1a49045.chunk.css.map": "/static/css/main.e1a49045.chunk.css.map",
+    "static/css/main.071bc90c.chunk.css.map": "/static/css/main.071bc90c.chunk.css.map",
     "static/media/AMSSpeakeasy.png": "/static/media/AMSSpeakeasy.3197a5de.png",
     "static/media/Academic.png": "/static/media/Academic.f6f38e8c.png",
     "static/media/AcademicBG.jpg": "/static/media/AcademicBG.22e0987e.jpg",
