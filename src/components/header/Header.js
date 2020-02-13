@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
+import Announcement from '../../components/banner/Announcement';
 import './style.css';
 import '../animate.css';
 import ReactGA from 'react-ga';
@@ -40,14 +41,14 @@ class Header extends React.Component {
     render() {
         return (
                 <section className = "b1">
-                    {/* <Announcement
+                    {<Announcement
                         icon={{name: "wrench"}}
-                        text={["Want to be part of Project Aurora? ", <b>We are hiring!</b>]}
+                        text={["Have business skills and want to be part of Project Aurora? ", <b>We are hiring!</b>]}
                         button={{
                             content:"Join us",
-                            onClick: () => window.open("https://forms.gle/MtQ4ev8P6A8ojamy9")
+                            onClick: () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfuV4-Eqm_lB32EjQn1Be_GjRIdETJyavbctmfwvf2fXvpOIw/viewform?usp=sf_link")
                         }}
-                    /> */}
+                    /> }
                     <div className="helpbutton">
                             <GetHelpModal />
                     </div>
