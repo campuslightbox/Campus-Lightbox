@@ -534,11 +534,11 @@ export default [
         },
     },
     {
-        name: "Women Against Violence Against Women", 
-        description: "Support services for survivors of sexualized violence or gender marginalization.",
+        name: "WAVAW Rape Crisis Centre", 
+        description: "Support services for survivors of sexualized violence or gender marginalization: cis and trans women, Two-Spirit, trans and/or non-binary people.",
         logo: WomenViolenceLogo,
         background: '',
-        tags: ["hotline", "professional", "allday", "sexualHealthAssault", "womensHealth"],
+        tags: ["hotline", "professional", "allday", "sexualHealthAssault", "womensHealth", "lgbt"],
         phone:"1-877-392-7583",
         social: {
             "website": "https://www.wavaw.ca/",
