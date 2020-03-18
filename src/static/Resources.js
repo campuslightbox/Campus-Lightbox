@@ -107,7 +107,10 @@ export default [
             "wednesday": "8:30am-6:00pm",
             "thursday": "10:00am-3:30pm",
             "friday": "8:30am-3:30pm",
-        }
+        },
+        notes:"You can call to schedule an appointment by phone during the COVID-19 outbreak."
+
+
     },
     {
         name: "UBC Yoga Club", 
@@ -122,7 +125,7 @@ export default [
         email: "info.ubcyogaclub@gmail.com",
         address: "AMS Student Nest\n6133 University Blvd\nVancouver, BC V6T 1Z1", 
         hours:{
-            "others": "Our class schedule is available at ubcyogaclub.com/schedule with the most current times and class locations",
+            "others": "Classes cancelled for the rest of the school year."
         }
     },
     {
@@ -157,6 +160,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
+        notes: "You may be contacted to have your appointment over the phone during the COVID-19 outbreak. On March 25 (Wed), we will close at 6pm."
         
     },
     {
@@ -243,7 +247,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "Address depends on schedule - refer to website"
+        notes: "Nurse on Campus booths have been cancelled until further notice."
     },
     {
         name: "UBC Psychology Clinic", 
@@ -280,7 +284,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "Hours may vary based on time of year, double check our website for more details."
+        notes: "Check FB page for updates about any further changes to services, events and activities during the COVID-19 outbreak."
     },
     {
         name:"Wellness Workshops",
@@ -294,7 +298,7 @@ export default [
         },
         email: "wellness.centre@ubc.ca",
         address: "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
-        notes: "Wellness workshops are available by request through the UBC Wellness Centre. You can also request a workshop for a specific group."
+        notes: "Wellness workshops have been cancelled until further notice"
         
     },
     {
@@ -318,7 +322,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "Schedule a private and confidential appointment at: calendly.com/speakeasyvice"
+        notes: "Speakeasy & Vice will be closed until further notice."
     },
     {
         name: "AMS Sexual Assault Support Centre (SASC)", 
@@ -339,10 +343,10 @@ export default [
             "wednesday": "8:00am-10:00pm",
             "thursday": "8:00am-10:00pm",
             "friday": "8:00am-10:00pm",
-            "saturday": "8:00am-10:00pm",
-            "sunday": "8:00am-10:00pm",
+            "saturday": "11:00am-7:00pm",
+            "sunday": "11:00am-7:00pm",
         },
-        notes: "Open on most holidays, drop ins available, appointments for support prefered if possible."
+        notes: "All in-person services and events will be suspended until April 15th. On-call support or phone appointments will still be available."
     },
     {
         name: "AMS VICE", 
@@ -357,6 +361,7 @@ export default [
         },
         email: "vice@ams.ubc.ca",
         address: "UBC AMS Nest\nRoom 3107",
+        notes: "Speakeasy & Vice will be closed until further notice."
     },
     {
         name: "AMS The Pride Collective", 
@@ -370,6 +375,7 @@ export default [
         },
         email: "prideubc@gmail.com",
         address: "UBC AMS Nest\nRoom 2103",
+        notes: "All in-person activities and meetings are cancelled for the rest of the school year."
     },
     {
         name: "Women’s Center", 
@@ -382,6 +388,7 @@ export default [
         },
         email: "ubcwomenscentre@gmail.com",
         address: "UBC AMS Nest\nRoom 2113",
+        notes: "Women's Center will be closed until further notice."
     },
     {
         name: "The Kaleidoscope", 
@@ -396,7 +403,7 @@ export default [
         email: "info@the-kaleidoscope.com",
         address: "Time and location varies by term",
         hours: {
-            "others": "Email or message us on Facebook to receive a response within 24 hours.",
+            "others": "Meetings are moving online! Check Facebook page for more details.",
         },
     },
     {
@@ -410,10 +417,7 @@ export default [
             "facebook": "https://www.facebook.com/vivreSHARE",
         },
         email: "info@vivreshare.org",
-        address: "IBLC Room 461\nVancouver, BC V6T 1Z1",
-        hours: {
-            "others": "First Monday of each month (Oct 7, Nov 4, Dec 2) from 6 - 7:30pm",
-        },
+        address: "IBLC Room 461\nVancouver, BC V6T 1Z1"
     },
     {
         name: "Sexual Violence Prevention & Response (SVPRO)", 
@@ -501,7 +505,7 @@ export default [
         },
         email: "gareth@zen.ca",
         hours: {
-            "others": "Check Facebook page for times & locations",
+            "others": "Meetings are moving online! Check Facebook page for more details.",
         },
     },
     {
@@ -596,7 +600,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "See your faculty website for email"
+        notes: "Enrolment Services will not be providing in-person services until further notice. Please contact Enrolment Services Advisors by email."
     },
     {
         name: "CounsellingBC.com",
@@ -816,7 +820,7 @@ export default [
         },
         address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
         hours: {
-            "others": "Every Monday from 6 - 7 pm. Check Facebook page for any updates!"
+            "others": "Weekly meetings are cancelled for the rest of the school year."
         },
         //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
     },
