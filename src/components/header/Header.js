@@ -43,7 +43,7 @@ class Header extends React.Component {
                 <section className = "b1">
                     {<Announcement
                         icon={{name: "wrench"}}
-                        text={["Have business skills? ", <b>We are hiring!</b>]}
+                        text={["Have finance/marketing skills? ", <b>We are hiring!</b>]}
                         button={{
                             content:"Join us",
                             onClick: () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfuV4-Eqm_lB32EjQn1Be_GjRIdETJyavbctmfwvf2fXvpOIw/viewform?usp=sf_link")
