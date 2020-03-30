@@ -160,7 +160,7 @@ export default [
             "friday": "8:00am-4:00pm",
             "saturday": "8:00am-4:00pm",
         },
-        notes: "You may be contacted to have your appointment over the phone during the COVID-19 outbreak. On March 25 (Wed), we will close at 6pm."
+        notes: "All appointments must now be booked by calling 604-822-7011. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed."
         
     },
     {
@@ -184,6 +184,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
+        notes:"All in-person services have been suspended, but we are conducting appointments over the phone or via Skype. Please email or call us directly to book an appointment."
     },
     {
         name: "University Village Medical & Dental Clinic - UBC Village", 
@@ -284,7 +285,7 @@ export default [
             "saturday": "closed",
             "sunday": "closed",
         },
-        notes: "Check FB page for updates about any further changes to services, events and activities during the COVID-19 outbreak."
+        notes: "Our office is temporarily closed, but you can engage in topics relevant to your wellbeing through Canvas! Check the link below to enroll: https://canvas.ubc.ca/enroll/PCNEN4."
     },
     {
         name:"Wellness Workshops",
