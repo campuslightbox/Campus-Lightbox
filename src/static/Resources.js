@@ -86,8 +86,6 @@ import UBCHospital from "./logos/UBCHospital.png";
 import UBCwellbeing from "./logos/UBCwellbeing.png";
 import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import TAOapp from "./logos/TAOapp2.png"
-import { TableBody } from 'semantic-ui-react';
-import { normalizeUnits } from 'moment';
 
 export default [
     {

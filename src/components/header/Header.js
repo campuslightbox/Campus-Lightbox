@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react'
 import GetHelpModal from '../../components/gethelpmodal/GetHelpModal';
+import CovidModal from '../../components/covidmodal/CovidModal';
 import Announcement from '../../components/banner/Announcement';
 import './style.css';
 import '../animate.css';
@@ -41,16 +42,19 @@ class Header extends React.Component {
     render() {
         return (
                 <section className = "b1">
-                    {<Announcement
+                   {/*  {<Announcement
                         icon={{name: "wrench"}}
                         text={["Have finance/marketing skills? ", <b>We are hiring!</b>]}
                         button={{
                             content:"Join us",
                             onClick: () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfuV4-Eqm_lB32EjQn1Be_GjRIdETJyavbctmfwvf2fXvpOIw/viewform?usp=sf_link")
                         }}
-                    /> }
+                    /> } */}
                     <div className="helpbutton">
                             <GetHelpModal />
+                    </div>
+                    <div className="covidbutton">
+                            <CovidModal />
                     </div>
                         <div className = "stuff">
                             <img className="titleImage" src={require("./CLB_PrimaryLogo.png")}
