@@ -21,7 +21,7 @@ export default class MenuHeader extends Component {
                         <Icon name='stethoscope' />
                     </div>
                     <Modal.Description>
-                        <Header>Here's the lastest news on the COVID-19 outbreak!</Header> 
+                        <Header>Here's the latest news on the COVID-19 outbreak!</Header> 
                         <p>Our team at Campus Lightbox understands that this a tough time, 
                             which is why we have updated the website to include information 
                             about how you might be able to reach your favored resource in 
