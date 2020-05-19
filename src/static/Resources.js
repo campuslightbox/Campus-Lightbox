@@ -452,7 +452,7 @@ export default [
       "Creating a safe space to help explore the available, most suitable options for anyone who has experienced sexual violence regardless of where it took place.",
     logo: SVPROLogo,
     background: "",
-    tags: ["hotline", "professional", "walkIn", "sexualHealthAssault"],
+    tags: ["phone", "professional", "walkIn", "sexualHealthAssault"],
     phone: "604-822-1588",
     social: {
       website: "https://svpro.ubc.ca/",
@@ -562,7 +562,7 @@ export default [
     description: "Emotional support for people in crisis/distress. ",
     logo: CrisisLogo,
     background: "",
-    tags: ["hotline", "professional", "allday"],
+    tags: ["phone", "professional", "allday"],
     phone: "1-800-784-2433",
     social: {
       website: "https://crisiscentre.bc.ca/",
@@ -578,7 +578,7 @@ export default [
     logo: WomenViolenceLogo,
     background: "",
     tags: [
-      "hotline",
+      "phone",
       "professional",
       "allday",
       "sexualHealthAssault",
@@ -601,7 +601,7 @@ export default [
       "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
     logo: EmpowerLogo,
     background: "",
-    tags: ["online", "hotline", "professional", "allday"],
+    tags: ["online", "phone", "professional", "allday"],
     phone: "1-844-741-6389",
     social: {
       website:
@@ -741,7 +741,7 @@ export default [
     description:
       "Free, confidential information and referral services to British Columbians in need of support with any kind of substance use issue.",
     logo: HealthLinkBC,
-    tags: ["hotline", "professional", "substanceAbuse"],
+    tags: ["phone", "professional", "substanceAbuse"],
     phone: "604-660-9382",
     social: {
       website:
