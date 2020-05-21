@@ -94,7 +94,13 @@ export default [
       "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
     logo: UBCCounsellingServiceLogo,
     background: UBCCounsellingServiceBG,
-    tags: ["professional", "appointment", "walkIn"],
+    tags: [
+      "professional",
+      "appointment",
+      "walkIn",
+      "depressionAnxiety",
+      "free",
+    ],
     phone: "604-822-3811",
     social: {
       website: "https://students.ubc.ca/health/counselling-services",
@@ -116,7 +122,14 @@ export default [
       "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health",
     logo: YogaClubLogo,
     background: YogaClubBG,
-    tags: ["generalAwareness"],
+    tags: [
+      "generalAwareness",
+      "peer",
+      "paid",
+      "less50",
+      "less1Week",
+      "two3Days",
+    ],
     social: {
       website: "https://www.ubcyogaclub.com",
       facebook: "https://www.facebook.com/theubcyogaclub",
@@ -133,7 +146,14 @@ export default [
       "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
     logo: UMCALogo,
     background: UMCABG,
-    tags: ["professional", "walkIn", "spiritual"],
+    tags: [
+      "professional",
+      "walkIn",
+      "spiritual",
+      "less1Week",
+      "two3Days",
+      "free",
+    ],
     social: {
       website:
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
@@ -148,7 +168,15 @@ export default [
       "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
     logo: UBCStudentHealthLogo,
     background: UBCStudentHealthBG,
-    tags: ["medical", "appointment", "walkIn"],
+    tags: [
+      "professional",
+      "medical",
+      "appointment",
+      "walkIn",
+      "free",
+      "depressionAnxiety",
+      "eatingDisorder",
+    ],
     phone: "604-822-7011",
     social: {
       website: "https://students.ubc.ca/health/student-health-service",
@@ -172,7 +200,7 @@ export default [
       "Facilitates accommodations and programs to remove barriers for students with disabilities and medical conditions.",
     logo: CentreForAccessibilityLogo,
     background: CentreForAccessibilityBG,
-    tags: ["professional", "appointment", "walkIn", "disability"],
+    tags: ["professional", "appointment", "walkIn", "disability", "free"],
     phone: "604-822-5844",
     social: {
       website:
@@ -198,7 +226,7 @@ export default [
       "Walk-in medical clinic located on Allison Road in UBC Village.",
     logo: VillageMedicalLogo,
     background: VillageMedicalBG,
-    tags: ["medical", "walkIn"],
+    tags: ["medical", "walkIn", "free"],
     phone: "604-222-2273 (ext. 2)",
     social: {
       website: "http://www.universityvillageclinic.com/",
@@ -220,7 +248,7 @@ export default [
       "Walk-in medical clinic located on Birney Avenue in Wesbrook Village.",
     logo: WesbrookVillageMedicalLogo,
     background: WesbrookVillageMedicalBG,
-    tags: ["medical", "walkIn"],
+    tags: ["medical", "walkIn", "free"],
     phone: "604-222-2273 (ext. 1)",
     social: {
       website: "http://www.universityvillageclinic.com/",
@@ -242,7 +270,7 @@ export default [
       "Booths around campus where you can get personalized tips, resources, and health advice from registered nurses.",
     logo: NursesLogo,
     background: NursesBG,
-    tags: ["medical", "walkIn"],
+    tags: ["medical", "walkIn", "free"],
     phone: "604-822-7011",
     social: {
       website:
@@ -280,7 +308,7 @@ export default [
       "Speak with a Wellness Peer Educator about everyday concerns related to health, relationships, and workload.",
     logo: WellnessCentreLogo,
     background: "",
-    tags: ["peer", "walkIn"],
+    tags: ["peer", "walkIn", "free"],
     phone: "604-822-8450",
     social: {
       website: "https://students.ubc.ca/health/wellness-centre",
@@ -324,7 +352,7 @@ export default [
       "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
     logo: AMSSpeakeasyLogo,
     background: "",
-    tags: ["walkIn", "peer"],
+    tags: ["walkIn", "peer", "free"],
     phone: "604-822-9246",
     social: {
       website: "https://www.ams.ubc.ca/student-services/speakeasy/",
@@ -374,7 +402,7 @@ export default [
       "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
     logo: VICELogo,
     background: "",
-    tags: ["peer", "recurring", "walkIn", "substanceAbuse"],
+    tags: ["peer", "recurring", "walkIn", "substanceAbuse", "free"],
     phone: "604-827-1728",
     social: {
       website: "https://www.ams.ubc.ca/student-services/vice/",
@@ -390,7 +418,7 @@ export default [
       "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
     logo: PrideLogo,
     background: "",
-    tags: ["recurring", "lgbt"],
+    tags: ["recurring", "lgbt", "walkIn"],
     social: {
       website: "https://www.prideubc.com/",
       facebook: "https://www.facebook.com/prideubc/",
@@ -420,7 +448,7 @@ export default [
       "The Kaleidoscope provides a safe, confidential, and stigma-free support group for all individuals who have experienced mental health concerns/difficulties.",
     logo: KaleidoscopeLogo,
     background: "",
-    tags: ["peer", "recurring"],
+    tags: ["peer", "recurring", "free"],
     social: {
       website: "http://the-kaleidoscope.com/",
       facebook: "https://www.facebook.com/kaleidoscopeUBC",
@@ -438,7 +466,7 @@ export default [
       "Support group for individuals who are struggling with/have struggled with self harm. Confidential, peer-to-peer, recovery oriented, safe space.",
     logo: SHARELogo,
     background: "",
-    tags: ["peer", "recurring", "selfHarm"],
+    tags: ["peer", "recurring", "selfHarm", "free"],
     social: {
       website: "https://vivreshare.org/support-group/",
       facebook: "https://www.facebook.com/vivreSHARE",
@@ -477,7 +505,7 @@ export default [
       "Community of students in recovery or pursuing recovery from drugs, alcohol, and addictive behaviour. We recognize and support multiple pathways of recovery!",
     logo: SRCLogo,
     background: "",
-    tags: ["substanceAbuse", "peer"],
+    tags: ["substanceAbuse", "peer", "free"],
     social: {
       facebook: "https://www.facebook.com/RecoveryUBC/",
       instagram: "https://www.instagram.com/recovery_ubc/",
@@ -504,7 +532,7 @@ export default [
       "Raises awareness for mental health and eliminates stigma by hosting events and writing blog posts with perspectives on mental health.",
     logo: MHACLogo,
     background: "",
-    tags: ["generalAwareness", "events"],
+    tags: ["generalAwareness", "events", "peer"],
     social: {
       website: "http://blogs.ubc.ca/ubcmhac/",
       facebook: "https://www.facebook.com/UBCMHAC/",
@@ -518,7 +546,7 @@ export default [
       "Part of a national network of students working to shift negative attitudes, beliefs, and behaviours around mental health.",
     logo: JackLogo,
     background: "",
-    tags: ["generalAwareness", "events"],
+    tags: ["generalAwareness", "events", "peer"],
     social: {
       website: "http://legacy.jack.org/chapters/university-british-columbia",
     },
@@ -529,7 +557,7 @@ export default [
       "Zen meditation practice on campus. One-on-one/Individual advice & counsel on Zen Buddhist meditation and awakening to life.",
     logo: ZenLogo,
     background: "",
-    tags: ["generalAwareness", "recurring"],
+    tags: ["generalAwareness", "recurring", "free"],
     social: {
       website:
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
@@ -547,7 +575,7 @@ export default [
       "Helps members learn and develop a formal meditation practice to promote well-being and overall health.",
     logo: MeditationLogo,
     background: "",
-    tags: ["generalAwareness", "recurring"],
+    tags: ["generalAwareness", "recurring", "paid", "less50"],
     social: {
       website: "http://blogs.ubc.ca/meditation/",
       facebook: "https://www.facebook.com/UBCMeditationCommunity/",
@@ -601,7 +629,7 @@ export default [
       "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
     logo: EmpowerLogo,
     background: "",
-    tags: ["online", "phone", "professional", "allday"],
+    tags: ["online", "phone", "professional", "allday", "free"],
     phone: "1-844-741-6389",
     social: {
       website:
@@ -672,7 +700,7 @@ export default [
       "HeadsUpGuys is a resource for supporting men in their fight against depression by providing tips, tools, information about professional services, and stories of success.",
     logo: HeadsUpGuys,
     email: "info@headsupguys.org",
-    tags: ["online", "professional", "generalAwareness"],
+    tags: ["online", "professional", "generalAwareness", "free"],
     social: {
       website: "https://headsupguys.org/",
       facebook: "https://www.facebook.com/HeadsUpGuys",
@@ -686,7 +714,7 @@ export default [
       "The association’s mission is to promote awareness of anxiety disorders and support access to proven resources and treatment.",
     logo: AnxietyCanada,
     background: "",
-    tags: ["online", "professional", "medical"],
+    tags: ["online", "professional", "medical", "free"],
     phone: "604-620-0744",
     social: {
       website: "https://anxietycanada.com/resources/find-help/",
@@ -702,7 +730,7 @@ export default [
     description:
       "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the support you need to feel better.",
     logo: KeltysKey,
-    tags: ["online", "professional"],
+    tags: ["online", "professional", "free"],
     social: {
       website: "https://www.keltyskey.com/",
     },
@@ -727,7 +755,7 @@ export default [
       "Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
     logo: Foundry,
     email: "webinfo@foundrybc.ca",
-    tags: ["online", "professional", "walkIn", "substanceAbuse"],
+    tags: ["online", "professional", "walkIn", "substanceAbuse", "free"],
     social: {
       website: "https://foundrybc.ca",
       facebook: "https://www.facebook.com/Foundrybc/",
@@ -741,7 +769,7 @@ export default [
     description:
       "Free, confidential information and referral services to British Columbians in need of support with any kind of substance use issue.",
     logo: HealthLinkBC,
-    tags: ["phone", "professional", "substanceAbuse"],
+    tags: ["phone", "professional", "substanceAbuse", "free"],
     phone: "604-660-9382",
     social: {
       website:
@@ -756,7 +784,7 @@ export default [
       "We aim to increase awareness of mental health issues, reduce the stigma of help-seeking, and promote health and wellness among varsity athletes at UBC.",
     logo: UBCAthleteHub,
     email: "john.ogrodniczuk@ubc.ca",
-    tags: ["online", "professional", "generalAwareness"],
+    tags: ["online", "professional", "generalAwareness", "free"],
     social: {
       website: "https://ubcathleteshub.ca/",
     },
@@ -767,7 +795,7 @@ export default [
       "A one stop shop that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
     logo: MindHealthBC,
     background: "",
-    tags: ["online", "professional", "medical"],
+    tags: ["online", "professional", "medical", "free"],
     social: {
       website: "http://www.mindhealthbc.ca/about-us",
       facebook: "https://www.facebook.com/mindhealthbc/",
@@ -780,7 +808,7 @@ export default [
       "This online modular-based resource can be used as a self-guided course or in individual modules by those wishing to develop their mental health literacy.",
     logo: MHliteracy,
     background: "",
-    tags: ["online", "generalAwareness", "allday"],
+    tags: ["online", "generalAwareness", "allday", "free"],
     phone: "",
     social: {
       website: "https://www.teachmentalhealth.org/",
@@ -794,7 +822,7 @@ export default [
       "Find the information you need and explore strategies to manage mental health and substance use problems.",
     logo: HeretoHelp,
     background: "",
-    tags: ["online", "generalAwareness", "allday", "substanceAbuse"],
+    tags: ["online", "generalAwareness", "allday", "substanceAbuse", "free"],
     social: {
       website: "https://www.heretohelp.bc.ca/",
     },
@@ -806,7 +834,7 @@ export default [
       "We offer help with stress-management (work, home, school stress), anxiety, depression, school and relationship issues.",
     logo: UBCScarfe,
     background: "",
-    tags: ["professional", "appointment"],
+    tags: ["professional", "appointment", "free"],
     social: {
       website:
         "https://ecps.educ.ubc.ca/counselling-centres/scarfe-free-counselling-clinic/",
@@ -822,7 +850,7 @@ export default [
       "If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can email us to make an appointment to see one of UBC’s Counsellors in Residence.",
     logo: UBCgeneral,
     background: "",
-    tags: ["professional", "appointment"],
+    tags: ["professional", "appointment", "free"],
     social: {
       website: "https://vancouver.housing.ubc.ca/counsellor-in-residence/",
     },
@@ -872,7 +900,7 @@ export default [
       "Thrive is a mindset and a month-long series of events focused on helping everyone at UBC explore their path to mental health.",
     logo: UBCwellbeing,
     background: "",
-    tags: ["events", "generalAwareness"],
+    tags: ["events", "generalAwareness", "free"],
     social: {
       website:
         "https://wellbeing.ubc.ca/wellbeing-campaigns-and-initiatives/thrive",
@@ -888,7 +916,7 @@ export default [
       "Empower students to change the conversation about body image through self-reflection, open communication, and collaborative action.",
     logo: UBCBodyBanter,
     background: "",
-    tags: ["peer", "recurring", "walkIn"],
+    tags: ["peer", "recurring", "walkIn", "free"],
     social: {
       website: "http://bodybanter.com/",
       facebook: "https://www.facebook.com/ubcbodybanter",
@@ -906,7 +934,7 @@ export default [
       "A digital platform of tools and educational materials that help you feel happier, healthier, and more productive in hard times",
     logo: TAOapp,
     background: "",
-    tags: ["online", "allday", "generalAwareness", "substanceAbuse"],
+    tags: ["online", "allday", "generalAwareness", "substanceAbuse", "free"],
     social: {
       website: "https://www.taoconnect.org/",
     },
