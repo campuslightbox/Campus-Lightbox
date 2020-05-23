@@ -1,5 +1,4 @@
 import _ from "underscore";
-
 // to do: create a collapsible buttonj
 const tags = {
   free: {
@@ -45,6 +44,11 @@ const tags = {
     displayName: "Sexual Health / Assault (hide)",
     color: "#B6595B",
   },
+  suicidal: {
+    category: "Type of issue",
+    displayName: "Suicidal (hide)",
+    color: "#BB7E15",
+  },
   depressionAnxiety: {
     category: "Type of issue",
     displayName: "Depression /Anxiety /Stress (hide)",
@@ -72,9 +76,15 @@ const tags = {
     displayName: "Self Harm  (hide)",
     color: "#BB7E15",
   },
+
   spiritual: {
     category: "Type of issue",
     displayName: "Spiritual  (hide)",
+    color: "#737373",
+  },
+  general: {
+    category: "Type of issue",
+    displayName: "General Wellbeing Concern (hide)",
     color: "#737373",
   },
   // end of type of issue category
@@ -116,6 +126,24 @@ const tags = {
   },
 
   // end of wait-time category
+
+  low: {
+    category: "Severity",
+    displayName: "Low",
+    color: "#2C8551",
+  },
+  medium: {
+    category: "Severity",
+    displayName: "Medium",
+    color: "#1E8843",
+  },
+  high: {
+    category: "Severity",
+    displayName: "High",
+    color: "#1E8843",
+  },
+
+  //end of Severity
 
   walkIn: {
     category: "Accessibility",
