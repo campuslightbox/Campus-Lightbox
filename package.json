@@ -9,6 +9,7 @@
     "gh-pages": "^2.0.1",
     "moment": "^2.24.0",
     "react": "^16.8.2",
+    "react-collapsible": "^2.8.0",
     "react-dom": "^16.8.2",
     "react-ga": "^2.5.7",
     "react-responsive": "^7.0.0",
