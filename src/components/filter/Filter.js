@@ -8,13 +8,13 @@ import {
   Card,
   Modal,
   Header,
+  CardContent,
 } from "semantic-ui-react";
 import MediaQuery from "react-responsive";
 import _ from "underscore";
 
 import Tags from "static/Tags";
 import MediaQueryHelper from "static/MediaQueryHelper";
-
 import "components/filter/Filter.css";
 
 const styles = {
@@ -61,11 +61,19 @@ class Filter extends React.Component {
                 {this.getDisplayNameForCategory(category)}
               </Card.Header>
             </Card.Content>
-            <Card.Content>
-              <List verticalAlign="middle">
-                {this.createList(category, val)}
-              </List>
-            </Card.Content>
+            <Card.Content>{this.createList(category, val)}</Card.Content>
+            <CardContent>
+              <Collapsible
+                trigger="show more >"
+                triggerStyle={{
+                  cursor: "pointer",
+                  color: "darkblue",
+                  fontWeight: "600",
+                }}
+              >
+                {this.createSubList(category, val)}
+              </Collapsible>
+            </CardContent>
           </Card>
         </Grid.Row>
       );
@@ -81,6 +89,31 @@ class Filter extends React.Component {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  // create sublist for hidden tags
+  createSubList = (category, items) => {
+    return items.map((item) => {
+      // Find if the item is currently selecteds
+      let existingItem = _.find(this.props.filter[category], (currItem) => {
+        return currItem === item.tag;
+      });
+
+      return (
+        <List.Item key={item.tag}>
+          {item.show ? (
+            ""
+          ) : (
+            <Checkbox
+              checked={existingItem ? true : false}
+              onClick={() => this.props.onFilterChange(category, item.tag)}
+              label={item.displayName}
+            />
+          )}
+        </List.Item>
+      );
+    });
+  };
+
+  // main list
   createList = (category, items) => {
     return items.map((item) => {
       // Find if the item is currently selecteds
@@ -97,18 +130,7 @@ class Filter extends React.Component {
               label={item.displayName}
             />
           ) : (
-            <div>
-              <Collapsible
-                trigger="show more"
-                triggerStyle={{ cursor: "pointer", color: "blue" }}
-              >
-                <Checkbox
-                  checked={existingItem ? true : false}
-                  onClick={() => this.props.onFilterChange(category, item.tag)}
-                  label={item.displayName}
-                />
-              </Collapsible>
-            </div>
+            ""
           )}
         </List.Item>
       );

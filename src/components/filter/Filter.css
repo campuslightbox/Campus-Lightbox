@@ -1,28 +1,28 @@
 .filter-row {
-	margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .mobile-group-title {
-	color: #666666;
-	font-size: 12px;
-	margin-bottom: 0px;
+  color: #666666;
+  font-size: 12px;
+  margin-bottom: 0px;
 }
 
 .filter-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .control-button {
-	color: #666666;
-	font-size: 12px;
-	font-weight: bold;
-	margin: 8px 0px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0px;
 }
 .control-button:not(:last-child) {
-	margin-right: 12px;
+  margin-right: 12px;
 }
 .green {
-	color: #16ab39;
+  color: #16ab39;
 }
