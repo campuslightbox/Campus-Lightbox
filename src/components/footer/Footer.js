@@ -53,7 +53,7 @@ const FixedMenuLayout = () => (
             {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
             <br />
             <br />
-            Email us: <a href="mailto:admin@projectaurora.ca" target="_blank" style={{color:"white",textDecoration:"none"}}>admin@projectaurora.ca</a>
+            Email us: <a href="mailto:admin@projectaurora.ca" target="_blank" rel="noopener noreferrer" style={{color:"white",textDecoration:"none"}}>admin@projectaurora.ca</a>
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
@@ -76,7 +76,7 @@ const FixedMenuLayout = () => (
             <h6>We are not affiliated,
         associated, authorized, endorsed by, or in any way officially connected with
         the University of British Columbia, or any of its subsidiaries or its affiliates.
-        The official University of British Columbia website can be found <a href="https://www.ubc.ca/" target="_blank" style={{color:"white",textDecoration:"none"}}>here</a>.</h6>
+        The official University of British Columbia website can be found <a href="https://www.ubc.ca/" target="_blank" rel="noopener noreferrer" style={{color:"white",textDecoration:"none"}}>here</a>.</h6>
           </Grid.Column>
         </Grid>
       </Container>
