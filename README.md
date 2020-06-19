@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://i.imgur.com/BDcgDDO.png" width="600" height="281" alt="Campus Lightbox Logo"><br/>
+</p>
+
 # Campus LightBox
 
 Campus Lightbox is Your Guide to UBC Mental Health Resources.
