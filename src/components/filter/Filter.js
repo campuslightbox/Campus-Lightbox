@@ -62,13 +62,15 @@ class Filter extends React.Component {
               </Card.Header>
             </Card.Content>
             <Card.Content>{this.createList(category, val)}</Card.Content>
-            <CardContent>
+            <CardContent style={{ border: "none", paddingTop: "0px" }}>
               <Collapsible
-                trigger="show more >"
+                trigger="SHOW MORE ▼"
+                triggerWhenOpen="SHOW LESS ▲"
+                transitionTime={310}
                 triggerStyle={{
                   cursor: "pointer",
                   color: "darkblue",
-                  fontWeight: "600",
+                  fontWeight: "500",
                 }}
               >
                 {this.createSubList(category, val)}
@@ -92,13 +94,13 @@ class Filter extends React.Component {
   // create sublist for hidden tags
   createSubList = (category, items) => {
     return items.map((item) => {
-      // Find if the item is currently selecteds
+      // Find if the item is currently selected
       let existingItem = _.find(this.props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
 
       return (
-        <List.Item key={item.tag}>
+        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
           {item.show ? (
             ""
           ) : (
@@ -122,7 +124,7 @@ class Filter extends React.Component {
       });
 
       return (
-        <List.Item key={item.tag}>
+        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
           {item.show ? (
             <Checkbox
               checked={existingItem ? true : false}

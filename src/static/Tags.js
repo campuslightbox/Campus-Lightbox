@@ -6,17 +6,18 @@ const tags = {
     displayName: "Free",
     color: "green",
     show: true,
+    TopTen: true,
   },
-  paid: { category: "cost", displayName: "Paid", color: "tomato", show: true },
+  paid: {
+    category: "cost",
+    displayName: "Paid",
+    color: "tomato",
+    show: true,
+    TopTen: true,
+  },
   less50: {
     category: "cost",
     displayName: " < $50/hr ",
-    color: "",
-    show: false,
-  },
-  less100: {
-    category: "cost",
-    displayName: " $50-$100/hr ",
     color: "",
     show: false,
   },
@@ -26,7 +27,7 @@ const tags = {
     color: "",
     show: false,
   },
-
+  // delete 50-100 category
   // end of cost category
 
   academic: {
@@ -34,6 +35,7 @@ const tags = {
     displayName: "Academic",
     color: "#1971BD",
     show: true,
+    TopTen: true,
   },
 
   financial: {
@@ -118,8 +120,9 @@ const tags = {
   immediate: {
     category: "Urgency /Wait-time",
     displayName: "Immediate",
-    color: "#2C8551",
+    color: "rgba(218, 68, 68, 0.88)",
     show: true,
+    TopTen: true,
   },
   sameDay: {
     category: "Urgency /Wait-time",
@@ -171,13 +174,13 @@ const tags = {
     category: "Severity",
     displayName: "Medium",
     color: "#1E8843",
-    show: true,
+    show: false,
   },
   high: {
     category: "Severity",
     displayName: "High",
     color: "#1E8843",
-    show: true,
+    show: false,
   },
 
   //end of Severity
@@ -185,7 +188,7 @@ const tags = {
   walkIn: {
     category: "Accessibility",
     displayName: "In-person",
-    color: "#2C8551",
+    color: "#8660C3",
     show: true,
   },
   online: {
@@ -198,8 +201,9 @@ const tags = {
   allday: {
     category: "Accessibility",
     displayName: "24/7",
-    color: "#1C8832",
+    color: "rgb(251, 196, 32)",
     show: true,
+    TopTen: true,
   },
 
   phone: {
@@ -228,6 +232,7 @@ const tags = {
     displayName: "Professional",
     color: "#32457D",
     show: true,
+    TopTen: true,
   },
   peer: {
     category: "type of help",
@@ -261,5 +266,6 @@ export default {
   getAllTagKeys: () => _.keys(tags),
   getCategories: () => _.uniq(_.map(_.values(tags), (obj) => obj.category)),
   getDisplayNameForTag: (tag) => tags[tag].displayName,
+  getTopValue: (tag) => tags[tag].TopTen,
   getColorForTag: (tag) => tags[tag].color || "#aaaaaa",
 };
