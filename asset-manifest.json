@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.829633c8.chunk.css",
-    "main.js": "/static/js/main.eef97ab6.chunk.js",
-    "main.js.map": "/static/js/main.eef97ab6.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.621b5bde.chunk.css": "/static/css/2.621b5bde.chunk.css",
-    "static/js/2.c61f332b.chunk.js": "/static/js/2.c61f332b.chunk.js",
-    "static/js/2.c61f332b.chunk.js.map": "/static/js/2.c61f332b.chunk.js.map",
+    "main.css": "/static/css/main.14914c86.chunk.css",
+    "main.js": "/static/js/main.52431bdd.chunk.js",
+    "main.js.map": "/static/js/main.52431bdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.246ffeb5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.246ffeb5.js.map",
+    "static/css/2.7df41cd5.chunk.css": "/static/css/2.7df41cd5.chunk.css",
+    "static/js/2.3ba76e9e.chunk.js": "/static/js/2.3ba76e9e.chunk.js",
+    "static/js/2.3ba76e9e.chunk.js.map": "/static/js/2.3ba76e9e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e7f55e457a66421a874cb084f342eba5.js": "/precache-manifest.e7f55e457a66421a874cb084f342eba5.js",
+    "precache-manifest.881469fd26a6f89b2ccaadce57816de9.js": "/precache-manifest.881469fd26a6f89b2ccaadce57816de9.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.621b5bde.chunk.css.map": "/static/css/2.621b5bde.chunk.css.map",
-    "static/css/main.829633c8.chunk.css.map": "/static/css/main.829633c8.chunk.css.map",
+    "static/css/2.7df41cd5.chunk.css.map": "/static/css/2.7df41cd5.chunk.css.map",
+    "static/css/main.14914c86.chunk.css.map": "/static/css/main.14914c86.chunk.css.map",
+    "static/js/2.3ba76e9e.chunk.js.LICENSE.txt": "/static/js/2.3ba76e9e.chunk.js.LICENSE.txt",
     "static/media/AMSSpeakeasy.png": "/static/media/AMSSpeakeasy.3197a5de.png",
     "static/media/Academic.png": "/static/media/Academic.f6f38e8c.png",
     "static/media/AcademicBG.jpg": "/static/media/AcademicBG.22e0987e.jpg",
@@ -66,5 +67,12 @@
     "static/media/headsupguys.png": "/static/media/headsupguys.71d52f4c.png",
     "static/media/heretohelp.png": "/static/media/heretohelp.d4aacb14.png",
     "static/media/mountains.jpg": "/static/media/mountains.ce701f9e.jpg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.246ffeb5.js",
+    "static/css/2.7df41cd5.chunk.css",
+    "static/js/2.3ba76e9e.chunk.js",
+    "static/css/main.14914c86.chunk.css",
+    "static/js/main.52431bdd.chunk.js"
+  ]
 }
