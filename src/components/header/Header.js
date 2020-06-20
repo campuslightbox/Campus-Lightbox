@@ -60,7 +60,7 @@ class Header extends React.Component {
                             <img className="titleImage" src={require("./CLB_PrimaryLogo.png")}
                                       alt = "Campus Lightbox"/>
                             <div className="guide">
-                            Your Guide to UBC Mental Health Resources
+                            Your Guide to SFU Mental Health Resources
                             </div>
                             <div className="select">
                                 Select From One of the Following Options
