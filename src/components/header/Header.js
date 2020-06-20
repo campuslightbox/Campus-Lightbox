@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "semantic-ui-react";
 import GetHelpModal from "../../components/gethelpmodal/GetHelpModal";
 import CovidModal from "../../components/covidmodal/CovidModal";
-import Announcement from "../../components/banner/Announcement";
+// import Announcement from "../../components/banner/Announcement";
 import "./style.css";
 import "../animate.css";
 import ReactGA from "react-ga";
