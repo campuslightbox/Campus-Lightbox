@@ -1,45 +1,49 @@
 .bottom-button > .ui.attached.button {
-	box-shadow: none!important;
+  box-shadow: none !important;
 }
 
-.ui.card>extra, .ui.cards>.card>.extra {
-	border-top: none!important;
+.ui.card > extra,
+.ui.cards > .card > .extra {
+  border-top: none !important;
 }
 
-.ui.card>:first-child, .ui.cards>.card>:first-child {
-	border-radius: 10px 10px 0px 0px!important;
+.ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 10px 10px 0px 0px !important;
 }
 
-.ui.card, .ui.cards>.card {
-	width: 260px;
+.ui.card,
+.ui.cards > .card {
+  width: 260px;
 }
 
 .banner-logo {
-	height: 72px;
-	top: 4px;
-	left: 4px;
-	position: absolute;
+  height: 72px;
+  top: 4px;
+  left: 4px;
+  position: absolute;
 }
 
-#report-button>button {
-	box-shadow: none!important;
-	padding:4px 0px 0px 4px!important;
+#report-button > button {
+  box-shadow: none !important;
+  padding: 4px 0px 0px 4px !important;
 }
 
-#report-button i:hover{
-	color: #db2828!important;
+#report-button i:hover {
+  color: #db2828 !important;
 }
 
 /* Mobile */
 @media only screen and (max-width: 801px) {
-	.ui.card, .ui.cards>.card {
-		width: 100%;
-	}
+  .ui.card,
+  .ui.cards > .card {
+    width: 100%;
+  }
 
-	.banner-logo {
-		height: 72px;
-		top: 4px;
-		left: 4px;
-		position: absolute;
-	}
+  .banner-logo {
+    height: 72px;
+    top: 4px;
+    left: 4px;
+    position: absolute;
+  }
 }

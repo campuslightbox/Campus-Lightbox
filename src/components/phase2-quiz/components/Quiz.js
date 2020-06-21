@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { CSSTransition } from 'react-transition-group';
-import Question from '../components/Question';
-import QuestionCount from '../components/QuestionCount';
-import AnswerOption from '../components/AnswerOption';
+import React from "react";
+import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
+import Question from "../components/Question";
+import QuestionCount from "../components/QuestionCount";
+import AnswerOption from "../components/AnswerOption";
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -46,7 +46,7 @@ Quiz.propTypes = {
   question: PropTypes.string.isRequired,
   questionId: PropTypes.number.isRequired,
   questionTotal: PropTypes.number.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired
+  onAnswerSelected: PropTypes.func.isRequired,
 };
 
 export default Quiz;

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url("https://fonts.googleapis.com/css?family=Muli");
 
-.b1{
+.b1 {
   position: relative;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover !important;
-	-webkit-background-size: cover !important;
+  -webkit-background-size: cover !important;
   background-image: url(bg.jpg);
   width: 100%;
   height: 100vh;
@@ -14,29 +14,29 @@
   text-align: center;
 }
 
-.helpbutton{
+.helpbutton {
   line-height: 12px;
   font-size: 8pt;
   font-family: tahoma;
   margin-top: 5px;
   margin-right: 2%;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.covidbutton{
+.covidbutton {
   line-height: 12px;
   font-size: 8pt;
   font-family: tahoma;
   margin-top: 5px;
   margin-left: 2%;
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.stuff{
+.stuff {
   display: inline-block;
   height: 100%;
   padding-top: 40px;
@@ -54,69 +54,68 @@
   width: 90%;
 }
 
-.stuff h4{
-    font-size: large;
-    position: center;
-    font-family: 'Muli', sans-serif;
-    font-weight:normal;
-    color: white;
+.stuff h4 {
+  font-size: large;
+  position: center;
+  font-family: "Muli", sans-serif;
+  font-weight: normal;
+  color: white;
 }
 
-
-.stuff h3{
-    font-size: large;
-    position: center;
-    font-family: 'Muli', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-    padding-bottom: 0px;
-    padding-top: 15px;
+.stuff h3 {
+  font-size: large;
+  position: center;
+  font-family: "Muli", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 0px;
+  padding-top: 15px;
 }
 
-.guide{
+.guide {
   position: center;
   padding-bottom: calc(8px + (12 - 6) * ((100vw - 300px) / (1600 - 300)));
   padding-top: calc(12px + (18 - 6) * ((100vw - 300px) / (1600 - 300)));
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: bold;
   color: white;
   font-size: calc(15px + (28 - 15) * ((100vw - 300px) / (1600 - 300)));
   /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))) */
 }
 
-.select{
+.select {
   padding-bottom: calc(12px + (18 - 6) * ((100vw - 300px) / (1600 - 300)));
   padding-top: calc(8px + (12 - 6) * ((100vw - 300px) / (1600 - 300)));
   font-size: calc(13px + (25 - 13) * ((100vw - 300px) / (1600 - 300)));
 
   position: center;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: normal;
   color: white;
 }
 
-.ButtonClass{
+.ButtonClass {
   position: center;
   margin-top: 30px;
   -webkit-animation-delay: 2.5s;
 }
 
 .buttonsAll {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
 .resourceButton1 {
-  -webkit-animation-delay: 1s; 
+  -webkit-animation-delay: 1s;
 }
 
 .resourceButton2 {
-  -webkit-animation-delay: 1.5s; 
+  -webkit-animation-delay: 1.5s;
 }
 
 .resourceButton3 {
-  -webkit-animation-delay: 2s; 
+  -webkit-animation-delay: 2s;
 }
 
 /* screenwidth less than 1024px
@@ -140,20 +139,20 @@
 
 @media only screen and (max-width: 600px) {
   .buttonsAll {
-    display: block; 
+    display: block;
   }
 
   .resourceButton1 {
-    display:block;
+    display: block;
     margin-bottom: 1em;
   }
-  
+
   .resourceButton2 {
-    display:block;
+    display: block;
     margin-bottom: 1em;
   }
-  
+
   .resourceButton3 {
-    display:block;
+    display: block;
   }
 }

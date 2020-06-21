@@ -1,51 +1,86 @@
-import React from 'react'
+import React from "react";
 import {
   Container,
   Segment,
   Button,
   Grid,
   Header,
-  Modal
-} from 'semantic-ui-react'
-import ReactGA from 'react-ga';
-import FeedbackModal from 'components/feedbackModal/FeedbackModal';
+  Modal,
+} from "semantic-ui-react";
+import ReactGA from "react-ga";
+import FeedbackModal from "components/feedbackModal/FeedbackModal";
 
-ReactGA.initialize('UA-139413334-1');
+ReactGA.initialize("UA-139413334-1");
 
 const trackGA = (buttonName) => {
   ReactGA.event({
-    category: 'Footer',
-    action: 'Clicked ' + buttonName + ' Button'
+    category: "Footer",
+    action: "Clicked " + buttonName + " Button",
   });
-}
+};
 
 const styles = {
   socialGroup: {
     marginBottom: 12,
   },
-}
+};
 
 const FixedMenuLayout = () => (
   <div>
-    <Segment inverted vertical style={{ margin: '5em 0em 0em', padding: '3em 0em', background: '#40798C' }}>
-      <Container textAlign='center'>
-
+    <Segment
+      inverted
+      vertical
+      style={{
+        margin: "5em 0em 0em",
+        padding: "3em 0em",
+        background: "#40798C",
+      }}
+    >
+      <Container textAlign="center">
         <Grid stackable>
-
           <Grid.Column width={5} alignitems="center">
-            <Header inverted as='h4' content='Brought to you by:' />
-            <Modal trigger={<Button onClick={() => trackGA("About Project Aurora")}>© Project Aurora</Button>} closeIcon size='large'>
-              <Modal.Header><center>About Us</center></Modal.Header>
+            <Header inverted as="h4" content="Brought to you by:" />
+            <Modal
+              trigger={
+                <Button onClick={() => trackGA("About Project Aurora")}>
+                  © Project Aurora
+                </Button>
+              }
+              closeIcon
+              size="large"
+            >
+              <Modal.Header>
+                <center>About Us</center>
+              </Modal.Header>
               <Modal.Content image>
                 <Modal.Description>
                   <center>
-                    <p >Campus Lightbox was envisioned and created by <a href="https://www.projectaurora.ca/" target="_blank" rel="noopener noreferrer"><b>Project Aurora.</b></a></p>
-                    <p>Project Aurora is a registered non-profit aimed at accelerating the creation, growth, <br />
-                      and impact of youth-led mental health initiatives by providing mentorship,<br />
-                      connections, administrative/logistical support, and funding.</p>
-                    <p>We hope to continue the much-­needed conversation about student <br />
-                      wellness on college campuses across the country and to empower students <br />
-                      to take charge of their mental health.</p>
+                    <p>
+                      Campus Lightbox was envisioned and created by{" "}
+                      <a
+                        href="https://www.projectaurora.ca/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <b>Project Aurora.</b>
+                      </a>
+                    </p>
+                    <p>
+                      Project Aurora is a registered non-profit aimed at
+                      accelerating the creation, growth, <br />
+                      and impact of youth-led mental health initiatives by
+                      providing mentorship,
+                      <br />
+                      connections, administrative/logistical support, and
+                      funding.
+                    </p>
+                    <p>
+                      We hope to continue the much-­needed conversation about
+                      student <br />
+                      wellness on college campuses across the country and to
+                      empower students <br />
+                      to take charge of their mental health.
+                    </p>
                   </center>
                 </Modal.Description>
               </Modal.Content>
@@ -53,35 +88,104 @@ const FixedMenuLayout = () => (
             {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
             <br />
             <br />
-            Email us: <a href="mailto:admin@projectaurora.ca" target="_blank" rel="noopener noreferrer" style={{ color: "white", textDecoration: "none" }}>admin@projectaurora.ca</a>
+            Email us:{" "}
+            <a
+              href="mailto:admin@projectaurora.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              admin@projectaurora.ca
+            </a>
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
-            <Header inverted as='h4' content='Follow us:' />
+            <Header inverted as="h4" content="Follow us:" />
             <Button.Group style={styles.socialGroup}>
-              <a href="https://www.facebook.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
-                <Button onClick={() => trackGA("Facebook")} size='large' circular color='facebook' icon='facebook' /></a>
-              <a href="https://www.instagram.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
-                <Button onClick={() => trackGA("Instagram")} size='large' circular color='instagram' icon='instagram' /></a>
-              <a href="https://twitter.com/campuslightbox/" target="_blank" rel="noopener noreferrer">
-                <Button onClick={() => trackGA("Twitter")} size='large' circular color='twitter' icon='twitter' /></a>
-              <a href="https://www.linkedin.com/company/project-aurora/" target="_blank" rel="noopener noreferrer">
-                <Button onClick={() => trackGA("LinkedIn")} size='large' circular color='linkedin' icon='linkedin' /></a>
+              <a
+                href="https://www.facebook.com/campuslightbox/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  onClick={() => trackGA("Facebook")}
+                  size="large"
+                  circular
+                  color="facebook"
+                  icon="facebook"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/campuslightbox/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  onClick={() => trackGA("Instagram")}
+                  size="large"
+                  circular
+                  color="instagram"
+                  icon="instagram"
+                />
+              </a>
+              <a
+                href="https://twitter.com/campuslightbox/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  onClick={() => trackGA("Twitter")}
+                  size="large"
+                  circular
+                  color="twitter"
+                  icon="twitter"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/project-aurora/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  onClick={() => trackGA("LinkedIn")}
+                  size="large"
+                  circular
+                  color="linkedin"
+                  icon="linkedin"
+                />
+              </a>
             </Button.Group>
-            <FeedbackModal trigger={<Button color='orange'>Give Us Feedback</Button>} />
+            <FeedbackModal
+              trigger={<Button color="orange">Give Us Feedback</Button>}
+            />
           </Grid.Column>
 
           <Grid.Column width={7}>
-            <Header inverted as='h4' content='Notice of Non­-Affiliation and Disclaimer:' />
-            <h6>We are not affiliated,
-            associated, authorized, endorsed by, or in any way officially connected with
-            the University of British Columbia, or any of its subsidiaries or its affiliates.
-        The official University of British Columbia website can be found <a href="https://www.ubc.ca/" target="_blank" rel="noopener noreferrer" style={{ color: "white", textDecoration: "none" }}>here</a>.</h6>
+            <Header
+              inverted
+              as="h4"
+              content="Notice of Non­-Affiliation and Disclaimer:"
+            />
+            <h6>
+              We are not affiliated, associated, authorized, endorsed by, or in
+              any way officially connected with the University of British
+              Columbia, or any of its subsidiaries or its affiliates. The
+              official University of British Columbia website can be found{" "}
+              <a
+                href="https://www.ubc.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                here
+              </a>
+              .
+            </h6>
           </Grid.Column>
         </Grid>
       </Container>
     </Segment>
   </div>
-)
+);
 
-export default FixedMenuLayout
+export default FixedMenuLayout;
