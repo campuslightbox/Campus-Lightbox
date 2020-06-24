@@ -22,3 +22,17 @@
     transform: rotate(360deg);
   }
 }
+.ArrowButtons {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.rightArrow {
+
+  text-align: right;
+  
+  
+}
+
+

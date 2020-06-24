@@ -5,6 +5,7 @@ import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,9 +18,11 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
+      flag : 0
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+    this.setPreviousQuestion = this.setPreviousQuestion.bind(this);
   }
 
   componentDidMount() {
@@ -85,6 +88,23 @@ class App extends Component {
     });
   }
 
+  
+  setPreviousQuestion () {
+    console.log(this.state);
+    const counter = this.state.counter - 1;
+    const questionId = this.state.questionId - 1;
+   
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
+      answer: ''
+    }); 
+  
+
+  }
+
   getResults() {
     const answersCount = this.state.answersCount;
     const answersCountKeys = Object.keys(answersCount);
@@ -98,9 +118,9 @@ class App extends Component {
 
   setResults(result) {
     if (result.length === 1) {
-      this.setState({ result: result[0] });
+      this.setState({ result: result[0], flag : 1 });
     } else {
-      this.setState({ result: "Undetermined" });
+      this.setState({ result: "Undetermined", flag : 1 });
     }
   }
 
@@ -113,6 +133,9 @@ class App extends Component {
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
+        doneFlag = {this.state.flag}
+        counter = {this.state.counter}
+        setPreviousQuestion = {this.setPreviousQuestion}
       />
     );
   }
