@@ -14,6 +14,10 @@ var quizQuestions = [
         type: "Sony",
         content: "Uncharted",
       },
+      {
+        type: "Blahblah",
+        content: "blahblah",
+      },
     ],
   },
   {
@@ -30,6 +34,10 @@ var quizQuestions = [
       {
         type: "Sony",
         content: "Playstation 1",
+      },
+      {
+        type: "Blahblah",
+        content: "blahblah",
       },
     ],
   },
@@ -49,6 +57,10 @@ var quizQuestions = [
         type: "Sony",
         content: "Gran Turismo",
       },
+      {
+        type: "Blahblah",
+        content: "blahblah",
+      },
     ],
   },
   {
@@ -66,6 +78,10 @@ var quizQuestions = [
         type: "Sony",
         content: "Final Fantasy VII",
       },
+      {
+        type: "Blahblah",
+        content: "blahblah",
+      },
     ],
   },
   {
@@ -82,6 +98,10 @@ var quizQuestions = [
       {
         type: "Sony",
         content: "Playstation 4",
+      },
+      {
+        type: "Blahblah",
+        content: "blahblah",
       },
     ],
   },

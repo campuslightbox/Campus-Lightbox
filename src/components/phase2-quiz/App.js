@@ -5,7 +5,6 @@ import Result from "./components/Result";
 import logo from "./svg/logo.svg";
 import "./App.css";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +17,7 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
-      flag : 0
+      flag: 0,
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -73,6 +72,7 @@ class App extends Component {
       },
       answer: answer,
     }));
+    console.log(answer, "setUserAnswer");
   }
 
   setNextQuestion() {
@@ -88,21 +88,18 @@ class App extends Component {
     });
   }
 
-  
-  setPreviousQuestion () {
-    console.log(this.state);
+  setPreviousQuestion() {
+    console.log(this.state, "setPreviousQ this.state");
     const counter = this.state.counter - 1;
     const questionId = this.state.questionId - 1;
-   
+
     this.setState({
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
-      answer: ''
-    }); 
-  
-
+      answer: "",
+    });
   }
 
   getResults() {
@@ -111,16 +108,22 @@ class App extends Component {
     const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
     const maxAnswerCount = Math.max.apply(null, answersCountValues);
 
-    return answersCountKeys.filter(
-      (key) => answersCount[key] === maxAnswerCount
-    );
+    console.log("answerCount", answersCount);
+    console.log("answerCountKeys", answersCountKeys);
+    console.log("answerCountValues", answersCountValues);
+    console.log("maxAnswerCount", maxAnswerCount);
+
+    return `Top ${answersCountKeys.length} choice: ${answersCountKeys}`;
+
+    // experiment with the code
   }
 
   setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0], flag : 1 });
+    if (result.length !== 0) {
+      console.log(result, "setResults");
+      this.setState({ result: result, flag: 1 }); // set result to result array
     } else {
-      this.setState({ result: "Undetermined", flag : 1 });
+      this.setState({ result: "Undetermined", flag: 1 });
     }
   }
 
@@ -133,9 +136,9 @@ class App extends Component {
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
-        doneFlag = {this.state.flag}
-        counter = {this.state.counter}
-        setPreviousQuestion = {this.setPreviousQuestion}
+        doneFlag={this.state.flag}
+        counter={this.state.counter}
+        setPreviousQuestion={this.setPreviousQuestion}
       />
     );
   }
