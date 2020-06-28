@@ -44,11 +44,14 @@ function Quiz(props) {
                 size="big"
                 onClick={props.setPreviousQuestion}
               />
-              <Icon name="disabled arrow right" size="big" />
+              <Icon name="arrow right" size="big" />
             </div>
           ) : (
             <div className="rightArrow">
-              <Icon name="arrow right" size="big" />
+              <Icon name="arrow right" size="big"
+              disabled={!props.answer}
+              onClick={props.onAnswerSelected}
+              />
             </div>
           )}
         </div>

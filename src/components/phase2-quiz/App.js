@@ -18,6 +18,7 @@ class App extends Component {
       answersCount: {},
       result: "",
       flag: 0,
+      
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -65,14 +66,23 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
-    this.setState((state, props) => ({
+
+    this.setState((state) => ({
       answersCount: {
         ...state.answersCount,
         [answer]: (state.answersCount[answer] || 0) + 1,
+        previousAnswerCount: this.state.answersCount,
       },
       answer: answer,
-    }));
+      
+    }),
+    () => {
+      console.log(this.state);
+    }
+  
+    );
     console.log(answer, "setUserAnswer");
+    
   }
 
   setNextQuestion() {
@@ -85,11 +95,13 @@ class App extends Component {
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
+      previousAnswer: this.state.answer
+    
     });
   }
 
   setPreviousQuestion() {
-    console.log(this.state, "setPreviousQ this.state");
+   // console.log(this.state, "setPreviousQ this.state");
     const counter = this.state.counter - 1;
     const questionId = this.state.questionId - 1;
 
@@ -98,8 +110,13 @@ class App extends Component {
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
-      answer: "",
-    });
+      answer: this.state.previousAnswer,
+      answersCount: this.state.answersCount.previousAnswerCount
+    },
+     () => {
+       console.log(this.state);
+     }
+    );
   }
 
   getResults() {
