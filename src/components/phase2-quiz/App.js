@@ -17,8 +17,10 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
+      previousAnswer: "",
       flag: 0,
-      
+      selected: false,
+      tags: [], // how to return tags correctly based on useranswers (dummy data)
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -26,38 +28,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const shuffledAnswerOptions = quizQuestions.map((question) =>
-      this.shuffleArray(question.answers)
+    const staticAnswerOptions = quizQuestions.map(
+      (question) => question.answers
     );
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0],
+      answerOptions: staticAnswerOptions[0],
     });
   }
 
-  shuffleArray(array) {
-    var currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  }
-
-  handleAnswerSelected(event) {
-    this.setUserAnswer(event.currentTarget.value);
-
+  handleAnswerSelected(e) {
+    this.setUserAnswer(e.target.value);
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -66,23 +47,21 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
+    this.setState(
+      (state) => ({
+        answersCount: {
+          ...state.answersCount,
+          [answer]: (state.answersCount[answer] || 0) + 1,
+          previousAnswerCount: this.state.answersCount,
+        },
 
-    this.setState((state) => ({
-      answersCount: {
-        ...state.answersCount,
-        [answer]: (state.answersCount[answer] || 0) + 1,
-        previousAnswerCount: this.state.answersCount,
-      },
-      answer: answer,
-      
-    }),
-    () => {
-      console.log(this.state);
-    }
-  
+        answer: answer,
+        selected: true,
+      }),
+      () => {
+        // console.log(this.state);
+      }
     );
-    console.log(answer, "setUserAnswer");
-    
   }
 
   setNextQuestion() {
@@ -95,50 +74,51 @@ class App extends Component {
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
-      previousAnswer: this.state.answer
-    
+      previousAnswer: this.state.answer,
+      selected: true,
     });
   }
 
   setPreviousQuestion() {
-   // console.log(this.state, "setPreviousQ this.state");
     const counter = this.state.counter - 1;
     const questionId = this.state.questionId - 1;
-
-    this.setState({
-      counter: counter,
-      questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
-      answer: this.state.previousAnswer,
-      answersCount: this.state.answersCount.previousAnswerCount
-    },
-     () => {
-       console.log(this.state);
-     }
+    this.setState(
+      {
+        counter: counter,
+        questionId: questionId,
+        question: quizQuestions[counter].question,
+        answerOptions: quizQuestions[counter].answers,
+        answer: this.state.previousAnswer,
+        selected: false,
+        answersCount: this.state.answersCount.previousAnswerCount,
+      },
+      () => {
+        //console.log(this.state);
+      }
     );
   }
 
   getResults() {
     const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-    console.log("answerCount", answersCount);
-    console.log("answerCountKeys", answersCountKeys);
-    console.log("answerCountValues", answersCountValues);
-    console.log("maxAnswerCount", maxAnswerCount);
-
-    return `Top ${answersCountKeys.length} choice: ${answersCountKeys}`;
-
-    // experiment with the code
+    const answersCountKeys = Object.keys(answersCount).sort(function (a, b) {
+      return answersCount[b] - answersCount[a];
+    });
+    //const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+    const choices = answersCountKeys.includes("previousAnswerCount")
+      ? answersCountKeys.length - 1
+      : answersCountKeys.length;
+    const filterResult = answersCountKeys.filter(
+      (x) => x !== "previousAnswerCount"
+    );
+    return `Top ${choices} resource: ${filterResult}`;
   }
 
   setResults(result) {
     if (result.length !== 0) {
-      console.log(result, "setResults");
-      this.setState({ result: result, flag: 1 }); // set result to result array
+      this.setState({
+        result: result,
+        flag: 1,
+      }); // set result to result array
     } else {
       this.setState({ result: "Undetermined", flag: 1 });
     }
@@ -156,6 +136,7 @@ class App extends Component {
         doneFlag={this.state.flag}
         counter={this.state.counter}
         setPreviousQuestion={this.setPreviousQuestion}
+        selected={this.selected}
       />
     );
   }

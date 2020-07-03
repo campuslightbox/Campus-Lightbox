@@ -8,16 +8,15 @@ function AnswerOption(props) {
         type="radio"
         className="radioCustomButton"
         name="radioGroup"
-        checked={props.answerType === props.answer}
+        defaultChecked={props.answerType === props.answer}
         id={props.answerType}
         value={props.answerType}
-        //disabled={props.answer}
-        onClick={props.onAnswerSelected}
+        onClick={props.onAnswerSelected} // aka handleAnswerSelected function in App.js
       />
       <label className="radioCustomLabel" htmlFor={props.answerType}>
+        <span>{props.letter}: </span>
         {props.answerContent}
       </label>
-      
     </li>
   );
 }

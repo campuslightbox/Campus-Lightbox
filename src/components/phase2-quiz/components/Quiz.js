@@ -10,6 +10,7 @@ function Quiz(props) {
   function renderAnswerOptions(key) {
     return (
       <AnswerOption
+        letter={key.letter}
         key={key.content}
         answerContent={key.content}
         answerType={key.type}
@@ -24,11 +25,12 @@ function Quiz(props) {
     <CSSTransition
       className="container"
       component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
+      transitionname="fade"
+      transitionentertimeout={800}
+      transitionleavetimeout={500}
+      transitionappear="true"
+      transitionappeartimeout={500}
+      timeout={100}
     >
       <div key={props.questionId}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
@@ -48,9 +50,11 @@ function Quiz(props) {
             </div>
           ) : (
             <div className="rightArrow">
-              <Icon name="arrow right" size="big"
-              disabled={!props.answer}
-              onClick={props.onAnswerSelected}
+              <Icon
+                name="arrow right"
+                size="big"
+                disabled={!props.selected}
+                onClick={props.onAnswerSelected}
               />
             </div>
           )}

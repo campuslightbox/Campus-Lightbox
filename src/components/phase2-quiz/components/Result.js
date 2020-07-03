@@ -7,14 +7,15 @@ function Result(props) {
     <CSSTransition
       className="container result"
       component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
+      transitionname="fade"
+      transitionentertimeout={800}
+      transitionleavetimeout={500}
+      transitionappear="true"
+      transitionappeartimeout={500}
+      timeout={100}
     >
       <div>
-        You prefer <strong>{props.quizResult}</strong>!
+        Result: <strong>{props.quizResult}</strong>
       </div>
     </CSSTransition>
   );
