@@ -8,10 +8,11 @@ function AnswerOption(props) {
         type="radio"
         className="radioCustomButton"
         name="radioGroup"
-        defaultChecked={props.answerType === props.answer}
+        defaultChecked = {props.answerType === props.answer}
         id={props.answerType}
         value={props.answerType}
         onClick={props.onAnswerSelected} // aka handleAnswerSelected function in App.js
+        
       />
       <label className="radioCustomLabel" htmlFor={props.answerType}>
         <span>{props.letter}: </span>

@@ -25,6 +25,8 @@ class App extends Component {
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     this.setPreviousQuestion = this.setPreviousQuestion.bind(this);
+   // this.setNextQuestion = this.setNextQuestion.bind(this);
+
   }
 
   componentDidMount() {
@@ -38,6 +40,7 @@ class App extends Component {
   }
 
   handleAnswerSelected(e) {
+    console.log(e.target.value);
     this.setUserAnswer(e.target.value);
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
@@ -45,6 +48,8 @@ class App extends Component {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
+
+
 
   setUserAnswer(answer) {
     this.setState(
@@ -59,7 +64,7 @@ class App extends Component {
         selected: true,
       }),
       () => {
-        // console.log(this.state);
+         console.log(this.state);
       }
     );
   }
@@ -77,6 +82,7 @@ class App extends Component {
       previousAnswer: this.state.answer,
       selected: true,
     });
+    console.log(this.state);
   }
 
   setPreviousQuestion() {
@@ -91,9 +97,11 @@ class App extends Component {
         answer: this.state.previousAnswer,
         selected: false,
         answersCount: this.state.answersCount.previousAnswerCount,
+       // forwardAnswer: this.state.answer
+        
       },
       () => {
-        //console.log(this.state);
+        console.log(this.state);
       }
     );
   }
