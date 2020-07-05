@@ -87,7 +87,7 @@ class Header extends React.Component {
               <Button
                 inverted
                 style={styles.button}
-                onClick={() => this.onFilterClicked("hotline")}
+                onClick={() => this.onFilterClicked("phone")}
               >
                 Phone Hotline
               </Button>

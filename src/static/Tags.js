@@ -1,5 +1,4 @@
 import _ from "underscore";
-// to do: create a collapsible buttonj
 const tags = {
   free: {
     category: "cost",
@@ -27,9 +26,7 @@ const tags = {
     color: "",
     show: false,
   },
-  // delete 50-100 category
   // end of cost category
-
   academic: {
     category: "Type of issue",
     displayName: "Academic",
@@ -50,11 +47,12 @@ const tags = {
     color: "#920110",
     show: true,
   },
-  general: {
+  sexualHealthAssault: {
     category: "Type of issue",
-    displayName: "General Wellbeing Concern",
-    color: "#737373",
+    displayName: "Sexual Health / Assault",
+    color: "#B6595B",
     show: true,
+    TopTen: true,
   },
   disability: {
     category: "Type of issue",
@@ -63,12 +61,6 @@ const tags = {
     show: true,
   },
 
-  sexualHealthAssault: {
-    category: "Type of issue",
-    displayName: "Sexual Health / Assault",
-    color: "#B6595B",
-    show: false,
-  },
   suicidal: {
     category: "Type of issue",
     displayName: "Suicidal",
@@ -114,15 +106,18 @@ const tags = {
     color: "#737373",
     show: false,
   },
-
+  general: {
+    category: "Type of issue",
+    displayName: "General Wellbeing Concern",
+    color: "#737373",
+    show: false,
+  },
   // end of type of issue category
-
   immediate: {
     category: "Urgency /Wait-time",
     displayName: "Immediate",
     color: "rgba(218, 68, 68, 0.88)",
     show: true,
-    TopTen: true,
   },
   sameDay: {
     category: "Urgency /Wait-time",
@@ -130,38 +125,24 @@ const tags = {
     color: "#2C8551",
     show: true,
   },
-  less1Week: {
-    category: "Urgency /Wait-time",
-    displayName: " < 1 week",
-    color: "#2C8551",
-    show: true,
-  },
   two3Days: {
     category: "Urgency /Wait-time",
     displayName: " 2-3 days",
     color: "#2C8551",
-    show: false,
+    show: true,
   },
-  more1Week: {
+  less1Week: {
     category: "Urgency /Wait-time",
-    displayName: "> 1 week",
+    displayName: " < 1 week",
     color: "#2C8551",
     show: false,
   },
-
   less1Month: {
     category: "Urgency /Wait-time",
     displayName: " < 1 month",
     color: "#2C8551",
     show: false,
   },
-  more1Month: {
-    category: "Urgency /Wait-time",
-    displayName: " > 1 month",
-    color: "#2C8551",
-    show: false,
-  },
-
   // end of wait-time category
 
   low: {
@@ -190,12 +171,14 @@ const tags = {
     displayName: "In-person",
     color: "#8660C3",
     show: true,
+    TopTen: true,
   },
   online: {
     category: "Accessibility",
     displayName: "Virtual",
-    color: "#1E8843",
+    color: "#000000",
     show: true,
+    TopTen: true,
   },
 
   allday: {
@@ -239,23 +222,25 @@ const tags = {
     displayName: "Peer",
     color: "#2B7A8A",
     show: true,
-  },
-  generalAwareness: {
-    category: "type of help",
-    displayName: "General Awareness",
-    color: "#3A729E",
-    show: true,
+    TopTen: true,
   },
   medical: {
     category: "type of help",
     displayName: "Medical ",
     color: "#920A21",
     show: false,
+    TopTen: true,
   },
   events: {
     category: "type of help",
     displayName: "Events ",
     color: "#D47100",
+    show: false,
+  },
+  generalAwareness: {
+    category: "type of help",
+    displayName: "General Awareness",
+    color: "#3A729E",
     show: false,
   },
   // end of type of help

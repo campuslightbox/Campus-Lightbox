@@ -467,7 +467,7 @@ const styles = {
     borderRadius: 10,
   },
   infoCardSection: {
-    flexGrow: 0,
+    // flexGrow: 0, this styling will cause TypeError
   },
   infoCardImage: {
     objectFit: "cover",
