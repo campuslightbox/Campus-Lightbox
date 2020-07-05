@@ -17,7 +17,7 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
-      previousAnswer: "",
+      previousAnswer: {},
       flag: 0,
       selected: false,
       tags: [], // how to return tags correctly based on useranswers (dummy data)
@@ -62,6 +62,7 @@ class App extends Component {
 
         answer: answer,
         selected: true,
+        
       }),
       () => {
          console.log(this.state);
@@ -79,7 +80,9 @@ class App extends Component {
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
-      previousAnswer: this.state.answer,
+      previousAnswer:{answerText: this.state.answer,
+        previousAnswer:this.state.previousAnswer
+      },
       selected: true,
     });
     console.log(this.state);
@@ -94,9 +97,10 @@ class App extends Component {
         questionId: questionId,
         question: quizQuestions[counter].question,
         answerOptions: quizQuestions[counter].answers,
-        answer: this.state.previousAnswer,
+        answer: this.state.previousAnswer.answerText,
         selected: false,
         answersCount: this.state.answersCount.previousAnswerCount,
+        previousAnswer: this.state.previousAnswer.previousAnswer,
        // forwardAnswer: this.state.answer
         
       },
