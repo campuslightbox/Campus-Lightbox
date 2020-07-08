@@ -17,7 +17,6 @@ function Quiz(props) {
         answer={props.answer}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
-        
       />
     );
   }
@@ -41,80 +40,57 @@ function Quiz(props) {
         </ul>
         <div>
           {props.counter > 0 && props.doneFlag === 0 ? (
-           props.answerLists[props.counter] === undefined ?
-           (
-            <div className="ArrowButtons">
-              <Icon
-                name="arrow left"
-                size="big"
-                onClick={props.setPreviousQuestion}
-                disabled={props.selected}
-
-              />
-              <Icon 
-              name="arrow right" 
-              size="big"
-              disabled={true}
-             // onClick={props.onAnswerSelected()}
-              onClick={(e) => props.onAnswerSelected(e, props.answer)}
-              
-              />
-           </div> )
-            : (
-
+            props.answerLists[props.counter] === undefined ? (
               <div className="ArrowButtons">
-              <Icon
-                name="arrow left"
-                size="big"
-                onClick={props.setPreviousQuestion}
-                disabled={props.selected}
-
-              />
-              <Icon 
-              name="arrow right" 
-              size="big"
-             // onClick={props.onAnswerSelected()}
-             disabled={false}
-              onClick={(e) => props.onAnswerSelected(e, props.answer)}
-              
-              />
-           </div>
-
-
-
+                <Icon
+                  name="arrow left"
+                  size="big"
+                  onClick={props.setPreviousQuestion}
+                  disabled={props.selected}
+                />
+                <Icon
+                  name="arrow right"
+                  size="big"
+                  disabled={true}
+                  // onClick={props.onAnswerSelected()}
+                  onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                />
+              </div>
+            ) : (
+              <div className="ArrowButtons">
+                <Icon
+                  name="arrow left"
+                  size="big"
+                  onClick={props.setPreviousQuestion}
+                  disabled={props.selected}
+                />
+                <Icon
+                  name="arrow right"
+                  size="big"
+                  // onClick={props.onAnswerSelected()}
+                  disabled={false}
+                  onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                />
+              </div>
             )
-            
-
-
-
-          ) : (
-            ( props.answerLists[0] === undefined ?
+          ) : props.answerLists[0] === undefined ? (
             <div className="rightArrow">
               <Icon
                 name="arrow right"
                 size="big"
                 disabled={true}
                 onClick={props.onAnswerSelected}
-
               />
-              </div> 
-              :
-              <div className="rightArrow">
+            </div>
+          ) : (
+            <div className="rightArrow">
               <Icon
                 name="arrow right"
                 size="big"
-                disabled={false}
+                disabled={!props.selected} // only this line was changed
                 onClick={props.onAnswerSelected}
-
               />
-              </div> 
-
-             
-
-
-
-
-            )
+            </div>
           )}
         </div>
       </div>
@@ -132,7 +108,7 @@ Quiz.propTypes = {
   doneFlag: PropTypes.number.isRequired,
   counter: PropTypes.number.isRequired,
   setPreviousQuestion: PropTypes.func.isRequired,
-  answerLists: PropTypes.array.isRequired
+  answerLists: PropTypes.array.isRequired,
 };
 
 export default Quiz;

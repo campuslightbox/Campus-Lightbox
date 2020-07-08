@@ -27,7 +27,6 @@ class App extends Component {
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     this.setPreviousQuestion = this.setPreviousQuestion.bind(this);
     // this.setNextQuestion = this.setNextQuestion.bind(this);
-
   }
 
   componentDidMount() {
@@ -51,25 +50,15 @@ class App extends Component {
       } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
       }
-    }
-    else {
-
+    } else {
       this.setUserAnswer(answer);
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
       }
-
-
-
     }
-
-
-
   }
-
-
 
   setUserAnswer(answer) {
     this.setState(
@@ -82,8 +71,6 @@ class App extends Component {
 
         answer: answer,
         selected: true,
-
-
       }),
       () => {
         console.log(this.state);
@@ -97,20 +84,21 @@ class App extends Component {
     let answerList = this.state.answerLists;
     answerList[this.state.counter] = this.state.answer;
 
-
     this.setState({
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       // answer: "",
-      answer: this.state.answerLists[this.state.counter + 1] !== undefined ? this.state.answerLists[this.state.counter + 1] : '',
+      answer:
+        this.state.answerLists[this.state.counter + 1] !== undefined
+          ? this.state.answerLists[this.state.counter + 1]
+          : "",
       //  previousAnswer:{answerText: this.state.answer,
       //   previousAnswer:this.state.previousAnswer
       // },
       selected: true,
-      answerLists: answerList
-
+      answerLists: answerList,
     });
     console.log(this.state);
   }
@@ -119,7 +107,6 @@ class App extends Component {
     const counter = this.state.counter - 1;
     const questionId = this.state.questionId - 1;
     const previousanswer = this.state.answerLists[this.state.counter - 1];
-
 
     this.setState(
       {
@@ -131,8 +118,6 @@ class App extends Component {
         selected: false,
         answersCount: this.state.answersCount.previousAnswerCount,
         // previousAnswer: this.state.previousAnswer.previousAnswer,
-
-
       },
       () => {
         console.log(this.state);
