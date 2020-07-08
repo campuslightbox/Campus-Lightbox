@@ -68,7 +68,7 @@ class FeedbackModal extends React.Component {
 
     render = () => (
         <Modal trigger={this.props.trigger} onClose={this.onClose} closeIcon>
-            <Modal.Header style={styles.title}>Have feedback, questions, comments, or want to reach out to us? Send us a message here, or email us at admin@projectaurora.ca.</Modal.Header>
+            <Modal.Header style={styles.title}>Have feedback, questions, comments, or want to reach out to us? Send us a message here, or email us at admin@campuslightbox.com.</Modal.Header>
             <Modal.Content>
                 <Modal.Description>
                     <Form success={this.state.sent} error={this.state.error}>
