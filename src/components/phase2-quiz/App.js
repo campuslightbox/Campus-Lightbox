@@ -17,15 +17,16 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
-      previousAnswer: {},
+      //   previousAnswer: {},
       flag: 0,
       selected: false,
       tags: [], // how to return tags correctly based on useranswers (dummy data)
+      answerLists: [],
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     this.setPreviousQuestion = this.setPreviousQuestion.bind(this);
-   // this.setNextQuestion = this.setNextQuestion.bind(this);
+    // this.setNextQuestion = this.setNextQuestion.bind(this);
 
   }
 
@@ -39,14 +40,33 @@ class App extends Component {
     });
   }
 
-  handleAnswerSelected(e) {
-    console.log(e.target.value);
-    this.setUserAnswer(e.target.value);
-    if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
-    } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
+  handleAnswerSelected(e, answer) {
+    console.log("E.TARGET.VALUE: " + e.target.value);
+    console.log("answer passed was : " + answer);
+
+    if (e.target.value !== undefined) {
+      this.setUserAnswer(e.target.value);
+      if (this.state.questionId < quizQuestions.length) {
+        setTimeout(() => this.setNextQuestion(), 300);
+      } else {
+        setTimeout(() => this.setResults(this.getResults()), 300);
+      }
     }
+    else {
+
+      this.setUserAnswer(answer);
+      if (this.state.questionId < quizQuestions.length) {
+        setTimeout(() => this.setNextQuestion(), 300);
+      } else {
+        setTimeout(() => this.setResults(this.getResults()), 300);
+      }
+
+
+
+    }
+
+
+
   }
 
 
@@ -62,10 +82,11 @@ class App extends Component {
 
         answer: answer,
         selected: true,
-        
+
+
       }),
       () => {
-         console.log(this.state);
+        console.log(this.state);
       }
     );
   }
@@ -73,17 +94,23 @@ class App extends Component {
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
+    let answerList = this.state.answerLists;
+    answerList[this.state.counter] = this.state.answer;
+
 
     this.setState({
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
-      answer: "",
-      previousAnswer:{answerText: this.state.answer,
-        previousAnswer:this.state.previousAnswer
-      },
+      // answer: "",
+      answer: this.state.answerLists[this.state.counter + 1] !== undefined ? this.state.answerLists[this.state.counter + 1] : '',
+      //  previousAnswer:{answerText: this.state.answer,
+      //   previousAnswer:this.state.previousAnswer
+      // },
       selected: true,
+      answerLists: answerList
+
     });
     console.log(this.state);
   }
@@ -91,18 +118,21 @@ class App extends Component {
   setPreviousQuestion() {
     const counter = this.state.counter - 1;
     const questionId = this.state.questionId - 1;
+    const previousanswer = this.state.answerLists[this.state.counter - 1];
+
+
     this.setState(
       {
         counter: counter,
         questionId: questionId,
         question: quizQuestions[counter].question,
         answerOptions: quizQuestions[counter].answers,
-        answer: this.state.previousAnswer.answerText,
+        answer: previousanswer,
         selected: false,
         answersCount: this.state.answersCount.previousAnswerCount,
-        previousAnswer: this.state.previousAnswer.previousAnswer,
-       // forwardAnswer: this.state.answer
-        
+        // previousAnswer: this.state.previousAnswer.previousAnswer,
+
+
       },
       () => {
         console.log(this.state);
@@ -149,6 +179,7 @@ class App extends Component {
         counter={this.state.counter}
         setPreviousQuestion={this.setPreviousQuestion}
         selected={this.selected}
+        answerLists={this.state.answerLists}
       />
     );
   }
