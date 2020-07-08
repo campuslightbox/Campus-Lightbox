@@ -94,7 +94,7 @@ function Quiz(props) {
                 name="arrow right"
                 size="big"
                 disabled={true}
-                onClick={props.onAnswerSelected}
+                onClick={(e) => props.onAnswerSelected(e, props.answer)}
 
               />
               </div> 
@@ -104,7 +104,7 @@ function Quiz(props) {
                 name="arrow right"
                 size="big"
                 disabled={false}
-                onClick={props.onAnswerSelected}
+                onClick={(e) => props.onAnswerSelected(e, props.answer)}
 
               />
               </div> 

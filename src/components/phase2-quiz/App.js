@@ -98,6 +98,7 @@ class App extends Component {
     answerList[this.state.counter] = this.state.answer;
 
 
+
     this.setState({
       counter: counter,
       questionId: questionId,
@@ -113,6 +114,7 @@ class App extends Component {
 
     });
     console.log(this.state);
+   
   }
 
   setPreviousQuestion() {
