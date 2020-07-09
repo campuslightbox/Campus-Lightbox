@@ -1,35 +1,256 @@
-import _ from 'underscore';
-
+import _ from "underscore";
 const tags = {
-    online:             {category: "location", displayName: "Online", color: "#1E8843"},
-    hotline:            {category: "location", displayName: "Telephone", color: "#2D6C42"},
+  free: {
+    category: "cost",
+    displayName: "Free",
+    color: "green",
+    show: true,
+    TopTen: true,
+  },
+  paid: {
+    category: "cost",
+    displayName: "Paid",
+    color: "tomato",
+    show: true,
+    TopTen: true,
+  },
+  less50: {
+    category: "cost",
+    displayName: " < $50/hr ",
+    color: "",
+    show: false,
+  },
+  more100: {
+    category: "cost",
+    displayName: " > $100/hr ",
+    color: "",
+    show: false,
+  },
+  // end of cost category
+  academic: {
+    category: "Type of issue",
+    displayName: "Academic",
+    color: "#1971BD",
+    show: true,
+    TopTen: true,
+  },
 
-    medical:            {category: "type", displayName: "Medical", color: "#920A21"},
-    professional:       {category: "type", displayName: "Professional", color: "#32457D"},
-    peer:               {category: "type", displayName: "Peer", color: "#2B7A8A"},
-    generalAwareness:   {category: "type", displayName: "General Awareness", color: "#3A729E"},
+  financial: {
+    category: "Type of issue",
+    displayName: "Financial",
+    color: "#254F73",
+    show: true,
+  },
+  substanceAbuse: {
+    category: "Type of issue",
+    displayName: "Substance Abuse",
+    color: "#920110",
+    show: true,
+  },
+  sexualHealthAssault: {
+    category: "Type of issue",
+    displayName: "Sexual Health / Assault",
+    color: "#B6595B",
+    show: true,
+    TopTen: true,
+  },
+  disability: {
+    category: "Type of issue",
+    displayName: "Disability",
+    color: "#1A79A8",
+    show: true,
+  },
 
-    appointment:        {category: "availability", displayName: "Appointment-Based", color: "#005F36"},
-    recurring:          {category: "availability", displayName: "Recurring Meetings", color: "#067834"},
-    walkIn:             {category: "availability", displayName: "Walk-in", color: "#2C8551"},
-    events:             {category: "availability", displayName: "Events", color: "#D47100"},
-    allday:             {category: "availability", displayName: "24/7", color: "#1C8832"},
+  suicidal: {
+    category: "Type of issue",
+    displayName: "Suicidal",
+    color: "#BB7E15",
+    show: false,
+  },
+  depressionAnxiety: {
+    category: "Type of issue",
+    displayName: "Depression /Anxiety /Stress ",
+    color: "#B6595B",
+    show: false,
+  },
+  eatingDisorder: {
+    category: "Type of issue",
+    displayName: "Eating Disorder ",
+    color: "#B6595B",
+    show: false,
+  },
 
-    sexualHealthAssault:{category: "additional", displayName: "Sexual Health / Assault", color: "#B6595B"},
-    financial:          {category: "additional", displayName: "Financial", color: "#254F73"},
-    academic:           {category: "additional", displayName: "Academic", color: "#1971BD"},
-    spiritual:          {category: "additional", displayName: "Spiritual", color: "#737373"},
-    disability:         {category: "additional", displayName: "Disability", color: "#1A79A8"},
-    substanceAbuse:     {category: "additional", displayName: "Substance Abuse", color: "#920110"},
-    lgbt:               {category: "additional", displayName: "LGBTQ+", color: "#7640A9"},
-    womensHealth:       {category: "additional", displayName: "Women's Health", color: "#D73E79"},
-    selfHarm:           {category: "additional", displayName: "Self Harm", color: "#BB7E15"},
-}
+  lgbt: {
+    category: "Type of issue",
+    displayName: "LGBTQ+ ",
+    color: "#7640A9",
+    show: false,
+  },
+
+  womensHealth: {
+    category: "Type of issue",
+    displayName: "Women's Health ",
+    color: "#D73E79",
+    show: false,
+  },
+  selfHarm: {
+    category: "Type of issue",
+    displayName: "Self Harm ",
+    color: "#BB7E15",
+    show: false,
+  },
+
+  spiritual: {
+    category: "Type of issue",
+    displayName: "Spiritual ",
+    color: "#737373",
+    show: false,
+  },
+  general: {
+    category: "Type of issue",
+    displayName: "General Wellbeing Concern",
+    color: "#737373",
+    show: false,
+  },
+  // end of type of issue category
+  immediate: {
+    category: "Urgency /Wait-time",
+    displayName: "Immediate",
+    color: "rgba(218, 68, 68, 0.88)",
+    show: true,
+  },
+  sameDay: {
+    category: "Urgency /Wait-time",
+    displayName: "Same day",
+    color: "#2C8551",
+    show: true,
+  },
+  two3Days: {
+    category: "Urgency /Wait-time",
+    displayName: " 2-3 days",
+    color: "#2C8551",
+    show: true,
+  },
+  less1Week: {
+    category: "Urgency /Wait-time",
+    displayName: " < 1 week",
+    color: "#2C8551",
+    show: false,
+  },
+  less1Month: {
+    category: "Urgency /Wait-time",
+    displayName: " < 1 month",
+    color: "#2C8551",
+    show: false,
+  },
+  // end of wait-time category
+
+  low: {
+    category: "Severity",
+    displayName: "Low",
+    color: "#2C8551",
+    show: true,
+  },
+  medium: {
+    category: "Severity",
+    displayName: "Medium",
+    color: "#1E8843",
+    show: false,
+  },
+  high: {
+    category: "Severity",
+    displayName: "High",
+    color: "#1E8843",
+    show: false,
+  },
+
+  //end of Severity
+
+  walkIn: {
+    category: "Accessibility",
+    displayName: "In-person",
+    color: "#8660C3",
+    show: true,
+    TopTen: true,
+  },
+  online: {
+    category: "Accessibility",
+    displayName: "Virtual",
+    color: "#000000",
+    show: true,
+    TopTen: true,
+  },
+
+  allday: {
+    category: "Accessibility",
+    displayName: "24/7",
+    color: "rgb(251, 196, 32)",
+    show: true,
+    TopTen: true,
+  },
+
+  phone: {
+    category: "Accessibility",
+    displayName: "Telephone",
+    color: "#2D6C42",
+    show: false,
+  },
+
+  recurring: {
+    category: "Accessibility",
+    displayName: "Recurring Meetings",
+    color: "#067834",
+    show: false,
+  },
+  appointment: {
+    category: "Accessibility",
+    displayName: "Appointment-Based",
+    color: "#005F36",
+    show: false,
+  },
+  //end of accessibility tag
+
+  professional: {
+    category: "type of help",
+    displayName: "Professional",
+    color: "#32457D",
+    show: true,
+    TopTen: true,
+  },
+  peer: {
+    category: "type of help",
+    displayName: "Peer",
+    color: "#2B7A8A",
+    show: true,
+    TopTen: true,
+  },
+  medical: {
+    category: "type of help",
+    displayName: "Medical ",
+    color: "#920A21",
+    show: false,
+    TopTen: true,
+  },
+  events: {
+    category: "type of help",
+    displayName: "Events ",
+    color: "#D47100",
+    show: false,
+  },
+  generalAwareness: {
+    category: "type of help",
+    displayName: "General Awareness",
+    color: "#3A729E",
+    show: false,
+  },
+  // end of type of help
+};
 
 export default {
-    getAllTags: () => tags,
-    getAllTagKeys: () => _.keys(tags),
-    getCategories: () => _.uniq(_.map(_.values(tags), obj => obj.category)),
-    getDisplayNameForTag: (tag) => tags[tag].displayName,
-    getColorForTag: (tag) => tags[tag].color || '#aaaaaa',
-}
+  getAllTags: () => tags,
+  getAllTagKeys: () => _.keys(tags),
+  getCategories: () => _.uniq(_.map(_.values(tags), (obj) => obj.category)),
+  getDisplayNameForTag: (tag) => tags[tag].displayName,
+  getTopValue: (tag) => tags[tag].TopTen,
+  getColorForTag: (tag) => tags[tag].color || "#aaaaaa",
+};
