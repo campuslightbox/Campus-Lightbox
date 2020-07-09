@@ -29,6 +29,7 @@
 }
 .rightArrow {
   text-align: right;
+  cursor: pointer;
 }
 .ArrowButtons:hover {
   cursor: pointer;

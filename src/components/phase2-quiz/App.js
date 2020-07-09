@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
-import logo from "./svg/logo.svg";
 import "./App.css";
 
 class App extends Component {
@@ -84,8 +83,6 @@ class App extends Component {
     let answerList = this.state.answerLists;
     answerList[this.state.counter] = this.state.answer;
 
-
-
     this.setState({
       counter: counter,
       questionId: questionId,
@@ -103,7 +100,6 @@ class App extends Component {
       answerLists: answerList,
     });
     console.log(this.state);
-   
   }
 
   setPreviousQuestion() {
