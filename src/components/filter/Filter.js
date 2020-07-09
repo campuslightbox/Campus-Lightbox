@@ -1,4 +1,5 @@
 import React from "react";
+import Collapsible from "react-collapsible";
 import {
   Grid,
   Button,
@@ -7,13 +8,13 @@ import {
   Card,
   Modal,
   Header,
+  CardContent,
 } from "semantic-ui-react";
 import MediaQuery from "react-responsive";
 import _ from "underscore";
 
 import Tags from "static/Tags";
 import MediaQueryHelper from "static/MediaQueryHelper";
-
 import "components/filter/Filter.css";
 
 const styles = {
@@ -60,27 +61,61 @@ class Filter extends React.Component {
                 {this.getDisplayNameForCategory(category)}
               </Card.Header>
             </Card.Content>
-            <Card.Content>
-              <List verticalAlign="middle">
-                {this.createList(category, val)}
-              </List>
-            </Card.Content>
+            <Card.Content>{this.createList(category, val)}</Card.Content>
+            <CardContent style={{ border: "none", paddingTop: "0px" }}>
+              <Collapsible
+                trigger="SHOW MORE ▼"
+                triggerWhenOpen="SHOW LESS ▲"
+                transitionTime={310}
+                triggerStyle={{
+                  cursor: "pointer",
+                  color: "darkblue",
+                  fontWeight: "500",
+                }}
+              >
+                {this.createSubList(category, val)}
+              </Collapsible>
+            </CardContent>
           </Card>
         </Grid.Row>
       );
     });
   };
 
+  // remove previous ternary operator and make getDisplayNameforCategory function cleaner
   getDisplayNameForCategory(category) {
-    return category === "additional"
-      ? "Additional Tags"
-      : this._capitalize(category);
+    return this._capitalize(category);
   }
 
   _capitalize = (text) => {
     return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
+  // create sublist for hidden tags
+  createSubList = (category, items) => {
+    return items.map((item) => {
+      // Find if the item is currently selected
+      let existingItem = _.find(this.props.filter[category], (currItem) => {
+        return currItem === item.tag;
+      });
+
+      return (
+        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
+          {item.show ? (
+            ""
+          ) : (
+            <Checkbox
+              checked={existingItem ? true : false}
+              onClick={() => this.props.onFilterChange(category, item.tag)}
+              label={item.displayName}
+            />
+          )}
+        </List.Item>
+      );
+    });
+  };
+
+  // main list
   createList = (category, items) => {
     return items.map((item) => {
       // Find if the item is currently selecteds
@@ -89,12 +124,16 @@ class Filter extends React.Component {
       });
 
       return (
-        <List.Item key={item.tag}>
-          <Checkbox
-            checked={existingItem ? true : false}
-            onClick={() => this.props.onFilterChange(category, item.tag)}
-            label={item.displayName}
-          />
+        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
+          {item.show ? (
+            <Checkbox
+              checked={existingItem ? true : false}
+              onClick={() => this.props.onFilterChange(category, item.tag)}
+              label={item.displayName}
+            />
+          ) : (
+            ""
+          )}
         </List.Item>
       );
     });

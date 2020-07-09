@@ -88,15 +88,7 @@ const FixedMenuLayout = () => (
             {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
             <br />
             <br />
-            Email us:{" "}
-            <a
-              href="mailto:admin@projectaurora.ca"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              admin@projectaurora.ca
-            </a>
+            Email us: <a href="mailto:admin@campuslightbox.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", textDecoration: "none" }}>admin@campuslightbox.com</a>
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
