@@ -57,22 +57,22 @@ function Quiz(props) {
                 />
               </div>
             ) : (
-                <div className="ArrowButtons">
-                  <Icon
-                    name="arrow left"
-                    size="big"
-                    onClick={props.setPreviousQuestion}
-                    disabled={props.selected}
-                  />
-                  <Icon
-                    name="arrow right"
-                    size="big"
-                    // onClick={props.onAnswerSelected()}
-                    disabled={false}
-                    onClick={(e) => props.onAnswerSelected(e, props.answer)}
-                  />
-                </div>
-              )
+              <div className="ArrowButtons">
+                <Icon
+                  name="arrow left"
+                  size="big"
+                  onClick={props.setPreviousQuestion}
+                  disabled={props.selected}
+                />
+                <Icon
+                  name="arrow right"
+                  size="big"
+                  // onClick={props.onAnswerSelected()}
+                  disabled={false}
+                  onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                />
+              </div>
+            )
           ) : props.answerLists[0] === undefined ? (
             <div className="rightArrow">
               <Icon
@@ -80,20 +80,19 @@ function Quiz(props) {
                 size="big"
                 disabled={true}
                 onClick={(e) => props.onAnswerSelected(e, props.answer)}
-
               />
             </div>
           ) : (
-                <div className="rightArrow">
-                  <Icon
-                    name="arrow right"
-                    size="big"
-                    disabled={false}
-                    onClick={(e) => props.onAnswerSelected(e, props.answer)}
-                  //call on answer selected
-                  />
-                </div>
-              )}
+            <div className="rightArrow">
+              <Icon
+                name="arrow right"
+                size="big"
+                disabled={false}
+                onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                //call on answer selected
+              />
+            </div>
+          )}
         </div>
       </div>
     </CSSTransition>

@@ -15,7 +15,7 @@ function Result(props) {
       timeout={100}
     >
       <div>
-        Result: <strong>{props.quizResult}</strong>
+        <strong>{props.quizResult}</strong>
       </div>
     </CSSTransition>
   );

@@ -1,148 +1,55 @@
 var quizQuestions = [
   {
-    question: "What franchise would you rather play a game from?",
+    question:
+      "On a scale from 1-10,how heavily is your current difficulty affecting your daily life? ",
     answers: [
-      {
-        type: "Microsoft",
-        content: "Halo",
-        letter: "A",
-        tags: ["free", "paid"],
-      },
-      {
-        type: "Nintendo",
-        content: "Pokemon",
-        letter: "B",
-        tags: ["immediate", "paid"],
-      },
-      {
-        type: "Sony",
-        content: "Uncharted",
-        letter: "C",
-        tags: ["sameDay", "academic"],
-      },
-      {
-        type: "Blahblah",
-        content: "blahblah",
-        letter: "D",
-        tags: ["financial", "professional"],
-      },
+      { type: "low", content: "1~3 (low severity)", letter: "A" },
+      { type: "medium", content: "4~7 (medium)", letter: "B" },
+      { type: "high", content: "8~10 (high severity)", letter: "C" },
     ],
   },
   {
-    question: "Which console would you prefer to play with friends?",
+    question: "What type of issues are you experiencing?",
     answers: [
-      {
-        type: "Microsoft",
-        content: "X-Box",
-        letter: "A",
-        tags: ["free", "paid"],
-      },
-      {
-        type: "Nintendo",
-        content: "Nintendo 64",
-        letter: "B",
-        tags: ["immediate", "paid"],
-      },
-      {
-        type: "Sony",
-        content: "Playstation 1",
-        letter: "C",
-        tags: ["sameDay", "academic"],
-      },
-      {
-        type: "Blahblah",
-        content: "blahblah",
-        letter: "D",
-        tags: ["financial", "professional"],
-      },
+      { type: "depressionAnxiety", content: "Depression", letter: "A" }, // or write Depression and/or Anxiety
+      { type: "depressionAnxiety", content: "Anxiety", letter: "B" }, // A B are using the same tag, (TODO: update Tags.js & Resource.js to split the tags)
+      { type: "substanceAbuse", content: "Substance Abuse", letter: "C" },
+      { type: "lgbt", content: "Gender/Identity", letter: "D" },
+      { type: "general", content: "General Wellbeing Concern", letter: "E" },
+      { type: "financial", content: "Financial", letter: "F" },
+      { type: "academic", content: "Academic", letter: "G" },
+      { type: "spiritual", content: "Spiritual", letter: "H" },
+      { type: "sexualHealthAssault", content: "Sexual Assault", letter: "I" },
+      { type: "disability", content: "Disability", letter: "J" },
+      { type: "eatingDisorder", content: "Eating Disorder", letter: "K" },
+      { type: "selfHarm", content: "Self Harm", letter: "L" },
+      { type: "suicidal", content: "Suicidal", letter: "M" },
+      { type: "womensHealth", content: "Women's Health", letter: "N" },
+    ],
+  },
+  {
+    question: "What's your cost preference?",
+    answers: [
+      { type: "free", content: "Free", letter: "A" },
+      { type: "paid", content: "Paid", letter: "B" },
+      { type: "less50", content: "Less than $50", letter: "C" },
+      { type: "more100", content: "More than $100", letter: "D" },
+    ],
+  },
+
+  {
+    question: "Do you prefer a professional resource or peer support?",
+    answers: [
+      { type: "professional", content: "Professional", letter: "A" },
+      { type: "peer", content: "Peer Support", letter: "B" },
     ],
   },
   {
     question:
-      "Which of these racing franchises would you prefer to play a game from?",
+      "Do you prefer a resource that is in-person or virtullly available?",
     answers: [
-      {
-        type: "Microsoft",
-        content: "Forza",
-        letter: "A",
-        tags: ["substanceAbuse", "professional"],
-      },
-      {
-        type: "Nintendo",
-        content: "Mario Kart",
-        letter: "B",
-        tags: ["free", "professional"],
-      },
-      {
-        type: "Sony",
-        content: "Gran Turismo",
-        letter: "C",
-        tags: ["event", "professional"],
-      },
-      {
-        type: "Blahblah",
-        content: "blahblah",
-        letter: "D",
-        tags: ["general", "professional"],
-      },
-    ],
-  },
-  {
-    question: "Which of these games do you think is best?",
-    answers: [
-      {
-        type: "Microsoft",
-        content: "BioShock",
-        letter: "A",
-        tags: ["general", "professional"],
-      },
-      {
-        type: "Nintendo",
-        content: "The Legend of Zelda: Ocarina of Time",
-        letter: "B",
-        tags: ["event", "professional"],
-      },
-      {
-        type: "Sony",
-        content: "Final Fantasy VII",
-        letter: "C",
-        tags: ["appointment", "professional"],
-      },
-      {
-        type: "Blahblah",
-        content: "blahblah",
-        letter: "D",
-        tags: ["free", "professional"],
-      },
-    ],
-  },
-  {
-    question: "What console would you prefer to own?",
-    answers: [
-      {
-        type: "Microsoft",
-        content: "X-Box One",
-        letter: "A",
-        tags: ["free", "professional"],
-      },
-      {
-        type: "Nintendo",
-        content: "Wii U",
-        letter: "B",
-        tags: ["free", "professional"],
-      },
-      {
-        type: "Sony",
-        content: "Playstation 4",
-        letter: "C",
-        tags: ["free", "professional"],
-      },
-      {
-        type: "Blahblah",
-        content: "blahblah",
-        letter: "D",
-        tags: ["free", "professional"],
-      },
+      { type: "walkIn", content: "In-Person", letter: "A" },
+      { type: "online", content: "Online Support", letter: "B" },
     ],
   },
 ];

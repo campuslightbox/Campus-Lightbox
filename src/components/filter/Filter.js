@@ -46,13 +46,18 @@ class Filter extends React.Component {
   transformTagsToFilterList(tags) {
     _.each(tags, (val, key) => {
       val["tag"] = key;
+      // console.log(val, "single tag val ");
     });
 
     return _.groupBy(_.values(tags), "category");
+    // group by tags' category value, check underscore.js doc for build-in methods
   }
 
   createGroups = () => {
     return _.map(this.filterList, (val, category) => {
+      //console.log(this.filterList, "this.filterList");
+      //console.log(val, "this.filterList val");
+      //console.log(category, "this.filterList category");
       return (
         <Grid.Row key={category} className="filter-row">
           <Card>
@@ -82,15 +87,9 @@ class Filter extends React.Component {
     });
   };
 
-  // remove previous ternary operator and make getDisplayNameforCategory function cleaner
-  getDisplayNameForCategory(category) {
-    return this._capitalize(category);
-  }
-
-  _capitalize = (text) => {
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  };
-
+  // rewrite code to make it cleaner
+  getDisplayNameForCategory = (text) =>
+    text.charAt(0).toUpperCase() + text.slice(1);
   // create sublist for hidden tags
   createSubList = (category, items) => {
     return items.map((item) => {
@@ -116,12 +115,17 @@ class Filter extends React.Component {
   };
 
   // main list
+  // items = the value object
   createList = (category, items) => {
+    //console.log(this.props.filter, "this.state.filter in app.js");
+    //console.log(this.props.filter[category],"this.state.filter with category in app.js");
     return items.map((item) => {
       // Find if the item is currently selecteds
+      // see App.js (this.state.filter )
       let existingItem = _.find(this.props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
+      // find return the first matching
 
       return (
         <List.Item key={item.tag} style={{ marginTop: "5px" }}>
@@ -189,7 +193,7 @@ class Filter extends React.Component {
 
   createMobileList = (category, items) => {
     return items.map((item) => {
-      // Find if the item is currently selecteds
+      // Find if the item is currently selected
       let existingItem = _.find(this.props.filter[category], (currItem) => {
         return currItem === item.tag;
       });

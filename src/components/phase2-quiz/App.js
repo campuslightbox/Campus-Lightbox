@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
-import Result from "./components/Result";
+//import Result from "./components/Result";
 import "./App.css";
+import _ from "underscore";
+import Tags from "./components/QuizTags"; // copy from static/Tags
+import Resources from "../../static/Resources";
+import QuizResultCard from "../phase2-quiz/components/QuizResultCard";
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +23,17 @@ class App extends Component {
       //   previousAnswer: {},
       flag: 0,
       selected: false,
-      tags: [], // how to return tags correctly based on useranswers (dummy data)
       answerLists: [],
+
+      // adding this.state.filter function
+      filter: _.reduce(
+        Tags.getCategories(),
+        (obj, category) => {
+          obj[category] = [];
+          return obj;
+        },
+        {}
+      ),
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -43,7 +56,7 @@ class App extends Component {
     console.log("answer passed was : " + answer);
 
     if (e.target.value !== undefined) {
-      this.setUserAnswer(e.target.value);
+      this.setUserAnswer(e.target.value); // means the input value (AnswerOption.js)
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
@@ -129,18 +142,16 @@ class App extends Component {
     const answersCountKeys = Object.keys(answersCount).sort(function (a, b) {
       return answersCount[b] - answersCount[a];
     });
-    //const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
-    const choices = answersCountKeys.includes("previousAnswerCount")
-      ? answersCountKeys.length - 1
-      : answersCountKeys.length;
     const filterResult = answersCountKeys.filter(
       (x) => x !== "previousAnswerCount"
     );
-    return `Top ${choices} resource: ${filterResult}`;
+    return filterResult;
   }
+  // return array of filtered tags
 
   setResults(result) {
     if (result.length !== 0) {
+      console.log(result, "return result of getResult");
       this.setState({
         result: result,
         flag: 1,
@@ -169,7 +180,15 @@ class App extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+    return (
+      <QuizResultCard
+        resources={Resources}
+        filter={this.state.filter}
+        quizResult={this.state.result}
+        // result is an array of tags
+      />
+    );
+    //return <Result quizResult={this.state.result} />;
   }
 
   render() {
