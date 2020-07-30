@@ -1,7 +1,8 @@
 import React from "react";
-import { Header, Segment, Card } from "semantic-ui-react";
+import { Header, Segment, Card, Grid } from "semantic-ui-react";
 import QuizInfoCard from "./QuizInfoCard";
 import _ from "underscore";
+import MediaQuery from "react-responsive";
 
 class CardContainer extends React.Component {
   constructor(props) {
@@ -39,13 +40,26 @@ class CardContainer extends React.Component {
     }
 
     return (
-      <Segment basic>
-        <Card.Group>
-          {_.map(resources, (resource, index) => (
-            <QuizInfoCard key={index.toString()} {...resource} /> // spread each found resource to infoCard for display
-          ))}
-        </Card.Group>
-      </Segment>
+      <>
+        <MediaQuery minWidth={800}>
+          <Segment basic>
+            <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
+              {_.map(resources, (resource, index) => (
+                <QuizInfoCard key={index.toString()} {...resource} /> // spread the props
+              ))}
+            </Card.Group>
+          </Segment>
+        </MediaQuery>
+        <MediaQuery maxWidth={799}>
+          <Segment basic>
+            <Card.Group>
+              {_.map(resources, (resource, index) => (
+                <QuizInfoCard key={index.toString()} {...resource} />
+              ))}
+            </Card.Group>
+          </Segment>
+        </MediaQuery>
+      </>
     );
   };
 }

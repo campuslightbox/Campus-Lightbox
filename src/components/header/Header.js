@@ -75,9 +75,10 @@ class Header extends React.Component {
                 </Button>
               }
               closeIcon
+              size="large"
             >
               <Modal.Header>Resource Recommender</Modal.Header>
-              <Modal.Content image>
+              <Modal.Content>
                 <Modal.Description>
                   <QuizApp />
                 </Modal.Description>
