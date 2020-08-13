@@ -40,7 +40,6 @@ function Quiz(props) {
       timeout={100}
     >
       <div key={props.questionId}>
-        <QuestionCount counter={props.questionId} total={props.questionTotal} />
         <Question content={props.question} />
         <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
@@ -101,6 +100,7 @@ function Quiz(props) {
             </div>
           )}
         </div>
+        <QuestionCount counter={props.questionId} total={props.questionTotal} />
       </div>
     </CSSTransition>
   );
