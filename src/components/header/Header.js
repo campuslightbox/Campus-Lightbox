@@ -83,6 +83,10 @@ class Header extends React.Component {
                   <QuizApp />
                 </Modal.Description>
               </Modal.Content>
+
+              {/* <Modal.Actions>
+                <GetHelpModal />
+              </Modal.Actions> */}
             </Modal>
             <br />
             <br />

@@ -5,6 +5,7 @@ import Question from "../components/Question";
 import QuestionCount from "../components/QuestionCount";
 import AnswerOption from "../components/AnswerOption";
 import { Icon } from "semantic-ui-react";
+import CrisisResponse from "./CrisisResponse";
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -21,7 +22,13 @@ function Quiz(props) {
     );
   }
 
-  return (
+  return (props.answerLists.includes("high") &&
+    props.answerLists.includes("depressionAnxiety")) ||
+    props.answerLists.includes("suicidal") ||
+    props.answerLists.includes("sexualHealthAssault") ||
+    props.answerLists.includes("selfHarm") ? (
+    <CrisisResponse />
+  ) : (
     <CSSTransition
       className="container"
       component="div"

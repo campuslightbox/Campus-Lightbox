@@ -25,7 +25,7 @@ class App extends Component {
       selected: false,
       answerLists: [],
 
-      // adding this.state.filter function
+      // adding this.state.filter function for the quizapp to return filtered results
       filter: _.reduce(
         Tags.getCategories(),
         (obj, category) => {
@@ -57,6 +57,7 @@ class App extends Component {
 
     if (e.target.value !== undefined) {
       this.setUserAnswer(e.target.value); // means the input value (AnswerOption.js)
+
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
@@ -188,7 +189,6 @@ class App extends Component {
         // result is an array of tags
       />
     );
-    //return <Result quizResult={this.state.result} />;
   }
 
   render() {
@@ -201,6 +201,10 @@ class App extends Component {
       </div>
     );
   }
+  // COMPLETE: update Quiz Component -- ok
+  // COMPLETE: create Crisis response component --ok
+  // TO-DO: render different header if we have CRISIS RESPONSE?
+  //example: {this.state.answerLists.includes("suicidal")? <SomethingElse> : <Default Header>}
 }
 
 export default App;

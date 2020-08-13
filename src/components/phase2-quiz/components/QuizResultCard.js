@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Segment, Card, Grid } from "semantic-ui-react";
+import { Header, Segment, Card } from "semantic-ui-react";
 import QuizInfoCard from "./QuizInfoCard";
 import _ from "underscore";
 import MediaQuery from "react-responsive";
