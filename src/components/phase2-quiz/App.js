@@ -51,6 +51,45 @@ class App extends Component {
     });
   }
 
+  backFromResult = () => {
+    this.setState({
+      result: "",
+      flag: 0,
+    })
+  }
+
+  resetForm = () => {
+    this.setState({
+      counter: 0,
+      questionId: 1,
+      question: "",
+      answerOptions: [],
+      answer: "",
+      answersCount: {},
+      result: "",
+      //   previousAnswer: {},
+      flag: 0,
+      selected: false,
+      answerLists: [],
+
+      // adding this.state.filter function
+      filter: _.reduce(
+        Tags.getCategories(),
+        (obj, category) => {
+          obj[category] = [];
+          return obj;
+        },
+        {}
+      ),
+
+    },
+      () => {
+        this.componentDidMount();
+      })
+
+
+  }
+
   handleAnswerSelected(e, answer) {
     console.log("E.TARGET.VALUE: " + e.target.value);
     console.log("answer passed was : " + answer);
@@ -151,11 +190,15 @@ class App extends Component {
   // return array of filtered tags
 
   setResults(result) {
+    let answerList = this.state.answerLists;
+    answerList[this.state.counter] = this.state.answer;
+
     if (result.length !== 0) {
       console.log(result, "return result of getResult");
       this.setState({
         result: result,
         flag: 1,
+        answerLists: answerList,
       }); // set result to result array
     } else {
       this.setState({ result: "Undetermined", flag: 1 });
@@ -182,12 +225,16 @@ class App extends Component {
 
   renderResult() {
     return (
-      <QuizResultCard
-        resources={Resources}
-        filter={this.state.filter}
-        quizResult={this.state.result}
+      <>
+        <QuizResultCard
+          resources={Resources}
+          filter={this.state.filter}
+          quizResult={this.state.result}
         // result is an array of tags
-      />
+        />
+        <button onClick={this.resetForm}> reset </button>
+        <button onClick={this.backFromResult}> go back </button>
+      </>
     );
   }
 
