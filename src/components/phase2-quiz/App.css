@@ -29,6 +29,27 @@
   display: flex;
   justify-content: space-between;
 }
+
+.ArrowButtons2 {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* new */
+.parentDiv {
+  display: flex;
+}
+
+.leftcol,
+.rightcol {
+  flex: 1;
+}
+
+
+/* Styles for demonstration */
+
+/*new */
 .rightArrow {
   text-align: right;
   cursor: pointer;

@@ -100,14 +100,14 @@ class App extends Component {
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-        setTimeout(() => this.setResults(this.getResults()), 300);
+        setTimeout(() => this.setFinalResults(), 300);
       }
     } else {
       this.setUserAnswer(answer);
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-        setTimeout(() => this.setResults(this.getResults()), 300);
+        setTimeout(() => this.setFinalResults(), 300);
       }
     }
   }
@@ -185,7 +185,7 @@ class App extends Component {
     const filterResult = answersCountKeys.filter(
       (x) => x !== "previousAnswerCount"
     );
-    return filterResult;
+    return filterResult; 
   }
   // return array of filtered tags
 
@@ -203,6 +203,23 @@ class App extends Component {
     } else {
       this.setState({ result: "Undetermined", flag: 1 });
     }
+  }
+
+  setFinalResults(){
+    let answerList = this.state.answerLists;
+    answerList[this.state.counter] = this.state.answer;
+
+    if (this.state.answerLists.length !== 0) {
+      console.log(answerList, "return result of getResult");
+      this.setState({
+        result: answerList,
+        flag: 1,
+        answerLists: answerList,
+      }); // set result to result array
+    } else {
+      this.setState({ result: "Undetermined", flag: 1 });
+    }
+
   }
 
   renderQuiz() {
@@ -230,10 +247,12 @@ class App extends Component {
           resources={Resources}
           filter={this.state.filter}
           quizResult={this.state.result}
+          backFromResult={this.backFromResult}
+          resetForm={this.resetForm}
         // result is an array of tags
         />
-        <button onClick={this.resetForm}> reset </button>
-        <button onClick={this.backFromResult}> go back </button>
+        {/*<button onClick={this.resetForm}> reset </button>
+        <button onClick={this.backFromResult}> go back </button>*/}
       </>
     );
   }

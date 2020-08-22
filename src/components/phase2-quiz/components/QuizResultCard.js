@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Segment, Card } from "semantic-ui-react";
+import { Header, Segment, Card, Icon, Button } from "semantic-ui-react";
 import QuizInfoCard from "./QuizInfoCard";
 import _ from "underscore";
 import MediaQuery from "react-responsive";
@@ -59,6 +59,27 @@ class CardContainer extends React.Component {
             </Card.Group>
           </Segment>
         </MediaQuery>
+
+
+        {/* <Icon
+                  name="arrow left"
+                  size="big"
+                  
+                  disabled={false}
+                />
+        
+        <Button negative>Negative Button</Button> */}
+
+        <div class="parentDiv">
+          <div class="leftcol"> <Icon
+            name="arrow left"
+            size="big"
+            onClick={this.props.backFromResult}
+            disabled={false}
+          /></div>
+          <div class="center"><Button negative onClick={this.props.resetForm}>Start Over</Button></div>
+          <div class="rightcol"></div>
+        </div>
       </>
     );
   };
