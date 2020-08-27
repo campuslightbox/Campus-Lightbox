@@ -60,7 +60,6 @@ class CardContainer extends React.Component {
           </Segment>
         </MediaQuery>
 
-
         {/* <Icon
                   name="arrow left"
                   size="big"
@@ -70,15 +69,22 @@ class CardContainer extends React.Component {
         
         <Button negative>Negative Button</Button> */}
 
-        <div class="parentDiv">
-          <div class="leftcol"> <Icon
-            name="arrow left"
-            size="big"
-            onClick={this.props.backFromResult}
-            disabled={false}
-          /></div>
-          <div class="center"><Button negative onClick={this.props.resetForm}>Start Over</Button></div>
-          <div class="rightcol"></div>
+        <div className="parentDiv">
+          <div className="leftcol">
+            {" "}
+            <Icon
+              name="arrow left"
+              size="big"
+              onClick={this.props.backFromResult}
+              disabled={false}
+            />
+          </div>
+          <div className="center">
+            <Button negative onClick={this.props.resetForm}>
+              Start Over
+            </Button>
+          </div>
+          <div className="rightcol"></div>
         </div>
       </>
     );
