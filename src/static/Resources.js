@@ -86,6 +86,7 @@ import UBCHospital from "./logos/UBCHospital.png";
 import UBCwellbeing from "./logos/UBCwellbeing.png";
 import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import TAOapp from "./logos/TAOapp2.png";
+import VCHLogo from "./logos/VCHlogo.jpg";
 
 export default [
   {
@@ -644,7 +645,7 @@ export default [
       sunday: "closed",
     },
     notes:
-      "Call during business hours to explore the options available. If the call goes unanswered, a message can be left and the call will be returned by the next working day.",
+      "Services are only available online or over the phone.If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
   },
   {
     name: "Student Recovery Community at UBC",
@@ -1352,5 +1353,42 @@ export default [
     },
     notes:
       "UBC students have FREE access to the tools if you sign up with your UBC email!",
+  },
+  {
+    name: "Suicide Attempt Follow-up, Education & Research ",
+    description:
+      "S.A.F.E.R. is a free, time-limited counselling service offered at Mental Health and Substance Use Outpatient Services. Intake is through the Access and Assessment Centre.",
+    logo: VCHLogo,
+    background: "",
+    tags: [
+      "free",
+      "general",
+      "suicidal",
+      "depressionAnxiety",
+      "low",
+      "medium",
+      "high",
+      "appointment",
+      "walkIn",
+      "phone",
+      "professional",
+    ],
+    social: {
+      website:
+        "http://www.vch.ca/Pages/Suicide-Attempt-Follow-up,-Education---Research-SAFER.aspx",
+    },
+    phone: "604-675-3700",
+    address: "803 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
+    hours: {
+      monday: "7:30am-11:00pm",
+      tuesday: "7:30am-11:00pm",
+      wednesday: "7:30am-11:00pm",
+      thursday: "7:30am-11:00pm",
+      friday: "7:30am-11:00pm",
+      saturday: "7:30am-11:00pm",
+      sunday: "7:30am-11:00pm",
+    },
+    notes:
+      "Due to the COVID-19 pandemic, the service may be operating at reduced or adjusted hours. Please contact 604-675-3700 for further details.",
   },
 ];
