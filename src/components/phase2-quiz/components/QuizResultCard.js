@@ -28,14 +28,33 @@ class CardContainer extends React.Component {
 
     if (resources.length === 0) {
       return (
-        <Segment placeholder>
-          <Header icon>
-            Sorry, no results found.
+        <>
+          <Segment placeholder>
+            <Header icon>
+              Sorry, no results found.
             <br />
-            <br />
-            Try a different search or filters.
+              <br />
+              Try a different search or filters.
           </Header>
-        </Segment>
+          </Segment>
+          <div className="parentDiv">
+            <div className="leftcol">
+              {" "}
+              <Icon
+                name="arrow left"
+                size="big"
+                onClick={this.props.backFromResult}
+                disabled={false}
+              />
+            </div>
+            <div className="center">
+              <Button negative onClick={this.props.resetForm}>
+                Start Over
+            </Button>
+            </div>
+            <div className="rightcol"></div>
+          </div>
+        </>
       );
     }
 
