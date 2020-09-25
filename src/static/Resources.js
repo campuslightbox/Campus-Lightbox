@@ -200,9 +200,10 @@ export default [
     hours: {
       monday: "8:00am-4:00pm",
       tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-6:00pm",
+      wednesday: "8:00am-8:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
+      saturday: "8:00am-3:45pm",
     },
     notes:
       "All appointments must now be booked by calling 604-822-7011. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
@@ -386,13 +387,10 @@ export default [
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
     hours: {
-      monday: "10:00am-5:00pm",
-      tuesday: "10:00am-4:00pm",
-      wednesday: "10:00am-5:00pm",
-      thursday: "10:00am-5:00pm",
-      friday: "10:00am-5:00pm",
-      saturday: "closed",
-      sunday: "closed",
+      monday: "11:00am-1:00pm",
+      tuesday: "11:00am-3:00pm",
+      wednesday: "11:00am-3:00pm",
+      thursday: "11:00am-3:00pm",
     },
     notes:
       "Our office is temporarily closed, but you can engage in topics relevant to your wellbeing through Canvas! Check the link below to enroll: https://canvas.ubc.ca/enroll/PCNEN4.",
