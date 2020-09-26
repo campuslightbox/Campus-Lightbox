@@ -17,7 +17,7 @@ class CardContainer extends React.Component {
     const quizResultTags = this.props.quizResult;
     let tagsMatches = _.filter(
       allResources,
-      (obj) => _.intersection(obj.tags, quizResultTags).length >= 4
+      (obj) => _.intersection(obj.tags, quizResultTags).length == 5
     );
     console.log(tagsMatches, "tagsMatches");
     return tagsMatches;
