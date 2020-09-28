@@ -15,6 +15,8 @@ class CardContainer extends React.Component {
   filterResource = (allResources) => {
     // this.props.quizResult is this.state.result from App.js => the filtered tags
     const quizResultTags = this.props.quizResult;
+    // if filtered tags include 'no preference' then the tagsmatches === 4
+    // OR add both walkIn and online tags in the quizResultTags array
     let tagsMatches = _.filter(
       allResources,
       (obj) => _.intersection(obj.tags, quizResultTags).length === 5
@@ -32,10 +34,10 @@ class CardContainer extends React.Component {
           <Segment placeholder>
             <Header icon>
               Sorry, no results found.
-            <br />
+              <br />
               <br />
               Try a different search or filters.
-          </Header>
+            </Header>
           </Segment>
           <div className="parentDiv">
             <div className="leftcol">
@@ -50,7 +52,7 @@ class CardContainer extends React.Component {
             <div className="center">
               <Button negative onClick={this.props.resetForm}>
                 Start Over
-            </Button>
+              </Button>
             </div>
             <div className="rightcol"></div>
           </div>

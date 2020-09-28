@@ -67,9 +67,15 @@ const tags = {
     color: "#BB7E15",
     show: false,
   },
-  depressionAnxiety: {
+  depression: {
     category: "Type of issue",
-    displayName: "Depression/Anxiety",
+    displayName: "Depression",
+    color: "#B6595B",
+    show: false,
+  },
+  anxiety: {
+    category: "Type of issue",
+    displayName: "Anxiety",
     color: "#B6595B",
     show: false,
   },
