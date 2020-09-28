@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal, Icon } from "semantic-ui-react";
+import { Button, Modal } from "semantic-ui-react";
 import GetHelpModal from "../../components/gethelpmodal/GetHelpModal";
 import CovidModal from "../../components/covidmodal/CovidModal";
 import QuizApp from "../../components/phase2-quiz/App";
@@ -69,10 +69,10 @@ class Header extends React.Component {
             <Modal
               dimmer="blurring"
               trigger={
-                <Button color="green">
-                  <Icon name="leaf" />
-                  Resource Recommender
-                </Button>
+                <button class="circular ui icon button green massive">
+                  <i class="icon leaf"></i>
+                  
+                </button>
               }
               closeIcon
               size="large"

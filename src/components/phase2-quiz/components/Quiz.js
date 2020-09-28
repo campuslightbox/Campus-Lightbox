@@ -100,6 +100,7 @@ function Quiz(props) {
             </div>
           )}
         </div>
+        <br />
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
       </div>
     </CSSTransition>
