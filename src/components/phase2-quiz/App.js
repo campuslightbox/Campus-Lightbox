@@ -4,7 +4,7 @@ import Quiz from "./components/Quiz";
 //import Result from "./components/Result";
 import "./App.css";
 import _ from "underscore";
-import Tags from "../../static/Tags";
+import Tags from "./components/QuizTags"; // copy from static/Tags
 import Resources from "../../static/Resources";
 import QuizResultCard from "../phase2-quiz/components/QuizResultCard";
 
@@ -55,39 +55,40 @@ class App extends Component {
     this.setState({
       result: "",
       flag: 0,
-    });
-  };
+    })
+  }
 
   resetForm = () => {
-    this.setState(
-      {
-        counter: 0,
-        questionId: 1,
-        question: "",
-        answerOptions: [],
-        answer: "",
-        answersCount: {},
-        result: "",
-        //   previousAnswer: {},
-        flag: 0,
-        selected: false,
-        answerLists: [],
+    this.setState({
+      counter: 0,
+      questionId: 1,
+      question: "",
+      answerOptions: [],
+      answer: "",
+      answersCount: {},
+      result: "",
+      //   previousAnswer: {},
+      flag: 0,
+      selected: false,
+      answerLists: [],
 
-        // adding this.state.filter function
-        filter: _.reduce(
-          Tags.getCategories(),
-          (obj, category) => {
-            obj[category] = [];
-            return obj;
-          },
-          {}
-        ),
-      },
+      // adding this.state.filter function
+      filter: _.reduce(
+        Tags.getCategories(),
+        (obj, category) => {
+          obj[category] = [];
+          return obj;
+        },
+        {}
+      ),
+
+    },
       () => {
         this.componentDidMount();
-      }
-    );
-  };
+      })
+
+
+  }
 
   handleAnswerSelected(e, answer) {
     console.log("E.TARGET.VALUE: " + e.target.value);
@@ -184,7 +185,7 @@ class App extends Component {
     const filterResult = answersCountKeys.filter(
       (x) => x !== "previousAnswerCount"
     );
-    return filterResult;
+    return filterResult; 
   }
   // return array of filtered tags
 
@@ -193,7 +194,7 @@ class App extends Component {
     answerList[this.state.counter] = this.state.answer;
 
     if (result.length !== 0) {
-      console.log(result, "setResults in App.js");
+      console.log(result, "return result of getResult");
       this.setState({
         result: result,
         flag: 1,
@@ -204,7 +205,7 @@ class App extends Component {
     }
   }
 
-  setFinalResults() {
+  setFinalResults(){
     let answerList = this.state.answerLists;
     answerList[this.state.counter] = this.state.answer;
 
@@ -218,6 +219,7 @@ class App extends Component {
     } else {
       this.setState({ result: "Undetermined", flag: 1 });
     }
+
   }
 
   renderQuiz() {
@@ -247,7 +249,7 @@ class App extends Component {
           quizResult={this.state.result}
           backFromResult={this.backFromResult}
           resetForm={this.resetForm}
-          // result is an array of tags
+        // result is an array of tags
         />
         {/*<button onClick={this.resetForm}> reset </button>
         <button onClick={this.backFromResult}> go back </button>*/}

@@ -8,7 +8,7 @@ import {
   Grid,
   Divider,
 } from "semantic-ui-react";
-import Tags from "../../../static/Tags";
+import Tags from "./QuizTags";
 import MediaQuery from "react-responsive";
 import _ from "underscore";
 import moment from "moment";

@@ -1,18 +1,18 @@
 var quizQuestions = [
   {
     question:
-      "How much does your current difficulty interfere with your daily life? (This response helps us gauge the severity) ",
+      "On a scale from 1-10,how heavily is your current difficulty affecting your daily life? ",
     answers: [
-      { type: "low", content: "Low severity", letter: "A" },
-      { type: "medium", content: "Medium severity", letter: "B" },
-      { type: "high", content: "High severity", letter: "C" },
+      { type: "low", content: "1~3 (low severity)", letter: "A" },
+      { type: "medium", content: "4~7 (medium)", letter: "B" },
+      { type: "high", content: "8~10 (high severity)", letter: "C" },
     ],
   },
   {
     question: "What type of issues are you experiencing?",
     answers: [
-      { type: "depression", content: "Depression", letter: "A" }, // or write Depression and/or Anxiety
-      { type: "anxiety", content: "Anxiety", letter: "B" }, // A B are using the same tag, (TODO: update Tags.js & Resource.js to split the tags)
+      { type: "depressionAnxiety", content: "Depression", letter: "A" }, // or write Depression and/or Anxiety
+      { type: "depressionAnxiety", content: "Anxiety", letter: "B" }, // A B are using the same tag, (TODO: update Tags.js & Resource.js to split the tags)
       { type: "substanceAbuse", content: "Substance Abuse", letter: "C" },
       { type: "lgbt", content: "Gender/Identity", letter: "D" },
       { type: "general", content: "General Wellbeing Concern", letter: "E" },
@@ -50,7 +50,6 @@ var quizQuestions = [
     answers: [
       { type: "walkIn", content: "In-Person", letter: "A" },
       { type: "online", content: "Online Support", letter: "B" },
-      { type: "nopreference", content: "No preference", letter: "C" },
     ],
   },
 ];
