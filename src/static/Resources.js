@@ -52,7 +52,6 @@ import ZenLogo from "./logos/Zen.png";
 import MeditationLogo from "./logos/Meditation.png";
 import CrisisLogo from "./logos/Crisis.png";
 import WomenViolenceLogo from "./logos/WomenViolence.png";
-import EmpowerLogo from "./logos/Empower.png";
 import AcademicLogo from "./logos/Academic.png";
 import EnrollmentLogo from "./logos/Enrollment.png";
 import SVPROLogo from "./logos/SVPRO.png";
@@ -87,6 +86,9 @@ import UBCwellbeing from "./logos/UBCwellbeing.png";
 import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import TAOapp from "./logos/TAOapp2.png";
 import VCHLogo from "./logos/VCHlogo.jpg";
+import PayFair from "./logos/PayFairLogo.png";
+import Here2Talk from "./logos/hereTalkLogo.png";
+import WellnessCan from "./logos/WellCanLogo.png";
 
 export default [
   {
@@ -203,7 +205,7 @@ export default [
       wednesday: "8:00am-8:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
-      saturday: "8:00am-3:45pm",
+      saturday: "8:00am-3:30pm",
     },
     notes:
       "All appointments must now be booked by calling 604-822-7011. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
@@ -851,14 +853,45 @@ export default [
     },
   },
   {
-    name: "Empower Me",
+    name: "Wellness Together Canada",
     description:
-      "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
-    logo: EmpowerLogo,
+      "Free mental health online assessment, self-guided mental health resources, and free access to counsellors by phone, text or video.",
+    logo: WellnessCan,
     background: "",
     tags: [
       "free",
-      "financial",
+      "general",
+      "substanceAbuse",
+      "depressionAnxiety",
+      "immediate",
+      "sameDay",
+      "low",
+      "medium",
+      "high",
+      "online",
+      "phone",
+      "professional",
+      "allday",
+    ],
+
+    social: {
+      website: "https://ca.portal.gs/",
+    },
+    hours: {
+      others: "24/7",
+    },
+    notes: "Text WELLNESS to 741741 for immediate crisis support",
+  },
+  {
+    name: "Here2Talk",
+    description:
+      "Here2Talk offers free, 24/7 single-session, counselling by phone or online chat for all UBC students, no matter where you are in the world.",
+    logo: Here2Talk,
+    background: "",
+    tags: [
+      "free",
+      "academic",
+      "depressionAnxiety",
       "general",
       "immediate",
       "low",
@@ -868,15 +901,44 @@ export default [
       "professional",
       "allday",
     ],
-    phone: "1-844-741-6389",
+    phone: "604-642-5212",
     social: {
-      website:
-        "http://www.studentcare.ca/rte/en/UniversityofBritishColumbiaAMSGSS_EmpowerMe_EmpowerMe",
+      website: "https://here2talk.ca/home",
     },
     hours: {
       others: "24/7",
     },
+    notes: "For Canada-wide toll free, please dial: 1-877-857-3397",
   },
+
+  {
+    name: "Pay What Feels Fair",
+    description:
+      "We connect those who want affordable counseling to counselors who offer it.",
+    logo: PayFair,
+    background: "",
+    tags: [
+      "paid",
+      "general",
+      "depressionAnxiety",
+      "substanceAbuse",
+      "eatingDisorder",
+      "lgbt",
+      "less1Month",
+      "low",
+      "medium",
+      "high",
+      "appointment",
+      "professional",
+    ],
+    phone: "604-351-4989",
+    social: {
+      twitter: "https://twitter.com/pwffBC",
+      website: "https://kevinkokoska.com",
+    },
+    email: "kevinkokoska@gmail.com",
+  },
+
   {
     name: "UBC Academic Advising",
     description:
