@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.666f1e5a.chunk.css",
-    "main.js": "/static/js/main.5c2956fb.chunk.js",
-    "main.js.map": "/static/js/main.5c2956fb.chunk.js.map",
+    "main.js": "/static/js/main.3578a655.chunk.js",
+    "main.js.map": "/static/js/main.3578a655.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.246ffeb5.js",
     "runtime-main.js.map": "/static/js/runtime-main.246ffeb5.js.map",
     "static/css/2.5f1adba5.chunk.css": "/static/css/2.5f1adba5.chunk.css",
-    "static/js/2.c918f5b9.chunk.js": "/static/js/2.c918f5b9.chunk.js",
-    "static/js/2.c918f5b9.chunk.js.map": "/static/js/2.c918f5b9.chunk.js.map",
+    "static/js/2.a4ba8f00.chunk.js": "/static/js/2.a4ba8f00.chunk.js",
+    "static/js/2.a4ba8f00.chunk.js.map": "/static/js/2.a4ba8f00.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.35b80fded702f3d5f212de6100042892.js": "/precache-manifest.35b80fded702f3d5f212de6100042892.js",
+    "precache-manifest.f7179eafee09739b117821f7a11e92a5.js": "/precache-manifest.f7179eafee09739b117821f7a11e92a5.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.5f1adba5.chunk.css.map": "/static/css/2.5f1adba5.chunk.css.map",
     "static/css/main.666f1e5a.chunk.css.map": "/static/css/main.666f1e5a.chunk.css.map",
-    "static/js/2.c918f5b9.chunk.js.LICENSE.txt": "/static/js/2.c918f5b9.chunk.js.LICENSE.txt",
+    "static/js/2.a4ba8f00.chunk.js.LICENSE.txt": "/static/js/2.a4ba8f00.chunk.js.LICENSE.txt",
     "static/media/AMSSpeakeasy.png": "/static/media/AMSSpeakeasy.3197a5de.png",
     "static/media/Academic.png": "/static/media/Academic.f6f38e8c.png",
     "static/media/AcademicBG.jpg": "/static/media/AcademicBG.22e0987e.jpg",
@@ -21,7 +21,6 @@
     "static/media/CentreForAccessibility.png": "/static/media/CentreForAccessibility.c5c24e52.png",
     "static/media/CentreForAccessibilityBG.jpg": "/static/media/CentreForAccessibilityBG.3d750191.jpg",
     "static/media/Crisis.png": "/static/media/Crisis.dfb06842.png",
-    "static/media/Empower.png": "/static/media/Empower.df15379f.png",
     "static/media/Enrollment.png": "/static/media/Enrollment.66db7dd1.png",
     "static/media/EnrollmentBG.jpg": "/static/media/EnrollmentBG.8640acff.jpg",
     "static/media/Foundry.png": "/static/media/Foundry.47880a6a.png",
@@ -36,6 +35,7 @@
     "static/media/MindHealthBC.png": "/static/media/MindHealthBC.95a1e389.png",
     "static/media/Nurses.png": "/static/media/Nurses.0a60a9d9.png",
     "static/media/NursesBG.jpg": "/static/media/NursesBG.2aff8fc0.jpg",
+    "static/media/PayFairLogo.png": "/static/media/PayFairLogo.e6c0a9ba.png",
     "static/media/Pride.png": "/static/media/Pride.6d25286a.png",
     "static/media/PsychologyClinic.png": "/static/media/PsychologyClinic.b8773279.png",
     "static/media/SASC.png": "/static/media/SASC.30958b73.png",
@@ -71,8 +71,8 @@
   "entrypoints": [
     "static/js/runtime-main.246ffeb5.js",
     "static/css/2.5f1adba5.chunk.css",
-    "static/js/2.c918f5b9.chunk.js",
+    "static/js/2.a4ba8f00.chunk.js",
     "static/css/main.666f1e5a.chunk.css",
-    "static/js/main.5c2956fb.chunk.js"
+    "static/js/main.3578a655.chunk.js"
   ]
 }
