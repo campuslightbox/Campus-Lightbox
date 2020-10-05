@@ -52,7 +52,6 @@ import ZenLogo from "./logos/Zen.png";
 import MeditationLogo from "./logos/Meditation.png";
 import CrisisLogo from "./logos/Crisis.png";
 import WomenViolenceLogo from "./logos/WomenViolence.png";
-import EmpowerLogo from "./logos/Empower.png";
 import AcademicLogo from "./logos/Academic.png";
 import EnrollmentLogo from "./logos/Enrollment.png";
 import SVPROLogo from "./logos/SVPRO.png";
@@ -86,6 +85,10 @@ import UBCHospital from "./logos/UBCHospital.png";
 import UBCwellbeing from "./logos/UBCwellbeing.png";
 import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import TAOapp from "./logos/TAOapp2.png";
+import VCHLogo from "./logos/VCHlogo.jpg";
+import PayFair from "./logos/PayFairLogo.png";
+import Here2Talk from "./logos/hereTalkLogo.png";
+import WellnessCan from "./logos/WellCanLogo.png";
 
 export default [
   {
@@ -199,9 +202,10 @@ export default [
     hours: {
       monday: "8:00am-4:00pm",
       tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-6:00pm",
+      wednesday: "8:00am-8:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
+      saturday: "8:00am-3:30pm",
     },
     notes:
       "All appointments must now be booked by calling 604-822-7011. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
@@ -385,13 +389,10 @@ export default [
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
     hours: {
-      monday: "10:00am-5:00pm",
-      tuesday: "10:00am-4:00pm",
-      wednesday: "10:00am-5:00pm",
-      thursday: "10:00am-5:00pm",
-      friday: "10:00am-5:00pm",
-      saturday: "closed",
-      sunday: "closed",
+      monday: "11:00am-1:00pm",
+      tuesday: "11:00am-3:00pm",
+      wednesday: "11:00am-3:00pm",
+      thursday: "11:00am-3:00pm",
     },
     notes:
       "Our office is temporarily closed, but you can engage in topics relevant to your wellbeing through Canvas! Check the link below to enroll: https://canvas.ubc.ca/enroll/PCNEN4.",
@@ -644,7 +645,7 @@ export default [
       sunday: "closed",
     },
     notes:
-      "Call during business hours to explore the options available. If the call goes unanswered, a message can be left and the call will be returned by the next working day.",
+      "Services are only available online or over the phone.If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
   },
   {
     name: "Student Recovery Community at UBC",
@@ -852,14 +853,45 @@ export default [
     },
   },
   {
-    name: "Empower Me",
+    name: "Wellness Together Canada",
     description:
-      "Connect with counsellors and life coaches for mental health, social, financial, nutritional problems. Online chat & phone options.",
-    logo: EmpowerLogo,
+      "Free mental health online assessment, self-guided mental health resources, and free access to counsellors by phone, text or video.",
+    logo: WellnessCan,
     background: "",
     tags: [
       "free",
-      "financial",
+      "general",
+      "substanceAbuse",
+      "depressionAnxiety",
+      "immediate",
+      "sameDay",
+      "low",
+      "medium",
+      "high",
+      "online",
+      "phone",
+      "professional",
+      "allday",
+    ],
+
+    social: {
+      website: "https://ca.portal.gs/",
+    },
+    hours: {
+      others: "24/7",
+    },
+    notes: "Text WELLNESS to 741741 for immediate crisis support",
+  },
+  {
+    name: "Here2Talk",
+    description:
+      "Here2Talk offers free, 24/7 single-session, counselling by phone or online chat for all UBC students, no matter where you are in the world.",
+    logo: Here2Talk,
+    background: "",
+    tags: [
+      "free",
+      "academic",
+      "depressionAnxiety",
       "general",
       "immediate",
       "low",
@@ -869,15 +901,44 @@ export default [
       "professional",
       "allday",
     ],
-    phone: "1-844-741-6389",
+    phone: "604-642-5212",
     social: {
-      website:
-        "http://www.studentcare.ca/rte/en/UniversityofBritishColumbiaAMSGSS_EmpowerMe_EmpowerMe",
+      website: "https://here2talk.ca/home",
     },
     hours: {
       others: "24/7",
     },
+    notes: "For Canada-wide toll free, please dial: 1-877-857-3397",
   },
+
+  {
+    name: "Pay What Feels Fair",
+    description:
+      "We connect those who want affordable counseling to counselors who offer it.",
+    logo: PayFair,
+    background: "",
+    tags: [
+      "paid",
+      "general",
+      "depressionAnxiety",
+      "substanceAbuse",
+      "eatingDisorder",
+      "lgbt",
+      "less1Month",
+      "low",
+      "medium",
+      "high",
+      "appointment",
+      "professional",
+    ],
+    phone: "604-351-4989",
+    social: {
+      twitter: "https://twitter.com/pwffBC",
+      website: "https://kevinkokoska.com",
+    },
+    email: "kevinkokoska@gmail.com",
+  },
+
   {
     name: "UBC Academic Advising",
     description:
@@ -1352,5 +1413,42 @@ export default [
     },
     notes:
       "UBC students have FREE access to the tools if you sign up with your UBC email!",
+  },
+  {
+    name: "Suicide Attempt Follow-up, Education & Research ",
+    description:
+      "S.A.F.E.R. is a free, time-limited counselling service offered at Mental Health and Substance Use Outpatient Services. Intake is through the Access and Assessment Centre.",
+    logo: VCHLogo,
+    background: "",
+    tags: [
+      "free",
+      "general",
+      "suicidal",
+      "depressionAnxiety",
+      "low",
+      "medium",
+      "high",
+      "appointment",
+      "walkIn",
+      "phone",
+      "professional",
+    ],
+    social: {
+      website:
+        "http://www.vch.ca/Pages/Suicide-Attempt-Follow-up,-Education---Research-SAFER.aspx",
+    },
+    phone: "604-675-3700",
+    address: "803 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
+    hours: {
+      monday: "7:30am-11:00pm",
+      tuesday: "7:30am-11:00pm",
+      wednesday: "7:30am-11:00pm",
+      thursday: "7:30am-11:00pm",
+      friday: "7:30am-11:00pm",
+      saturday: "7:30am-11:00pm",
+      sunday: "7:30am-11:00pm",
+    },
+    notes:
+      "Due to the COVID-19 pandemic, the service may be operating at reduced or adjusted hours. Please contact 604-675-3700 for further details.",
   },
 ];
