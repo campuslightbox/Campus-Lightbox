@@ -1,7 +1,5 @@
 /*
     ##last updated: May, 7, 2019##
-    
-    Empty template:
     {
         name: "", 
         description: "",
@@ -40,9 +38,8 @@ import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
 import NursesLogo from "./logos/Nurses.png";
 import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
 import WellnessCentreLogo from "./logos/WellnessCentre.png";
-import AMSSpeakeasyLogo from "./logos/AMSSpeakeasy.png";
 import SASCLogo from "./logos/SASC.png";
-import VICELogo from "./logos/VICE.png";
+import AMSPeerSupport from "./logos/ams2.png";
 import PrideLogo from "./logos/Pride.png";
 import WomenCentreLogo from "./logos/WomenCentre.png";
 import KaleidoscopeLogo from "./logos/Kaleidoscope.png";
@@ -422,42 +419,33 @@ export default [
     notes: "Wellness workshops have been cancelled until further notice",
   },
   {
-    name: "AMS Speakeasy",
+    name: "AMS Peer Support",
     description:
-      "Speakeasy provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
-    logo: AMSSpeakeasyLogo,
+      "Peer Support provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
+    logo: AMSPeerSupport,
     background: "",
     tags: [
       "free",
       "academic",
-      "financial",
-      "sexualHealthAssault",
+      "substanceAbuse",
+      "lgbt",
       "depressionAnxiety",
       "general",
-      "two3Days",
       "less1Week",
       "less1Month",
       "low",
       "medium",
-      "walkIn",
+      "online",
       "peer",
     ],
     phone: "604-822-9246",
     social: {
-      website: "https://www.ams.ubc.ca/student-services/speakeasy/",
+      website: "https://www.ams.ubc.ca/student-services/peer-support/",
+      instagram: "https://www.instagram.com/ams_peersupport/",
     },
-    email: "speak@ams.ubc.ca",
-    address: "UBC AMS Nest\nRoom 3125",
-    hours: {
-      monday: "10:00am-6:00pm",
-      tuesday: "10:00am-6:00pm",
-      wednesday: "10:00am-6:00pm",
-      thursday: "10:00am-6:00pm",
-      friday: "10:00am-6:00pm",
-      saturday: "closed",
-      sunday: "closed",
-    },
-    notes: "Speakeasy & Vice will be closed until further notice.",
+    email: "peersupport@ams.ubc.ca",
+    notes:
+      "AMS Peer Support is currently closed, but we will be starting our peer support services (virtually) on October 12th.",
   },
   {
     name: "AMS Sexual Assault Support Centre (SASC)",
@@ -490,34 +478,6 @@ export default [
     },
     notes:
       "All in-person services and events will be suspended until April 15th. On-call support or phone appointments will still be available.",
-  },
-  {
-    name: "AMS VICE",
-    description:
-      "Free, confidential peer dialogue sessions or mentorship to provide guidance on addiction/substance abuse challenges.",
-    logo: VICELogo,
-    background: "",
-    tags: [
-      "free",
-      "depressionAnxiety",
-      "general",
-      "substanceAbuse",
-      "low",
-      "medium",
-      "less1Week",
-      "less1Month",
-      "walkIn",
-      "recurring",
-      "peer",
-    ],
-    phone: "604-827-1728",
-    social: {
-      website: "https://www.ams.ubc.ca/student-services/vice/",
-      facebook: "https://www.facebook.com/UBC.AMS.Vice/",
-    },
-    email: "vice@ams.ubc.ca",
-    address: "UBC AMS Nest\nRoom 3107",
-    notes: "Speakeasy & Vice will be closed until further notice.",
   },
   {
     name: "AMS The Pride Collective",
@@ -1217,12 +1177,40 @@ export default [
     logo: MHliteracy,
     background: "",
     tags: ["online", "generalAwareness", "allday", "free"],
-    phone: "",
     social: {
       website: "https://www.teachmentalhealth.org/",
     },
     email: "tmentalhealth@gmail.com",
     notes: "Participation in this online course is FREE.",
+  },
+  {
+    name: " UBC Student Assistance Program (SAP)",
+    description:
+      "Offered by Aspiria, UBC SAP is a free, 24/7 wellness resource for students. Services include personal counselling, life coaching, group programs to support your mental, emotional, physical and financial health.",
+    logo: UBCgeneral,
+    tags: [
+      "free",
+      "academic",
+      "financial",
+      "depressionAnxiety",
+      "substanceAbuse",
+      "eatingDisorder",
+      "womensHealth",
+      "suicidal",
+      "general",
+      "immediate",
+      "online",
+      "allday",
+      "phone",
+      "low",
+      "medium",
+      "professional",
+    ],
+    social: {
+      website:
+        "https://students.ubc.ca/health/ubc-student-assistance-program-sap",
+    },
+    phone: "1-833-590-1328",
   },
   {
     name: "HeretoHelp",
