@@ -69,9 +69,8 @@ class Header extends React.Component {
             <Modal
               dimmer="blurring"
               trigger={
-                <button class="circular ui icon button green massive">
-                  <i class="icon leaf"></i>
-                  
+                <button className="circular ui icon button green massive">
+                  <i className="icon leaf"></i>
                 </button>
               }
               closeIcon

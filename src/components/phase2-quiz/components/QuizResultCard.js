@@ -14,11 +14,31 @@ class CardContainer extends React.Component {
 
   filterResource = (allResources) => {
     // this.props.quizResult is this.state.result from App.js => the filtered tags
-    const quizResultTags = this.props.quizResult;
-    let tagsMatches = _.filter(
-      allResources,
-      (obj) => _.intersection(obj.tags, quizResultTags).length === 5
-    );
+    let quizResultTags = this.props.quizResult;
+    let accessiblity = [
+      "walkIn",
+      "online",
+      "allday",
+      "phone",
+      "recurring",
+      "appointment",
+    ];
+    if (quizResultTags.includes("nopreference")) {
+      const updateResultTags = quizResultTags
+        .slice(0, 4)
+        .concat(...accessiblity);
+      console.log(updateResultTags, "new array if select nopreference");
+      var tagsMatches = _.filter(
+        allResources,
+        (obj) => _.intersection(obj.tags, updateResultTags).length === 5
+      );
+    } else {
+      tagsMatches = _.filter(
+        allResources,
+        (obj) => _.intersection(obj.tags, quizResultTags).length === 5
+      );
+    }
+    // TODO: Optimize this filter function and return better results
     console.log(tagsMatches, "tagsMatches");
     return tagsMatches;
   };
@@ -32,10 +52,10 @@ class CardContainer extends React.Component {
           <Segment placeholder>
             <Header icon>
               Sorry, no results found.
-            <br />
+              <br />
               <br />
               Try a different search or filters.
-          </Header>
+            </Header>
           </Segment>
           <div className="parentDiv">
             <div className="leftcol">
@@ -50,7 +70,7 @@ class CardContainer extends React.Component {
             <div className="center">
               <Button negative onClick={this.props.resetForm}>
                 Start Over
-            </Button>
+              </Button>
             </div>
             <div className="rightcol"></div>
           </div>

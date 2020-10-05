@@ -1,11 +1,11 @@
 var quizQuestions = [
   {
     question:
-      "On a scale from 1-10,how heavily is your current difficulty affecting your daily life? ",
+      "How much does your current difficulty interfere with your daily life? (This response  helps us gauge the severity)",
     answers: [
-      { type: "low", content: "1~3 (low severity)", letter: "A" },
-      { type: "medium", content: "4~7 (medium)", letter: "B" },
-      { type: "high", content: "8~10 (high severity)", letter: "C" },
+      { type: "low", content: "low severity", letter: "A" },
+      { type: "medium", content: "medium severity", letter: "B" },
+      { type: "high", content: "high severity", letter: "C" },
     ],
   },
   {
@@ -50,6 +50,7 @@ var quizQuestions = [
     answers: [
       { type: "walkIn", content: "In-Person", letter: "A" },
       { type: "online", content: "Online Support", letter: "B" },
+      { type: "nopreference", content: "No preference", letter: "C" },
     ],
   },
 ];
