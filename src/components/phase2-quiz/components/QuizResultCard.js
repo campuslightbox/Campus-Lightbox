@@ -11,36 +11,27 @@ class CardContainer extends React.Component {
       trackNoResults: "enabled",
     };
   }
-
+  // resourceMatch is a reusable function
+  resourceMatch = (resources, searchArr) => {
+    return _.filter(
+      resources,
+      (obj) => _.intersection(obj.tags, searchArr).length === 5
+    );
+  };
   filterResource = (allResources) => {
-    // this.props.quizResult is this.state.result from App.js => the filtered tags
-    let quizResultTags = this.props.quizResult;
-    let accessiblity = [
-      "walkIn",
-      "online",
-      "allday",
-      "phone",
-      "recurring",
-      "appointment",
-    ];
+    const quizResultTags = this.props.quizResult; // the filtered tags from App.js
+    var filterResults;
     if (quizResultTags.includes("nopreference")) {
-      const updateResultTags = quizResultTags
-        .slice(0, 4)
-        .concat(...accessiblity);
-      console.log(updateResultTags, "new array if select nopreference");
-      var tagsMatches = _.filter(
-        allResources,
-        (obj) => _.intersection(obj.tags, updateResultTags).length === 5
-      );
+      let search1 = quizResultTags.slice(0, 4).concat("walkIn");
+      let search2 = quizResultTags.slice(0, 4).concat("online");
+      let Match1 = this.resourceMatch(allResources, search1);
+      let Match2 = this.resourceMatch(allResources, search2);
+      filterResults = _.uniq(Match1.concat(Match2));
     } else {
-      tagsMatches = _.filter(
-        allResources,
-        (obj) => _.intersection(obj.tags, quizResultTags).length === 5
-      );
+      filterResults = this.resourceMatch(allResources, quizResultTags);
     }
-    // TODO: Optimize this filter function and return better results
-    console.log(tagsMatches, "tagsMatches");
-    return tagsMatches;
+    console.log(filterResults, "filtered resources");
+    return filterResults;
   };
 
   render = () => {
