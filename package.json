@@ -1,6 +1,6 @@
 {
-  "name": "aurora",
-  "version": "0.1.0",
+  "name": "campus-lightbox",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://campuslightbox.com/",
   "dependencies": {
@@ -8,12 +8,14 @@
     "fuse.js": "^3.4.4",
     "gh-pages": "^3.1.0",
     "moment": "^2.27.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-collapsible": "^2.8.0",
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
     "react-responsive": "^8.1.0",
     "react-scripts": "^3.4.1",
+    "react-transition-group": "^4.4.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "underscore": "^1.10.2"

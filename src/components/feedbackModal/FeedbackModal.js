@@ -1,70 +1,68 @@
-import React from 'react';
-import { Modal, Button, Form, Message } from 'semantic-ui-react';
+import React from "react";
+import { Modal, Button, Form, Message } from "semantic-ui-react";
 
 const styles = {
-    title: {
-        fontSize: 20,
-    },
-    textValue: {
-        fontSize: 14,
-    }
-}
+  title: {
+    fontSize: 20,
+  },
+  textValue: {
+    fontSize: 14,
+  },
+};
 
 class FeedbackModal extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            name: "",
-            email: "",
-            subject: this.props.subject,
-            message: this.props.message,
-            sent: false,
-            error: false,
-        }
-    }
+    this.state = {
+      name: "",
+      email: "",
+      subject: this.props.subject,
+      message: this.props.message,
+      sent: false,
+      error: false,
+    };
+  }
 
-    onChange = (_, {name, value}) => {
-        this.setState({[name]: value});
-    }
+  onChange = (_, { name, value }) => {
+    this.setState({ [name]: value });
+  };
 
-    onClose = () => {
+  onClose = () => {
+    this.setState({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      sent: false,
+      error: false,
+    });
+  };
+
+  onSubmitFeedback = () => {
+    console.log(this.state);
+
+    window.emailjs
+      .send("mailgun", "template_qCO0QsXD", {
+        name: this.state.name || "(Empty)",
+        email: this.state.email || "(Empty)",
+        subject: this.state.subject,
+        message: this.state.message,
+      })
+      .then((res) => {
         this.setState({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-            sent: false,
-            error: false,
+          sent: true,
+          error: false,
         });
-    }
-
-    onSubmitFeedback = () => {
-        console.log(this.state);
-
-        window.emailjs.send(
-            'mailgun',
-            'template_qCO0QsXD',
-            {
-                name: this.state.name || "(Empty)",
-                email: this.state.email || "(Empty)",
-                subject: this.state.subject,
-                message: this.state.message,
-            })
-            .then(res => {
-                this.setState({
-                    sent: true,
-                    error: false,
-                });
-            })
-            .catch(err => {
-                this.setState({
-                    sent: false,
-                    error: true,
-                });
-                console.error('Failed to send feedback. Error: ', err);
-            })
-    }
+      })
+      .catch((err) => {
+        this.setState({
+          sent: false,
+          error: true,
+        });
+        console.error("Failed to send feedback. Error: ", err);
+      });
+  };
 
     render = () => (
         <Modal trigger={this.props.trigger} onClose={this.onClose} closeIcon>
@@ -128,9 +126,9 @@ class FeedbackModal extends React.Component {
 }
 
 FeedbackModal.defaultProps = {
-    trigger: <Button color='orange'>Feedback</Button>,
-    subject: "",
-    message: "",
-}
+  trigger: <Button color="orange">Feedback</Button>,
+  subject: "",
+  message: "",
+};
 
 export default FeedbackModal;
