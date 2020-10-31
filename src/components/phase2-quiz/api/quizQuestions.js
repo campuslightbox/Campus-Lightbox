@@ -3,9 +3,11 @@ var quizQuestions = [
     question:
       "How much does your current difficulty interfere with your daily life? (This response  helps us gauge the severity)",
     answers: [
-      { type: "low", content: "low severity", letter: "A" },
-      { type: "medium", content: "medium severity", letter: "B" },
-      { type: "high", content: "high severity", letter: "C" },
+      { type: "high", content: "Very severe interference", letter: "A" },
+      { type: "high", content: "Severe", letter: "B" },
+      { type: "medium", content: "Moderate", letter: "C" },
+      { type: "medium", content: "Mild", letter: "D" },
+      { type: "low", content: "No interference", letter: "E" },
     ],
   },
   {
@@ -46,7 +48,7 @@ var quizQuestions = [
   },
   {
     question:
-      "Do you prefer a resource that is in-person or virtullly available?",
+      "Do you prefer a resource that is in-person or virtully available?",
     answers: [
       { type: "walkIn", content: "In-Person", letter: "A" },
       { type: "online", content: "Online Support", letter: "B" },

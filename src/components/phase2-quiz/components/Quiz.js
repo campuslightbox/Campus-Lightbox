@@ -40,6 +40,7 @@ function Quiz(props) {
       timeout={100}
     >
       <div key={props.questionId}>
+      {props.counter  === 0 ? (<div className="disclaimer">In order to gather information using this survey to match your needs and preferences to a resource, please answer the following questions:</div>):(null)}
         <Question content={props.question} />
         <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
