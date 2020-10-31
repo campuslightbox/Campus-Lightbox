@@ -113,14 +113,14 @@ export default [
     },
     address: "Brock Hall Room 1040\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "8:30am-3:30pm",
-      tuesday: "8:30am-3:30pm",
-      wednesday: "8:30am-6:00pm",
-      thursday: "10:00am-3:30pm",
-      friday: "8:30am-3:30pm",
+      monday: "8:30am-4:30pm",
+      tuesday: "8:30am-4:30pm",
+      wednesday: "8:30am-7:00pm",
+      thursday: "10:30am-4:30pm",
+      friday: "8:30am-4:30pm",
     },
     notes:
-      "You can call to schedule an appointment by phone during the COVID-19 outbreak.",
+      "All appointments are being offered by phone during the COVID-19 outbreak.",
   },
   {
     name: "UBC Yoga Club",
@@ -333,15 +333,16 @@ export default [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "12:00pm-6:00pm",
-      tuesday: "10:00am-6:00pm",
-      wednesday: "12:00pm-6:00pm",
-      thursday: "12:00pm-6:00pm",
+      monday: "closed",
+      tuesday: "closed",
+      wednesday: "closed",
+      thursday: "10:00am-6:00pm",
       friday: "closed",
       saturday: "closed",
       sunday: "closed",
     },
-    notes: "Nurse on Campus booths have been cancelled until further notice.",
+    notes:
+      "Hours differ from locations. Please check the website and follow the guidelines before visiting.",
   },
   {
     name: "UBC Psychology Clinic",
@@ -466,7 +467,7 @@ export default [
       facebook: "https://www.facebook.com/AMSSASCUBC/",
     },
     email: "sasc@ams.ubc.ca",
-    address: "UBC AMS Nest\nRoom 3127",
+    address: "UBC AMS Nest\nRoom 2516",
     hours: {
       monday: "8:00am-10:00pm",
       tuesday: "8:00am-10:00pm",
@@ -477,7 +478,7 @@ export default [
       sunday: "11:00am-7:00pm",
     },
     notes:
-      "All in-person services and events will be suspended until April 15th. On-call support or phone appointments will still be available.",
+      "Limited drop-in hours: 2pm-6pm from Monday to Sunday. On-call support & virtual appointments are available in regular hours.",
   },
   {
     name: "AMS The Pride Collective",
