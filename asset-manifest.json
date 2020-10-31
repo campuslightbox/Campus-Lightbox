@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.666f1e5a.chunk.css",
-    "main.js": "/static/js/main.2aafb887.chunk.js",
-    "main.js.map": "/static/js/main.2aafb887.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.246ffeb5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.246ffeb5.js.map",
+    "main.css": "/static/css/main.833cb4df.chunk.css",
+    "main.js": "/static/js/main.54dc9249.chunk.js",
+    "main.js.map": "/static/js/main.54dc9249.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8bb1d0e8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8bb1d0e8.js.map",
     "static/css/2.5f1adba5.chunk.css": "/static/css/2.5f1adba5.chunk.css",
-    "static/js/2.cec32898.chunk.js": "/static/js/2.cec32898.chunk.js",
-    "static/js/2.cec32898.chunk.js.map": "/static/js/2.cec32898.chunk.js.map",
+    "static/js/2.f28e01d4.chunk.js": "/static/js/2.f28e01d4.chunk.js",
+    "static/js/2.f28e01d4.chunk.js.map": "/static/js/2.f28e01d4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ab052f1e7a9c2e12f9836aec654e83a6.js": "/precache-manifest.ab052f1e7a9c2e12f9836aec654e83a6.js",
+    "precache-manifest.d4df452e8fdf5d97bf85a99483ec11de.js": "/precache-manifest.d4df452e8fdf5d97bf85a99483ec11de.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.5f1adba5.chunk.css.map": "/static/css/2.5f1adba5.chunk.css.map",
-    "static/css/main.666f1e5a.chunk.css.map": "/static/css/main.666f1e5a.chunk.css.map",
-    "static/js/2.cec32898.chunk.js.LICENSE.txt": "/static/js/2.cec32898.chunk.js.LICENSE.txt",
+    "static/css/main.833cb4df.chunk.css.map": "/static/css/main.833cb4df.chunk.css.map",
+    "static/js/2.f28e01d4.chunk.js.LICENSE.txt": "/static/js/2.f28e01d4.chunk.js.LICENSE.txt",
     "static/media/Academic.png": "/static/media/Academic.f6f38e8c.png",
     "static/media/AcademicBG.jpg": "/static/media/AcademicBG.22e0987e.jpg",
     "static/media/CLB_PrimaryLogo.png": "/static/media/CLB_PrimaryLogo.6273f73c.png",
@@ -68,10 +68,10 @@
     "static/media/mountains.jpg": "/static/media/mountains.ce701f9e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.246ffeb5.js",
+    "static/js/runtime-main.8bb1d0e8.js",
     "static/css/2.5f1adba5.chunk.css",
-    "static/js/2.cec32898.chunk.js",
-    "static/css/main.666f1e5a.chunk.css",
-    "static/js/main.2aafb887.chunk.js"
+    "static/js/2.f28e01d4.chunk.js",
+    "static/css/main.833cb4df.chunk.css",
+    "static/js/main.54dc9249.chunk.js"
   ]
 }
