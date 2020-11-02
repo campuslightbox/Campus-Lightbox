@@ -7,6 +7,13 @@ const tags = {
     show: true,
     TopTen: true,
   },
+  free4UBC: {
+    category: "cost",
+    displayName: "Free For Students",
+    color: "green",
+    show: true,
+    TopTen: false,
+  },
   paid: {
     category: "cost",
     displayName: "Paid",

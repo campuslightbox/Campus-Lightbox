@@ -30,10 +30,11 @@ var quizQuestions = [
   {
     question: "What's your cost preference?",
     answers: [
-      { type: "free", content: "Free", letter: "A" },
-      { type: "paid", content: "Paid", letter: "B" },
-      { type: "less50", content: "Less than $50", letter: "C" },
-      { type: "more100", content: "More than $100", letter: "D" },
+      { type: "free", content: "Free For All", letter: "A" },
+      { type: "free4UBC", content: "Free For Students", letter: "B" },
+      { type: "paid", content: "Paid", letter: "C" },
+      { type: "less50", content: "Less than $50", letter: "D" },
+      { type: "more100", content: "More than $100", letter: "E" },
     ],
   },
 
