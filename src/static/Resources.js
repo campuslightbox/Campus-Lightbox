@@ -96,6 +96,7 @@ export default [
     background: UBCCounsellingServiceBG,
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "selfHarm",
       "suicidal",
@@ -157,6 +158,7 @@ export default [
     background: UMCABG,
     tags: [
       "free",
+      "free4UBC",
       "spiritual",
       "less1Week",
       "two3Days",
@@ -180,7 +182,7 @@ export default [
     logo: UBCStudentHealthLogo,
     background: UBCStudentHealthBG,
     tags: [
-      "free",
+      "free4UBC",
       "general",
       "sameDay",
       "low",
@@ -214,7 +216,7 @@ export default [
     logo: CentreForAccessibilityLogo,
     background: CentreForAccessibilityBG,
     tags: [
-      "free",
+      "free4UBC",
       "academic",
       "disability",
       "sameDay",
@@ -250,7 +252,7 @@ export default [
     logo: VillageMedicalLogo,
     background: VillageMedicalBG,
     tags: [
-      "free",
+      "free4UBC",
       "general",
       "sameDay",
       "less1Week",
@@ -283,7 +285,7 @@ export default [
     logo: WesbrookVillageMedicalLogo,
     background: WesbrookVillageMedicalBG,
     tags: [
-      "free",
+      "free4UBC",
       "general",
       "sameDay",
       "less1Week",
@@ -317,6 +319,7 @@ export default [
     background: NursesBG,
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "general",
       "immediate",
@@ -366,6 +369,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "academic",
       "financial",
       "sexualHealthAssault",
@@ -403,6 +407,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "less1Month",
       "low",
@@ -427,6 +432,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "academic",
       "substanceAbuse",
       "lgbt",
@@ -456,6 +462,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "sexualHealthAssault",
       "appointment",
       "walkIn",
@@ -486,7 +493,7 @@ export default [
       "Support, guidance, and information for people who identify as LGBTQ+. Provides folks with assistance in coming out and more.",
     logo: PrideLogo,
     background: "",
-    tags: ["free", "lgbt", "walkIn", "recurring", "peer"],
+    tags: ["free", "free4UBC", "lgbt", "walkIn", "recurring", "peer"],
     social: {
       website: "https://www.prideubc.com/",
       facebook: "https://www.facebook.com/prideubc/",
@@ -504,6 +511,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "womensHealth",
       "sameDay",
       "low",
@@ -525,6 +533,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "selfHarm",
       "suicidal",
@@ -557,6 +566,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "selfHarm",
       "suicidal",
       "depressionAnxiety",
@@ -582,6 +592,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "sexualHealthAssault",
       "immediate",
       "sameDay",
@@ -616,6 +627,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "substanceAbuse",
       "low",
       "medium",
@@ -638,6 +650,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "less1Week",
       "low",
@@ -660,6 +673,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "depressionAnxiety",
       "less1Week",
@@ -684,6 +698,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "depressionAnxiety",
       "less1Week",
@@ -705,6 +720,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "spiritual",
       "general",
@@ -764,6 +780,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "suicidal",
       "selfHarm",
@@ -793,6 +810,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "sexualHealthAssault",
       "womensHealth",
       "lgbt",
@@ -821,6 +839,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "substanceAbuse",
       "depressionAnxiety",
@@ -850,7 +869,7 @@ export default [
     logo: Here2Talk,
     background: "",
     tags: [
-      "free",
+      "free4UBC",
       "academic",
       "depressionAnxiety",
       "general",
@@ -908,6 +927,7 @@ export default [
     background: AcademicBG,
     tags: [
       "free",
+      "free4UBC",
       "academic",
       "less1Week",
       "low",
@@ -934,6 +954,7 @@ export default [
     background: EnrollmentBG,
     tags: [
       "free",
+      "free4UBC",
       "financial",
       "sameDay",
       "low",
@@ -992,6 +1013,7 @@ export default [
     email: "info@headsupguys.org",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "immediate",
       "low",
@@ -1016,6 +1038,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "immediate",
       "sameDay",
@@ -1040,6 +1063,7 @@ export default [
     logo: KeltysKey,
     tags: [
       "free",
+      "free4UBC",
       "general",
       "depressionAnxiety",
       "substanceAbuse",
@@ -1085,6 +1109,7 @@ export default [
     email: "webinfo@foundrybc.ca",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "substanceAbuse",
       "sameDay",
@@ -1108,6 +1133,7 @@ export default [
     logo: HealthLinkBC,
     tags: [
       "free",
+      "free4UBC",
       "substanceAbuse",
       "immediate",
       "low",
@@ -1130,6 +1156,7 @@ export default [
     email: "john.ogrodniczuk@ubc.ca",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "general",
       "immediate",
@@ -1152,6 +1179,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "substanceAbuse",
       "eatingDisorder",
@@ -1177,7 +1205,7 @@ export default [
       "This online modular-based resource can be used as a self-guided course or in individual modules by those wishing to develop their mental health literacy.",
     logo: MHliteracy,
     background: "",
-    tags: ["online", "generalAwareness", "allday", "free"],
+    tags: ["online", "generalAwareness", "allday", "free", "free4UBC"],
     social: {
       website: "https://www.teachmentalhealth.org/",
     },
@@ -1190,7 +1218,7 @@ export default [
       "Offered by Aspiria, UBC SAP is a free, 24/7 wellness resource for students. Services include personal counselling, life coaching, group programs to support your mental, emotional, physical and financial health.",
     logo: UBCgeneral,
     tags: [
-      "free",
+      "free4UBC",
       "academic",
       "financial",
       "depressionAnxiety",
@@ -1221,6 +1249,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "substanceAbuse",
       "eatingDisorder",
@@ -1246,6 +1275,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "general",
       "less1Month",
@@ -1270,6 +1300,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "depressionAnxiety",
       "general",
       "less1Week",
@@ -1292,7 +1323,6 @@ export default [
     logo: HenryChen,
     background: "",
     tags: [
-      "free",
       "paid",
       "depressionAnxiety",
       "eatingDisorder",
@@ -1307,7 +1337,6 @@ export default [
     },
     phone: "604-261-6000",
     address: "#360 - 650 West 41st Avenue \nVancouver,BC V5Z 2M9",
-    notes: " UBC students are free of charge at Henry's clinic.",
   },
   {
     name: "UBC Hospital - Koerner Pavilion",
@@ -1345,7 +1374,7 @@ export default [
       "Thrive is a mindset and a month-long series of events focused on helping everyone at UBC explore their path to mental health.",
     logo: UBCwellbeing,
     background: "",
-    tags: ["free", "general", "low", "events", "generalAwareness"],
+    tags: ["free", "free4UBC", "general", "low", "events", "generalAwareness"],
     social: {
       website:
         "https://wellbeing.ubc.ca/wellbeing-campaigns-and-initiatives/thrive",
@@ -1363,6 +1392,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "less1Week",
       "less1Month",
@@ -1389,7 +1419,7 @@ export default [
     logo: TAOapp,
     background: "",
     tags: [
-      "free",
+      "free4UBC",
       "general",
       "immediate",
       "low",
@@ -1411,6 +1441,7 @@ export default [
     background: "",
     tags: [
       "free",
+      "free4UBC",
       "general",
       "suicidal",
       "depressionAnxiety",
