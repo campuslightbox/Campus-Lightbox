@@ -9,7 +9,7 @@ function AnswerOption(props) {
         className="radioCustomButton"
         name="radioGroup"
         defaultChecked={props.answerType === props.answer}
-        id={props.answerType}
+        id={props.answerContent}
         value={props.answerType}
         onClick={props.onAnswerSelected} // aka handleAnswerSelected function in App.js
       />
