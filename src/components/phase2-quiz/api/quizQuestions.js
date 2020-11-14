@@ -49,7 +49,7 @@ var quizQuestions = [
   },
   {
     question:
-      "Do you prefer a resource that is in-person or virtully available?",
+      "Do you prefer a resource that is in-person or virtually available?",
     answers: [
       { type: "walkIn", content: "In-Person", letter: "A" },
       { type: "online", content: "Online Support", letter: "B" },
