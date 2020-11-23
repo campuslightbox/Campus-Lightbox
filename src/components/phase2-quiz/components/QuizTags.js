@@ -80,6 +80,11 @@ const tags = {
     color: "#B6595B",
     show: false,
   },
+  depressionAnxietyDup: {
+    category: "Type of issue",
+    displayName: "Depression/Anxiety",
+    show: false,
+  },
   eatingDisorder: {
     category: "Type of issue",
     displayName: "Eating Disorder ",
@@ -164,10 +169,21 @@ const tags = {
     color: "#1E8843",
     show: false,
   },
+
   high: {
     category: "Severity",
     displayName: "High",
     color: "#1E8843",
+    show: false,
+  },
+  mediumDup: {
+    category: "Severity",
+    displayName: "Medium2",
+    show: false,
+  },
+  highDup: {
+    category: "Severity",
+    displayName: "High2",
     show: false,
   },
 
