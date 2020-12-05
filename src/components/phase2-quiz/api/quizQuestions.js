@@ -3,9 +3,9 @@ var quizQuestions = [
     question:
       "How much does your current difficulty interfere with your daily life? (This response  helps us gauge the severity)",
     answers: [
-      { type: "high", content: "Very severe interference", letter: "A" },
+      { type: "highDup", content: "Very severe interference", letter: "A" },
       { type: "high", content: "Severe", letter: "B" },
-      { type: "medium", content: "Moderate", letter: "C" },
+      { type: "mediumDup", content: "Moderate", letter: "C" },
       { type: "medium", content: "Mild", letter: "D" },
       { type: "low", content: "No interference", letter: "E" },
     ],
@@ -13,8 +13,8 @@ var quizQuestions = [
   {
     question: "What type of issues are you experiencing?",
     answers: [
-      { type: "depressionAnxiety", content: "Depression", letter: "A" }, // or write Depression and/or Anxiety
-      { type: "depressionAnxiety", content: "Anxiety", letter: "B" }, // A B are using the same tag, (TODO: update Tags.js & Resource.js to split the tags)
+      { type: "depressionAnxiety", content: "Depression", letter: "A" },
+      { type: "depressionAnxietyDup", content: "Anxiety", letter: "B" },
       { type: "substanceAbuse", content: "Substance Abuse", letter: "C" },
       { type: "lgbt", content: "Gender/Identity", letter: "D" },
       { type: "general", content: "General Wellbeing Concern", letter: "E" },
