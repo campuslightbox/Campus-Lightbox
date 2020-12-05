@@ -90,8 +90,8 @@ class App extends Component {
   };
 
   handleAnswerSelected(e, answer) {
-    console.log("E.TARGET.VALUE: " + e.target.value);
-    console.log("answer passed was : " + answer);
+    //console.log("E.TARGET.VALUE: " + e.target.value);
+    //console.log("answer passed was : " + answer);
 
     if (e.target.value !== undefined) {
       this.setUserAnswer(e.target.value); // means the input value (AnswerOption.js)
@@ -124,7 +124,7 @@ class App extends Component {
         selected: true,
       }),
       () => {
-        console.log(this.state);
+        // console.log(this.state);
       }
     );
   }
@@ -151,7 +151,7 @@ class App extends Component {
       selected: true,
       answerLists: answerList,
     });
-    console.log(this.state);
+    //console.log(this.state);
   }
 
   setPreviousQuestion() {
@@ -171,7 +171,7 @@ class App extends Component {
         // previousAnswer: this.state.previousAnswer.previousAnswer,
       },
       () => {
-        console.log(this.state);
+        //console.log(this.state);
       }
     );
   }
@@ -181,9 +181,11 @@ class App extends Component {
     const answersCountKeys = Object.keys(answersCount).sort(function (a, b) {
       return answersCount[b] - answersCount[a];
     });
+
     const filterResult = answersCountKeys.filter(
       (x) => x !== "previousAnswerCount"
     );
+
     return filterResult;
   }
   // return array of filtered tags
@@ -191,9 +193,7 @@ class App extends Component {
   setResults(result) {
     let answerList = this.state.answerLists;
     answerList[this.state.counter] = this.state.answer;
-
     if (result.length !== 0) {
-      console.log(result, "return result of getResult");
       this.setState({
         result: result,
         flag: 1,
@@ -209,7 +209,10 @@ class App extends Component {
     answerList[this.state.counter] = this.state.answer;
 
     if (this.state.answerLists.length !== 0) {
-      console.log(answerList, "result of getResult in App.js");
+      answerList = answerList.map((tag) =>
+        tag.includes("Dup") ? tag.replace("Dup", "") : tag
+      );
+      console.log(answerList, "answerList");
       this.setState({
         result: answerList,
         flag: 1,
