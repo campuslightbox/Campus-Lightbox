@@ -9,6 +9,7 @@ import {
 } from "semantic-ui-react";
 import ReactGA from "react-ga";
 import FeedbackModal from "components/feedbackModal/FeedbackModal";
+import PrivacyPolicy from "components/footer/PrivacyPolicy";
 
 ReactGA.initialize("UA-139413334-1");
 
@@ -88,7 +89,15 @@ const FixedMenuLayout = () => (
             {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
             <br />
             <br />
-            Email us: <a href="mailto:admin@campuslightbox.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", textDecoration: "none" }}>admin@campuslightbox.com</a>
+            Email us:{" "}
+            <a
+              href="mailto:admin@campuslightbox.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              admin@campuslightbox.com
+            </a>
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
@@ -173,6 +182,7 @@ const FixedMenuLayout = () => (
               </a>
               .
             </h6>
+            <PrivacyPolicy></PrivacyPolicy>
           </Grid.Column>
         </Grid>
       </Container>
