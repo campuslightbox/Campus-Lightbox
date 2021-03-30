@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
+      counter: -1,
       questionId: 1,
       question: "",
       answerOptions: [],
@@ -56,6 +56,10 @@ class App extends Component {
       result: "",
       flag: 0,
     });
+  };
+
+  handleClick = () => {
+    this.setState({ counter: 0 });
   };
 
   resetForm = () => {
@@ -237,6 +241,7 @@ class App extends Component {
         setPreviousQuestion={this.setPreviousQuestion}
         selected={this.selected}
         answerLists={this.state.answerLists}
+        handleClick={this.handleClick}
       />
     );
   }
