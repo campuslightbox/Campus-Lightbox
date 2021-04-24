@@ -216,7 +216,7 @@ class App extends Component {
       answerList = answerList.map((tag) =>
         tag.includes("Dup") ? tag.replace("Dup", "") : tag
       );
-      console.log(answerList, "answerList");
+
       this.setState({
         result: answerList,
         flag: 1,

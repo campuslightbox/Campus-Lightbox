@@ -30,7 +30,7 @@ class CardContainer extends React.Component {
     } else {
       filterResults = this.resourceMatch(allResources, quizResultTags);
     }
-    console.log(filterResults, "filtered resources");
+
     return filterResults;
   };
 
