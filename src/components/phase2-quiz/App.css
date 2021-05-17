@@ -16,10 +16,10 @@
   font-size: large;
 }
 
-.disclaimerContainer {
+.welcomeContainer {
   font-size: 16px;
 }
-.disclaimer {
+.welcome {
   float: right;
   outline: none;
   border: none;
@@ -29,7 +29,7 @@
   background-color: rgb(20, 172, 55);
   color: white;
 }
-.disclaimer:hover {
+.welcome:hover {
   cursor: pointer;
   background-color: rgba(20, 172, 55, 0.8);
 }

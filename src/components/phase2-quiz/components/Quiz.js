@@ -25,9 +25,9 @@ function Quiz(props) {
       />
     );
   }
-  function renderDisclaimer() {
+  function renderWelcome() {
     return (
-      <div className="disclaimerContainer">
+      <div className="welcomeContainer">
         <p>
           {" "}
           Welcome to the resource finder! Our tool is meant to help you find a
@@ -41,7 +41,7 @@ function Quiz(props) {
           be met.
         </p>
 
-        <button onClick={props.handleClick} className="disclaimer">
+        <button onClick={props.handleClick} className="welcome">
           {" "}
           I understand{" "}
         </button>
@@ -139,7 +139,7 @@ function Quiz(props) {
     >
       <div key={props.questionId}>
         {props.counter === -1 ? (
-          renderDisclaimer()
+          renderWelcome()
         ) : (
           <>
             {" "}
