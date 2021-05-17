@@ -1,7 +1,7 @@
 var quizQuestions = [
   {
     question:
-      "How much does your current difficulty interfere with your daily life? (This response  helps us gauge the severity)",
+      "How much does your current difficulty interfere with your daily life? (Very severe interference: Not able to manage basic self care activities, No interference would be: Daily functioning unaffected)",
     answers: [
       { type: "highDup", content: "Very severe interference", letter: "A" },
       { type: "high", content: "Severe", letter: "B" },
@@ -11,22 +11,20 @@ var quizQuestions = [
     ],
   },
   {
-    question: "What type of issues are you experiencing?",
+    question: "Mental health challenges often co-occur and are not mutually exclusive. For the purpose of this tool, please select the challenge you require most urgent assistance for.",
     answers: [
-      { type: "depressionAnxiety", content: "Depression", letter: "A" },
-      { type: "depressionAnxietyDup", content: "Anxiety", letter: "B" },
-      { type: "substanceAbuse", content: "Substance Abuse", letter: "C" },
-      { type: "lgbt", content: "Gender/Identity", letter: "D" },
-      { type: "general", content: "General Wellbeing Concern", letter: "E" },
-      { type: "financial", content: "Financial", letter: "F" },
-      { type: "academic", content: "Academic", letter: "G" },
-      { type: "spiritual", content: "Spiritual", letter: "H" },
-      { type: "sexualHealthAssault", content: "Sexual Assault", letter: "I" },
-      { type: "disability", content: "Disability", letter: "J" },
-      { type: "eatingDisorder", content: "Eating Disorder", letter: "K" },
-      { type: "selfHarm", content: "Self Harm", letter: "L" },
-      { type: "suicidal", content: "Suicidal", letter: "M" },
-      { type: "womensHealth", content: "Women's Health", letter: "N" },
+      { type: "depressionAnxiety", content: "Mental Health related concerns (Depression, Anxiety, etc.)", letter: "A" },
+      { type: "substanceAbuse", content: "Substance Abuse", letter: "B" },
+      { type: "lgbt", content: "Gender/Identity", letter: "C" },
+      { type: "general", content: "General Wellbeing Concern", letter: "D" },
+      { type: "financial", content: "Financial", letter: "E" },
+      { type: "academic", content: "Academic", letter: "F" },
+      { type: "spiritual", content: "Spiritual", letter: "G" },
+      { type: "sexualHealthAssault", content: "Sexual Assault", letter: "H" },
+      { type: "disability", content: "Disability", letter: "I" },
+      { type: "eatingDisorder", content: "Eating Disorder", letter: "J" },
+      { type: "suicidal", content: "Self Harm/Suicide", letter: "K" },
+      { type: "womensHealth", content: "Women's Health", letter: "L" },
     ],
   },
   {

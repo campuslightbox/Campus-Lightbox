@@ -13,6 +13,9 @@ class CardContainer extends React.Component {
   }
   // resourceMatch is a reusable function
   resourceMatch = (resources, searchArr) => {
+    if (searchArr.includes('suicidal')) {
+      searchArr.push('selfHarmm')
+    }
     return _.filter(
       resources,
       (obj) => _.intersection(obj.tags, searchArr).length === 5
