@@ -7,7 +7,11 @@ import AnswerOption from "../components/AnswerOption";
 import { Icon } from "semantic-ui-react";
 import CrisisResponse from "./CrisisResponse";
 import "../App.css";
+import { logicChecker } from "../helper/logicHelper";
+
+// Refactor note: Need to turn App.js into functional component to use Context
 function Quiz(props) {
+  // const [CRState, setCRState] = useState(null);
   function renderAnswerOptions(key) {
     return (
       <AnswerOption
@@ -21,9 +25,9 @@ function Quiz(props) {
       />
     );
   }
-  function renderDisclaimer() {
+  function renderWelcome() {
     return (
-      <div className="disclaimerContainer">
+      <div className="welcomeContainer">
         <p>
           {" "}
           Welcome to the resource finder! Our tool is meant to help you find a
@@ -37,7 +41,7 @@ function Quiz(props) {
           be met.
         </p>
 
-        <button onClick={props.handleClick} className="disclaimer">
+        <button onClick={props.handleClick} className="welcome">
           {" "}
           I understand{" "}
         </button>
@@ -45,12 +49,83 @@ function Quiz(props) {
     );
   }
 
-  return (props.answerLists.includes("high") &&
-    props.answerLists.includes("depressionAnxiety")) ||
-    props.answerLists.includes("suicidal") ||
-    props.answerLists.includes("sexualHealthAssault") ||
-    props.answerLists.includes("selfHarm") ? (
-    <CrisisResponse />
+  const crisisResponse = logicChecker(props.answerLists);
+
+  return crisisResponse && props.counter < 3 ? (
+    <>
+      <CrisisResponse isCrisis={crisisResponse} />
+      <>
+        <Question content={props.question} />
+        <ul className="answerOptions">
+          {props.answerOptions.map(renderAnswerOptions)}
+        </ul>
+        <div>
+          {props.counter > 0 && props.doneFlag === 0 ? (
+            props.answerLists[props.counter] === undefined ? (
+              <div className="ArrowButtons">
+                <Icon
+                  name="arrow left"
+                  size="big"
+                  onClick={() => {
+                    props.setPreviousQuestion();
+                    // handleCRState();
+                  }}
+                  disabled={props.selected}
+                />
+                <Icon
+                  name="arrow right"
+                  size="big"
+                  disabled={true}
+                  onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                />
+              </div>
+            ) : (
+              <div className="ArrowButtons">
+                <Icon
+                  name="arrow left"
+                  size="big"
+                  onClick={() => {
+                    props.setPreviousQuestion();
+                    // handleCRState();
+                  }}
+                  disabled={props.selected}
+                />
+                <Icon
+                  name="arrow right"
+                  size="big"
+                  disabled={false}
+                  onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                />
+              </div>
+            )
+          ) : props.answerLists[0] === undefined ? (
+            <div className="rightArrow">
+              <Icon
+                name="arrow right"
+                size="big"
+                disabled={true}
+                onClick={(e) => props.onAnswerSelected(e, props.answer)}
+              />
+            </div>
+          ) : (
+            <div className="rightArrow">
+              <Icon
+                name="arrow right"
+                size="big"
+                disabled={false}
+                onClick={(e) => props.onAnswerSelected(e, props.answer)}
+                //call on answer selected
+              />
+            </div>
+          )}
+        </div>
+        <br />
+        <QuestionCount
+          counter={props.questionId}
+          total={props.questionTotal}
+        />{" "}
+      </>
+    </>
   ) : (
     <CSSTransition
       className="container"
@@ -64,7 +139,7 @@ function Quiz(props) {
     >
       <div key={props.questionId}>
         {props.counter === -1 ? (
-          renderDisclaimer()
+          renderWelcome()
         ) : (
           <>
             {" "}

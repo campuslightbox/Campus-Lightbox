@@ -13,6 +13,9 @@ class CardContainer extends React.Component {
   }
   // resourceMatch is a reusable function
   resourceMatch = (resources, searchArr) => {
+    if (searchArr.includes('suicidal')) {
+      searchArr.push('selfHarmm')
+    }
     return _.filter(
       resources,
       (obj) => _.intersection(obj.tags, searchArr).length === 5
@@ -30,7 +33,7 @@ class CardContainer extends React.Component {
     } else {
       filterResults = this.resourceMatch(allResources, quizResultTags);
     }
-    console.log(filterResults, "filtered resources");
+
     return filterResults;
   };
 
