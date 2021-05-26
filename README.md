@@ -27,8 +27,6 @@
 
 ![Homepage preview](/images/homepage.png)
 
-![Cards preview](/images/cards.png)
-
 ## Table of Contents
 
 - [Our Mission 🧠](#our-mission-)
@@ -45,6 +43,8 @@ Campus Lightbox was envisioned and created by [Project Aurora](https://www.proje
 We are a group of UBC students seeking to dismantle the barriers between campus mental health resources and those who are in need of it.
 
 We hope to continue the much-­needed conversation about student wellness on college campuses across the country and to empower students to take charge of their mental health.
+
+![Cards preview](/images/cards.png)
 ## Technology Stack 🛠️
 
 Dependencies defined in package.json:
