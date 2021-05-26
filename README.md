@@ -124,4 +124,4 @@ Project Link: [https://github.com/campuslightbox/Campus-Lightbox](https://github
 [issues-shield]: https://img.shields.io/github/issues/campuslightbox/Campus-Lightbox.svg?style=for-the-badge
 [issues-url]: https://github.com/campuslightbox/Campus-Lightbox/issues
 [license-shield]: https://img.shields.io/github/license/campuslightbox/Campus-Lightbox.svg?style=for-the-badge
-[license-url]: https://github.com/campuslightbox/Campus-Lightbox/blob/main/LICENSE.txt
+[license-url]: https://github.com/campuslightbox/Campus-Lightbox/blob/master/LICENSE
