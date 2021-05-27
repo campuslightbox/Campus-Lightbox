@@ -55,7 +55,7 @@ Dependencies defined in package.json:
 
 ## Prerequisites 🍪
 
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
+You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC.
 
 ## Setup And Deployment 🔧
 
@@ -72,14 +72,14 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
    npm start
    ```
 
-3. To deploy website, run:
+3. To deploy website (⚠️ Caution, test first), run:
 
    ```bash
     npm run deploy
    ```
 4. Visit the repo's settings, under GitHub Pages and set the Custom domain to: `campuslightbox.com`
 
-4. Congrats your site is up and running. To see it live, visit:
+4. Congrats! The updated website is up and running. To see it live, visit:
 
    ```https
      https://campuslightbox.com
