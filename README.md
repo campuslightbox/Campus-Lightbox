@@ -72,7 +72,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
    npm start
    ```
 
-3. To deploy website (⚠️ Caution, test first), run:
+3. To deploy website, run:
+⚠️ Caution: Test first
 
    ```bash
     npm run deploy
