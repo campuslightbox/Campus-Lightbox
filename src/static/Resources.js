@@ -114,7 +114,7 @@ export default [
     },
     address: "Brock Hall Room 1040\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "8:30am-4:30pm",
+      monday: "8:30am-5:30pm",
       tuesday: "8:30am-4:30pm",
       wednesday: "8:30am-7:00pm",
       thursday: "10:30am-4:30pm",
