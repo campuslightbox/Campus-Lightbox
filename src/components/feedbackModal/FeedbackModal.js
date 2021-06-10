@@ -10,6 +10,8 @@ const styles = {
     fontSize: 14,
   },
 };
+// this component can still be class component?
+// this component is used in Footer and InforCard flag as well
 
 class FeedbackModal extends React.Component {
   constructor(props) {
@@ -23,6 +25,7 @@ class FeedbackModal extends React.Component {
       sent: false,
       error: false,
     };
+    console.log(this.props);
   }
 
   onChange = (_, { name, value }) => {
@@ -134,7 +137,7 @@ class FeedbackModal extends React.Component {
 FeedbackModal.defaultProps = {
   trigger: <Button color="orange">Feedback</Button>,
   subject: "",
-  message: "",
+  message: "hello",
 };
 
 export default FeedbackModal;
