@@ -24,12 +24,433 @@ import moment from "moment";
 
 ReactGA.initialize("UA-139413334-1");
 
-// Turn this into a functional components ?
+// STEP ONE -- CHANGE IT TO FUNCTIONAL COMPONENTS  -- OK
+// STEP TWO -- REWRITE FUNCTION FOR READABILITY / CLEANER CODE
+// 17 functions -> can we reusable some of the code? become its own component (inside Quiz we also need infoCard)
 
 function InfoCard(props) {
-  console.log(props, "what is props");
+  const [side, setSide] = useState("front");
 
-  return <p>{props.name}</p>;
+  const onContactButtonClick = () => {
+    ReactGA.event({
+      category: "User",
+      action: "Clicked View Details: " + props.name,
+    });
+    setSide("back");
+  };
+
+  const onCloseButtonClick = () => {
+    setSide("front");
+  };
+
+  const renderTag = (tag) => {
+    const displayName = Tags.getDisplayNameForTag(tag);
+    const color = Tags.getColorForTag(tag);
+    const Top = Tags.getTopValue(tag);
+    if (Top) {
+      return (
+        <Label
+          as="a"
+          key={displayName}
+          style={_.extend(
+            { backgroundColor: color, borderColor: color },
+            styles.tag
+          )}
+        >
+          {displayName}
+        </Label>
+      );
+    }
+  };
+
+  const _isOpen = () => {
+    const todayDay = moment().format("dddd").toLowerCase();
+
+    if (props.hours[todayDay]) {
+      const hoursString = props.hours[todayDay];
+
+      const openString = hoursString.split("-")[0];
+      const closeString = hoursString.split("-")[1];
+
+      const todayOpen = moment(openString, "h:mma");
+      const todayClose = moment(closeString, "h:mma");
+      return moment().isBetween(todayOpen, todayClose);
+    } else {
+      return false;
+    }
+  };
+  // NEED REWRITE
+  const renderTodayHours = () => {
+    // Check if resource is 24/7
+    if (props.tags.indexOf("allday") > -1) {
+      return (
+        <Card.Meta>
+          <Icon name="circle" color="green" />
+          Open 24 / 7
+        </Card.Meta>
+      );
+    }
+
+    const todayDay = moment().format("dddd").toLowerCase();
+
+    if (props.hours[todayDay]) {
+      const isOpen = _isOpen(); // need to rewrite this isOpen function
+
+      const iconColor = isOpen ? "green" : "red";
+
+      return (
+        <Card.Meta>
+          <Icon name="circle" color={iconColor} />
+          {" " + props.hours[todayDay]}
+        </Card.Meta>
+      );
+    } else {
+      if (!props.hours.others) {
+        // Resource does not have alternative hours, so it is closed
+        return (
+          <Card.Meta>
+            <Icon name="circle" color="red" />
+            Closed
+          </Card.Meta>
+        );
+      }
+    }
+  };
+
+  // REWRITE THIS FUNCTION - do we need an array for minMaxDeviceWidth ??
+  // -> FrontInfoCard ?
+  // -> BackInfoCard ?
+  // extract function to helper function?
+  const renderFront = () => {
+    return (
+      <>
+        <MediaQuery
+          key="front-mobile-image"
+          minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}
+        >
+          <Image
+            src={props.background || background}
+            size="medium"
+            key="front-image"
+            style={styles.infoCardImageMobile}
+          />
+          {props.logo && (
+            <img className="banner-logo" alt="banner logo" src={props.logo} />
+          )}
+        </MediaQuery>
+        <Card.Content key="front-content" style={styles.infoCardFrontContent}>
+          <Card.Header>{props.name}</Card.Header>
+          <Card.Description>{props.description}</Card.Description>
+        </Card.Content>
+        <Card.Content
+          key="front-extra"
+          style={styles.infoCardFrontContent}
+          extra
+        >
+          <Card.Meta style={{ marginBottom: 8 }}>
+            {_.map(props.tags, (tag) => renderTag(tag))}
+          </Card.Meta>
+          {props.hours && renderTodayHours()}
+        </Card.Content>
+      </>
+    );
+  };
+
+  // -----------------------------------//////-----------------
+  // BACK of the card
+
+  const renderNameBack = () => {
+    return (
+      <Card.Content
+        key="back-header"
+        style={_.extend(styles.backNameHeader, styles.infoCardSection)}
+      >
+        <Card.Header>
+          {renderReportButton()}
+          {props.name}
+        </Card.Header>
+      </Card.Content>
+    );
+  };
+
+  const renderReportButton = () => {
+    return (
+      <div id="report-button">
+        <FeedbackModal
+          trigger={
+            <Button basic icon floated="right" size="small">
+              <Popup
+                size="tiny"
+                content="Report incorrect information"
+                trigger={<Icon name="flag" />}
+              />
+            </Button>
+          }
+          subject={'Inaccurate information regarding "' + props.name + '"'}
+        />
+      </div>
+    );
+  };
+
+  const renderPhoneNumber = () => {
+    const link = "tel://1-" + props.phone;
+
+    return (
+      <Card.Content key="back-contact" style={styles.infoCardSection}>
+        <Card.Description>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {props.phone}
+          </a>
+        </Card.Description>
+      </Card.Content>
+    );
+  };
+
+  const renderAddress = () => {
+    const link = "https://maps.google.com/?q=" + props.address;
+
+    return (
+      <Card.Content style={styles.infoCardSection}>
+        {props.address && (
+          <Card.Description>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              {props.address}
+            </a>
+          </Card.Description>
+        )}
+      </Card.Content>
+    );
+  };
+
+  const renderEmail = () => {
+    return (
+      <Card.Content style={styles.infoCardSection}>
+        {props.email && (
+          <a
+            href={"mailto:" + props.email}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.email}
+          </a>
+        )}
+      </Card.Content>
+    );
+  };
+
+  // REWRITE THIS FUNCTION
+  const renderSocial = () => {
+    return (
+      <Card.Content key="back-social-email" style={styles.infoCardSection}>
+        <Card.Description>
+          {props.social && props.social.website && (
+            <Button
+              circular
+              color="grey"
+              icon="world"
+              onClick={() => window.open(props.social.website)}
+            />
+          )}
+          {props.social && props.social.facebook && (
+            <Button
+              circular
+              color="facebook"
+              icon="facebook"
+              onClick={() => window.open(props.social.facebook)}
+            />
+          )}
+          {props.social && props.social.instagram && (
+            <Button
+              circular
+              color="instagram"
+              icon="instagram"
+              onClick={() => window.open(props.social.instagram)}
+            />
+          )}
+          {props.social && props.social.twitter && (
+            <Button
+              circular
+              color="twitter"
+              icon="twitter"
+              onClick={() => window.open(props.social.twitter)}
+            />
+          )}
+        </Card.Description>
+      </Card.Content>
+    );
+  };
+
+  // REWRITE !!! THIS FUNCTION IS TOO BIG
+  const renderHours = () => {
+    if (!props.hours) {
+      return;
+    }
+
+    const content = [];
+
+    if (props.hours.others) {
+      content.push(
+        <Card.Description key="others">{props.hours.others}</Card.Description>
+      );
+    } else {
+      const days = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+      ];
+      _.each(days, (dayInWeek, index) => {
+        const hoursForDay = props.hours[dayInWeek]; // example of debuggin React
+        const isToday = index + 1 === moment().isoWeekday();
+        const isOpen = _isOpen();
+        const iconColor = isOpen ? "green" : "red";
+
+        content.push(
+          <div key={dayInWeek}>
+            <div style={styles.hoursLabel}>
+              {_capitalize(dayInWeek).slice(0, 3) + ": "}
+            </div>
+            <div style={styles.hours}>
+              {!hoursForDay ? "Closed" : hoursForDay}
+            </div>
+            <div style={{ display: "inline-block" }}>
+              {isToday && (
+                <Icon
+                  name="circle"
+                  color={iconColor}
+                  size="small"
+                  style={{ marginLeft: 6 }}
+                />
+              )}
+            </div>
+          </div>
+        );
+      });
+    }
+
+    return (
+      <Grid.Row key="back-hours" style={styles.backRow}>
+        <Divider style={styles.divider} />
+        <Card.Content style={styles.infoCardSection}>{content}</Card.Content>
+      </Grid.Row>
+    );
+  };
+
+  const renderNotes = () => {
+    if (!props.notes) {
+      return;
+    }
+
+    return (
+      <Grid.Row key="back-notes" style={styles.backRow}>
+        <Divider style={styles.divider} />
+        <Card.Content style={styles.infoCardSection}>
+          {props.notes}
+        </Card.Content>
+      </Grid.Row>
+    );
+  };
+
+  const renderLastElement = () => {
+    // Hack to make sure button sticks to the bottom of the card
+    return <Card.Content key="back-last" style={styles.infoCardLast} />;
+  };
+
+  const _capitalize = (text) => {
+    if (!text || text.length < 1) {
+      return;
+    } else {
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+  };
+
+  // REWRITE THIS - REMOVE REPETED CODE AND INSTEAD OF RETURNING AN ARRAY RETURN THE COMPONENT!
+  const renderBack = () => {
+    const views = []; // rewrite this !!
+
+    if (props.phone) {
+      views.push(
+        <Grid.Row key="back-phone" style={styles.backRow}>
+          <Grid.Column width={4} style={styles.backLabel}>
+            Phone:
+          </Grid.Column>
+          <Grid.Column width={12}>{renderPhoneNumber()}</Grid.Column>
+        </Grid.Row>
+      );
+    }
+
+    if (props.address) {
+      views.push(
+        <Grid.Row key="back-address" style={styles.backRow}>
+          <Grid.Column width={4} style={styles.backLabel}>
+            Address:
+          </Grid.Column>
+          <Grid.Column width={12}>{renderAddress()}</Grid.Column>
+        </Grid.Row>
+      );
+    }
+
+    if (props.email) {
+      views.push(
+        <Grid.Row key="back-email" style={styles.backRow}>
+          <Grid.Column width={4} style={styles.backLabel}>
+            Email:
+          </Grid.Column>
+          <Grid.Column width={12}>{renderEmail()}</Grid.Column>
+        </Grid.Row>
+      );
+    }
+
+    if (props.social) {
+      views.push(
+        <Grid.Row key="back-social" style={styles.backRow}>
+          <Grid.Column width={4} style={styles.backLabel}>
+            Social:
+          </Grid.Column>
+          <Grid.Column width={12}>{renderSocial()}</Grid.Column>
+        </Grid.Row>
+      );
+    }
+
+    if (props.hours) {
+      views.push(renderHours());
+    }
+
+    if (props.notes) {
+      views.push(renderNotes());
+    }
+
+    views.push(renderLastElement());
+
+    return [
+      renderNameBack(),
+      <Card.Content key="back-content" style={styles.backHeader}>
+        <Grid>{views}</Grid>
+      </Card.Content>,
+    ];
+  };
+
+  return (
+    <Card style={styles.infoCard}>
+      {side === "front" ? renderFront() : renderBack()}
+      {side === "front" ? (
+        <div className="bottom-button">
+          <Button attached="bottom" basic onClick={onContactButtonClick}>
+            <Icon name="angle right" /> View Details
+          </Button>
+        </div>
+      ) : (
+        <div className="bottom-button">
+          <Button attached="bottom" basic onClick={onCloseButtonClick}>
+            <Icon name="angle right" /> See Less
+          </Button>
+        </div>
+      )}
+    </Card>
+  );
 }
 
 // class InfoCard extends React.Component {
