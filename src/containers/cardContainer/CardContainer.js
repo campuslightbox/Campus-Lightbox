@@ -85,7 +85,6 @@ class CardContainer extends React.Component {
       threshold: 0.15,
     };
     const fuse = new Fuse(resourcesForSearch, options);
-    console.log(fuse.search(this.props.searchText));
     const tempItems = fuse.search(this.props.searchText);
     const searchedPlaced = tempItems.map((x) => x.item);
     return searchedPlaced;
@@ -96,7 +95,6 @@ class CardContainer extends React.Component {
     //console.log(resources, "resouces in render first"); // return array of value object based on filter tags
     resources = this.searchResource(resources); // if no textsearch then same as tag search
     //console.log(resources, "resouces in render second"); // return array of value object based on filter tags or searchText
-    console.log(resources);
     if (resources.length === 0) {
       if (this.state.trackNoResults === "enabled") {
         ReactGA.event({
