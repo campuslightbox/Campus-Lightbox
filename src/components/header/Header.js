@@ -1,12 +1,15 @@
-import React from "react";
-import { Button, Modal } from "semantic-ui-react";
-import GetHelpModal from "../../components/gethelpmodal/GetHelpModal";
-import CovidModal from "../../components/covidmodal/CovidModal";
-import QuizApp from "../../components/phase2-quiz/App";
 // import Announcement from '../../components/banner/Announcement';
 import "./style.css";
 import "../animate.css";
+
+import { Button, Modal } from "semantic-ui-react";
+
+import CovidModal from "../../components/covidmodal/CovidModal";
+import GetHelpModal from "../../components/gethelpmodal/GetHelpModal";
+import QuizApp from "../../components/phase2-quiz/App";
+import React from "react";
 import ReactGA from "react-ga";
+import logo from "./CLB_PrimaryLogo.png";
 
 ReactGA.initialize("UA-139413334-1");
 
@@ -51,7 +54,7 @@ class Header extends React.Component {
     right2: "-150px",
     expiration: "",
   };
-  
+
   startTimer = (e) => {
     let expiredAt = new Date();
     expiredAt = expiredAt.setSeconds(expiredAt.getSeconds());
@@ -93,14 +96,10 @@ class Header extends React.Component {
           <CovidModal />
         </div>
         <div className="stuff">
-          <img
-            className="titleImage"
-            src={require("./CLB_PrimaryLogo.png")}
-            alt="Campus Lightbox"
-          />
+          <img className="titleImage" src={logo} alt="Campus Lightbox" />
           <div className="guide">Your Guide to UBC Mental Health Resources</div>
           <div className="select">Select From One of the Following Options</div>
-          
+
           <div className="startquiz" style={{ right: this.state.right }}>
             <h4 id="helper" style={{ right: this.state.right2 }}>
               Help me pick
@@ -130,8 +129,7 @@ class Header extends React.Component {
             <br />
             <br />
           </div>
-          
-          
+
           <div className="buttonsAll">
             <span className="resourceButton1 animated fadeIn">
               <Button
@@ -167,12 +165,9 @@ class Header extends React.Component {
             <Modal
               dimmer="blurring"
               trigger={
-                <Button
-                color='green'
-                style={styles.buttonResource}
-              >
-                Resource Recommender
-              </Button>
+                <Button color="green" style={styles.buttonResource}>
+                  Resource Recommender
+                </Button>
               }
               closeIcon
               size="large"

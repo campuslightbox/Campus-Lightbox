@@ -252,7 +252,7 @@ const tags = {
   // end of type of help
 };
 
-export default {
+const returnTags = {
   getAllTags: () => tags,
   getAllTagKeys: () => _.keys(tags),
   getCategories: () => _.uniq(_.map(_.values(tags), (obj) => obj.category)),
@@ -260,3 +260,5 @@ export default {
   getTopValue: (tag) => tags[tag].TopTen,
   getColorForTag: (tag) => tags[tag].color || "#aaaaaa",
 };
+
+export default returnTags;

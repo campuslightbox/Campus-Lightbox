@@ -1,3 +1,60 @@
+import AMSPeerSupport from "./logos/ams2.png";
+import AcademicBG from "./logos/AcademicBG.jpg";
+import AcademicLogo from "./logos/Academic.png";
+import AnxietyCanada from "./logos/Anxiety_Canada.png";
+import BCPA from "./logos/BCPA.png";
+import CentreForAccessibilityBG from "./logos/CentreForAccessibilityBG.jpg";
+import CentreForAccessibilityLogo from "./logos/CentreForAccessibility.png";
+import CounsellingBC from "./logos/counsellingbc.png";
+import CrisisLogo from "./logos/Crisis.png";
+import EnrollmentBG from "./logos/EnrollmentBG.jpg";
+import EnrollmentLogo from "./logos/Enrollment.png";
+import Foundry from "./logos/Foundry.png";
+import HeadsUpGuys from "./logos/headsupguys.png";
+import HealthLinkBC from "./logos/HealthLinkBC.png";
+import HenryChen from "./logos/HenryChen.png";
+import Here2Talk from "./logos/hereTalkLogo.png";
+import HeretoHelp from "./logos/heretohelp.png";
+import JackLogo from "./logos/Jack.png";
+import KaleidoscopeLogo from "./logos/Kaleidoscope.png";
+import KeltysKey from "./logos/keltyskey.png";
+import MHACLogo from "./logos/MHAC.png";
+import MHNLogo from "./logos/MHNLogo2.png";
+import MHliteracy from "./logos/MHliteracy.png";
+import MeditationLogo from "./logos/Meditation.png";
+import MindHealthBC from "./logos/MindHealthBC.png";
+import NursesBG from "./logos/NursesBG.jpg";
+import NursesLogo from "./logos/Nurses.png";
+import PayFair from "./logos/PayFairLogo.png";
+import PrideLogo from "./logos/Pride.png";
+import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
+import SASCLogo from "./logos/SASC.png";
+import SHARELogo from "./logos/SHARE.png";
+import SRCLogo from "./logos/SRC_circle3.png";
+import SVPROLogo from "./logos/SVPRO.png";
+import TAOapp from "./logos/TAOapp2.png";
+import UBCAthleteHub from "./logos/UBCAthleteHub2.png";
+import UBCBodyBanter from "./logos/UBCBodyBanter.png";
+import UBCCounsellingServiceBG from "./logos/UBCCounsellingServiceBG.jpg";
+import UBCCounsellingServiceLogo from "./logos/UBCCounsellingService.png";
+import UBCHospital from "./logos/UBCHospital.png";
+import UBCScarfe from "./logos/ubcscarfe.jpg";
+import UBCStudentHealthBG from "./logos/UBCStudentHealthBG.jpg";
+import UBCStudentHealthLogo from "./logos/UBCStudentHealth.png";
+import UBCgeneral from "./logos/UBClogo.png";
+import UBCwellbeing from "./logos/UBCwellbeing.png";
+import UMCABG from "./logos/UMCABG.jpg";
+import UMCALogo from "./logos/UMCA.png";
+import VCHLogo from "./logos/VCHlogo.jpg";
+import VillageMedicalBG from "./logos/UBCVillageMedicalBG.jpg";
+import VillageMedicalLogo from "./logos/UBCVillageMedical.png";
+import WellnessCan from "./logos/WellCanLogo.png";
+import WellnessCentreLogo from "./logos/WellnessCentre.png";
+import WesbrookVillageMedicalBG from "./logos/WesbrookVillageMedicalBG.jpg";
+import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
+import WomenCentreLogo from "./logos/WomenCentre.png";
+import WomenViolenceLogo from "./logos/WomenViolence.png";
+import YogaClubBG from "./logos/YogaClubBG.png";
 /*
     ##last updated: May, 7, 2019##
     {
@@ -28,66 +85,9 @@
     }
 */
 import YogaClubLogo from "./logos/YogaClub.png";
-import UBCCounsellingServiceLogo from "./logos/UBCCounsellingService.png";
-import JackLogo from "./logos/Jack.png";
-import UMCALogo from "./logos/UMCA.png";
-import UBCStudentHealthLogo from "./logos/UBCStudentHealth.png";
-import CentreForAccessibilityLogo from "./logos/CentreForAccessibility.png";
-import VillageMedicalLogo from "./logos/UBCVillageMedical.png";
-import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
-import NursesLogo from "./logos/Nurses.png";
-import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
-import WellnessCentreLogo from "./logos/WellnessCentre.png";
-import SASCLogo from "./logos/SASC.png";
-import AMSPeerSupport from "./logos/ams2.png";
-import PrideLogo from "./logos/Pride.png";
-import WomenCentreLogo from "./logos/WomenCentre.png";
-import KaleidoscopeLogo from "./logos/Kaleidoscope.png";
-import SHARELogo from "./logos/SHARE.png";
-import MHACLogo from "./logos/MHAC.png";
 import ZenLogo from "./logos/Zen.png";
-import MeditationLogo from "./logos/Meditation.png";
-import CrisisLogo from "./logos/Crisis.png";
-import WomenViolenceLogo from "./logos/WomenViolence.png";
-import AcademicLogo from "./logos/Academic.png";
-import EnrollmentLogo from "./logos/Enrollment.png";
-import SVPROLogo from "./logos/SVPRO.png";
-import SRCLogo from "./logos/SRC_circle3.png";
-import MHNLogo from "./logos/MHNLogo2.png";
-import CounsellingBC from "./logos/counsellingbc.png";
-import AnxietyCanada from "./logos/Anxiety_Canada.png";
-import KeltysKey from "./logos/keltyskey.png";
-import BCPA from "./logos/BCPA.png";
-import Foundry from "./logos/Foundry.png";
-import HealthLinkBC from "./logos/HealthLinkBC.png";
-import YogaClubBG from "./logos/YogaClubBG.png";
-import AcademicBG from "./logos/AcademicBG.jpg";
-import EnrollmentBG from "./logos/EnrollmentBG.jpg";
-import VillageMedicalBG from "./logos/UBCVillageMedicalBG.jpg";
-import WesbrookVillageMedicalBG from "./logos/WesbrookVillageMedicalBG.jpg";
-import UBCCounsellingServiceBG from "./logos/UBCCounsellingServiceBG.jpg";
-import CentreForAccessibilityBG from "./logos/CentreForAccessibilityBG.jpg";
-import UMCABG from "./logos/UMCABG.jpg";
-import UBCStudentHealthBG from "./logos/UBCStudentHealthBG.jpg";
-import NursesBG from "./logos/NursesBG.jpg";
-import HeadsUpGuys from "./logos/headsupguys.png";
-import UBCAthleteHub from "./logos/UBCAthleteHub2.png";
-import MindHealthBC from "./logos/MindHealthBC.png";
-import MHliteracy from "./logos/MHliteracy.png";
-import HeretoHelp from "./logos/heretohelp.png";
-import UBCScarfe from "./logos/ubcscarfe.jpg";
-import UBCgeneral from "./logos/UBClogo.png";
-import HenryChen from "./logos/HenryChen.png";
-import UBCHospital from "./logos/UBCHospital.png";
-import UBCwellbeing from "./logos/UBCwellbeing.png";
-import UBCBodyBanter from "./logos/UBCBodyBanter.png";
-import TAOapp from "./logos/TAOapp2.png";
-import VCHLogo from "./logos/VCHlogo.jpg";
-import PayFair from "./logos/PayFairLogo.png";
-import Here2Talk from "./logos/hereTalkLogo.png";
-import WellnessCan from "./logos/WellCanLogo.png";
 
-export default [
+const resources = [
   {
     name: "UBC Counselling Service",
     description:
@@ -1472,3 +1472,5 @@ export default [
       "Due to the COVID-19 pandemic, the service may be operating at reduced or adjusted hours. Please contact 604-675-3700 for further details.",
   },
 ];
+
+export default resources;
