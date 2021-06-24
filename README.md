@@ -82,9 +82,7 @@ You should have [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpk
     yarn deploy
    ```
 
-4. Visit the repo's settings, under GitHub Pages and set the Custom domain to: `campuslightbox.com`
-
-5. Congrats! The updated website is up and running. To see it live, visit:
+4. Congrats! The updated website is up and running. To see it live, visit:
 
    ```https
      https://campuslightbox.com
