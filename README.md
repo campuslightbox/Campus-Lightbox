@@ -50,8 +50,12 @@ We hope to continue the much-­needed conversation about student wellness on col
 
 Dependencies defined in package.json:
 
-[Reactjs](https://reactjs.org/)
+[ReactJS](https://reactjs.org/)
 | [Semantic-UI](https://react.semantic-ui.com/)
+| [EmailJS](https://www.emailjs.com/)
+| [FuseJS](https://fusejs.io/)
+| [Moment](https://momentjs.com/)
+| [UnderscoreJS](https://underscorejs.org/)
 
 ## Prerequisites 🍪
 
