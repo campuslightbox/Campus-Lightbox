@@ -1,8 +1,9 @@
-import React from "react";
-import { Header, Segment, Card, Icon, Button } from "semantic-ui-react";
-import QuizInfoCard from "./QuizInfoCard";
-import _ from "underscore";
+import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
+
 import MediaQuery from "react-responsive";
+import QuizInfoCard from "./QuizInfoCard";
+import React from "react";
+import _ from "underscore";
 
 class CardContainer extends React.Component {
   constructor(props) {
@@ -13,8 +14,8 @@ class CardContainer extends React.Component {
   }
   // resourceMatch is a reusable function
   resourceMatch = (resources, searchArr) => {
-    if (searchArr.includes('suicidal')) {
-      searchArr.push('selfHarmm')
+    if (searchArr.includes("suicidal")) {
+      searchArr.push("selfHarmm");
     }
     return _.filter(
       resources,

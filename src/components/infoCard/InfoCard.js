@@ -1,25 +1,25 @@
-import React from "react";
+import "./InfoCard.css";
+
 import {
   Button,
   Card,
-  Image,
-  Icon,
-  Label,
-  Grid,
   Divider,
+  Grid,
+  Icon,
+  Image,
+  Label,
   Popup,
 } from "semantic-ui-react";
-import Tags from "static/Tags";
-import MediaQuery from "react-responsive";
-import _ from "underscore";
-import moment from "moment";
-import ReactGA from "react-ga";
 
 import FeedbackModal from "components/feedbackModal/FeedbackModal";
+import MediaQuery from "react-responsive";
 import MediaQueryHelper from "static/MediaQueryHelper";
-
-import "./InfoCard.css";
+import React from "react";
+import ReactGA from "react-ga";
+import Tags from "static/Tags";
+import _ from "underscore";
 import background from "./mountains.jpg";
+import moment from "moment";
 
 ReactGA.initialize("UA-139413334-1");
 

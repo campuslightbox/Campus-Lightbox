@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
-import MainContainer from "containers/mainContainer/MainContainer";
+
 import Footer from "components/footer/Footer";
 import Header from "./components/header/Header";
+import MainContainer from "containers/mainContainer/MainContainer";
+import ReactGA from "react-ga";
 import Tags from "static/Tags";
 import _ from "underscore";
-import ReactGA from "react-ga";
 
 ReactGA.initialize("UA-139413334-1");
 ReactGA.pageview("Homepage");

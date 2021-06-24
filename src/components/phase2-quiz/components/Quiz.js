@@ -1,12 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
+import "../App.css";
+
+import AnswerOption from "../components/AnswerOption";
 import { CSSTransition } from "react-transition-group";
+import CrisisResponse from "./CrisisResponse";
+import { Icon } from "semantic-ui-react";
+import PropTypes from "prop-types";
 import Question from "../components/Question";
 import QuestionCount from "../components/QuestionCount";
-import AnswerOption from "../components/AnswerOption";
-import { Icon } from "semantic-ui-react";
-import CrisisResponse from "./CrisisResponse";
-import "../App.css";
+import React from "react";
 import { logicChecker } from "../helper/logicHelper";
 
 // Refactor note: Need to turn App.js into functional component to use Context

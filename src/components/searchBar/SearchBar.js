@@ -1,5 +1,5 @@
-import React from "react";
 import { Input } from "semantic-ui-react";
+import React from "react";
 
 class SearchBar extends React.Component {
   render = () => (

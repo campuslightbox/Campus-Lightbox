@@ -1,12 +1,14 @@
-import React, { Component } from "react";
-import quizQuestions from "./api/quizQuestions";
-import Quiz from "./components/Quiz";
 //import Result from "./components/Result";
 import "./App.css";
-import _ from "underscore";
-import Tags from "./components/QuizTags"; // copy from static/Tags
-import Resources from "../../static/Resources";
+
+import React, { Component } from "react";
+
+import Quiz from "./components/Quiz";
 import QuizResultCard from "../phase2-quiz/components/QuizResultCard";
+import Resources from "../../static/Resources";
+import Tags from "./components/QuizTags"; // copy from static/Tags
+import _ from "underscore";
+import quizQuestions from "./api/quizQuestions";
 
 class App extends Component {
   constructor(props) {

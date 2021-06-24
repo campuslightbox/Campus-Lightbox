@@ -124,7 +124,7 @@
   z-index: 50;
   font-size: 15px;
   font-weight: 600;
-  color: #21BA45;
+  color: #21ba45;
   position: fixed;
   bottom: 80px;
   right: -150px;
@@ -144,7 +144,7 @@
 }
 
 .resourceButton4 {
-  -webkit-animation-delay: 1.0s;
+  -webkit-animation-delay: 1s;
 }
 
 /* screenwidth less than 1024px

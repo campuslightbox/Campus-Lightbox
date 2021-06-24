@@ -1,19 +1,20 @@
-import React from "react";
 import {
   Button,
   Card,
-  Image,
-  Icon,
-  Label,
-  Grid,
   Divider,
+  Grid,
+  Icon,
+  Image,
+  Label,
 } from "semantic-ui-react";
-import Tags from "./QuizTags";
+
 import MediaQuery from "react-responsive";
-import _ from "underscore";
-import moment from "moment";
 import MediaQueryHelper from "static/MediaQueryHelper";
+import React from "react";
+import Tags from "./QuizTags";
+import _ from "underscore";
 import background from "./mountains.jpg";
+import moment from "moment";
 
 class InfoCard extends React.Component {
   constructor(props) {
