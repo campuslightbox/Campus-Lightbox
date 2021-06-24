@@ -45,6 +45,7 @@ We are a group of UBC students seeking to dismantle the barriers between campus 
 We hope to continue the much-­needed conversation about student wellness on college campuses across the country and to empower students to take charge of their mental health.
 
 ![Cards preview](/images/cards.png)
+
 ## Technology Stack 🛠️
 
 Dependencies defined in package.json:
@@ -52,10 +53,9 @@ Dependencies defined in package.json:
 [Reactjs](https://reactjs.org/)
 | [Semantic-UI](https://react.semantic-ui.com/)
 
-
 ## Prerequisites 🍪
 
-You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC.
+You should have [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/) installed on your PC.
 
 ## Setup And Deployment 🔧
 
@@ -67,25 +67,29 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
 
 2. To start the development server, run the following bash commands:
 
+   🚨 Alert: Avoid using npm, do not push `package-lock.json`
+
    ```bash
-   npm install
-   npm start
+   yarn install
+   yarn start
    ```
 
 3. To deploy website, run:
 
-⚠️ Caution: Test first
+   ⚠️ Caution: Test first
 
    ```bash
-    npm run deploy
+    yarn deploy
    ```
+
 4. Visit the repo's settings, under GitHub Pages and set the Custom domain to: `campuslightbox.com`
 
-4. Congrats! The updated website is up and running. To see it live, visit:
+5. Congrats! The updated website is up and running. To see it live, visit:
 
    ```https
      https://campuslightbox.com
    ```
+
 ## Contributors 🖥
 
 **Active Members:**
@@ -104,15 +108,13 @@ Camellia Peng - [GitHub](https://github.com/cching0L2)
 
 Shamit Rahman - [GitHub](https://github.com/rahmanshamit)
 
-Jarvin Rivera  - [GitHub](https://github.com/Jrivera1625)
-
+Jarvin Rivera - [GitHub](https://github.com/Jrivera1625)
 
 ## Contact 📧
 
 If you're interested in joining our team, email us at admin@campuslightbox.com
 
 Project Link: [https://github.com/campuslightbox/Campus-Lightbox](https://github.com/campuslightbox/Campus-Lightbox)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
