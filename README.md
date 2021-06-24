@@ -30,7 +30,7 @@
 ## Table of Contents
 
 - [Our Mission 🧠](#our-mission-)
-- [Technology Stack 🛠️](#technology-stack-)
+- [Technology Stack 🛠️](#technology-stack-%EF%B8%8F)
 - [Prerequisites 🍪](#prerequisites-)
 - [Setup And Deployment 🔧](#setup-and-deployment-)
 - [Contributors 🖥](#contributors-)
