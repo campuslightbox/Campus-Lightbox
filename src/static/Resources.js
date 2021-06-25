@@ -1023,6 +1023,9 @@ const resources = [
       "professional",
       "generalAwareness",
     ],
+    hours: {
+      others: "24/7",
+    },
     social: {
       website: "https://headsupguys.org/",
       facebook: "https://www.facebook.com/HeadsUpGuys",

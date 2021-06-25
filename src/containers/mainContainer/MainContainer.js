@@ -2,7 +2,7 @@ import "./MainContainer.css";
 
 import { Button, Container, Grid, Segment } from "semantic-ui-react";
 
-import CardContainer from "containers/cardContainer/CardContainer";
+import CardContainer from "containers/mainContainer/cardContainer/CardContainer";
 import Filter from "components/filter/Filter";
 import MediaQuery from "react-responsive";
 import MediaQueryHelper from "static/MediaQueryHelper";
