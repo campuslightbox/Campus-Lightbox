@@ -90,10 +90,7 @@ class App extends React.Component {
   };
 
   scrollToContent = () => {
-    window.scroll({
-      top: this.resourcesRef.current.offsetTop,
-      behavior: "smooth",
-    });
+    this.resourcesRef.current.scrollIntoView();
   };
 
   render = () => (
