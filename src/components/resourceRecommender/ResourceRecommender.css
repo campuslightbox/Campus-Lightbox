@@ -19,18 +19,10 @@ code {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #eee;
-  font-family: sans-serif;
-}
-
 .container {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  background: #fff;
   border-radius: 3px;
 }
 
