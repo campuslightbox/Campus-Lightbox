@@ -1,12 +1,12 @@
-import "../App.css";
+import "../ResourceRecommender.css";
 
-import AnswerOption from "../components/AnswerOption";
+import AnswerOption from "./AnswerOption";
 import { CSSTransition } from "react-transition-group";
 import CrisisResponse from "./CrisisResponse";
 import { Icon } from "semantic-ui-react";
 import PropTypes from "prop-types";
-import Question from "../components/Question";
-import QuestionCount from "../components/QuestionCount";
+import Question from "./Question";
+import QuestionCount from "./QuestionCount";
 import React from "react";
 import { logicChecker } from "../helper/logicHelper";
 

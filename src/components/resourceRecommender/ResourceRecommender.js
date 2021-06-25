@@ -1,16 +1,16 @@
 //import Result from "./components/Result";
-import "./App.css";
+import "./ResourceRecommender.css";
 
 import React, { Component } from "react";
 
 import Quiz from "./components/Quiz";
-import QuizResultCard from "../phase2-quiz/components/QuizResultCard";
+import QuizResultCard from "./components/QuizResultCard";
 import Resources from "../../static/Resources";
 import Tags from "./components/QuizTags"; // copy from static/Tags
 import _ from "underscore";
 import quizQuestions from "./api/quizQuestions";
 
-class App extends Component {
+class ResourceRecommender extends Component {
   constructor(props) {
     super(props);
 
@@ -278,4 +278,4 @@ class App extends Component {
   //example: {this.state.answerLists.includes("suicidal")? <SomethingElse> : <Default Header>}
 }
 
-export default App;
+export default ResourceRecommender;
