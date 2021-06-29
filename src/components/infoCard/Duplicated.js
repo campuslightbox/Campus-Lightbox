@@ -477,7 +477,8 @@ function InfoCard2(props) {
 //     this.state = {
 //       side: "front",
 //     };
-//     console.log(props, "what is props inside InfoCard");
+//
+//(props, "what is props inside InfoCard");
 //   }
 //   // below is original code don't modify
 

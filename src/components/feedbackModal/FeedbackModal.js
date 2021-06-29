@@ -25,7 +25,6 @@ class FeedbackModal extends React.Component {
       sent: false,
       error: false,
     };
-    console.log(this.props);
   }
 
   onChange = (_, { name, value }) => {

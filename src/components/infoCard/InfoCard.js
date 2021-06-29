@@ -11,6 +11,8 @@ import {
 } from "semantic-ui-react";
 import "./InfoCard.css";
 
+// to do: remove QuizInfoCard duplicated
+
 // front and back card
 import BackCard from "./backCard";
 import FrontCard from "./frontCard";
@@ -62,36 +64,6 @@ function InfoCard(props) {
 
   // -----------------------------------//////-----------------
   // BACK of the card
-
-  const renderPhoneNumber = () => {
-    const link = "tel://1-" + phone;
-
-    return (
-      <Card.Content key="back-contact" style={styles.infoCardSection}>
-        <Card.Description>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            {phone}
-          </a>
-        </Card.Description>
-      </Card.Content>
-    );
-  };
-
-  const renderAddress = () => {
-    const link = "https://maps.google.com/?q=" + address;
-
-    return (
-      <Card.Content style={styles.infoCardSection}>
-        {address && (
-          <Card.Description>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              {address}
-            </a>
-          </Card.Description>
-        )}
-      </Card.Content>
-    );
-  };
 
   const renderEmail = () => {
     return (
@@ -244,7 +216,7 @@ function InfoCard(props) {
             <Grid.Column width={4} style={styles.backLabel}>
               Phone:
             </Grid.Column>
-            <Grid.Column width={12}>{renderPhoneNumber()}</Grid.Column>
+            <Grid.Column width={12}>phone</Grid.Column>
           </Grid.Row>
         </Grid>
       </Card.Content>
