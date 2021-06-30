@@ -1,31 +1,17 @@
 import React from "react";
 import { Card, Image, Label, Icon } from "semantic-ui-react";
 import "./InfoCard.css";
-
 import { styles } from "./InfoCard";
+import { isOpen } from "./InfoCard";
 import MediaQuery from "react-responsive";
 import MediaQueryHelper from "static/MediaQueryHelper";
 import _ from "underscore";
 import defaultbackground from "./mountains.jpg";
 import Tags from "static/Tags";
 import moment from "moment";
+
 const FrontCard = (props) => {
   const { logo, background, name, description, tags, hours } = props;
-
-  // is Open can be a helper function used both in front and back ?
-  const _isOpen = () => {
-    const todayDay = moment().format("dddd").toLowerCase();
-    if (hours[todayDay]) {
-      const hoursString = hours[todayDay];
-      const [openString, closeString] = hoursString.split("-");
-
-      const todayOpen = moment(openString, "h:mma");
-      const todayClose = moment(closeString, "h:mma");
-      return moment().isBetween(todayOpen, todayClose);
-    } else {
-      return false;
-    }
-  };
 
   const renderTag = (tag) => {
     const displayName = Tags.getDisplayNameForTag(tag);
@@ -49,8 +35,8 @@ const FrontCard = (props) => {
   const renderTodayHours = () => {
     // Check if resource is 24/7
     const isAllDay = tags.includes("allday");
-    const isOpen = _isOpen();
-    const iconColor = isOpen || isAllDay ? "green" : "red";
+    const isOpenNow = isOpen(hours);
+    const iconColor = isOpenNow || isAllDay ? "green" : "red";
     const todayDay = moment().format("dddd").toLowerCase();
     if (isAllDay) {
       return (
@@ -64,7 +50,7 @@ const FrontCard = (props) => {
       return (
         <Card.Meta>
           <Icon name="circle" color={iconColor} />
-          {isOpen ? " " + hours[todayDay] : " Closed"}
+          {isOpenNow ? " " + hours[todayDay] : " Closed"}
         </Card.Meta>
       );
     }

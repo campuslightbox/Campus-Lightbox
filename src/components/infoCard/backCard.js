@@ -1,61 +1,17 @@
 import React from "react";
-import {
-  Card,
-  Image,
-  Label,
-  Icon,
-  Button,
-  Popup,
-  Grid,
-} from "semantic-ui-react";
+import { Card, Divider, Icon, Button, Popup, Grid } from "semantic-ui-react";
 import "./InfoCard.css";
-
 import { styles } from "./InfoCard";
-import MediaQuery from "react-responsive";
-import MediaQueryHelper from "static/MediaQueryHelper";
+import { isOpen } from "./InfoCard";
 import _ from "underscore";
-import defaultbackground from "./mountains.jpg";
-import Tags from "static/Tags";
 import moment from "moment";
 import FeedbackModal from "components/feedbackModal/FeedbackModal";
 
 const BackCard = (props) => {
-  const {
-    logo,
-    background,
-    name,
-    description,
-    tags,
-    hours,
-    phone,
-    address,
-    email,
-    social,
-  } = props;
-  //console.log(props, "what is social");
+  const { name, hours, phone, address, email, social, notes } = props;
   const phonelink = "tel://1-" + phone;
   const addresslink = "https://maps.google.com/?q=" + address;
   const emailLink = "mailto:" + email;
-  const renderReportButton = () => {
-    return (
-      <div id="report-button">
-        <FeedbackModal
-          trigger={
-            <Button basic icon floated="right" size="small">
-              <Popup
-                size="tiny"
-                content="Report incorrect information"
-                trigger={<Icon name="flag" />}
-              />
-            </Button>
-          }
-          subject={'Inaccurate information regarding "' + name + '"'}
-        />
-      </div>
-    );
-  };
-
-  // CONTINEU FROM RENDER SOCIAL BUTTONS - make it prettier!!!
   const renderSocialButtons = (social) => {
     return (
       <>
@@ -95,19 +51,30 @@ const BackCard = (props) => {
     );
   };
 
-  // use in both front and back
-  const _isOpen = () => {
-    const todayDay = moment().format("dddd").toLowerCase();
-    if (hours[todayDay]) {
-      const hoursString = hours[todayDay];
-      const [openString, closeString] = hoursString.split("-");
+  const elements = [
+    ["Phone", phonelink, phone],
+    ["Address", addresslink, address],
+    ["Email", emailLink, email],
+    ["Social", null, true, renderSocialButtons(social)],
+  ];
 
-      const todayOpen = moment(openString, "h:mma");
-      const todayClose = moment(closeString, "h:mma");
-      return moment().isBetween(todayOpen, todayClose);
-    } else {
-      return false;
-    }
+  const renderReportButton = () => {
+    return (
+      <div id="report-button">
+        <FeedbackModal
+          trigger={
+            <Button basic icon floated="right" size="small">
+              <Popup
+                size="tiny"
+                content="Report incorrect information"
+                trigger={<Icon name="flag" />}
+              />
+            </Button>
+          }
+          subject={'Inaccurate information regarding "' + name + '"'}
+        />
+      </div>
+    );
   };
 
   const _capitalize = (text) => {
@@ -118,13 +85,9 @@ const BackCard = (props) => {
     }
   };
 
-  //  Grid row and Card Content is repetitive!
-  // renderElements function here to return the same grid
-  // need to conditionally render the elements -- different cards have different elements
-
-  // rewrite thsi again to incorporate render social icons function as a parameter
+  // phone email address and social icons are all using the same styling
   const GridElement = (...args) => {
-    const [eleName, URLLink, itemName, fn] = args;
+    const [eleName, URLLink, itemName, fn] = args[0];
     if (itemName) {
       return (
         <Grid.Row key={`back-${eleName}`} style={styles.backRow}>
@@ -153,10 +116,12 @@ const BackCard = (props) => {
     } else return null;
   };
 
-  // REWRITE RENDER HOURS!!! don't use an array!!
   const renderHours = () => {
     if (!hours) {
       return;
+    }
+    if (hours.others) {
+      return <Card.Description key="others">{hours.others}</Card.Description>;
     }
     const days = [
       "monday",
@@ -168,7 +133,45 @@ const BackCard = (props) => {
       "sunday",
     ];
 
-    return <div>hours !</div>;
+    return days.map((dayInWeek, index) => {
+      const hoursForDay = hours[dayInWeek];
+      const isToday = index + 1 === moment().isoWeekday();
+      const iconColor = isOpen(hours) ? "green" : "red";
+
+      return (
+        <div key={dayInWeek}>
+          <div style={styles.hoursLabel}>
+            {_capitalize(dayInWeek).slice(0, 3) + ": "}
+          </div>
+          <div style={styles.hours}>
+            {!hoursForDay ? "Closed" : hoursForDay}
+          </div>
+          <div style={{ display: "inline-block" }}>
+            {isToday && (
+              <Icon
+                name="circle"
+                color={iconColor}
+                size="small"
+                style={{ marginLeft: 6 }}
+              />
+            )}
+          </div>
+        </div>
+      );
+    });
+  };
+
+  const renderNotes = () => {
+    if (!notes) {
+      return;
+    }
+
+    return (
+      <Grid.Row key="back-notes" style={styles.backRow}>
+        <Divider style={styles.divider} />
+        <Card.Content style={styles.infoCardSection}>{notes}</Card.Content>
+      </Grid.Row>
+    );
   };
 
   return (
@@ -184,11 +187,14 @@ const BackCard = (props) => {
       </Card.Content>
       <Card.Content key="back-content" style={styles.backHeader}>
         <Grid>
-          {GridElement("Phone", phonelink, phone)}
-          {GridElement("Address", addresslink, address)}
-          {GridElement("Email", emailLink, email)}
-          {GridElement("Social", null, true, renderSocialButtons(social))}
-          {renderHours()}
+          {elements.map((ele) => GridElement(ele))}
+          <Grid.Row key="back-hours" style={styles.backRow}>
+            {hours ? <Divider style={styles.divider} /> : null}
+            <Card.Content style={styles.infoCardSection}>
+              {renderHours()}
+            </Card.Content>
+          </Grid.Row>
+          {renderNotes()}
         </Grid>
       </Card.Content>
     </>
