@@ -1,8 +1,7 @@
 import React from "react";
 import { Card, Image, Label, Icon } from "semantic-ui-react";
 import "./InfoCard.css";
-import { styles } from "./InfoCard";
-import { isOpen } from "./InfoCard";
+import { styles, isOpen } from "./InfoCard";
 import MediaQuery from "react-responsive";
 import MediaQueryHelper from "static/MediaQueryHelper";
 import _ from "underscore";

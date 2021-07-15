@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Button, Card, Icon } from "semantic-ui-react";
 import "./InfoCard.css";
 
-// TO DO !!! remove QuizInfoCard duplicated
-// TO DO !! Rebase with master branch!!
-
 import BackCard from "./backCard";
 import FrontCard from "./frontCard";
 

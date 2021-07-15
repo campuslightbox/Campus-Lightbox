@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Divider, Icon, Button, Popup, Grid } from "semantic-ui-react";
 import "./InfoCard.css";
-import { styles } from "./InfoCard";
-import { isOpen } from "./InfoCard";
+import { styles, isOpen } from "./InfoCard";
+
 import _ from "underscore";
 import moment from "moment";
 import FeedbackModal from "components/feedbackModal/FeedbackModal";

@@ -1,9 +1,7 @@
 import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
 
 import MediaQuery from "react-responsive";
-import QuizInfoCard from "./QuizInfoCard";
 
-// Remove Duplicated QuizInfoCard
 import InfoCard from "components/infoCard/InfoCard";
 
 import React from "react";
