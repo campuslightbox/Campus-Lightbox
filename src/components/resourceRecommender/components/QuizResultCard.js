@@ -34,7 +34,7 @@ class CardContainer extends React.Component {
       let Match1 = this.resourceMatch(allResources, search1);
       let Match2 = this.resourceMatch(allResources, search2);
       let Match3 = this.resourceMatch(allResources, search3);
-      filterResults = _.unique([...Match1, ...Match2, ...Match3]);
+      filterResults = _.uniq([...Match1, ...Match2, ...Match3]);
     } else {
       filterResults = this.resourceMatch(allResources, quizResultTags);
     }
