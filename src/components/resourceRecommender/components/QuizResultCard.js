@@ -1,128 +1,95 @@
 import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
 
 import MediaQuery from "react-responsive";
-import QuizInfoCard from "./QuizInfoCard";
+
+import InfoCard from "components/infoCard/InfoCard";
+
 import React from "react";
 import _ from "underscore";
 
-class CardContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      trackNoResults: "enabled",
-    };
-  }
-  // resourceMatch is a reusable function
-  resourceMatch = (resources, searchArr) => {
+const CardContainer = ({
+  resources,
+  resetForm,
+  quizResult,
+  backFromResult,
+}) => {
+  const resourceMatch = (resources, searchArr) => {
     if (searchArr.includes("suicidal")) {
-      searchArr.push("selfHarmm");
+      searchArr.push("selfHarm");
     }
     return _.filter(
       resources,
       (obj) => _.intersection(obj.tags, searchArr).length === 5
     );
   };
-  filterResource = (allResources) => {
-    const quizResultTags = this.props.quizResult; // the filtered tags from App.js
+
+  const filterResource = (allResources) => {
     var filterResults;
-    if (quizResultTags.includes("nopreference")) {
-      let search1 = quizResultTags.slice(0, 4).concat("walkIn");
-      let search2 = quizResultTags.slice(0, 4).concat("online");
-      let Match1 = this.resourceMatch(allResources, search1);
-      let Match2 = this.resourceMatch(allResources, search2);
+    if (quizResult.includes("nopreference")) {
+      let search1 = quizResult.slice(0, 4).concat("walkIn");
+      let search2 = quizResult.slice(0, 4).concat("online");
+      let Match1 = resourceMatch(allResources, search1);
+      let Match2 = resourceMatch(allResources, search2);
       filterResults = _.uniq(Match1.concat(Match2));
     } else {
-      filterResults = this.resourceMatch(allResources, quizResultTags);
+      filterResults = resourceMatch(allResources, quizResult);
     }
-
     return filterResults;
   };
+  const filteredData = filterResource(resources);
 
-  render = () => {
-    let resources = this.filterResource(this.props.resources);
-
-    if (resources.length === 0) {
-      return (
+  return (
+    <>
+      {filteredData.length ? (
         <>
-          <Segment placeholder>
-            <Header icon>
-              Sorry, no results found.
-              <br />
-              <br />
-              Try a different search or filters.
-            </Header>
-          </Segment>
-          <div className="parentDiv">
-            <div className="leftcol">
-              {" "}
-              <Icon
-                name="arrow left"
-                size="big"
-                onClick={this.props.backFromResult}
-                disabled={false}
-              />
-            </div>
-            <div className="center">
-              <Button negative onClick={this.props.resetForm}>
-                Start Over
-              </Button>
-            </div>
-            <div className="rightcol"></div>
-          </div>
+          <MediaQuery minWidth={800}>
+            <Segment basic>
+              <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
+                {_.map(filteredData, (resource, index) => (
+                  <InfoCard key={index.toString()} {...resource} /> // spread the props
+                ))}
+              </Card.Group>
+            </Segment>
+          </MediaQuery>
+          <MediaQuery maxWidth={799}>
+            <Segment basic>
+              <Card.Group>
+                {_.map(filteredData, (resource, index) => (
+                  <InfoCard key={index.toString()} {...resource} />
+                ))}
+              </Card.Group>
+            </Segment>
+          </MediaQuery>
         </>
-      );
-    }
-
-    return (
-      <>
-        <MediaQuery minWidth={800}>
-          <Segment basic>
-            <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
-              {_.map(resources, (resource, index) => (
-                <QuizInfoCard key={index.toString()} {...resource} /> // spread the props
-              ))}
-            </Card.Group>
-          </Segment>
-        </MediaQuery>
-        <MediaQuery maxWidth={799}>
-          <Segment basic>
-            <Card.Group>
-              {_.map(resources, (resource, index) => (
-                <QuizInfoCard key={index.toString()} {...resource} />
-              ))}
-            </Card.Group>
-          </Segment>
-        </MediaQuery>
-
-        {/* <Icon
-                  name="arrow left"
-                  size="big"
-                  
-                  disabled={false}
-                />
-        
-        <Button negative>Negative Button</Button> */}
-
-        <div className="parentDiv">
-          <div className="leftcol">
-            {" "}
-            <Icon
-              name="arrow left"
-              size="big"
-              onClick={this.props.backFromResult}
-              disabled={false}
-            />
-          </div>
-          <div className="center">
-            <Button negative onClick={this.props.resetForm}>
-              Start Over
-            </Button>
-          </div>
-          <div className="rightcol"></div>
+      ) : (
+        <Segment placeholder>
+          <Header icon>
+            Sorry, no results found.
+            <br />
+            <br />
+            Try a different search or filters.
+          </Header>
+        </Segment>
+      )}
+      <div className="parentDiv">
+        <div className="leftcol">
+          {" "}
+          <Icon
+            name="arrow left"
+            size="big"
+            onClick={backFromResult}
+            disabled={false}
+          />
         </div>
-      </>
-    );
-  };
-}
+        <div className="center">
+          <Button negative onClick={resetForm}>
+            Start Over
+          </Button>
+        </div>
+        <div className="rightcol"></div>
+      </div>
+    </>
+  );
+};
 
 export default CardContainer;
