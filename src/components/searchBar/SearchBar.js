@@ -1,8 +1,7 @@
 import { Input } from "semantic-ui-react";
-import React from "react";
 
-class SearchBar extends React.Component {
-  render = () => (
+function SearchBar(props) {
+  return (
     <Input
       fluid
       action={{ icon: "cancel", onClick: this.props.onClearSearchText }}
