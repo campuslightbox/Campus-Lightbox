@@ -1,22 +1,22 @@
-import "./MainContainer.css";
+import './MainContainer.css';
 
-import { Button, Container, Grid, Segment } from "semantic-ui-react";
+import { Button, Container, Grid, Segment } from 'semantic-ui-react';
 
-import CardContainer from "containers/cardContainer/CardContainer";
-import Filter from "components/filter/Filter";
-import MediaQuery from "react-responsive";
-import MediaQueryHelper from "static/MediaQueryHelper";
-import React from "react";
-import Resources from "static/Resources";
-import SearchBar from "components/searchBar/SearchBar";
+import CardContainer from 'containers/cardContainer/CardContainer';
+import Filter from 'components/filter/Filter';
+import MediaQuery from 'react-responsive';
+import MediaQueryHelper from 'static/MediaQueryHelper';
+import React from 'react';
+import Resources from 'static/Resources';
+import SearchBar from 'components/searchBar/SearchBar';
 
 const styles = {
   container: {
-    marginTop: 36,
+    marginTop: 36
   },
   filterButton: {
-    marginRight: 16,
-  },
+    marginRight: 16
+  }
 };
 
 class MainContainer extends React.Component {
@@ -24,7 +24,7 @@ class MainContainer extends React.Component {
     super(props);
 
     this.state = {
-      filterOpen: false,
+      filterOpen: false
     };
   }
 
@@ -39,7 +39,7 @@ class MainContainer extends React.Component {
   render = () => (
     <Container style={styles.container}>
       <div ref={this.props.refProp}></div>
-      <Grid stackable compact="true">
+      <Grid stackable compact='true'>
         <Grid.Column width={4}>
           <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             {/* Laptop */}
@@ -60,7 +60,7 @@ class MainContainer extends React.Component {
           </MediaQuery>
           <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             {/* Mobile and tablet */}
-            <div className="filter-search-container">
+            <div className='filter-search-container'>
               <Filter
                 filter={this.props.filter}
                 open={this.state.filterOpen}
@@ -70,11 +70,11 @@ class MainContainer extends React.Component {
               />
               <Button
                 style={styles.filterButton}
-                color="green"
-                icon="options"
+                color='green'
+                icon='options'
                 onClick={this.openMobileFilter}
               />
-              <div className="mobile-search-bar">
+              <div className='mobile-search-bar'>
                 <SearchBar
                   searchText={this.props.searchText}
                   onSearchTextChange={this.props.onSearchTextChange}

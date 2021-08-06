@@ -1,27 +1,27 @@
-import React from "react";
-import { Button, Modal } from "semantic-ui-react";
+import { Button, Modal } from 'semantic-ui-react';
 
-import ReactGA from "react-ga";
+import React from 'react';
+import ReactGA from 'react-ga';
 
-ReactGA.initialize("UA-139413334-1");
+ReactGA.initialize('UA-139413334-1');
 
 class PrivacyPolicy extends React.Component {
   trackGA = (buttonName) => {
     ReactGA.event({
-      category: "Footer",
-      action: "Clicked " + buttonName + " Button",
+      category: 'Footer',
+      action: 'Clicked ' + buttonName + ' Button'
     });
   };
 
   render = () => (
     <Modal
       trigger={
-        <Button onClick={() => this.trackGA("Privacy Policy")}>
+        <Button onClick={() => this.trackGA('Privacy Policy')}>
           Privacy Policy
         </Button>
       }
       closeIcon
-      size="large"
+      size='large'
     >
       <Modal.Header>
         <center>Privacy Policy</center>
@@ -39,10 +39,8 @@ class PrivacyPolicy extends React.Component {
           We use Your Personal data to provide and improve the Service. By using
           the Service, You agree to the collection and use of information in
           accordance with this Privacy Policy. This Privacy Policy has been
-          created with the help of the{" "}
-          <a
-            href="https://www.privacypolicies.com/privacy-policy-generator/"
-          >
+          created with the help of the{' '}
+          <a href='https://www.privacypolicies.com/privacy-policy-generator/'>
             Privacy Policy Generator
           </a>
           .
@@ -129,10 +127,10 @@ class PrivacyPolicy extends React.Component {
           <li>
             <p>
               <strong>Website</strong> refers to Campus Lightbox, accessible
-              from{" "}
+              from{' '}
               <a
-                href="https://campuslightbox.com/"
-                rel="external nofollow noopener"
+                href='https://campuslightbox.com/'
+                rel='external nofollow noopener'
               >
                 https://campuslightbox.com/
               </a>
@@ -161,7 +159,7 @@ class PrivacyPolicy extends React.Component {
         <h3>Usage Data</h3>
         <p>Usage Data is collected automatically when using the Service.</p>
         <p>
-          Usage Data may include information such as Your Device's Internet
+          Usage Data may include information such as Your Device&apos;s Internet
           Protocol address (e.g. IP address), browser type, browser version, the
           pages of our Service that You visit, the time and date of Your visit,
           the time spent on those pages, unique device identifiers and other
@@ -204,10 +202,10 @@ class PrivacyPolicy extends React.Component {
             Flash Cookies are not managed by the same browser settings as those
             used for Browser Cookies. For more information on how You can delete
             Flash Cookies, please read &quot;Where can I change the settings for
-            disabling, or deleting local shared objects?&quot; available at{" "}
+            disabling, or deleting local shared objects?&quot; available at{' '}
             <a
-              href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-              rel="external nofollow noopener"
+              href='https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_'
+              rel='external nofollow noopener'
             >
               https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
             </a>
@@ -226,10 +224,8 @@ class PrivacyPolicy extends React.Component {
           Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies.
           Persistent Cookies remain on Your personal computer or mobile device
           when You go offline, while Session Cookies are deleted as soon as You
-          close Your web browser. Learn more about cookies:{" "}
-          <a
-            href="https://www.privacypolicies.com/blog/cookies/"
-          >
+          close Your web browser. Learn more about cookies:{' '}
+          <a href='https://www.privacypolicies.com/blog/cookies/'>
             What Are Cookies?
           </a>
           .
@@ -314,11 +310,11 @@ class PrivacyPolicy extends React.Component {
             <p>
               <strong>To contact You:</strong> To contact You by email,
               telephone calls, SMS, or other equivalent forms of electronic
-              communication, such as a mobile application's push notifications
-              regarding updates or informative communications related to the
-              functionalities, products or contracted services, including the
-              security updates, when necessary or reasonable for their
-              implementation.
+              communication, such as a mobile application&apos;s push
+              notifications regarding updates or informative communications
+              related to the functionalities, products or contracted services,
+              including the security updates, when necessary or reasonable for
+              their implementation.
             </p>
           </li>
           <li>
@@ -419,12 +415,12 @@ class PrivacyPolicy extends React.Component {
         <h2>Transfer of Your Personal Data</h2>
         <p>
           Your information, including Personal Data, is processed at the
-          Company's operating offices and in any other places where the parties
-          involved in the processing are located. It means that this information
-          may be transferred to — and maintained on — computers located outside
-          of Your state, province, country or other governmental jurisdiction
-          where the data protection laws may differ than those from Your
-          jurisdiction.
+          Company&apos;s operating offices and in any other places where the
+          parties involved in the processing are located. It means that this
+          information may be transferred to — and maintained on — computers
+          located outside of Your state, province, country or other governmental
+          jurisdiction where the data protection laws may differ than those from
+          Your jurisdiction.
         </p>
         <p>
           Your consent to this Privacy Policy followed by Your submission of
@@ -476,7 +472,7 @@ class PrivacyPolicy extends React.Component {
           acceptable means to protect Your Personal Data, We cannot guarantee
           its absolute security.
         </p>
-        <h1>Children's Privacy</h1>
+        <h1>Children&apos;s Privacy</h1>
         <p>
           Our Service does not address anyone under the age of 13. We do not
           knowingly collect personally identifiable information from anyone
@@ -489,15 +485,15 @@ class PrivacyPolicy extends React.Component {
         <p>
           If We need to rely on consent as a legal basis for processing Your
           information and Your country requires consent from a parent, We may
-          require Your parent's consent before We collect and use that
+          require Your parent&apos;s consent before We collect and use that
           information.
         </p>
         <h1>Links to Other Websites</h1>
         <p>
           Our Service may contain links to other websites that are not operated
           by Us. If You click on a third party link, You will be directed to
-          that third party's site. We strongly advise You to review the Privacy
-          Policy of every site You visit.
+          that third party&apos;s site. We strongly advise You to review the
+          Privacy Policy of every site You visit.
         </p>
         <p>
           We have no control over and assume no responsibility for the content,

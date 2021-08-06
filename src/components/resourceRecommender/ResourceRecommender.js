@@ -1,14 +1,14 @@
 //import Result from "./components/Result";
-import "./ResourceRecommender.css";
+import './ResourceRecommender.css';
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Quiz from "./components/Quiz";
-import QuizResultCard from "./components/QuizResultCard";
-import Resources from "../../static/Resources";
-import Tags from "./components/QuizTags"; // copy from static/Tags
-import _ from "underscore";
-import quizQuestions from "./api/quizQuestions";
+import Quiz from './components/Quiz';
+import QuizResultCard from './components/QuizResultCard';
+import Resources from '../../static/Resources';
+import Tags from './components/QuizTags'; // copy from static/Tags
+import _ from 'underscore';
+import quizQuestions from './api/quizQuestions';
 
 class ResourceRecommender extends Component {
   constructor(props) {
@@ -17,11 +17,11 @@ class ResourceRecommender extends Component {
     this.state = {
       counter: -1,
       questionId: 1,
-      question: "",
+      question: '',
       answerOptions: [],
-      answer: "",
+      answer: '',
       answersCount: {},
-      result: "",
+      result: '',
       //   previousAnswer: {},
       flag: 0,
       selected: false,
@@ -35,7 +35,7 @@ class ResourceRecommender extends Component {
           return obj;
         },
         {}
-      ),
+      )
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -49,14 +49,14 @@ class ResourceRecommender extends Component {
     );
     this.setState({
       question: quizQuestions[0].question,
-      answerOptions: staticAnswerOptions[0],
+      answerOptions: staticAnswerOptions[0]
     });
   }
 
   backFromResult = () => {
     this.setState({
-      result: "",
-      flag: 0,
+      result: '',
+      flag: 0
     });
   };
 
@@ -69,11 +69,11 @@ class ResourceRecommender extends Component {
       {
         counter: 0,
         questionId: 1,
-        question: "",
+        question: '',
         answerOptions: [],
-        answer: "",
+        answer: '',
         answersCount: {},
-        result: "",
+        result: '',
         //   previousAnswer: {},
         flag: 0,
         selected: false,
@@ -87,7 +87,7 @@ class ResourceRecommender extends Component {
             return obj;
           },
           {}
-        ),
+        )
       },
       () => {
         this.componentDidMount();
@@ -123,11 +123,11 @@ class ResourceRecommender extends Component {
         answersCount: {
           ...state.answersCount,
           [answer]: (state.answersCount[answer] || 0) + 1,
-          previousAnswerCount: this.state.answersCount,
+          previousAnswerCount: this.state.answersCount
         },
 
         answer: answer,
-        selected: true,
+        selected: true
       }),
       () => {
         // console.log(this.state);
@@ -150,12 +150,12 @@ class ResourceRecommender extends Component {
       answer:
         this.state.answerLists[this.state.counter + 1] !== undefined
           ? this.state.answerLists[this.state.counter + 1]
-          : "",
+          : '',
       //  previousAnswer:{answerText: this.state.answer,
       //   previousAnswer:this.state.previousAnswer
       // },
       selected: true,
-      answerLists: answerList,
+      answerLists: answerList
     });
     //console.log(this.state);
   }
@@ -173,7 +173,7 @@ class ResourceRecommender extends Component {
         answerOptions: quizQuestions[counter].answers,
         answer: previousanswer,
         selected: false,
-        answersCount: this.state.answersCount.previousAnswerCount,
+        answersCount: this.state.answersCount.previousAnswerCount
         // previousAnswer: this.state.previousAnswer.previousAnswer,
       },
       () => {
@@ -189,7 +189,7 @@ class ResourceRecommender extends Component {
     });
 
     const filterResult = answersCountKeys.filter(
-      (x) => x !== "previousAnswerCount"
+      (x) => x !== 'previousAnswerCount'
     );
 
     return filterResult;
@@ -203,10 +203,10 @@ class ResourceRecommender extends Component {
       this.setState({
         result: result,
         flag: 1,
-        answerLists: answerList,
+        answerLists: answerList
       }); // set result to result array
     } else {
-      this.setState({ result: "Undetermined", flag: 1 });
+      this.setState({ result: 'Undetermined', flag: 1 });
     }
   }
 
@@ -216,16 +216,16 @@ class ResourceRecommender extends Component {
 
     if (this.state.answerLists.length !== 0) {
       answerList = answerList.map((tag) =>
-        tag.includes("Dup") ? tag.replace("Dup", "") : tag
+        tag.includes('Dup') ? tag.replace('Dup', '') : tag
       );
 
       this.setState({
         result: answerList,
         flag: 1,
-        answerLists: answerList,
+        answerLists: answerList
       }); // set result to result array
     } else {
-      this.setState({ result: "Undetermined", flag: 1 });
+      this.setState({ result: 'Undetermined', flag: 1 });
     }
   }
 
@@ -267,7 +267,7 @@ class ResourceRecommender extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );
