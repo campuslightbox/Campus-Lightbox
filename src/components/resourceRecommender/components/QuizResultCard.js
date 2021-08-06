@@ -17,6 +17,7 @@ const CardContainer = ({
     if (searchArr.includes("suicidal")) {
       searchArr.push("selfHarm");
     }
+
     return _.filter(
       resources,
       (obj) => _.intersection(obj.tags, searchArr).length === 5
@@ -25,12 +26,15 @@ const CardContainer = ({
 
   const filterResource = (allResources) => {
     var filterResults;
-    if (quizResult.includes("nopreference")) {
-      let search1 = quizResult.slice(0, 4).concat("walkIn");
-      let search2 = quizResult.slice(0, 4).concat("online");
-      let Match1 = resourceMatch(allResources, search1);
-      let Match2 = resourceMatch(allResources, search2);
-      filterResults = _.uniq(Match1.concat(Match2));
+    if (quizResultTags.includes("nopreference")) {
+      // we have to separate search because some resources can have walkIn, online, and phone
+      let search1 = quizResultTags.slice(0, 4).concat("walkIn");
+      let search2 = quizResultTags.slice(0, 4).concat("online");
+      let search3 = quizResultTags.slice(0, 4).concat("phone");
+      let Match1 = this.resourceMatch(allResources, search1);
+      let Match2 = this.resourceMatch(allResources, search2);
+      let Match3 = this.resourceMatch(allResources, search3);
+      filterResults = _.uniq([...Match1, ...Match2, ...Match3]);
     } else {
       filterResults = resourceMatch(allResources, quizResult);
     }
