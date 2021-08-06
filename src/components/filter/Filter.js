@@ -1,4 +1,4 @@
-import "components/filter/Filter.css";
+import 'components/filter/Filter.css';
 
 import {
   Button,
@@ -8,33 +8,33 @@ import {
   Grid,
   Header,
   List,
-  Modal,
-} from "semantic-ui-react";
+  Modal
+} from 'semantic-ui-react';
 
-import Collapsible from "react-collapsible";
-import MediaQuery from "react-responsive";
-import MediaQueryHelper from "static/MediaQueryHelper";
-import React from "react";
-import Tags from "static/Tags";
-import _ from "underscore";
+import Collapsible from 'react-collapsible';
+import MediaQuery from 'react-responsive';
+import MediaQueryHelper from 'static/MediaQueryHelper';
+import React from 'react';
+import Tags from 'static/Tags';
+import _ from 'underscore';
 
 const styles = {
   filterList: {
     marginTop: 4,
     marginBottom: 4,
     marginRight: 14,
-    marginLeft: 0,
+    marginLeft: 0
   },
   filterHeader: {
-    marginBottom: 0,
+    marginBottom: 0
   },
   filterSection: {
     marginTop: 12,
-    marginBottom: 12,
+    marginBottom: 12
   },
   filterButton: {
-    borderRadius: 6,
-  },
+    borderRadius: 6
+  }
 };
 
 class Filter extends React.Component {
@@ -46,11 +46,11 @@ class Filter extends React.Component {
 
   transformTagsToFilterList(tags) {
     _.each(tags, (val, key) => {
-      val["tag"] = key;
+      val['tag'] = key;
       // console.log(val, "single tag val ");
     });
 
-    return _.groupBy(_.values(tags), "category");
+    return _.groupBy(_.values(tags), 'category');
     // group by tags' category value, check underscore.js doc for build-in methods
   }
 
@@ -60,7 +60,7 @@ class Filter extends React.Component {
       //console.log(val, "this.filterList val");
       //console.log(category, "this.filterList category");
       return (
-        <Grid.Row key={category} className="filter-row">
+        <Grid.Row key={category} className='filter-row'>
           <Card>
             <Card.Content>
               <Card.Header>
@@ -68,15 +68,15 @@ class Filter extends React.Component {
               </Card.Header>
             </Card.Content>
             <Card.Content>{this.createList(category, val)}</Card.Content>
-            <CardContent style={{ border: "none", paddingTop: "0px" }}>
+            <CardContent style={{ border: 'none', paddingTop: '0px' }}>
               <Collapsible
-                trigger="SHOW MORE ▼"
-                triggerWhenOpen="SHOW LESS ▲"
+                trigger='SHOW MORE ▼'
+                triggerWhenOpen='SHOW LESS ▲'
                 transitionTime={310}
                 triggerStyle={{
-                  cursor: "pointer",
-                  color: "darkblue",
-                  fontWeight: "500",
+                  cursor: 'pointer',
+                  color: 'darkblue',
+                  fontWeight: '500'
                 }}
               >
                 {this.createSubList(category, val)}
@@ -100,9 +100,9 @@ class Filter extends React.Component {
       });
 
       return (
-        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
+        <List.Item key={item.tag} style={{ marginTop: '5px' }}>
           {item.show ? (
-            ""
+            ''
           ) : (
             <Checkbox
               checked={existingItem ? true : false}
@@ -129,7 +129,7 @@ class Filter extends React.Component {
       // find return the first matching
 
       return (
-        <List.Item key={item.tag} style={{ marginTop: "5px" }}>
+        <List.Item key={item.tag} style={{ marginTop: '5px' }}>
           {item.show ? (
             <Checkbox
               checked={existingItem ? true : false}
@@ -137,7 +137,7 @@ class Filter extends React.Component {
               label={item.displayName}
             />
           ) : (
-            ""
+            ''
           )}
         </List.Item>
       );
@@ -147,19 +147,19 @@ class Filter extends React.Component {
   renderMobileFilter = () => (
     <Modal open={this.props.open} onClose={this.props.onCloseFilter}>
       <Modal.Header>
-        <div className="filter-header">
-          <Header as="h2" style={styles.filterHeader}>
+        <div className='filter-header'>
+          <Header as='h2' style={styles.filterHeader}>
             Filters
           </Header>
           <div>
             <button
-              className="control-button"
+              className='control-button'
               onClick={this.props.onClearFilter}
             >
               CLEAR ALL
             </button>
             <button
-              className="control-button green"
+              className='control-button green'
               onClick={this.props.onCloseFilter}
             >
               APPLY
@@ -175,7 +175,7 @@ class Filter extends React.Component {
     return _.map(this.filterList, (val, category) => {
       return (
         <div key={category}>
-          <h5 className="mobile-group-title">
+          <h5 className='mobile-group-title'>
             {this.getMobileDisplayNameForCategory(category)}
           </h5>
           <List horizontal style={styles.filterSection}>
@@ -188,7 +188,7 @@ class Filter extends React.Component {
 
   getMobileDisplayNameForCategory(category) {
     const displayName =
-      category === "additional" ? "Additional Tags" : category;
+      category === 'additional' ? 'Additional Tags' : category;
     return displayName.toUpperCase();
   }
 
@@ -204,7 +204,7 @@ class Filter extends React.Component {
           <Button
             compact
             toggle
-            size="small"
+            size='small'
             style={styles.filterButton}
             active={existingItem ? true : false}
             onClick={() => this.props.onFilterChange(category, item.tag)}
@@ -223,7 +223,7 @@ class Filter extends React.Component {
         <Grid.Row>
           <Button
             onClick={this.props.onClearFilter}
-            content="Clear Filter"
+            content='Clear Filter'
             primary
           />
         </Grid.Row>

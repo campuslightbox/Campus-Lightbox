@@ -16,12 +16,12 @@
 
 // export default QuestionCount;
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { Progress } from "semantic-ui-react";
+import { Progress } from 'semantic-ui-react';
 
 export default class QuestionCount extends Component {
-  render() {
+  render () {
     return (
       <div>
         <Progress

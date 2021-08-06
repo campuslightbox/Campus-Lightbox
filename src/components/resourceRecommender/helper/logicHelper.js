@@ -1,15 +1,15 @@
-import _ from "underscore";
+import _ from 'underscore';
 // depressionAnxietyDup will be removed!
 const combo1 = [
-  "eatingDisorder",
-  "depressionAnxiety",
-  "depressionAnxietyDup",
-  "substanceAbuse",
-  "high",
-  "highDup",
+  'eatingDisorder',
+  'depressionAnxiety',
+  'depressionAnxietyDup',
+  'substanceAbuse',
+  'high',
+  'highDup'
 ];
 
-const combo2 = ["sexualHealthAssault", "selfHarm", "suicidal"];
+const combo2 = ['sexualHealthAssault', 'selfHarm', 'suicidal'];
 
 export const logicChecker = (arr) => {
   return (

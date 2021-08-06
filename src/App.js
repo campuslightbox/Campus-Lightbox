@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import Footer from "components/footer/Footer";
-import Header from "./components/header/Header";
-import MainContainer from "containers/mainContainer/MainContainer";
-import ReactGA from "react-ga";
-import Tags from "static/Tags";
-import _ from "underscore";
+import Footer from 'components/footer/Footer';
+import Header from './components/header/Header';
+import MainContainer from 'containers/mainContainer/MainContainer';
+import ReactGA from 'react-ga';
+import Tags from 'static/Tags';
+import _ from 'underscore';
 
-ReactGA.initialize("UA-139413334-1");
-ReactGA.pageview("Homepage");
+ReactGA.initialize('UA-139413334-1');
+ReactGA.pageview('Homepage');
 
 class App extends React.Component {
   constructor(props) {
@@ -22,8 +22,8 @@ class App extends React.Component {
         },
         {}
       ),
-      searchText: "",
-      trackSearch: "enabled",
+      searchText: '',
+      trackSearch: 'enabled'
     };
     this.resourcesRef = React.createRef(); // Create a ref object
   }
@@ -47,8 +47,8 @@ class App extends React.Component {
     } else {
       // Not selected, select it
       ReactGA.event({
-        category: "Filters",
-        action: "Clicked On Filter: " + item,
+        category: 'Filters',
+        action: 'Clicked On Filter: ' + item
       });
       newState.filter[category].push(item);
     }
@@ -62,22 +62,22 @@ class App extends React.Component {
 
   searchTrackGA = () => {
     ReactGA.event({
-      category: "Search",
-      action: "Used Search Bar",
+      category: 'Search',
+      action: 'Used Search Bar'
     });
   };
 
   onSearchTextChange = (_, data) => {
-    if (this.state.trackSearch === "enabled") {
+    if (this.state.trackSearch === 'enabled') {
       this.searchTrackGA();
     }
-    this.setState({ trackSearch: "disabled" });
+    this.setState({ trackSearch: 'disabled' });
 
     this.setState({ searchText: data.value });
   };
 
   onClearSearchText = () => {
-    this.setState({ searchText: "" });
+    this.setState({ searchText: '' });
   };
 
   onPresetFilterChange = (presetFilter) => {

@@ -1,21 +1,21 @@
-import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
+import { Button, Card, Header, Icon, Segment } from 'semantic-ui-react';
 
-import MediaQuery from "react-responsive";
-import QuizInfoCard from "./QuizInfoCard";
-import React from "react";
-import _ from "underscore";
+import MediaQuery from 'react-responsive';
+import QuizInfoCard from './QuizInfoCard';
+import React from 'react';
+import _ from 'underscore';
 
 class CardContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      trackNoResults: "enabled",
+      trackNoResults: 'enabled'
     };
   }
   // resourceMatch is a reusable function
   resourceMatch = (resources, searchArr) => {
-    if (searchArr.includes("suicidal")) {
-      searchArr.push("selfHarmm");
+    if (searchArr.includes('suicidal')) {
+      searchArr.push('selfHarmm');
     }
     return _.filter(
       resources,
@@ -25,9 +25,9 @@ class CardContainer extends React.Component {
   filterResource = (allResources) => {
     const quizResultTags = this.props.quizResult; // the filtered tags from App.js
     var filterResults;
-    if (quizResultTags.includes("nopreference")) {
-      let search1 = quizResultTags.slice(0, 4).concat("walkIn");
-      let search2 = quizResultTags.slice(0, 4).concat("online");
+    if (quizResultTags.includes('nopreference')) {
+      let search1 = quizResultTags.slice(0, 4).concat('walkIn');
+      let search2 = quizResultTags.slice(0, 4).concat('online');
       let Match1 = this.resourceMatch(allResources, search1);
       let Match2 = this.resourceMatch(allResources, search2);
       filterResults = _.uniq(Match1.concat(Match2));
@@ -52,22 +52,22 @@ class CardContainer extends React.Component {
               Try a different search or filters.
             </Header>
           </Segment>
-          <div className="parentDiv">
-            <div className="leftcol">
-              {" "}
+          <div className='parentDiv'>
+            <div className='leftcol'>
+              {' '}
               <Icon
-                name="arrow left"
-                size="big"
+                name='arrow left'
+                size='big'
                 onClick={this.props.backFromResult}
                 disabled={false}
               />
             </div>
-            <div className="center">
+            <div className='center'>
               <Button negative onClick={this.props.resetForm}>
                 Start Over
               </Button>
             </div>
-            <div className="rightcol"></div>
+            <div className='rightcol'></div>
           </div>
         </>
       );
@@ -77,7 +77,7 @@ class CardContainer extends React.Component {
       <>
         <MediaQuery minWidth={800}>
           <Segment basic>
-            <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
+            <Card.Group style={{ margin: '-.875em 1em 0.5em 6em' }}>
               {_.map(resources, (resource, index) => (
                 <QuizInfoCard key={index.toString()} {...resource} /> // spread the props
               ))}
@@ -103,22 +103,22 @@ class CardContainer extends React.Component {
         
         <Button negative>Negative Button</Button> */}
 
-        <div className="parentDiv">
-          <div className="leftcol">
-            {" "}
+        <div className='parentDiv'>
+          <div className='leftcol'>
+            {' '}
             <Icon
-              name="arrow left"
-              size="big"
+              name='arrow left'
+              size='big'
               onClick={this.props.backFromResult}
               disabled={false}
             />
           </div>
-          <div className="center">
+          <div className='center'>
             <Button negative onClick={this.props.resetForm}>
               Start Over
             </Button>
           </div>
-          <div className="rightcol"></div>
+          <div className='rightcol'></div>
         </div>
       </>
     );

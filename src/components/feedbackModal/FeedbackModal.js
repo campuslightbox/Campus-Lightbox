@@ -1,14 +1,14 @@
-import { Button, Form, Message, Modal } from "semantic-ui-react";
+import { Button, Form, Message, Modal } from 'semantic-ui-react';
 
-import React from "react";
+import React from 'react';
 
 const styles = {
   title: {
-    fontSize: 20,
+    fontSize: 20
   },
   textValue: {
-    fontSize: 14,
-  },
+    fontSize: 14
+  }
 };
 
 class FeedbackModal extends React.Component {
@@ -16,12 +16,12 @@ class FeedbackModal extends React.Component {
     super(props);
 
     this.state = {
-      name: "",
-      email: "",
+      name: '',
+      email: '',
       subject: this.props.subject,
       message: this.props.message,
       sent: false,
-      error: false,
+      error: false
     };
   }
 
@@ -31,12 +31,12 @@ class FeedbackModal extends React.Component {
 
   onClose = () => {
     this.setState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
       sent: false,
-      error: false,
+      error: false
     });
   };
 
@@ -44,24 +44,24 @@ class FeedbackModal extends React.Component {
     console.log(this.state);
 
     window.emailjs
-      .send("mailgun", "template_qCO0QsXD", {
-        name: this.state.name || "(Empty)",
-        email: this.state.email || "(Empty)",
+      .send('mailgun', 'template_qCO0QsXD', {
+        name: this.state.name || '(Empty)',
+        email: this.state.email || '(Empty)',
         subject: this.state.subject,
-        message: this.state.message,
+        message: this.state.message
       })
-      .then((res) => {
+      .then(() => {
         this.setState({
           sent: true,
-          error: false,
+          error: false
         });
       })
       .catch((err) => {
         this.setState({
           sent: false,
-          error: true,
+          error: true
         });
-        console.error("Failed to send feedback. Error: ", err);
+        console.error('Failed to send feedback. Error: ', err);
       });
   };
 
@@ -77,48 +77,48 @@ class FeedbackModal extends React.Component {
             <Form.Group>
               <Form.Input
                 width={4}
-                label="Name (Optional)"
-                name="name"
+                label='Name (Optional)'
+                name='name'
                 value={this.state.name}
                 style={styles.textValue}
                 onChange={this.onChange}
               />
               <Form.Input
                 width={14}
-                label="Your Email Address (Required if you would like a response. If not, Optional)"
-                name="email"
+                label='Your Email Address (Required if you would like a response. If not, Optional)'
+                name='email'
                 value={this.state.email}
                 style={styles.textValue}
                 onChange={this.onChange}
               />
             </Form.Group>
             <Form.Input
-              label="Subject"
-              name="subject"
+              label='Subject'
+              name='subject'
               value={this.state.subject}
               style={styles.textValue}
               onChange={this.onChange}
             />
             <Form.TextArea
-              label="Message"
-              name="message"
+              label='Message'
+              name='message'
               value={this.state.message}
               style={styles.textValue}
               onChange={this.onChange}
             />
             <Message
               success
-              header="Feedback Sent!"
-              content="Thank you for helping us help you better :)"
+              header='Feedback Sent!'
+              content='Thank you for helping us help you better :)'
             />
             <Message
               error
-              header="Opps..."
-              content="Something went wrong when trying to send this feedback :("
+              header='Opps...'
+              content='Something went wrong when trying to send this feedback :('
             />
             <Button
-              type="submit"
-              color="green"
+              type='submit'
+              color='green'
               disabled={!this.state.message || !this.state.subject}
               onClick={this.onSubmitFeedback}
             >
@@ -132,9 +132,9 @@ class FeedbackModal extends React.Component {
 }
 
 FeedbackModal.defaultProps = {
-  trigger: <Button color="orange">Feedback</Button>,
-  subject: "",
-  message: "",
+  trigger: <Button color='orange'>Feedback</Button>,
+  subject: '',
+  message: ''
 };
 
 export default FeedbackModal;
