@@ -11,9 +11,14 @@ var quizQuestions = [
     ],
   },
   {
-    question: "Mental health challenges often co-occur and are not mutually exclusive. For the purpose of this tool, please select the challenge you require most urgent assistance for.",
+    question:
+      "Mental health challenges often co-occur and are not mutually exclusive. For the purpose of this tool, please select the challenge you require most urgent assistance for.",
     answers: [
-      { type: "depressionAnxiety", content: "Mental Health related concerns (Depression, Anxiety, etc.)", letter: "A" },
+      {
+        type: "depressionAnxiety",
+        content: "Mental Health related concerns (Depression, Anxiety, etc.)",
+        letter: "A",
+      },
       { type: "substanceAbuse", content: "Substance Abuse", letter: "B" },
       { type: "lgbt", content: "Gender/Identity", letter: "C" },
       { type: "general", content: "General Wellbeing Concern", letter: "D" },

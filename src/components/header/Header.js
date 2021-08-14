@@ -1,14 +1,14 @@
 // import Announcement from '../../components/banner/Announcement';
 import "./style.css";
-import "../animate.css";
+import "./animate.css";
 
 import { Button, Modal } from "semantic-ui-react";
 
-import CovidModal from "../../components/covidmodal/CovidModal";
-import GetHelpModal from "../../components/gethelpmodal/GetHelpModal";
-import QuizApp from "../../components/phase2-quiz/App";
+import CovidModal from "../covidModal/CovidModal";
+import GetHelpModal from "../getHelpModal/GetHelpModal";
 import React from "react";
 import ReactGA from "react-ga";
+import ResourceRecommender from "../resourceRecommender/ResourceRecommender";
 import logo from "./CLB_PrimaryLogo.png";
 
 ReactGA.initialize("UA-139413334-1");
@@ -117,7 +117,7 @@ class Header extends React.Component {
               <Modal.Header>Resource Recommender</Modal.Header>
               <Modal.Content>
                 <Modal.Description>
-                  <QuizApp />
+                  <ResourceRecommender />
                 </Modal.Description>
               </Modal.Content>
 
@@ -153,7 +153,7 @@ class Header extends React.Component {
               <Button
                 inverted
                 style={styles.button}
-                onClick={() => this.onFilterClicked("hotline")}
+                onClick={() => this.onFilterClicked("phone")}
               >
                 Phone Hotline
               </Button>
@@ -175,7 +175,7 @@ class Header extends React.Component {
               <Modal.Header>Resource Recommender</Modal.Header>
               <Modal.Content>
                 <Modal.Description>
-                  <QuizApp />
+                  <ResourceRecommender />
                 </Modal.Description>
               </Modal.Content>
 

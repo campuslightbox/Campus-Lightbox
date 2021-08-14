@@ -1,14 +1,14 @@
-import React from "react";
-import { Container, Grid, Button, Segment } from "semantic-ui-react";
-import MediaQuery from "react-responsive";
-
-import SearchBar from "components/searchBar/SearchBar";
-import Filter from "components/filter/Filter";
-import CardContainer from "containers/cardContainer/CardContainer";
-import Resources from "static/Resources";
-import MediaQueryHelper from "static/MediaQueryHelper";
-
 import "./MainContainer.css";
+
+import { Button, Container, Grid, Segment } from "semantic-ui-react";
+
+import CardContainer from "containers/cardContainer/CardContainer";
+import Filter from "components/filter/Filter";
+import MediaQuery from "react-responsive";
+import MediaQueryHelper from "static/MediaQueryHelper";
+import React from "react";
+import Resources from "static/Resources";
+import SearchBar from "components/searchBar/SearchBar";
 
 const styles = {
   container: {

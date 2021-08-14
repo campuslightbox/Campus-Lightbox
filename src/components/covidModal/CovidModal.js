@@ -1,5 +1,6 @@
+import { Button, Header, Icon, Modal } from "semantic-ui-react";
 import React, { Component } from "react";
-import { Icon, Button, Modal, Header } from "semantic-ui-react";
+
 import ReactGA from "react-ga";
 
 ReactGA.initialize("UA-139413334-1");

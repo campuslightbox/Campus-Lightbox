@@ -16,16 +16,19 @@
 
 // export default QuestionCount;
 
-import React, { Component } from 'react'
-import { Progress } from 'semantic-ui-react'
+import React, { Component } from "react";
+
+import { Progress } from "semantic-ui-react";
 
 export default class QuestionCount extends Component {
-
   render() {
     return (
       <div>
-        <Progress percent={(this.props.counter - 1)/this.props.total*100} indicating />
+        <Progress
+          percent={((this.props.counter - 1) / this.props.total) * 100}
+          indicating
+        />
       </div>
-    )
+    );
   }
 }

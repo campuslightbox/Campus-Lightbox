@@ -1,21 +1,22 @@
-import React from "react";
-import Collapsible from "react-collapsible";
-import {
-  Grid,
-  Button,
-  List,
-  Checkbox,
-  Card,
-  Modal,
-  Header,
-  CardContent,
-} from "semantic-ui-react";
-import MediaQuery from "react-responsive";
-import _ from "underscore";
-
-import Tags from "static/Tags";
-import MediaQueryHelper from "static/MediaQueryHelper";
 import "components/filter/Filter.css";
+
+import {
+  Button,
+  Card,
+  CardContent,
+  Checkbox,
+  Grid,
+  Header,
+  List,
+  Modal,
+} from "semantic-ui-react";
+
+import Collapsible from "react-collapsible";
+import MediaQuery from "react-responsive";
+import MediaQueryHelper from "static/MediaQueryHelper";
+import React from "react";
+import Tags from "static/Tags";
+import _ from "underscore";
 
 const styles = {
   filterList: {

@@ -1,5 +1,5 @@
+import { Header, Icon, Modal, Table } from "semantic-ui-react";
 import React, { useState } from "react";
-import { Icon, Modal, Header, Table } from "semantic-ui-react";
 
 const CrisisResponse = () => {
   const [open, setOpen] = useState(true);
