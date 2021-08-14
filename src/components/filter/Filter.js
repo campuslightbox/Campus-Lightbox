@@ -37,37 +37,27 @@ const styles = {
   },
 };
 
-class Filter extends React.Component {
-  constructor(props) {
-    super(props);
+function Filter(props) {
+  const filterList = transformTagsToFilterList(Tags.getAllTags());
 
-    this.filterList = this.transformTagsToFilterList(Tags.getAllTags());
-  }
-
-  transformTagsToFilterList(tags) {
+  function transformTagsToFilterList(tags) {
     _.each(tags, (val, key) => {
       val["tag"] = key;
-      // console.log(val, "single tag val ");
     });
 
     return _.groupBy(_.values(tags), "category");
     // group by tags' category value, check underscore.js doc for build-in methods
   }
 
-  createGroups = () => {
-    return _.map(this.filterList, (val, category) => {
-      //console.log(this.filterList, "this.filterList");
-      //console.log(val, "this.filterList val");
-      //console.log(category, "this.filterList category");
+  function createGroups() {
+    return _.map(filterList, (val, category) => {
       return (
         <Grid.Row key={category} className="filter-row">
           <Card>
             <Card.Content>
-              <Card.Header>
-                {this.getDisplayNameForCategory(category)}
-              </Card.Header>
+              <Card.Header>{getDisplayNameForCategory(category)}</Card.Header>
             </Card.Content>
-            <Card.Content>{this.createList(category, val)}</Card.Content>
+            <Card.Content>{createList(category, val)}</Card.Content>
             <CardContent style={{ border: "none", paddingTop: "0px" }}>
               <Collapsible
                 trigger="SHOW MORE ▼"
@@ -79,23 +69,25 @@ class Filter extends React.Component {
                   fontWeight: "500",
                 }}
               >
-                {this.createSubList(category, val)}
+                {createSubList(category, val)}
               </Collapsible>
             </CardContent>
           </Card>
         </Grid.Row>
       );
     });
-  };
+  }
 
   // rewrite code to make it cleaner
-  getDisplayNameForCategory = (text) =>
-    text.charAt(0).toUpperCase() + text.slice(1);
+  function getDisplayNameForCategory(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+
   // create sublist for hidden tags
-  createSubList = (category, items) => {
+  function createSubList(category, items) {
     return items.map((item) => {
       // Find if the item is currently selected
-      let existingItem = _.find(this.props.filter[category], (currItem) => {
+      let existingItem = _.find(props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
 
@@ -106,24 +98,24 @@ class Filter extends React.Component {
           ) : (
             <Checkbox
               checked={existingItem ? true : false}
-              onClick={() => this.props.onFilterChange(category, item.tag)}
+              onClick={() => props.onFilterChange(category, item.tag)}
               label={item.displayName}
             />
           )}
         </List.Item>
       );
     });
-  };
+  }
 
   // main list
   // items = the value object
-  createList = (category, items) => {
-    //console.log(this.props.filter, "this.state.filter in app.js");
-    //console.log(this.props.filter[category],"this.state.filter with category in app.js");
+  function createList(category, items) {
+    //console.log(props.filter, "state.filter in app.js");
+    //console.log(props.filter[category],"state.filter with category in app.js");
     return items.map((item) => {
       // Find if the item is currently selecteds
-      // see App.js (this.state.filter )
-      let existingItem = _.find(this.props.filter[category], (currItem) => {
+      // see App.js (state.filter )
+      let existingItem = _.find(props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
       // find return the first matching
@@ -133,7 +125,7 @@ class Filter extends React.Component {
           {item.show ? (
             <Checkbox
               checked={existingItem ? true : false}
-              onClick={() => this.props.onFilterChange(category, item.tag)}
+              onClick={() => props.onFilterChange(category, item.tag)}
               label={item.displayName}
             />
           ) : (
@@ -142,60 +134,59 @@ class Filter extends React.Component {
         </List.Item>
       );
     });
-  };
+  }
 
-  renderMobileFilter = () => (
-    <Modal open={this.props.open} onClose={this.props.onCloseFilter}>
-      <Modal.Header>
-        <div className="filter-header">
-          <Header as="h2" style={styles.filterHeader}>
-            Filters
-          </Header>
-          <div>
-            <button
-              className="control-button"
-              onClick={this.props.onClearFilter}
-            >
-              CLEAR ALL
-            </button>
-            <button
-              className="control-button green"
-              onClick={this.props.onCloseFilter}
-            >
-              APPLY
-            </button>
+  function renderMobileFilter() {
+    return (
+      <Modal open={props.open} onClose={props.onCloseFilter}>
+        <Modal.Header>
+          <div className="filter-header">
+            <Header as="h2" style={styles.filterHeader}>
+              Filters
+            </Header>
+            <div>
+              <button className="control-button" onClick={props.onClearFilter}>
+                CLEAR ALL
+              </button>
+              <button
+                className="control-button green"
+                onClick={props.onCloseFilter}
+              >
+                APPLY
+              </button>
+            </div>
           </div>
-        </div>
-      </Modal.Header>
-      <Modal.Content>{this.createMobileGroups()}</Modal.Content>
-    </Modal>
-  );
+        </Modal.Header>
+        <Modal.Content>{createMobileGroups()}</Modal.Content>
+      </Modal>
+    );
+  }
 
-  createMobileGroups = () => {
-    return _.map(this.filterList, (val, category) => {
+  function createMobileGroups() {
+    return _.map(filterList, (val, category) => {
       return (
         <div key={category}>
           <h5 className="mobile-group-title">
-            {this.getMobileDisplayNameForCategory(category)}
+            {getMobileDisplayNameForCategory(category)}
           </h5>
           <List horizontal style={styles.filterSection}>
-            {this.createMobileList(category, val)}
+            {createMobileList(category, val)}
           </List>
         </div>
       );
     });
-  };
+  }
 
-  getMobileDisplayNameForCategory(category) {
+  function getMobileDisplayNameForCategory(category) {
     const displayName =
       category === "additional" ? "Additional Tags" : category;
     return displayName.toUpperCase();
   }
 
-  createMobileList = (category, items) => {
+  function createMobileList(category, items) {
     return items.map((item) => {
       // Find if the item is currently selected
-      let existingItem = _.find(this.props.filter[category], (currItem) => {
+      let existingItem = _.find(props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
 
@@ -207,22 +198,22 @@ class Filter extends React.Component {
             size="small"
             style={styles.filterButton}
             active={existingItem ? true : false}
-            onClick={() => this.props.onFilterChange(category, item.tag)}
+            onClick={() => props.onFilterChange(category, item.tag)}
             content={item.displayName}
           />
         </List.Item>
       );
     });
-  };
+  }
 
-  render = () => (
+  return (
     <div>
       <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
         {/* Laptop */}
-        {this.createGroups()}
+        {createGroups()}
         <Grid.Row>
           <Button
-            onClick={this.props.onClearFilter}
+            onClick={props.onClearFilter}
             content="Clear Filter"
             primary
           />
@@ -230,7 +221,7 @@ class Filter extends React.Component {
       </MediaQuery>
       <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
         {/* Mobile and tablet */}
-        {this.renderMobileFilter()}
+        {renderMobileFilter()}
       </MediaQuery>
     </div>
   );
