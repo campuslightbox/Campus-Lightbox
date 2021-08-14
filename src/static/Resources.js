@@ -114,9 +114,9 @@ const resources = [
     },
     address: "Brock Hall Room 1040\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "8:30am-5:30pm",
+      monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
-      wednesday: "8:30am-7:00pm",
+      wednesday: "8:30am-6:00pm",
       thursday: "10:30am-4:30pm",
       friday: "8:30am-4:30pm",
     },
@@ -201,13 +201,13 @@ const resources = [
     hours: {
       monday: "8:00am-4:00pm",
       tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-8:00pm",
+      wednesday: "8:00am-4:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
-      saturday: "8:00am-3:30pm",
+      saturday: "closed",
     },
     notes:
-      "All appointments must now be booked by calling 604-822-7011. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
+      "All appointments must now be booked by calling 604-822-7011 or through our online form. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
   },
   {
     name: "Centre for Accessibility",
@@ -269,12 +269,12 @@ const resources = [
     },
     address: "#228 2155 Allison Road\nVancouver, BC V6T 1T5",
     hours: {
-      monday: "8:00am-4:00pm",
-      tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-4:00pm",
-      thursday: "8:00am-4:00pm",
-      friday: "8:00am-4:00pm",
-      saturday: "10:00am-4:00pm",
+      monday: "8:00am-5:00pm",
+      tuesday: "8:00am-5:00pm",
+      wednesday: "8:00am-5:00pm",
+      thursday: "8:00am-5:00pm",
+      friday: "8:00am-5:00pm",
+      saturday: "9:00am-3:00pm",
       sunday: "closed",
     },
   },
@@ -302,12 +302,12 @@ const resources = [
     },
     address: "5933 Birney Avenue\nVancouver, BC V6T 1W5",
     hours: {
-      monday: "8:00am-4:00pm",
-      tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-4:00pm",
-      thursday: "8:00am-4:00pm",
-      friday: "8:00am-4:00pm",
-      saturday: "10:00am-4:00pm",
+      monday: "8:00am-5:00pm",
+      tuesday: "8:00am-5:00pm",
+      wednesday: "8:00am-5:00pm",
+      thursday: "8:00am-5:00pm",
+      friday: "8:00am-5:00pm",
+      saturday: "9:00am-3:00pm",
       sunday: "closed",
     },
   },
@@ -339,13 +339,13 @@ const resources = [
       monday: "closed",
       tuesday: "closed",
       wednesday: "closed",
-      thursday: "10:00am-6:00pm",
+      thursday: "closed",
       friday: "closed",
       saturday: "closed",
       sunday: "closed",
     },
     notes:
-      "Hours differ from locations. Please check the website and follow the guidelines before visiting.",
+      "Nurse on Campus will resume in September 2021. Check back later for location and opening hour information.",
   },
   {
     name: "UBC Psychology Clinic",
@@ -391,13 +391,12 @@ const resources = [
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
     hours: {
-      monday: "11:00am-1:00pm",
       tuesday: "11:00am-3:00pm",
       wednesday: "11:00am-3:00pm",
       thursday: "11:00am-3:00pm",
     },
     notes:
-      "Our office is temporarily closed, but you can engage in topics relevant to your wellbeing through Canvas! Check the link below to enroll: https://canvas.ubc.ca/enroll/PCNEN4.",
+      "Drop by the Wellness Centre Virtual Info Desk using the Zoom link and passcode 123456 during our hours or contact us via our online form.",
   },
   {
     name: "Wellness Workshops",
@@ -427,7 +426,7 @@ const resources = [
   {
     name: "AMS Peer Support",
     description:
-      "Peer Support provides free, confidential, one-on-one peer support for UBC students and staff facing a wide variety of challenges.",
+      "Peer Support provides free, confidential, one-on-one  and group-style peer support for UBC students and staff facing a wide variety of challenges. Peer Support also provides educational workshops on mental health and harm reduction for UBC student groups and community members free of charge.",
     logo: AMSPeerSupport,
     background: "",
     tags: [
@@ -445,14 +444,13 @@ const resources = [
       "online",
       "peer",
     ],
-    phone: "604-822-9246",
     social: {
       website: "https://www.ams.ubc.ca/student-services/peer-support/",
-      instagram: "https://www.instagram.com/ams_peersupport/",
+      instagram: "https://www.instagram.com/ams_student_services/",
     },
     email: "peersupport@ams.ubc.ca",
     notes:
-      "AMS Peer Support is currently closed, but we will be starting our peer support services (virtually) on October 12th.",
+      "AMS Peer Support is closed for the Summer but will be restarting peer support and education services (virtually) on September 13th, 2021. Visit our website for the most up-to-date information.",
   },
   {
     name: "AMS Sexual Assault Support Centre (SASC)",
@@ -485,7 +483,7 @@ const resources = [
       sunday: "11:00am-7:00pm",
     },
     notes:
-      "Limited drop-in hours: 2pm-6pm from Monday to Sunday. On-call support & virtual appointments are available in regular hours.",
+      "Limited drop-in hours: 2pm-6pm from Monday to Sunday. On-call support & virtual appointments are available in regular hours. Hospital accompaniments are 8:00am-10:00pm, 7 days a week.",
   },
   {
     name: "AMS The Pride Collective",
@@ -617,7 +615,7 @@ const resources = [
       sunday: "closed",
     },
     notes:
-      "Services are only available online or over the phone.If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
+      "Services are only available online or over the phone. If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
   },
   {
     name: "Student Recovery Community at UBC",
