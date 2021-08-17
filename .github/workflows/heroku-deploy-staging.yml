@@ -1,0 +1,19 @@
+name: Deploy Staging
+# Staging URL: https://campuslightbox-staging.herokuapp.com/
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Deploy Staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Deploy Staging
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{ secrets.HEROKU_STAGING_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
