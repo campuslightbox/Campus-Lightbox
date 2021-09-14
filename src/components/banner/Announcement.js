@@ -1,5 +1,6 @@
+import { Button, Icon, Segment } from "semantic-ui-react";
+
 import React from "react";
-import { Segment, Icon, Button } from "semantic-ui-react";
 
 const style = {
   banner: {

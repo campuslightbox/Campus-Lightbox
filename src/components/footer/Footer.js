@@ -1,15 +1,16 @@
-import React from "react";
 import {
-  Container,
-  Segment,
   Button,
+  Container,
   Grid,
   Header,
   Modal,
+  Segment,
 } from "semantic-ui-react";
-import ReactGA from "react-ga";
+
 import FeedbackModal from "components/feedbackModal/FeedbackModal";
 import PrivacyPolicy from "components/footer/PrivacyPolicy";
+import React from "react";
+import ReactGA from "react-ga";
 
 ReactGA.initialize("UA-139413334-1");
 
