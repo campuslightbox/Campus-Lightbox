@@ -116,12 +116,12 @@ const resources = [
     hours: {
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
-      wednesday: "8:30am-6:00pm",
+      wednesday: "8:30am-7:00pm",
       thursday: "10:30am-4:30pm",
       friday: "8:30am-4:30pm",
     },
     notes:
-      "All appointments are being offered by phone during the COVID-19 outbreak.",
+      "Counselling Services is offering in-person and phone appointments for initial and follow-up appointments at this time. Students can call Counselling Services at 604 822 3811 to schedule an appointment by phone. First-time appointments are booked for the same day.",
   },
   {
     name: "UBC Yoga Club",
@@ -147,7 +147,7 @@ const resources = [
     email: "info.ubcyogaclub@gmail.com",
     address: "AMS Student Nest\n6133 University Blvd\nVancouver, BC V6T 1Z1",
     hours: {
-      others: "Classes cancelled for the rest of the school year.",
+      others: "Classes are being offered in person and virtually at this time.",
     },
   },
   {
@@ -207,7 +207,7 @@ const resources = [
       saturday: "closed",
     },
     notes:
-      "All appointments must now be booked by calling 604-822-7011 or through our online form. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
+      "Starting September 11, 2021, Student Health Services will be open on Saturday from 8 am to 3:45 pm. All appointments must now be booked by calling 604-822-7011 or through our online form. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
   },
   {
     name: "Centre for Accessibility",
@@ -243,7 +243,7 @@ const resources = [
       sunday: "closed",
     },
     notes:
-      "All in-person services have been suspended, but we are conducting appointments over the phone or via Skype. Please email or call us directly to book an appointment.",
+      "The Centre for Accessibility is open and will be providing service in person, online through Zoom, or by phone.",
   },
   {
     name: "University Village Medical & Dental Clinic - UBC Village",
@@ -335,17 +335,8 @@ const resources = [
         "https://students.ubc.ca/health/student-health-service/nurse-campus",
     },
     email: "student.health@ubc.ca",
-    hours: {
-      monday: "closed",
-      tuesday: "closed",
-      wednesday: "closed",
-      thursday: "closed",
-      friday: "closed",
-      saturday: "closed",
-      sunday: "closed",
-    },
     notes:
-      "Nurse on Campus will resume in September 2021. Check back later for location and opening hour information.",
+      "See our website for detailed information on hours and locations.",
   },
   {
     name: "UBC Psychology Clinic",
@@ -391,12 +382,14 @@ const resources = [
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
     hours: {
-      tuesday: "11:00am-3:00pm",
-      wednesday: "11:00am-3:00pm",
-      thursday: "11:00am-3:00pm",
+      monday: "11:00am-4:00pm",
+      tuesday: "11:00am-4:00pm",
+      wednesday: "11:00am-4:00pm",
+      thursday: "11:00am-4:00pm",
+      friday: "11:00am-4:00pm",
     },
     notes:
-      "Drop by the Wellness Centre Virtual Info Desk using the Zoom link and passcode 123456 during our hours or contact us via our online form.",
+      "Along with our in-person services, starting Tuesday, Sep 21, access our Zoom meeting room on Tuesdays and Wednesdays, from 9 am to 11 am.",
   },
   {
     name: "Wellness Workshops",
@@ -421,7 +414,6 @@ const resources = [
     email: "wellness.centre@ubc.ca",
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
-    notes: "Wellness workshops have been cancelled until further notice",
   },
   {
     name: "AMS Peer Support",
@@ -449,8 +441,17 @@ const resources = [
       instagram: "https://www.instagram.com/ams_student_services/",
     },
     email: "peersupport@ams.ubc.ca",
+    hours: {
+      monday: "9:30am-5:30pm",
+      tuesday: "9:30am-5:30pm",
+      wednesday: "9:30am-7:00pm",
+      thursday: "9:30am-5:30pm",
+      friday: "9:30am-3:00pm",
+      saturday: "closed",
+      sunday: "closed",
+    },
     notes:
-      "AMS Peer Support is closed for the Summer but will be restarting peer support and education services (virtually) on September 13th, 2021. Visit our website for the most up-to-date information.",
+      "Peer Support is now open for all peers with a valid UBC student ID!",
   },
   {
     name: "AMS Sexual Assault Support Centre (SASC)",
@@ -474,16 +475,14 @@ const resources = [
     email: "sasc@ams.ubc.ca",
     address: "UBC AMS Nest\nRoom 2516",
     hours: {
-      monday: "8:00am-10:00pm",
-      tuesday: "8:00am-10:00pm",
-      wednesday: "8:00am-10:00pm",
-      thursday: "8:00am-10:00pm",
-      friday: "8:00am-10:00pm",
-      saturday: "11:00am-7:00pm",
-      sunday: "11:00am-7:00pm",
+      monday: "11:00am-7:00pm",
+      tuesday: "11:00am-7:00pm",
+      wednesday: "11:00am-7:00pm",
+      thursday: "11:00am-7:00pm",
+      friday: "11:00am-7:00pm",
     },
     notes:
-      "Limited drop-in hours: 2pm-6pm from Monday to Sunday. On-call support & virtual appointments are available in regular hours. Hospital accompaniments are 8:00am-10:00pm, 7 days a week.",
+      "Along with our in-person support hours, appointments and phone support continue to be available Monday-Friday 8am-10pm & Saturday-Sunday 11am-7pm. Hospital accompaniments are 8:00am-10:00pm, 7 days a week.",
   },
   {
     name: "AMS The Pride Collective",
@@ -498,8 +497,6 @@ const resources = [
     },
     email: "prideubc@gmail.com",
     address: "UBC AMS Nest\nRoom 2103",
-    notes:
-      "All in-person activities and meetings are cancelled for the rest of the school year.",
   },
   {
     name: "Women’s Center",
@@ -521,7 +518,7 @@ const resources = [
     },
     email: "ubcwomenscentre@gmail.com",
     address: "UBC AMS Nest\nRoom 2113",
-    notes: "Women's Center will be closed until further notice.",
+    notes: "2 people are allowed in the space at a time, masks are mandatory.",
   },
   {
     name: "The Kaleidoscope",
@@ -553,7 +550,7 @@ const resources = [
     address: "Time and location varies by term",
     hours: {
       others:
-        "Meetings are moving online! Check Facebook page for more details.",
+        "Meetings are moving online! Check our webiste and Facebook page for more details.",
     },
   },
   {
@@ -966,7 +963,7 @@ const resources = [
         "https://students.ubc.ca/about-student-services/enrolment-services-advisors",
     },
     address:
-      "Enrolment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
+      "Enrollment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
       monday: "9:30am-4:00pm",
       tuesday: "10:00am-4:00pm",
@@ -976,8 +973,6 @@ const resources = [
       saturday: "closed",
       sunday: "closed",
     },
-    notes:
-      "Enrolment Services will not be providing in-person services until further notice. Please contact Enrolment Services Advisors by email.",
   },
   {
     name: "CounsellingBC.com",
@@ -1406,7 +1401,7 @@ const resources = [
     },
     address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
     hours: {
-      others: "Weekly meetings are cancelled for the rest of the school year.",
+      others: "See our Facebook and Instagram for details on weekly meetings.",
     },
     //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
   },
