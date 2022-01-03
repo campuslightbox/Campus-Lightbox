@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e0d4eb7.chunk.css",
-    "main.js": "/static/js/main.c022da56.chunk.js",
-    "main.js.map": "/static/js/main.c022da56.chunk.js.map",
+    "main.css": "/static/css/main.e2800edf.chunk.css",
+    "main.js": "/static/js/main.231b7662.chunk.js",
+    "main.js.map": "/static/js/main.231b7662.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34974b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.34974b02.js.map",
     "static/css/2.bad41965.chunk.css": "/static/css/2.bad41965.chunk.css",
-    "static/js/2.c68764cc.chunk.js": "/static/js/2.c68764cc.chunk.js",
-    "static/js/2.c68764cc.chunk.js.map": "/static/js/2.c68764cc.chunk.js.map",
+    "static/js/2.309e0e16.chunk.js": "/static/js/2.309e0e16.chunk.js",
+    "static/js/2.309e0e16.chunk.js.map": "/static/js/2.309e0e16.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.bad41965.chunk.css.map": "/static/css/2.bad41965.chunk.css.map",
-    "static/css/main.6e0d4eb7.chunk.css.map": "/static/css/main.6e0d4eb7.chunk.css.map",
-    "static/js/2.c68764cc.chunk.js.LICENSE.txt": "/static/js/2.c68764cc.chunk.js.LICENSE.txt",
+    "static/css/main.e2800edf.chunk.css.map": "/static/css/main.e2800edf.chunk.css.map",
+    "static/js/2.309e0e16.chunk.js.LICENSE.txt": "/static/js/2.309e0e16.chunk.js.LICENSE.txt",
     "static/media/Academic.273fb70f.png": "/static/media/Academic.273fb70f.png",
     "static/media/AcademicBG.2da11022.jpg": "/static/media/AcademicBG.2da11022.jpg",
     "static/media/CLB_PrimaryLogo.0c7bc0d3.png": "/static/media/CLB_PrimaryLogo.0c7bc0d3.png",
@@ -68,8 +68,8 @@
   "entrypoints": [
     "static/js/runtime-main.34974b02.js",
     "static/css/2.bad41965.chunk.css",
-    "static/js/2.c68764cc.chunk.js",
-    "static/css/main.6e0d4eb7.chunk.css",
-    "static/js/main.c022da56.chunk.js"
+    "static/js/2.309e0e16.chunk.js",
+    "static/css/main.e2800edf.chunk.css",
+    "static/js/main.231b7662.chunk.js"
   ]
 }
