@@ -127,7 +127,7 @@ const resources = [
     name: "Access and Assessment Center (AAC) at VGH",
     description:
       "The AAC serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care. Staff includes registered nurses, registered psychiatric nurses, and social workers, psychiatrists and reception staff who are here to help.",
-    logo: VCHLogo
+    logo: VCHLogo,
     background: "",
     tags: [
       "free",
