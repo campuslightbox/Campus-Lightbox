@@ -123,6 +123,37 @@ const resources = [
     notes:
       "Counselling Services is offering in-person and phone appointments for initial and follow-up appointments at this time. Students can call Counselling Services at 604 822 3811 to schedule an appointment by phone. First-time appointments are booked for the same day.",
   },
+    {
+    name: "Access and Assessment Center (AAC) at VGH",
+    description:
+      "The AAC serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care. Staff includes registered nurses, registered psychiatric nurses, and social workers, psychiatrists and reception staff who are here to help.",
+    logo: VCHLogo,
+    background: "",
+    tags: [
+      "free",
+      "free4UBC",
+      "depressionAnxiety",
+      "substanceAbuse",
+      "selfHarm",
+      "suicidal",
+      "general",
+      "immediate",
+      "medium",
+      "high",
+      "walkIn",
+      "professional",
+    ],
+    phone: "604-675-3700",
+    social: {
+      website: "http://www.vch.ca/locations-services/result?res_id=1186",
+    },
+    address: "803 West 12th Avenue\nLevel 1 East Entrance\nVancouver, BC V5Z 1N1",
+    hours: {
+      others: "Call between 7:30am-10pm. Walk in between 7:30am-9:30pm"
+    },
+    notes:
+      "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
+  },
   {
     name: "UBC Yoga Club",
     description:

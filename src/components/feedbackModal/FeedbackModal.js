@@ -1,6 +1,6 @@
 import { Button, Form, Message, Modal } from "semantic-ui-react";
 
-import React from "react";
+import React, {useState} from "react";
 
 const styles = {
   title: {
@@ -10,101 +10,97 @@ const styles = {
     fontSize: 14,
   },
 };
+function FeedbackModal() {
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
-class FeedbackModal extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "",
-      email: "",
-      subject: this.props.subject,
-      message: this.props.message,
-      sent: false,
-      error: false,
-    };
+  const handleNameInput = e => {
+    setName(e.target.value);
+  }
+  
+  const handleEmailInput = e => {
+    setEmail(e.target.value);
   }
 
-  onChange = (_, { name, value }) => {
-    this.setState({ [name]: value });
-  };
+  const handleSubjectInput = e => {
+    setSubject(e.target.value);
+  }
 
-  onClose = () => {
-    this.setState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-      sent: false,
-      error: false,
-    });
-  };
+  const handleMessageInput = e => {
+    setMessage(e.target.value);
+  }
 
-  onSubmitFeedback = () => {
-    console.log(this.state);
+  const onSubmitFeedback = () => {
+    // console.log(this.state);
 
     window.emailjs
       .send("mailgun", "template_qCO0QsXD", {
-        name: this.state.name || "(Empty)",
-        email: this.state.email || "(Empty)",
-        subject: this.state.subject,
-        message: this.state.message,
+        name: {name} || "(Empty)",
+        email: {email} || "(Empty)",
+        subject: {subject},
+        message: {message},
       })
       .then((res) => {
-        this.setState({
-          sent: true,
-          error: false,
-        });
+        setSent(true);
+        setError(false);
       })
       .catch((err) => {
-        this.setState({
-          sent: false,
-          error: true,
-        });
+        setSent(false);
+        setError(true);
         console.error("Failed to send feedback. Error: ", err);
       });
   };
 
-  render = () => (
-    <Modal trigger={this.props.trigger} onClose={this.onClose} closeIcon>
+  return (
+    <Modal 
+      trigger={<Button color="orange">Give Us Feedback</Button>} 
+      onClose={() => setOpen(false)}
+      onOpen={() => setOpen(true)}
+      open = {open} 
+      closeIcon>
       <Modal.Header style={styles.title}>
         Have feedback, questions, comments, or want to reach out to us? Send us
         a message here, or email us at admin@campuslightbox.com.
       </Modal.Header>
       <Modal.Content>
         <Modal.Description>
-          <Form success={this.state.sent} error={this.state.error}>
+          <Form success={sent} error={error}>
             <Form.Group>
               <Form.Input
                 width={4}
                 label="Name (Optional)"
                 name="name"
-                value={this.state.name}
                 style={styles.textValue}
-                onChange={this.onChange}
+                onChange={handleNameInput}
+                value={name}
               />
               <Form.Input
                 width={14}
                 label="Your Email Address (Required if you would like a response. If not, Optional)"
                 name="email"
-                value={this.state.email}
                 style={styles.textValue}
-                onChange={this.onChange}
+                onChange={handleEmailInput}
+                value={email}
               />
             </Form.Group>
             <Form.Input
               label="Subject"
               name="subject"
-              value={this.state.subject}
               style={styles.textValue}
-              onChange={this.onChange}
+              onChange={handleSubjectInput}
+              value={subject}
             />
             <Form.TextArea
               label="Message"
               name="message"
-              value={this.state.message}
               style={styles.textValue}
-              onChange={this.onChange}
+              onChange={handleMessageInput}
+              value={message}
             />
             <Message
               success
@@ -119,8 +115,8 @@ class FeedbackModal extends React.Component {
             <Button
               type="submit"
               color="green"
-              disabled={!this.state.message || !this.state.subject}
-              onClick={this.onSubmitFeedback}
+              disabled={!message || !subject}
+              onClick={onSubmitFeedback}
             >
               Submit
             </Button>

@@ -1,17 +1,19 @@
 import "../ResourceRecommender.css";
 
+import React, { useState } from "react";
+
 import AnswerOption from "./AnswerOption";
 import { CSSTransition } from "react-transition-group";
-import CrisisResponse from "./CrisisResponse";
+import GetHelpModal from "../../getHelpModal/GetHelpModal";
 import { Icon } from "semantic-ui-react";
 import PropTypes from "prop-types";
 import Question from "./Question";
 import QuestionCount from "./QuestionCount";
-import React from "react";
 import { logicChecker } from "../helper/logicHelper";
 
 // Refactor note: Need to turn App.js into functional component to use Context
 function Quiz(props) {
+  const [isCrisis, setIsCrisis] = useState(true);
   // const [CRState, setCRState] = useState(null);
   function renderAnswerOptions(key) {
     return (
@@ -54,7 +56,7 @@ function Quiz(props) {
 
   return crisisResponse && props.counter < 3 ? (
     <>
-      <CrisisResponse isCrisis={crisisResponse} />
+      <GetHelpModal isCrisis={isCrisis} setIsCrisis={setIsCrisis} />
       <>
         <Question content={props.question} />
         <ul className="answerOptions">
