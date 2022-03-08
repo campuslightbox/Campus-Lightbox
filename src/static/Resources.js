@@ -126,7 +126,7 @@ const resources = [
     {
     name: "Access and Assessment Center (AAC) at VGH",
     description:
-      "The AAC serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care. Staff includes registered nurses, registered psychiatric nurses, and social workers, psychiatrists and reception staff who are here to help.",
+      "The AAC at Vancouver General Hospital serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care.",
     logo: VCHLogo,
     background: "",
     tags: [
@@ -149,7 +149,7 @@ const resources = [
     },
     address: "803 West 12th Avenue\nLevel 1 East Entrance\nVancouver, BC V5Z 1N1",
     hours: {
-      others: "Call between 7:30am-10pm. Walk in between 7:30am-9:30pm"
+      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm."
     },
     notes:
       "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
@@ -235,7 +235,7 @@ const resources = [
       wednesday: "8:00am-4:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
-      saturday: "closed",
+      saturday: "Closed",
     },
     notes:
       "All appointments must now be booked by calling 604-822-7011 or through our online form. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
@@ -270,8 +270,8 @@ const resources = [
       wednesday: "8:30am-4:30pm",
       thursday: "8:30am-4:00pm",
       friday: "8:30am-4:30pm",
-      saturday: "closed",
-      sunday: "closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
     notes:
       "All in-person services have been suspended, but we are conducting appointments over the phone or via Skype. Please email or call us directly to book an appointment.",
@@ -306,7 +306,7 @@ const resources = [
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
       saturday: "9:00am-3:00pm",
-      sunday: "closed",
+      sunday: "Closed",
     },
   },
   {
@@ -339,7 +339,7 @@ const resources = [
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
       saturday: "9:00am-3:00pm",
-      sunday: "closed",
+      sunday: "Closed",
     },
   },
   {
@@ -367,13 +367,13 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "closed",
-      tuesday: "closed",
-      wednesday: "closed",
-      thursday: "closed",
-      friday: "closed",
-      saturday: "closed",
-      sunday: "closed",
+      monday: "Closed",
+      tuesday: "Closed",
+      wednesday: "Closed",
+      thursday: "Closed",
+      friday: "Closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
     notes:
       "Nurse on Campus will resume in September 2021. Check back later for location and opening hour information.",
@@ -642,8 +642,8 @@ const resources = [
       wednesday: "8:30am-4:30pm",
       thursday: "8:30am-4:30pm",
       friday: "8:30am-4:30pm",
-      saturday: "closed",
-      sunday: "closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
     notes:
       "Services are only available online or over the phone. If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
@@ -1004,8 +1004,8 @@ const resources = [
       wednesday: "9:30am-4:00pm",
       thursday: "9:30am-4:00pm",
       friday: "9:30am-4:00pm",
-      saturday: "closed",
-      sunday: "closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
     notes:
       "Enrolment Services will not be providing in-person services until further notice. Please contact Enrolment Services Advisors by email.",
