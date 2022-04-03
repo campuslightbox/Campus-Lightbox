@@ -99,13 +99,15 @@ function Header(props) {
         </Button>
         <GetHelpModal isCrisis={isCrisis} setIsCrisis={setIsCrisis} />
       </div>
-      <div className="covidbutton">
+      {/* <div className="covidbutton">
         <CovidModal />
-      </div>
+      </div> */}
       <div className="stuff">
         <img className="titleImage" src={logo} alt="Campus Lightbox" />
         <div className="guide">Your Guide to UBC Mental Health Resources</div>
-        <div className="select">Select From One of the Following Options</div>
+        <div className="select">
+          Get a suggested resource or choose your own below.
+        </div>
 
         <div className="startquiz" style={{ right: right }}>
           <h4 id="helper" style={{ right: right2 }}>
@@ -134,39 +136,7 @@ function Header(props) {
           </Modal>
 
           <br />
-          <br />
         </div>
-
-        <div className="buttonsAll">
-          <span className="resourceButton1 animated fadeIn">
-            <Button
-              inverted
-              style={styles.button}
-              onClick={() => onFilterClicked("peer")}
-            >
-              Peer Support
-            </Button>
-          </span>
-          <span className="resourceButton2 animated fadeIn">
-            <Button
-              inverted
-              style={styles.button}
-              onClick={() => onFilterClicked("professional")}
-            >
-              Professional Help
-            </Button>
-          </span>
-          <span className="resourceButton3 animated fadeIn">
-            <Button
-              inverted
-              style={styles.button}
-              onClick={() => onFilterClicked("phone")}
-            >
-              Phone Hotline
-            </Button>
-          </span>
-        </div>
-        <br />
         <br />
         <div className="resourceButton4 animated fadeIn">
           <Modal

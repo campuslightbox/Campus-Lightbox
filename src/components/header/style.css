@@ -18,11 +18,11 @@
   line-height: 12px;
   font-size: 8pt;
   font-family: tahoma;
-  margin-top: 5px;
-  margin-right: 2%;
+  margin-top: 10px;
+  margin-left: 1.5%;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 .covidbutton {
