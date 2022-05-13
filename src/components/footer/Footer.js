@@ -5,19 +5,19 @@ import {
   Header,
   Modal,
   Segment,
-} from "semantic-ui-react";
+} from 'semantic-ui-react';
 
-import FeedbackModal from "components/feedbackModal/FeedbackModal";
-import PrivacyPolicy from "components/footer/PrivacyPolicy";
-import React from "react";
-import ReactGA from "react-ga";
+import FeedbackModal from 'components/feedbackModal/FeedbackModal';
+import PrivacyPolicy from 'components/footer/PrivacyPolicy';
+import React from 'react';
+import ReactGA from 'react-ga';
 
-ReactGA.initialize("UA-139413334-1");
+ReactGA.initialize('UA-139413334-1');
 
 const trackGA = (buttonName) => {
   ReactGA.event({
-    category: "Footer",
-    action: "Clicked " + buttonName + " Button",
+    category: 'Footer',
+    action: 'Clicked ' + buttonName + ' Button',
   });
 };
 
@@ -33,9 +33,9 @@ const FixedMenuLayout = () => (
       inverted
       vertical
       style={{
-        margin: "5em 0em 0em",
-        padding: "3em 0em",
-        background: "#40798C",
+        margin: '5em 0em 0em',
+        padding: '3em 0em',
+        background: '#40798C',
       }}
     >
       <Container textAlign="center">
@@ -44,7 +44,7 @@ const FixedMenuLayout = () => (
             <Header inverted as="h4" content="Brought to you by:" />
             <Modal
               trigger={
-                <Button onClick={() => trackGA("About Project Aurora")}>
+                <Button onClick={() => trackGA('About Project Aurora')}>
                   © Project Aurora
                 </Button>
               }
@@ -58,7 +58,7 @@ const FixedMenuLayout = () => (
                 <Modal.Description>
                   <center>
                     <p>
-                      Campus Lightbox was envisioned and created by{" "}
+                      Campus Lightbox was envisioned and created by{' '}
                       <a
                         href="https://www.projectaurora.ca/"
                         target="_blank"
@@ -90,15 +90,17 @@ const FixedMenuLayout = () => (
             {/* <Button onClick={() => trackGA("Email")} icon='mail' href='mailto:admin@projectaurora.ca' /> */}
             <br />
             <br />
-            Email us:{" "}
+            Email us:{' '}
             <a
               href="mailto:admin@campuslightbox.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "white", textDecoration: "none" }}
+              style={{ color: 'white', textDecoration: 'none' }}
             >
               admin@campuslightbox.com
             </a>
+            <br />
+            Resources last updated March 8, 2022
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
@@ -110,7 +112,7 @@ const FixedMenuLayout = () => (
                 rel="noopener noreferrer"
               >
                 <Button
-                  onClick={() => trackGA("Facebook")}
+                  onClick={() => trackGA('Facebook')}
                   size="large"
                   circular
                   color="facebook"
@@ -123,7 +125,7 @@ const FixedMenuLayout = () => (
                 rel="noopener noreferrer"
               >
                 <Button
-                  onClick={() => trackGA("Instagram")}
+                  onClick={() => trackGA('Instagram')}
                   size="large"
                   circular
                   color="instagram"
@@ -136,7 +138,7 @@ const FixedMenuLayout = () => (
                 rel="noopener noreferrer"
               >
                 <Button
-                  onClick={() => trackGA("Twitter")}
+                  onClick={() => trackGA('Twitter')}
                   size="large"
                   circular
                   color="twitter"
@@ -149,7 +151,7 @@ const FixedMenuLayout = () => (
                 rel="noopener noreferrer"
               >
                 <Button
-                  onClick={() => trackGA("LinkedIn")}
+                  onClick={() => trackGA('LinkedIn')}
                   size="large"
                   circular
                   color="linkedin"
@@ -172,12 +174,12 @@ const FixedMenuLayout = () => (
               We are not affiliated, associated, authorized, endorsed by, or in
               any way officially connected with the University of British
               Columbia, or any of its subsidiaries or its affiliates. The
-              official University of British Columbia website can be found{" "}
+              official University of British Columbia website can be found{' '}
               <a
                 href="https://www.ubc.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: 'white', textDecoration: 'none' }}
               >
                 here
               </a>
