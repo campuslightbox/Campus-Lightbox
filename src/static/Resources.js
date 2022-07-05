@@ -116,7 +116,7 @@ const resources = [
     hours: {
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
-      wednesday: "8:30am-6:00pm",
+      wednesday: "8:30am-7:00pm",
       thursday: "10:30am-4:30pm",
       friday: "8:30am-4:30pm",
     },
@@ -422,9 +422,11 @@ const resources = [
     address:
       "Wellness Centre\nUBC Life Building\nRoom 1400\n6138 Student Union Blvd\nVancouver, BC V6T 1Z3",
     hours: {
-      tuesday: "11:00am-3:00pm",
-      wednesday: "11:00am-3:00pm",
-      thursday: "11:00am-3:00pm",
+      monday: "11:00am-4:00pm",
+      tuesday: "11:00am-4:00pm",
+      wednesday: "11:00am-4:00pm",
+      thursday: "11:00am-4:00pm",
+      friday: "11:00am-4:00pm",
     },
     notes:
       "In-person and online drop-in services are available. You can also submit a question online and receive an email response within 2 business days.",
@@ -526,8 +528,6 @@ const resources = [
     },
     email: "prideubc@gmail.com",
     address: "UBC AMS Nest\nRoom 2103",
-    notes:
-      "All in-person activities and meetings are cancelled for the rest of the school year.",
   },
   {
     name: "Women’s Center",
@@ -580,7 +580,7 @@ const resources = [
     address: "Time and location varies by term",
     hours: {
       others:
-        "Meetings are moving online! Check Facebook page for more details.",
+        "Meetings are moving online! Check our webiste and Facebook page for more details.",
     },
   },
   {
@@ -996,7 +996,7 @@ const resources = [
         "https://students.ubc.ca/about-student-services/enrolment-services-advisors",
     },
     address:
-      "Enrolment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
+      "Enrollment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
       monday: "11:00am-3:00pm",
       tuesday: "11:00am-3:00pm",

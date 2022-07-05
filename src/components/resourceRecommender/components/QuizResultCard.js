@@ -23,7 +23,7 @@ const CardContainer = ({
   };
 
   const filterResource = (allResources) => {
-    const quizResultTags = this.props.quizResult; // the filtered tags from App.js
+    const quizResultTags = quizResult; // the filtered tags from App.js
     var filterResults;
     if (quizResultTags.includes("nopreference")) {
       // we have to separate search because some resources can have walkIn, online, and phone
@@ -42,38 +42,37 @@ const CardContainer = ({
   const filteredData = filterResource(resources);
 
   return (
-    <>
-      {filteredData.length ? (
-        <>
-          <MediaQuery minWidth={800}>
-            <Segment basic>
-              <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
-                {_.map(filteredData, (resource, index) => (
-                  <InfoCard key={index.toString()} {...resource} /> // spread the props
-                ))}
-              </Card.Group>
-            </Segment>
-          </MediaQuery>
-          <MediaQuery maxWidth={799}>
-            <Segment basic>
-              <Card.Group>
-                {_.map(filteredData, (resource, index) => (
-                  <InfoCard key={index.toString()} {...resource} />
-                ))}
-              </Card.Group>
-            </Segment>
-          </MediaQuery>
-        </>
-      ) : (
-        <Segment placeholder>
-          <Header icon>
-            Sorry, no results found.
-            <br />
-            <br />
-            Try a different search or filters.
-          </Header>
-        </Segment>
-      )}
+    <>{filteredData.length ? (
+      <>
+        <MediaQuery minWidth={800}>
+          <Segment basic>
+            <Card.Group style={{ margin: "-.875em 1em 0.5em 6em" }}>
+              {_.map(filteredData, (resource, index) => (
+                <InfoCard key={index.toString()} {...resource} /> // spread the props
+              ))}
+            </Card.Group>
+          </Segment>
+        </MediaQuery>
+        <MediaQuery maxWidth={799}>
+          <Segment basic>
+            <Card.Group>
+              {_.map(filteredData, (resource, index) => (
+                <InfoCard key={index.toString()} {...resource} />
+              ))}
+            </Card.Group>
+          </Segment>
+        </MediaQuery>
+      </>
+    ) : (
+      <Segment placeholder>
+        <Header icon>
+          Sorry, no results found.
+          <br />
+          <br />
+          Try a different search or filters.
+        </Header>
+      </Segment>
+    )}
       <div className="parentDiv">
         <div className="leftcol">
           {" "}

@@ -15,7 +15,7 @@
 
   <h2 align="center">Campus Lightbox ✨</h2>
   <p align="center">
-    Your Guide to UBC Mental Health Resources. Visit us at: 
+    Your Guide to UBC Mental Health Resources. Visit us at : 
     <a href="https://campuslightbox.com/">CampusLightbox.com</a>
     <br />
     <br />
