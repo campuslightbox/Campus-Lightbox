@@ -121,12 +121,12 @@ const resources = [
       friday: "8:30am-4:30pm",
     },
     notes:
-      "Counselling Services is offering in-person and phone appointments for initial and follow-up appointments at this time. Students can call Counselling Services at 604 822 3811 to schedule an appointment by phone. First-time appointments are booked for the same day.",
+      "Counselling Services is offering virtual, phone and in-person appointments for initial and follow-up appointments.",
   },
     {
     name: "Access and Assessment Center (AAC) at VGH",
     description:
-      "The AAC serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care. Staff includes registered nurses, registered psychiatric nurses, and social workers, psychiatrists and reception staff who are here to help.",
+      "The AAC at Vancouver General Hospital serves City of Vancouver adult residents (17+) who are experiencing or identifying concerns related to Mental Health, Substance Use and/or Addictions with professional care.",
     logo: VCHLogo,
     background: "",
     tags: [
@@ -149,7 +149,7 @@ const resources = [
     },
     address: "803 West 12th Avenue\nLevel 1 East Entrance\nVancouver, BC V5Z 1N1",
     hours: {
-      others: "Call between 7:30am-10pm. Walk in between 7:30am-9:30pm"
+      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm."
     },
     notes:
       "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
@@ -177,9 +177,9 @@ const resources = [
     },
     email: "info.ubcyogaclub@gmail.com",
     address: "AMS Student Nest\n6133 University Blvd\nVancouver, BC V6T 1Z1",
-    hours: {
-      others: "Classes are being offered in person and virtually at this time.",
-    },
+    /*hours: {
+      others: "Classes cancelled for the rest of the school year.",
+    },*/
   },
   {
     name: "University Multifaith Chaplains Association",
@@ -235,10 +235,10 @@ const resources = [
       wednesday: "8:00am-4:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
-      saturday: "closed",
+      saturday: "Closed",
     },
     notes:
-      "Starting September 11, 2021, Student Health Services will be open on Saturday from 8 am to 3:45 pm. All appointments must now be booked by calling 604-822-7011 or through our online form. You can arrange a video or phone appointment. A follow up appointment will be arranged in-person if needed.",
+      "Make a virtual (video) or phone appointment through the online form or by calling Student Health Services.",
   },
   {
     name: "Centre for Accessibility",
@@ -270,11 +270,9 @@ const resources = [
       wednesday: "8:30am-4:30pm",
       thursday: "8:30am-4:00pm",
       friday: "8:30am-4:30pm",
-      saturday: "closed",
-      sunday: "closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
-    notes:
-      "The Centre for Accessibility is open and will be providing service in person, online through Zoom, or by phone.",
   },
   {
     name: "University Village Medical & Dental Clinic - UBC Village",
@@ -306,7 +304,7 @@ const resources = [
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
       saturday: "9:00am-3:00pm",
-      sunday: "closed",
+      sunday: "Closed",
     },
   },
   {
@@ -339,7 +337,7 @@ const resources = [
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
       saturday: "9:00am-3:00pm",
-      sunday: "closed",
+      sunday: "Closed",
     },
   },
   {
@@ -366,8 +364,17 @@ const resources = [
         "https://students.ubc.ca/health/student-health-service/nurse-campus",
     },
     email: "student.health@ubc.ca",
+    hours: {
+      monday: "Closed",
+      tuesday: "Closed",
+      wednesday: "Closed",
+      thursday: "Closed",
+      friday: "Closed",
+      saturday: "Closed",
+      sunday: "Closed",
+    },
     notes:
-      "See our website for detailed information on hours and locations.",
+      "Nurse on Campus service in residences and in the Wellness Centre at the UBC Life Building is closed for the term. The service will reopen in September 2022.",
   },
   {
     name: "UBC Psychology Clinic",
@@ -382,6 +389,8 @@ const resources = [
     },
     email: "clinic@psych.ubc.ca",
     address: "Douglas T. Kenny Building\n2136 West Mall\nVancouver, BC V6T 1Z4",
+    notes:
+      "The waitlist for OCD group is open. The waitlist for all other services is closed.",
   },
   {
     name: "Wellness Centre",
@@ -420,7 +429,7 @@ const resources = [
       friday: "11:00am-4:00pm",
     },
     notes:
-      "Along with our in-person services, starting Tuesday, Sep 21, access our Zoom meeting room on Tuesdays and Wednesdays, from 9 am to 11 am.",
+      "In-person and online drop-in services are available. You can also submit a question online and receive an email response within 2 business days.",
   },
   {
     name: "Wellness Workshops",
@@ -472,17 +481,6 @@ const resources = [
       instagram: "https://www.instagram.com/ams_student_services/",
     },
     email: "peersupport@ams.ubc.ca",
-    hours: {
-      monday: "9:30am-5:30pm",
-      tuesday: "9:30am-5:30pm",
-      wednesday: "9:30am-7:00pm",
-      thursday: "9:30am-5:30pm",
-      friday: "9:30am-3:00pm",
-      saturday: "closed",
-      sunday: "closed",
-    },
-    notes:
-      "Peer Support is now open for all peers with a valid UBC student ID!",
   },
   {
     name: "AMS Sexual Assault Support Centre (SASC)",
@@ -506,14 +504,16 @@ const resources = [
     email: "sasc@ams.ubc.ca",
     address: "UBC AMS Nest\nRoom 2516",
     hours: {
-      monday: "11:00am-7:00pm",
-      tuesday: "11:00am-7:00pm",
-      wednesday: "11:00am-7:00pm",
-      thursday: "11:00am-7:00pm",
-      friday: "11:00am-7:00pm",
+      monday: "9:00am-9:00pm",
+      tuesday: "9:00am-9:00pm",
+      wednesday: "9:00am-9:00pm",
+      thursday: "9:00am-9:00pm",
+      friday: "9:00am-9:00pm",
+      saturday: "11:00am-7:00pm",
+      sunday: "11:00am-7:00pm",
     },
     notes:
-      "Along with our in-person support hours, appointments and phone support continue to be available Monday-Friday 8am-10pm & Saturday-Sunday 11am-7pm. Hospital accompaniments are 8:00am-10:00pm, 7 days a week.",
+      "Hospital accompaniments are 9:00am-9:00pm, 7 days a week.",
   },
   {
     name: "AMS The Pride Collective",
@@ -549,7 +549,6 @@ const resources = [
     },
     email: "ubcwomenscentre@gmail.com",
     address: "UBC AMS Nest\nRoom 2113",
-    notes: "2 people are allowed in the space at a time, masks are mandatory.",
   },
   {
     name: "The Kaleidoscope",
@@ -604,7 +603,7 @@ const resources = [
       "peer",
     ],
     social: {
-      website: "https://vivreshare.org/support-group/",
+      website: "https://vivreshare.org/support-group/", /*note: link not working*/
       facebook: "https://www.facebook.com/vivreSHARE",
     },
     email: "info@vivreshare.org",
@@ -639,11 +638,9 @@ const resources = [
       wednesday: "8:30am-4:30pm",
       thursday: "8:30am-4:30pm",
       friday: "8:30am-4:30pm",
-      saturday: "closed",
-      sunday: "closed",
+      saturday: "Closed",
+      sunday: "Closed",
     },
-    notes:
-      "Services are only available online or over the phone. If you have a scheduled appointment, we will contact you to arrange a phone or online meeting.",
   },
   {
     name: "Student Recovery Community at UBC",
@@ -663,6 +660,7 @@ const resources = [
       "peer",
     ],
     social: {
+      website: "https://gss.ubc.ca/helping-students-on-the-road-to-recovery/",
       facebook: "https://www.facebook.com/RecoveryUBC/",
       instagram: "https://www.instagram.com/recovery_ubc/",
     },
@@ -685,11 +683,12 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "http://blogs.ubc.ca/ubcmhn",
+      website: "https://ubcmhn.ca/",
       facebook: "https://www.facebook.com/mentalhealthnetworkubc/",
       twitter: "https://www.twitter.com/ubcmhn",
+      instagram: "https://www.instagram.com/ubcmhn",
     },
-    email: "mhnubc@gmail.com",
+    email: "info@ubcmhn.ca",
   },
   {
     name: "Mental Health Awareness Club",
@@ -712,6 +711,7 @@ const resources = [
     social: {
       website: "http://blogs.ubc.ca/ubcmhac/",
       facebook: "https://www.facebook.com/UBCMHAC/",
+      instagram: "https://www.instagram.com/ubcmhac/"
     },
     email: "ubcmhac@gmail.com",
     address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
@@ -735,8 +735,9 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "http://legacy.jack.org/chapters/university-british-columbia",
+      website: "https://amscampusbase.ubc.ca/jack/home/",
     },
+    email: "ubcjackchapater@gmail.com",
   },
   {
     name: "Zen at UBC",
@@ -767,7 +768,7 @@ const resources = [
     email: "gareth@zen.ca",
     hours: {
       others:
-        "Meetings are moving online! Check Facebook page for more details.",
+        "Zen Meditation sessions run Mondays in UBC Life Building room 2214 from 4:30 to 5:30pm and Thursdays in room 2212 from 5:00 to 6:00pm.",
     },
   },
   {
@@ -847,7 +848,7 @@ const resources = [
       "professional",
       "allday",
     ],
-    phone: "1-877-392-7583",
+    phone: "604-255-6344",
     social: {
       website: "https://www.wavaw.ca/",
     },
@@ -856,6 +857,7 @@ const resources = [
     hours: {
       others: "24/7",
     },
+    notes: "24-hour crisis and information line is 604-255-6344 in BC and 1-877-392-7583 for the national toll-free line. Virtual, phone, and in-person services available.",
   },
   {
     name: "Wellness Together Canada",
@@ -996,13 +998,13 @@ const resources = [
     address:
       "Enrollment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "9:30am-4:00pm",
-      tuesday: "10:00am-4:00pm",
-      wednesday: "9:30am-4:00pm",
-      thursday: "9:30am-4:00pm",
-      friday: "9:30am-4:00pm",
-      saturday: "closed",
-      sunday: "closed",
+      monday: "11:00am-3:00pm",
+      tuesday: "11:00am-3:00pm",
+      wednesday: "11:00am-3:00pm",
+      thursday: "11:00am-3:00pm",
+      friday: "11:00am-3:00pm",
+      saturday: "Closed",
+      sunday: "Closed",
     },
   },
   {
@@ -1357,7 +1359,7 @@ const resources = [
       "professional",
     ],
     social: {
-      website: "https://jcmed.ca/counselling/",
+      website: "https://jcmed.ca/henrychen/",
     },
     phone: "604-261-6000",
     address: "#360 - 650 West 41st Avenue \nVancouver,BC V5Z 2M9",
@@ -1431,9 +1433,9 @@ const resources = [
       instagram: "https://www.instagram.com/ubcbodybanter",
     },
     address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
-    hours: {
-      others: "See our Facebook and Instagram for details on weekly meetings.",
-    },
+    /*hours: {
+      others: "Weekly meetings are cancelled for the rest of the school year.",
+    },*/
     //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
   },
   {
@@ -1483,7 +1485,7 @@ const resources = [
     },
     phone: "604-675-3700",
     address: "803 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
-    hours: {
+    /*hours: {
       monday: "7:30am-11:00pm",
       tuesday: "7:30am-11:00pm",
       wednesday: "7:30am-11:00pm",
@@ -1491,9 +1493,9 @@ const resources = [
       friday: "7:30am-11:00pm",
       saturday: "7:30am-11:00pm",
       sunday: "7:30am-11:00pm",
-    },
+    },*/
     notes:
-      "Due to the COVID-19 pandemic, the service may be operating at reduced or adjusted hours. Please contact 604-675-3700 for further details.",
+      "Call the Access and Assessment Centre at 604-675-3700 to connect with S.A.F.E.R.",
   },
 ];
 
