@@ -1,4 +1,4 @@
-import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
+import { Button, Card, Icon, Segment } from "semantic-ui-react";
 
 import InfoCard from "components/infoCard/InfoCard";
 import MediaQuery from "react-responsive";
@@ -39,7 +39,27 @@ const CardContainer = ({
     }
     return filterResults;
   };
+
+  const filterGeneral = (allResources, generalNames) => {
+    let out = []
+    for (const elem of generalNames) {
+      out.push(allResources.filter((r) => r.name === elem)[0])
+    }
+    return out;
+  }
+
   const filteredData = filterResource(resources);
+
+  const gNames = [
+    "UBC Counselling Service",
+    "Access and Assessment Center (AAC) at VGH",
+    "AMS Peer Support",
+    "HeretoHelp",
+    "Foundry",
+    "Kelty's Key"  
+  ];
+
+  const generalRecommendations = filterGeneral(resources, gNames)
 
   return (
     <>{filteredData.length ? (
@@ -56,21 +76,28 @@ const CardContainer = ({
         <MediaQuery maxWidth={799}>
           <Segment basic>
             <Card.Group>
-              {_.map(filteredData, (resource, index) => (
-                <InfoCard key={index.toString()} {...resource} />
-              ))}
+              {}
             </Card.Group>
           </Segment>
         </MediaQuery>
       </>
     ) : (
       <Segment placeholder>
-        <Header icon>
-          Sorry, no results found.
+        <h3 class="ui center aligned header">
+          Sorry, we couldn't find any fitting matches.
+          <br />          
           <br />
+          Here are other general mental health and well-being resources that are accessible for you
+          <br />          
           <br />
-          Try a different search or filters.
-        </Header>
+          💡Tip: You can also use the filter functionality on our homepage to find a better fit.
+          
+        </h3>
+        <Card.Group centered={true}>
+            {generalRecommendations.map((resource, index) => {
+              return <InfoCard key={index.toString()} {...resource} />
+            })}
+          </Card.Group>
       </Segment>
     )}
       <div className="parentDiv">
