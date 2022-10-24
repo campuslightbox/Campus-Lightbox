@@ -21,6 +21,7 @@ const CardContainer = ({
       (obj) => _.intersection(obj.tags, searchArr).length === 5
     );
   };
+  
 
   const filterResource = (allResources) => {
     const quizResultTags = quizResult; // the filtered tags from App.js
