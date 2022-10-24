@@ -1,4 +1,4 @@
-import { Button, Card, Header, Icon, Segment } from "semantic-ui-react";
+import { Button, Card, Icon, Segment } from "semantic-ui-react";
 
 import InfoCard from "components/infoCard/InfoCard";
 import MediaQuery from "react-responsive";
