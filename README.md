@@ -96,15 +96,15 @@ You should have [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpk
 
 **Active Members:**
 
-Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
-
-Cindy Lin - [GitHub](https://github.com/LanguageXange)
-
 Maiya Rasheed - [GitHub](https://github.com/maiyaer)
 
 <br />
 
 **Past Members:**
+
+Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
+
+Cindy Lin - [GitHub](https://github.com/LanguageXange)
 
 Camellia Peng - [GitHub](https://github.com/cching0L2)
 
