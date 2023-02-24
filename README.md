@@ -112,6 +112,10 @@ Shamit Rahman - [GitHub](https://github.com/rahmanshamit)
 
 Jarvin Rivera - [GitHub](https://github.com/Jrivera1625)
 
+Nehal Naeem - [GitHub](https://github.com/Nehal-Naeem)
+
+Savannah Feder - [GitHub](https://github.com/savannahfeder)
+
 ## Contact 📧
 
 If you're interested in joining our team, email us at admin@campuslightbox.com
