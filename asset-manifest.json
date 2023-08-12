@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a893663.chunk.css",
-    "main.js": "/static/js/main.e304d327.chunk.js",
-    "main.js.map": "/static/js/main.e304d327.chunk.js.map",
+    "main.css": "/static/css/main.bdcbdbc2.chunk.css",
+    "main.js": "/static/js/main.3f6acb7c.chunk.js",
+    "main.js.map": "/static/js/main.3f6acb7c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34974b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.34974b02.js.map",
     "static/css/2.bad41965.chunk.css": "/static/css/2.bad41965.chunk.css",
-    "static/js/2.f508eb0b.chunk.js": "/static/js/2.f508eb0b.chunk.js",
-    "static/js/2.f508eb0b.chunk.js.map": "/static/js/2.f508eb0b.chunk.js.map",
+    "static/js/2.cf73e137.chunk.js": "/static/js/2.cf73e137.chunk.js",
+    "static/js/2.cf73e137.chunk.js.map": "/static/js/2.cf73e137.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.bad41965.chunk.css.map": "/static/css/2.bad41965.chunk.css.map",
-    "static/css/main.5a893663.chunk.css.map": "/static/css/main.5a893663.chunk.css.map",
-    "static/js/2.f508eb0b.chunk.js.LICENSE.txt": "/static/js/2.f508eb0b.chunk.js.LICENSE.txt",
+    "static/css/main.bdcbdbc2.chunk.css.map": "/static/css/main.bdcbdbc2.chunk.css.map",
+    "static/js/2.cf73e137.chunk.js.LICENSE.txt": "/static/js/2.cf73e137.chunk.js.LICENSE.txt",
     "static/media/Academic.273fb70f.png": "/static/media/Academic.273fb70f.png",
     "static/media/AcademicBG.2da11022.jpg": "/static/media/AcademicBG.2da11022.jpg",
     "static/media/CLB_PrimaryLogo.0c7bc0d3.png": "/static/media/CLB_PrimaryLogo.0c7bc0d3.png",
@@ -33,6 +33,7 @@
     "static/media/Nurses.2e410e96.png": "/static/media/Nurses.2e410e96.png",
     "static/media/NursesBG.416bbbe7.jpg": "/static/media/NursesBG.416bbbe7.jpg",
     "static/media/PayFairLogo.61079c7b.png": "/static/media/PayFairLogo.61079c7b.png",
+    "static/media/PegasusLogo.35b2b70c.png": "/static/media/PegasusLogo.35b2b70c.png",
     "static/media/Pride.4d2d33a8.png": "/static/media/Pride.4d2d33a8.png",
     "static/media/PsychologyClinic.6b7d5459.png": "/static/media/PsychologyClinic.6b7d5459.png",
     "static/media/SASC.720f2c51.png": "/static/media/SASC.720f2c51.png",
@@ -68,8 +69,8 @@
   "entrypoints": [
     "static/js/runtime-main.34974b02.js",
     "static/css/2.bad41965.chunk.css",
-    "static/js/2.f508eb0b.chunk.js",
-    "static/css/main.5a893663.chunk.css",
-    "static/js/main.e304d327.chunk.js"
+    "static/js/2.cf73e137.chunk.js",
+    "static/css/main.bdcbdbc2.chunk.css",
+    "static/js/main.3f6acb7c.chunk.js"
   ]
 }
