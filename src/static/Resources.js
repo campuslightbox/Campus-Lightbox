@@ -26,6 +26,7 @@ import MindHealthBC from "./logos/MindHealthBC.png";
 import NursesBG from "./logos/NursesBG.jpg";
 import NursesLogo from "./logos/Nurses.png";
 import PayFair from "./logos/PayFairLogo.png";
+import PegasusLogo from "./logos/PegasusLogo.png";
 import PrideLogo from "./logos/Pride.png";
 import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
 import SASCLogo from "./logos/SASC.png";
@@ -142,6 +143,7 @@ const resources = [
       "high",
       "walkIn",
       "professional",
+      "medical",
     ],
     phone: "604-675-3700",
     social: {
@@ -153,6 +155,35 @@ const resources = [
     },
     notes:
       "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
+  },
+  {
+    name: "Pegasus Integrative Health",
+    description: "Integrative health & wellness services including clinical counselling. 5 clinical counsellors who speak English, Punjabi, Cantonese and Mandarin. Accept student health insurance/benefits and some counsellors offer sliding scale rates as well. \nSee students experiencing emotional distress, interpersonal relationships issues, mental health issues, adjustment issues, etc.",
+    logo: PegasusLogo,
+    background: "",
+    tags: [
+      "paid",
+      "depressionAnxiety",
+      "general",
+      "low",
+      "medium",
+      "walkIn",
+      "professional",
+      "medical",
+      "appointment",
+      "two3Days",
+      "less1Week",
+      "less1Month",
+    ],
+    phone: "604-232-8888",
+    social: {
+      website: "https://www.pegasusintegratedhealth.ca/",
+      facebook: "https://www.facebook.com/people/Pegasus-Integrated-Health/100084661956008/",
+      instagram: "https://www.instagram.com/pegasusintegratedhealth/",
+    },
+    address: "315 - 8171 Cook Rd, \nRichmond, BC V6Y 3T8",
+    notes:
+      "Offer 20% off for current UBC students.",
   },
   {
     name: "UBC Yoga Club",

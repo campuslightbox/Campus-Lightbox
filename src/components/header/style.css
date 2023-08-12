@@ -25,17 +25,6 @@
   right: 0;
 }
 
-.covidbutton {
-  line-height: 12px;
-  font-size: 8pt;
-  font-family: tahoma;
-  margin-top: 5px;
-  margin-left: 2%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .stuff {
   display: inline-block;
   height: 100%;

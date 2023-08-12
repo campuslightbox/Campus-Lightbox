@@ -100,7 +100,7 @@ const FixedMenuLayout = () => (
               admin@campuslightbox.com
             </a>
             <br />
-            Resources last updated March 8, 2022
+            Resources last updated August 12, 2023
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
