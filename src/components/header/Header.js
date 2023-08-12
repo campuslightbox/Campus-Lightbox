@@ -5,7 +5,6 @@ import "./animate.css";
 import { Button, Icon, Modal } from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
 
-import CovidModal from "../covidModal/CovidModal";
 import GetHelpModal from "../getHelpModal/GetHelpModal";
 import ReactGA from "react-ga";
 import ResourceRecommender from "../resourceRecommender/ResourceRecommender";
@@ -99,13 +98,10 @@ function Header(props) {
         </Button>
         <GetHelpModal isCrisis={isCrisis} setIsCrisis={setIsCrisis} />
       </div>
-      <div className="covidbutton">
-        <CovidModal />
-      </div>
       <div className="stuff">
         <img className="titleImage" src={logo} alt="Campus Lightbox" />
         <div className="guide">Your Guide to UBC Mental Health Resources</div>
-        <div className="select">Select From One of the Following Options</div>
+        <div className="select">Filter the Resources Below Using One of the Following Options</div>
 
         <div className="startquiz" style={{ right: right }}>
           <h4 id="helper" style={{ right: right2 }}>
@@ -115,7 +111,7 @@ function Header(props) {
             dimmer="blurring"
             trigger={
               <button className="circular ui icon button green massive">
-                <i className="icon leaf"></i>
+                <i className="icon">&#xf128;</i>
               </button>
             }
             closeIcon
