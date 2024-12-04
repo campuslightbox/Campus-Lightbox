@@ -26,7 +26,7 @@ jobs:
         run: yarn install && yarn build
 
       - name: Upload Production-Ready Build Files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: production-files
           path: ./build
