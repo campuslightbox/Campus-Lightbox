@@ -96,11 +96,10 @@ You should have [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpk
 
 **Active Members:**
 
-Maiya Rasheed - [GitHub](https://github.com/maiyaer)
-
 <br />
 
 **Past Members:**
+Maiya Rasheed - [GitHub](https://github.com/maiyaer)
 
 Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
 
