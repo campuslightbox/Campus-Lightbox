@@ -92,7 +92,7 @@ const resources = [
   {
     name: "UBC Counselling Service",
     description:
-      "Professional counselling for students feeling  persistently stressed, anxious, or sad.",
+      "Professional counselling for students feeling stressed, anxious, or sad.",
     logo: UBCCounsellingServiceLogo,
     background: UBCCounsellingServiceBG,
     tags: [
@@ -118,11 +118,11 @@ const resources = [
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
       wednesday: "8:30am-7:00pm",
-      thursday: "10:30am-4:30pm",
+      thursday: "8:30am-4:30pm",
       friday: "8:30am-4:30pm",
     },
     notes:
-      "Counselling Services is offering virtual, phone and in-person appointments for initial and follow-up appointments.",
+      "Counselling Services is offering virtual, phone (on weekdays from 8:00am to 4:30pm) and in-person appointments (as above) for initial and follow-up appointments.",
   },
     {
     name: "Access and Assessment Center (AAC) at VGH",
@@ -151,14 +151,14 @@ const resources = [
     },
     address: "803 West 12th Avenue\nLevel 1 East Entrance\nVancouver, BC V5Z 1N1",
     hours: {
-      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm."
+      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm. This is available 7 days a week. Phone assistance is available daily."
     },
     notes:
       "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
   },
   {
     name: "Pegasus Integrative Health",
-    description: "Integrative health & wellness services including clinical counselling. 5 clinical counsellors who speak English, Punjabi, Cantonese and Mandarin. Accept student health insurance/benefits and some counsellors offer sliding scale rates as well. \nSee students experiencing emotional distress, interpersonal relationships issues, mental health issues, adjustment issues, etc.",
+    description: "Integrative health & wellness services including clinical counselling. 5 clinical counsellors who speak English, Punjabi, Cantonese, Mandarin, Hindi, Urdu. Accept student health insurance/benefits and some counsellors offer sliding scale rates as well. \nSee students experiencing emotional distress, interpersonal relationships issues, mental health issues, adjustment issues, etc.",
     logo: PegasusLogo,
     background: "",
     tags: [
@@ -188,7 +188,7 @@ const resources = [
   {
     name: "UBC Yoga Club",
     description:
-      "We provide affordable and accessible yoga to the UBC and greater Vancouver community to support mental health and physical health",
+      "A student-run club that provides affordable and accessible yoga to the UBC and greater Vancouver community to support mental and physical health",
     logo: YogaClubLogo,
     background: YogaClubBG,
     tags: [
@@ -215,7 +215,7 @@ const resources = [
   {
     name: "University Multifaith Chaplains Association",
     description:
-      "One-on-one pastoral/spiritual counselling and opportunities to engage in exploring in the faith tradition they represent (Buddhist, Muslim, Jewish, Christian, and Bahá'í).",
+      "One-on-one pastoral/spiritual counselling and opportunities to engage in and explore the faith traditions chaplains represent (Buddhist, Muslim, Jewish, Christian, etc.)",
     logo: UMCALogo,
     background: UMCABG,
     tags: [
@@ -234,13 +234,14 @@ const resources = [
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains",
       facebook: "https://www.facebook.com/UMCAssociation/",
     },
+    email: "pastorcraigobrien@gmail.com",
     address:
-      "University Multifaith Chaplains Association\nUBC Life Room 1303\n6000 Student Union Blvd\nVancouver, BC V6T 1Z1",
+      "University Multifaith Chaplains Association\nUBC Life Building 1303\n6138 Student Union Blvd\nVancouver, BC V6T 1Z1",
   },
   {
     name: "UBC Student Health Services",
     description:
-      "A wide range of health assessments and treatments provided by doctors, nurses, and specialists. ",
+      "A wide range of health assessments and treatments provided by doctors, nurses, and specialists for students by phone, video or in-person. ",
     logo: UBCStudentHealthLogo,
     background: UBCStudentHealthBG,
     tags: [
@@ -259,17 +260,17 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     address:
-      "Student Health Services\nUBC Hospital Room M334\n2211 Wesbrook Mall\nVancouver, BC V6T 2A1",
+      "Student Health Services\nUBC Hospital Room S267\n2211 Wesbrook Mall\nVancouver, BC V6T 2B5",
     hours: {
       monday: "8:00am-4:00pm",
       tuesday: "8:00am-4:00pm",
-      wednesday: "8:00am-4:00pm",
+      wednesday: "8:00am-8:00pm",
       thursday: "9:00am-4:00pm",
       friday: "8:00am-4:00pm",
       saturday: "Closed",
     },
     notes:
-      "Make a virtual (video) or phone appointment through the online form or by calling Student Health Services.",
+      "Make an in-person, virtual/video or phone appointment through the online form found through the website. Can call in for procedures, nursing or urgent concerns. Other locations include Orchard Commons (West Mall and Agronomy Road)",
   },
   {
     name: "Centre for Accessibility",
@@ -294,7 +295,7 @@ const resources = [
         "https://students.ubc.ca/about-student-services/centre-for-accessibility",
     },
     email: "info.accessibility@ubc.ca",
-    address: "Brock Hall\nRoom 1203\n1874 East Mall\nVancouver, BC V6T 1Z1",
+    address: "Brock Commons South\nRoom 3110\n6180 Walter Gage Road\nVancouver, BC V6T 1Z1",
     hours: {
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-5:00pm",
@@ -334,7 +335,7 @@ const resources = [
       wednesday: "8:00am-5:00pm",
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
-      saturday: "9:00am-3:00pm",
+      saturday: "Closed",
       sunday: "Closed",
     },
   },
@@ -367,7 +368,7 @@ const resources = [
       wednesday: "8:00am-5:00pm",
       thursday: "8:00am-5:00pm",
       friday: "8:00am-5:00pm",
-      saturday: "9:00am-3:00pm",
+      saturday: "Closed",
       sunday: "Closed",
     },
   },
@@ -396,16 +397,16 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "Closed",
-      tuesday: "Closed",
-      wednesday: "Closed",
-      thursday: "Closed",
+      monday: "3:00opm-6:00pm (Gage)",
+      tuesday: "12:00pm-2:00pm (First Nations House of Learning), 3:00opm-6:00pm (Vanier)",
+      wednesday: "12:00pm-2:00pm (UBC Life Building, nest to Wellness Center), 3:00opm-6:00pm (Totem)",
+      thursday: "3:00opm-6:00pm (Orchard Commons)",
       friday: "Closed",
       saturday: "Closed",
       sunday: "Closed",
     },
     notes:
-      "Nurse on Campus service in residences and in the Wellness Centre at the UBC Life Building is closed for the term. The service will reopen in September 2022.",
+      "Nurse on Campus service in residences, First Nations House of Learning, and in the Wellness Centre at the UBC Life Building.",
   },
   {
     name: "UBC Psychology Clinic",
