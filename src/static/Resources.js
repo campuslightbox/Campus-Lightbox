@@ -122,7 +122,7 @@ const resources = [
       friday: "8:30am-4:30pm",
     },
     notes:
-      "Counselling Services is offering virtual, phone (on weekdays from 8:00am to 4:30pm) and in-person appointments (as above) for initial and follow-up appointments.",
+      "Counselling Services is offering virtual, phone (on weekdays from 8:00am to 4:30pm) and in-person appointments (as above) for initial and follow-up appointments. Note there is a second location (Counselling Services Annex)",
   },
     {
     name: "Access and Assessment Center (AAC) at VGH",
@@ -151,7 +151,7 @@ const resources = [
     },
     address: "803 West 12th Avenue\nLevel 1 East Entrance\nVancouver, BC V5Z 1N1",
     hours: {
-      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm. This is available 7 days a week. Phone assistance is available daily."
+      others: "Call between 7:30am-10pm.\nWalk in between 7:30am-9:30pm, 7 days a week. Phone assistance is available daily."
     },
     notes:
       "Eligible adults can self-refer to the AAC by calling or walking into the clinic. Families and friends concerned about a loved one can call the AAC to provide information.",
@@ -206,7 +206,7 @@ const resources = [
       website: "https://www.ubcyogaclub.com",
       facebook: "https://www.facebook.com/theubcyogaclub",
     },
-    email: "info.ubcyogaclub@gmail.com",
+    email: "president.ubcyogaclub@gmail.com",
     address: "AMS Student Nest\n6133 University Blvd\nVancouver, BC V6T 1Z1",
     /*hours: {
       others: "Classes cancelled for the rest of the school year.",
@@ -397,10 +397,10 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "3:00opm-6:00pm (Gage)",
-      tuesday: "12:00pm-2:00pm (First Nations House of Learning), 3:00opm-6:00pm (Vanier)",
-      wednesday: "12:00pm-2:00pm (UBC Life Building, nest to Wellness Center), 3:00opm-6:00pm (Totem)",
-      thursday: "3:00opm-6:00pm (Orchard Commons)",
+      monday: "3:00pm-6:00pm (Gage)",
+      tuesday: "12:00pm-2:00pm (FNHL), 3:00pm-6:00pm (Vanier)",
+      wednesday: "12:00pm-2:00pm (Life Building), 3:00opm-6:00pm (Totem)",
+      thursday: "3:00opm-6:00pm (Orchard)",
       friday: "Closed",
       saturday: "Closed",
       sunday: "Closed",
@@ -411,7 +411,7 @@ const resources = [
   {
     name: "UBC Psychology Clinic",
     description:
-      "The UBC Psychology Clinic offers professional psychological services in the form of (mostly) individual therapy and group treatment.",
+      "The UBC Psychology Clinic offers professional outpatient psychological services mostly in the form of individual therapy. Group treatment may be offered depending on need.",
     logo: PsychologyClinicLogo,
     background: "",
     tags: ["low", "walkIn", "appointment", "professional"],
@@ -422,12 +422,12 @@ const resources = [
     email: "clinic@psych.ubc.ca",
     address: "Douglas T. Kenny Building\n2136 West Mall\nVancouver, BC V6T 1Z4",
     notes:
-      "The waitlist for OCD group is open. The waitlist for all other services is closed.",
+      "Assessment and treatment services offered every weekday between September and April and may be offered on a limited basis from May to August.",
   },
   {
     name: "Wellness Centre",
     description:
-      "Speak with a Wellness Peer Educator about everyday concerns related to health, relationships, and workload.",
+      "A peer-hosted space that offers many wellbeing programs for students.",
     logo: WellnessCentreLogo,
     background: "",
     tags: [
@@ -461,12 +461,12 @@ const resources = [
       friday: "11:00am-4:00pm",
     },
     notes:
-      "In-person and online drop-in services are available. You can also submit a question online and receive an email response within 2 business days.",
+      "In-person drop-in services are available.  You can also submit a question online and receive an email response within 3 to 5 business days.",
   },
   {
     name: "Wellness Workshops",
     description:
-      "You can request a workshop for a group of students, staff, and/or faculty members. Choose from the workshop topics on this page.",
+      "You can request a workshop for a group of students, staff, and/or faculty members. Choose from the workshop topics on the website.",
     logo: WellnessCentreLogo,
     background: "",
     tags: [
@@ -481,7 +481,7 @@ const resources = [
     phone: "604-822-8450",
     social: {
       website:
-        "https://students.ubc.ca/health/wellness-centre/wellness-workshops#how-to-participate",
+        "https://students.ubc.ca/health/wellness-centre/wellbeing-training-education/",
     },
     email: "wellness.centre@ubc.ca",
     address:
@@ -490,7 +490,7 @@ const resources = [
   {
     name: "AMS Peer Support",
     description:
-      "Peer Support provides free, confidential, one-on-one  and group-style peer support for UBC students and staff facing a wide variety of challenges. Peer Support also provides educational workshops on mental health and harm reduction for UBC student groups and community members free of charge.",
+      "Peer Support provides free, confidential, one-on-one  and group-style peer support (booked through the website) for UBC students and staff facing a wide variety of challenges. Peer Support also provides educational workshops on mental health and harm reduction for UBC student groups and community members free of charge.",
     logo: AMSPeerSupport,
     background: "",
     tags: [
@@ -532,9 +532,10 @@ const resources = [
     social: {
       website: "https://amssasc.ca/",
       facebook: "https://www.facebook.com/AMSSASCUBC/",
+      instagram: "https://www.facebook.com/AMSSASCUBC/",
     },
     email: "sasc@ams.ubc.ca",
-    address: "UBC AMS Nest\nRoom 2516",
+    address: "UBC AMS Nest\nRoom 3130",
     hours: {
       monday: "9:00am-9:00pm",
       tuesday: "9:00am-9:00pm",
@@ -545,7 +546,7 @@ const resources = [
       sunday: "11:00am-7:00pm",
     },
     notes:
-      "Hospital accompaniments are 9:00am-9:00pm, 7 days a week.",
+      "To schedule a session with a support worker at the SASC, you can phone the support line above. SASC now provides support over Signal (a free and end-to-end encrypted messaging app) at 604-729-5476.",
   },
   {
     name: "AMS The Pride Collective",
@@ -556,7 +557,7 @@ const resources = [
     tags: ["free", "free4UBC", "lgbt", "walkIn", "recurring", "peer"],
     social: {
       website: "https://www.prideubc.com/",
-      facebook: "https://www.facebook.com/prideubc/",
+      instagram: "https://www.instagram.com/prideubc/?hl=en",
     },
     email: "prideubc@gmail.com",
     address: "UBC AMS Nest\nRoom 2103",
@@ -577,10 +578,12 @@ const resources = [
       "generalAwareness",
     ],
     social: {
+      website: "https://womenscentre.ams.ubc.ca/",
       facebook: "https://www.facebook.com/ubcwomenscentre/",
+      instagram: "https://www.instagram.com/ubcwomenscentre/",
     },
     email: "ubcwomenscentre@gmail.com",
-    address: "UBC AMS Nest\nRoom 2113",
+    address: "UBC AMS Nest\nRoom 2114",
   },
   {
     name: "The Kaleidoscope",
@@ -606,13 +609,11 @@ const resources = [
     ],
     social: {
       website: "http://the-kaleidoscope.com/",
-      facebook: "https://www.facebook.com/kaleidoscopeUBC",
     },
-    email: "info@the-kaleidoscope.com",
     address: "Time and location varies by term",
     hours: {
       others:
-        "Meetings are moving online! Check our webiste and Facebook page for more details.",
+        "Meetings are moving online! Check our webiste and Facebook page for more details. Use the contact form on their webpage to get in touch with Kaleidoscope.",
     },
   },
   {
@@ -635,7 +636,7 @@ const resources = [
       "peer",
     ],
     social: {
-      website: "https://vivreshare.org/support-group/", /*note: link not working*/
+      website: "https://blogs.ubc.ca/canshare/about/",
       facebook: "https://www.facebook.com/vivreSHARE",
     },
     email: "info@vivreshare.org",
