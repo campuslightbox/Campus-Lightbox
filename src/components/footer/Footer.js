@@ -59,11 +59,6 @@ const FixedMenuLayout = () => (
                   <center>
                     <p>
                       Campus Lightbox was envisioned and created by{' '}
-                      <a
-                        href="https://www.projectaurora.ca/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
                         <b>Project Aurora.</b>
                       </a>
                     </p>
@@ -100,7 +95,7 @@ const FixedMenuLayout = () => (
               admin@campuslightbox.com
             </a>
             <br />
-            Resources last updated August 12, 2023
+            Resources last updated March 08, 2025
           </Grid.Column>
 
           <Grid.Column width={4} alignitems="center">
