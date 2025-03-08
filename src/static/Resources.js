@@ -397,16 +397,16 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "3:00pm-6:00pm (Gage)",
-      tuesday: "12:00pm-2:00pm (FNHL), 3:00pm-6:00pm (Vanier)",
-      wednesday: "12:00pm-2:00pm (Life Building), 3:00opm-6:00pm (Totem)",
-      thursday: "3:00opm-6:00pm (Orchard)",
+      monday: "3:00pm-6:00pm (G)",
+      tuesday: "12:00pm-2:00pm (F), 3:00pm-6:00pm (V)",
+      wednesday: "12:00pm-2:00pm (L), 3:00pm-6:00pm (Totem)",
+      thursday: "3:00pm-6:00pm (O)",
       friday: "Closed",
       saturday: "Closed",
       sunday: "Closed",
     },
     notes:
-      "Nurse on Campus service in residences, First Nations House of Learning, and in the Wellness Centre at the UBC Life Building.",
+      "Nurse on Campus service in Gage (G), Vanier (V), Totem (T), First Nations House of Learning (F), and in the Wellness Centre at the UBC Life Building (L).",
   },
   {
     name: "UBC Psychology Clinic",
@@ -664,7 +664,7 @@ const resources = [
       website: "https://svpro.ubc.ca/",
     },
     email: "svpro.vancouver@ubc.ca",
-    address: "6363 Agronomy Road\nRoom 4071 \nVancouver, BC V6T 1T2",
+    address: "6180 Walter Gage Road\nRoom 2110 \nVancouver, BC V6T 1Z1",
     hours: {
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
@@ -693,11 +693,11 @@ const resources = [
       "peer",
     ],
     social: {
-      website: "https://gss.ubc.ca/helping-students-on-the-road-to-recovery/",
+      website: "https://students.ubc.ca/health/ubc-student-recovery-community/",
       facebook: "https://www.facebook.com/RecoveryUBC/",
       instagram: "https://www.instagram.com/recovery_ubc/",
     },
-    email: "sfudjack@alumni.ubc.ca",
+    email: "src.recovery@ubc.ca",
   },
   {
     name: "UBC Mental Health Network",
@@ -716,12 +716,11 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "https://ubcmhn.ca/",
-      facebook: "https://www.facebook.com/mentalhealthnetworkubc/",
+      facebook: "https://www.facebook.com/ubcmhn/",
       twitter: "https://www.twitter.com/ubcmhn",
       instagram: "https://www.instagram.com/ubcmhn",
     },
-    email: "info@ubcmhn.ca",
+    email: "info.ubcmhn@gmail.com ",
   },
   {
     name: "Mental Health Awareness Club",
@@ -747,7 +746,7 @@ const resources = [
       instagram: "https://www.instagram.com/ubcmhac/"
     },
     email: "ubcmhac@gmail.com",
-    address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
+    address: "6133 University Blvd\nVancouver, BC V6T1Z1",
   },
   {
     name: "UBC Jack Chapter",
@@ -768,7 +767,7 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "https://amscampusbase.ubc.ca/jack/home/",
+      instagram: "https://www.instagram.com/jack.orgubc/",
     },
     email: "ubcjackchapater@gmail.com",
   },
@@ -798,10 +797,10 @@ const resources = [
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
       facebook: "https://www.facebook.com/UBCZen/",
     },
-    email: "gareth@zen.ca",
+    email: "gareth.ubczen@gmail.com ",
     hours: {
       others:
-        "Zen Meditation sessions run Mondays in UBC Life Building room 2214 from 4:30 to 5:30pm and Thursdays in room 2212 from 5:00 to 6:00pm.",
+        "Zen Meditation sessions run in UBC Life Building (Room 2214) on Monday and Thursdays from 5:00pm - 6:00pm.",
     },
   },
   {
@@ -854,16 +853,16 @@ const resources = [
       "allday",
       "professional",
     ],
-    phone: "1-800-784-2433",
+    phone: "310-6789",
     social: {
       website: "https://crisiscentre.bc.ca/",
     },
     hours: {
-      others: "24/7, 365 days a year",
+      others: "24/7, 365 days a year. Yo ",
     },
   },
   {
-    name: "WAVAW Rape Crisis Centre",
+    name: "Salal Sexual Violence Support Centre",
     description:
       "Support services for survivors of sexualized violence or gender marginalization: cis and trans women, Two-Spirit, trans and/or non-binary people.",
     logo: WomenViolenceLogo,
@@ -885,43 +884,12 @@ const resources = [
     social: {
       website: "https://www.wavaw.ca/",
     },
-    email: "admin@wavaw.ca",
-    address: "WAVAW Rape Crisis Centre\n1476 BC-7\nVancouver, BC V6H 4E8",
+    email: "admin@salalsvsc.ca",
+    address: "2405 Pine Street\nP.O. Box 46851\nVancouver, BC V6J 5M4",
     hours: {
       others: "24/7",
     },
-    notes: "24-hour crisis and information line is 604-255-6344 in BC and 1-877-392-7583 for the national toll-free line. Virtual, phone, and in-person services available.",
-  },
-  {
-    name: "Wellness Together Canada",
-    description:
-      "Free mental health online assessment, self-guided mental health resources, and free access to counsellors by phone, text or video.",
-    logo: WellnessCan,
-    background: "",
-    tags: [
-      "free",
-      "free4UBC",
-      "general",
-      "substanceAbuse",
-      "depressionAnxiety",
-      "immediate",
-      "sameDay",
-      "low",
-      "medium",
-      "high",
-      "online",
-      "phone",
-      "professional",
-      "allday",
-    ],
-
-    social: {
-      website: "https://ca.portal.gs/",
-    },
-    hours: {
-      others: "24/7",
-    },
-    notes: "Text WELLNESS to 741741 for immediate crisis support",
+    notes: "24-hour crisis and information line is 604-255-6344 in BC and 1-877-392-7583 for the national toll-free line. Virtual (https://www.salalsvsc.ca/connect-chat/), phone, and in-person services available.",
   },
   {
     name: "Here2Talk",
