@@ -27,8 +27,8 @@ function GetHelpModal({ isCrisis, setIsCrisis }) {
             <Table.Body>
               <Table.Row>
                 <Table.Cell>
-                  Crisis Center Line 24/7 <Icon name="phone" /> (604-872-3311)
-                  BC-Wide: (1-800-784-2433)
+                  National Suicide Crisis Helpline 24/7, Call or Text <Icon name="phone" /> (9-8-8)
+                  BC Mental Health & Crisis Response: (310-6789)
                 </Table.Cell>
               </Table.Row>
               <Table.Row>
