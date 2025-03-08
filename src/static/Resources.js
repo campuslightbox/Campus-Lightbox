@@ -25,7 +25,6 @@ import MeditationLogo from "./logos/Meditation.png";
 import MindHealthBC from "./logos/MindHealthBC.png";
 import NursesBG from "./logos/NursesBG.jpg";
 import NursesLogo from "./logos/Nurses.png";
-import PayFair from "./logos/PayFairLogo.png";
 import PegasusLogo from "./logos/PegasusLogo.png";
 import PrideLogo from "./logos/Pride.png";
 import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
@@ -918,39 +917,10 @@ const resources = [
     },
     notes: "For Canada-wide toll free, please dial: 1-877-857-3397",
   },
-
-  {
-    name: "Pay What Feels Fair",
-    description:
-      "We connect those who want affordable counseling to counselors who offer it.",
-    logo: PayFair,
-    background: "",
-    tags: [
-      "paid",
-      "general",
-      "depressionAnxiety",
-      "substanceAbuse",
-      "eatingDisorder",
-      "lgbt",
-      "less1Month",
-      "low",
-      "medium",
-      "high",
-      "appointment",
-      "professional",
-    ],
-    phone: "604-351-4989",
-    social: {
-      twitter: "https://twitter.com/pwffBC",
-      website: "https://kevinkokoska.com",
-    },
-    email: "kevinkokoska@gmail.com",
-  },
-
   {
     name: "UBC Academic Advising",
     description:
-      "Help with program planning, degree requirements, and other course-related questions.",
+      "Help with course planning, degree/graduation requirements, academic concession and credit tranfers.",
     logo: AcademicLogo,
     background: AcademicBG,
     tags: [
@@ -971,13 +941,13 @@ const resources = [
     },
     hours: {
       others:
-        "For contact information, address, and hours please refer to your faculty website",
+        "“For contact information, address, and hours, please refer to your faculty website. It can be found through the Academic Advising page linked above.",
     },
   },
   {
     name: "Enrollment Services",
     description:
-      "Get help with budgeting, loans, understanding UBC processes, financial planning.",
+      "Get help with loans, scholarships, tuition payment, understanding UBC processes and financial planning.",
     logo: EnrollmentLogo,
     background: EnrollmentBG,
     tags: [
@@ -998,11 +968,11 @@ const resources = [
     address:
       "Enrollment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "11:00am-3:00pm",
-      tuesday: "11:00am-3:00pm",
-      wednesday: "11:00am-3:00pm",
-      thursday: "11:00am-3:00pm",
-      friday: "11:00am-3:00pm",
+      monday: "9:30am-4:00pm",
+      tuesday: "10:00am-4:00pm",
+      wednesday: "9:30am-4:00pm",
+      thursday: "9:30am-4:00pm",
+      friday: "9:30am-4:00pm",
       saturday: "Closed",
       sunday: "Closed",
     },
@@ -1010,7 +980,7 @@ const resources = [
   {
     name: "CounsellingBC.com",
     description:
-      "We provide individuals, couples, and families in BC with the counselling assistance via up-to-date information about resources that promote healing and recovery.",
+      "An online resource where you can find information regarding counselling, psychological services, art therapy and psychotherapy provided in British Columbia and professionals who can deliver such services.",
     logo: CounsellingBC,
     background: "",
     tags: [
@@ -1085,7 +1055,7 @@ const resources = [
   {
     name: "Kelty's Key",
     description:
-      "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the support you need to feel better.",
+      "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the tailored or self-guided support that best suits your needs.",
     logo: KeltysKey,
     tags: [
       "free",
@@ -1119,18 +1089,17 @@ const resources = [
       "professional",
       "medical",
     ],
-    phone: "604-730-0522",
+    phone: "604-730-0501",
     social: {
-      website: " https://www.psychologists.bc.ca/find_psychologist",
-      facebook: "https://www.facebook.com/bcpsychologists/",
+      website: " https://psychologists.bc.ca/find-psychologist",
     },
     notes:
-      "604-730-0522 or 1-800-730-0522 are BCPA Referral Line, where you can find names and contact information for psychologists in your area. Please call between 9:30 AM and 4:30 PM.",
+      "Please note the number above is for membership related purposes. Use the website above to access a directory of psychologists in British Columbia.",
   },
   {
     name: "Foundry",
     description:
-      "Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
+      "Foundry offers health and wellness resources, services and supports – online and through integrated service centres for youth aged 12-24 in seventeen communities across BC",
     logo: Foundry,
     email: "webinfo@foundrybc.ca",
     tags: [
@@ -1155,7 +1124,7 @@ const resources = [
   {
     name: "Alcohol & Drug Information Referral Service (ADIRS)",
     description:
-      "Free, confidential information and referral services to British Columbians in need of support with any kind of substance use issue.",
+      "Free, confidential, multilingual information and referral regarding community resources for people in BC in need of any kind of substance use and addiction issues.",
     logo: HealthLinkBC,
     tags: [
       "free",
@@ -1169,10 +1138,11 @@ const resources = [
     phone: "604-660-9382",
     social: {
       website:
-        "https://www.healthlinkbc.ca/mental-health-substance-use/resources/adirs",
+        "https://bc.211.ca/result/the-alcohol-and-drug-information-and-referral-service-adirs-9505601/",
     },
+    email: "211-help@uwbc.ca",
     notes:
-      "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available.",
+      "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available 365 days a year",
   },
   {
     name: "UBC Athletes Hub",
