@@ -49,7 +49,6 @@ import UMCALogo from "./logos/UMCA.png";
 import VCHLogo from "./logos/VCHlogo.jpg";
 import VillageMedicalBG from "./logos/UBCVillageMedicalBG.jpg";
 import VillageMedicalLogo from "./logos/UBCVillageMedical.png";
-import WellnessCan from "./logos/WellCanLogo.png";
 import WellnessCentreLogo from "./logos/WellnessCentre.png";
 import WesbrookVillageMedicalBG from "./logos/WesbrookVillageMedicalBG.jpg";
 import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
@@ -858,7 +857,7 @@ const resources = [
       website: "https://crisiscentre.bc.ca/",
     },
     hours: {
-      others: "24/7, 365 days a year. Yo ",
+      others: "24/7, 365 days a year. You can call or text the National Suicide Crisis Helpline at 9-8-8.",
     },
   },
   {
