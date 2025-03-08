@@ -53,7 +53,7 @@ import WellnessCentreLogo from "./logos/WellnessCentre.png";
 import WesbrookVillageMedicalBG from "./logos/WesbrookVillageMedicalBG.jpg";
 import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
 import WomenCentreLogo from "./logos/WomenCentre.png";
-import WomenViolenceLogo from "./logos/WomenViolence.png";
+import SalalLogo from "./logos/Salal.png";
 import YogaClubBG from "./logos/YogaClubBG.png";
 /*
     ##last updated: May, 7, 2019##
@@ -864,7 +864,7 @@ const resources = [
     name: "Salal Sexual Violence Support Centre",
     description:
       "Support services for survivors of sexualized violence or gender marginalization: cis and trans women, Two-Spirit, trans and/or non-binary people.",
-    logo: WomenViolenceLogo,
+    logo: SalalLogo,
     background: "",
     tags: [
       "free",
