@@ -20,7 +20,6 @@ import KaleidoscopeLogo from "./logos/Kaleidoscope.png";
 import KeltysKey from "./logos/keltyskey.png";
 import MHACLogo from "./logos/MHAC.png";
 import MHNLogo from "./logos/MHNLogo2.png";
-import MHliteracy from "./logos/MHliteracy.png";
 import MeditationLogo from "./logos/Meditation.png";
 import MindHealthBC from "./logos/MindHealthBC.png";
 import NursesBG from "./logos/NursesBG.jpg";
@@ -34,7 +33,6 @@ import SRCLogo from "./logos/SRC_circle3.png";
 import SVPROLogo from "./logos/SVPRO.png";
 import TAOapp from "./logos/TAOapp2.png";
 import UBCAthleteHub from "./logos/UBCAthleteHub2.png";
-import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import UBCCounsellingServiceBG from "./logos/UBCCounsellingServiceBG.jpg";
 import UBCCounsellingServiceLogo from "./logos/UBCCounsellingService.png";
 import UBCHospital from "./logos/UBCHospital.png";
@@ -795,7 +793,7 @@ const resources = [
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
       facebook: "https://www.facebook.com/UBCZen/",
     },
-    email: "gareth.ubczen@gmail.com ",
+    email: "gareth.ubczen@gmail.com",
     hours: {
       others:
         "Zen Meditation sessions run in UBC Life Building (Room 2214) on Monday and Thursdays from 5:00pm - 6:00pm.",
@@ -1170,7 +1168,7 @@ const resources = [
   {
     name: "MindHealthBC",
     description:
-      "A one stop shop that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
+      "A one stop shop developed by Vancouver Coastal Health and Providence Health that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
     logo: MindHealthBC,
     background: "",
     tags: [
@@ -1196,51 +1194,9 @@ const resources = [
     },
   },
   {
-    name: "UBC Mental Health Literacy",
-    description:
-      "This online modular-based resource can be used as a self-guided course or in individual modules by those wishing to develop their mental health literacy.",
-    logo: MHliteracy,
-    background: "",
-    tags: ["online", "generalAwareness", "allday", "free", "free4UBC"],
-    social: {
-      website: "https://www.teachmentalhealth.org/",
-    },
-    email: "tmentalhealth@gmail.com",
-    notes: "Participation in this online course is FREE.",
-  },
-  {
-    name: " UBC Student Assistance Program (SAP)",
-    description:
-      "Offered by Aspiria, UBC SAP is a free, 24/7 wellness resource for students. Services include personal counselling, life coaching, group programs to support your mental, emotional, physical and financial health.",
-    logo: UBCgeneral,
-    tags: [
-      "free4UBC",
-      "academic",
-      "financial",
-      "depressionAnxiety",
-      "substanceAbuse",
-      "eatingDisorder",
-      "womensHealth",
-      "suicidal",
-      "general",
-      "immediate",
-      "online",
-      "allday",
-      "phone",
-      "low",
-      "medium",
-      "professional",
-    ],
-    social: {
-      website:
-        "https://students.ubc.ca/health/ubc-student-assistance-program-sap",
-    },
-    phone: "1-833-590-1328",
-  },
-  {
     name: "HeretoHelp",
     description:
-      "Find the information you need and explore strategies to manage mental health and substance use problems.",
+      "Find the information you need and explore strategies to better manage mental health and substance use challenges.",
     logo: HeretoHelp,
     background: "",
     tags: [
@@ -1266,12 +1222,11 @@ const resources = [
   {
     name: "UBC Scarfe Free Counselling Clinic",
     description:
-      "We offer help with stress-management (work, home, school stress), anxiety, depression, school and relationship issues.",
+      "Counselling services offered by UBC Counselling Psychology Master’s and Doctoral students to support with stress-management (work, home, school stress), anxiety, depression, school or relationship issues.",
     logo: UBCScarfe,
     background: "",
     tags: [
-      "free",
-      "free4UBC",
+      "paid",
       "depressionAnxiety",
       "general",
       "less1Month",
@@ -1281,17 +1236,18 @@ const resources = [
     ],
     social: {
       website:
-        "https://ecps.educ.ubc.ca/counselling-centres/scarfe-free-counselling-clinic/",
+        "https://psctc.educ.ubc.ca/",
     },
-    phone: "604-827-1523",
-    address: "6174 University Blvd - 3F\nVancouver, BC V6T 1Z4",
+    phone: "604-822-1364",
+    email: "psctc.reception@ubc.ca",
+    address: "Neville Scarfe Education Building\n1100-2125 Main Mall\nVancouver, BC V6T 1Z4",
     notes:
-      "Clinics run from September to April. Daytime and evening appointments available. Please note that all patients must complete a telephone intake prior to first visit.",
+      "Clinics run from September to April with sessions offered primarily in person but with some opportunities for online counselling using Zoom/OWL. Contact office by phone to be added to the waitlist. All patients must complete a telephone intake prior to first visit.",
   },
   {
     name: "UBC Counsellor in Residence",
     description:
-      "If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can email us to make an appointment to see one of UBC’s Counsellors in Residence.",
+      "If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can make an appointment to see one of UBC’s Counsellors in Residence.",
     logo: UBCgeneral,
     background: "",
     tags: [
@@ -1310,7 +1266,7 @@ const resources = [
     },
     email: "counsellor.residence@ubc.ca",
     notes:
-      "Please include your full name, student number, class schedule and residence/building in your email.",
+      "Use the online booking form available on the website to make an appointment.",
   },
   {
     name: "Henry Chen Counselling",
@@ -1332,12 +1288,15 @@ const resources = [
       website: "https://jcmed.ca/henrychen/",
     },
     phone: "604-261-6000",
+    email: "office@jcmed.ca",
     address: "#360 - 650 West 41st Avenue \nVancouver,BC V5Z 2M9",
+    notes:
+      "UServices available in English, Mandarin and Taiwanese (Hokkien).",
   },
   {
-    name: "UBC Hospital - Koerner Pavilion",
+    name: "UBC Hospital",
     description:
-      "UBC Hospital offers specialized treatment for non-life-threatening emergencies and surgical care.",
+      "UBC Hospital offers specialized treatment for non-life-threatening, life-threatening emergencies and surgical care.",
     logo: UBCHospital,
     background: "",
     tags: [
@@ -1355,19 +1314,19 @@ const resources = [
     phone: "604-822-7121",
     address: "2211 Wesbrook Mall \n Vancouver,BC \n V6T 2B5",
     hours: {
-      monday: "8:00am-10:00pm",
-      tuesday: "8:00am-10:00pm",
-      wednesday: "8:00am-10:00pm",
-      thursday: "8:00am-10:00pm",
-      friday: "8:00am-10:00pm",
-      saturday: "8:00am-10:00pm",
-      sunday: "8:00am-10:00pm",
+      monday: "8:00am-8:00pm",
+      tuesday: "8:00am-8:00pm",
+      wednesday: "8:00am-8:00pm",
+      thursday: "8:00am-8:00pm",
+      friday: "8:00am-8:00pm",
+      saturday: "8:00am-8:00pm",
+      sunday: "8:00am-8:00pm",
     },
   },
   {
     name: "UBC Thrive",
     description:
-      "Thrive is a mindset and a month-long series of events focused on helping everyone at UBC explore their path to mental health.",
+      "Thrive is a campaign dedicated to shining a spotlight ton the incredible resources, groups, and departments at UBC that work year-round to support mental health and wellbeing for the UBC community.",
     logo: UBCwellbeing,
     background: "",
     tags: ["free", "free4UBC", "general", "low", "events", "generalAwareness"],
@@ -1379,34 +1338,6 @@ const resources = [
       "UBC Wellbeing Design Lab \n 2321 - 2260 West Mall \n Vancouver, BC V6T 1Z4",
     notes:
       "Be sure to check out the Thrive calendar for lots of great events and initiatives throughout November!",
-  },
-  {
-    name: "UBC Body Banter",
-    description:
-      "Empower students to change the conversation about body image through self-reflection, open communication, and collaborative action.",
-    logo: UBCBodyBanter,
-    background: "",
-    tags: [
-      "free",
-      "free4UBC",
-      "general",
-      "less1Week",
-      "less1Month",
-      "low",
-      "recurring",
-      "walkIn",
-      "peer",
-    ],
-    social: {
-      website: "http://bodybanter.com/",
-      facebook: "https://www.facebook.com/ubcbodybanter",
-      instagram: "https://www.instagram.com/ubcbodybanter",
-    },
-    address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
-    /*hours: {
-      others: "Weekly meetings are cancelled for the rest of the school year.",
-    },*/
-    //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
   },
   {
     name: "Therapy Assistance Online (TAO)",
@@ -1432,7 +1363,7 @@ const resources = [
   {
     name: "Suicide Attempt Follow-up, Education & Research ",
     description:
-      "S.A.F.E.R. is a free, time-limited counselling service offered at Mental Health and Substance Use Outpatient Services. Intake is through the Access and Assessment Centre.",
+      "S.A.F.E.R. is a free, time-limited counselling service for individuals aged 19+ who have made a suicide attempt, are currently suicidal or have suicidal ideation.",
     logo: VCHLogo,
     background: "",
     tags: [
@@ -1454,7 +1385,7 @@ const resources = [
         "http://www.vch.ca/Pages/Suicide-Attempt-Follow-up,-Education---Research-SAFER.aspx",
     },
     phone: "604-675-3700",
-    address: "803 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
+    address: "899 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
     /*hours: {
       monday: "7:30am-11:00pm",
       tuesday: "7:30am-11:00pm",
@@ -1465,7 +1396,7 @@ const resources = [
       sunday: "7:30am-11:00pm",
     },*/
     notes:
-      "Call the Access and Assessment Centre at 604-675-3700 to connect with S.A.F.E.R.",
+      "This service is offered at the Mental Health and Substance Use Outpatient Services at VGH. Intake is through the Access and Assessment Centre.",
   },
 ];
 
