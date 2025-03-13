@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bdcbdbc2.chunk.css",
-    "main.js": "/static/js/main.7ff1f15e.chunk.js",
-    "main.js.map": "/static/js/main.7ff1f15e.chunk.js.map",
+    "main.js": "/static/js/main.82afda9c.chunk.js",
+    "main.js.map": "/static/js/main.82afda9c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.34974b02.js",
     "runtime-main.js.map": "/static/js/runtime-main.34974b02.js.map",
     "static/css/2.bad41965.chunk.css": "/static/css/2.bad41965.chunk.css",
@@ -27,12 +27,10 @@
     "static/media/Kaleidoscope.80559c00.png": "/static/media/Kaleidoscope.80559c00.png",
     "static/media/MHAC.f051e520.png": "/static/media/MHAC.f051e520.png",
     "static/media/MHNLogo2.0e27f6e9.png": "/static/media/MHNLogo2.0e27f6e9.png",
-    "static/media/MHliteracy.ed852179.png": "/static/media/MHliteracy.ed852179.png",
     "static/media/Meditation.f422066f.png": "/static/media/Meditation.f422066f.png",
     "static/media/MindHealthBC.3bceb698.png": "/static/media/MindHealthBC.3bceb698.png",
     "static/media/Nurses.2e410e96.png": "/static/media/Nurses.2e410e96.png",
     "static/media/NursesBG.416bbbe7.jpg": "/static/media/NursesBG.416bbbe7.jpg",
-    "static/media/PayFairLogo.61079c7b.png": "/static/media/PayFairLogo.61079c7b.png",
     "static/media/PegasusLogo.35b2b70c.png": "/static/media/PegasusLogo.35b2b70c.png",
     "static/media/Pride.4d2d33a8.png": "/static/media/Pride.4d2d33a8.png",
     "static/media/PsychologyClinic.6b7d5459.png": "/static/media/PsychologyClinic.6b7d5459.png",
@@ -40,9 +38,9 @@
     "static/media/SHARE.aacbdb18.png": "/static/media/SHARE.aacbdb18.png",
     "static/media/SRC_circle3.6a3e8aed.png": "/static/media/SRC_circle3.6a3e8aed.png",
     "static/media/SVPRO.185f3a95.png": "/static/media/SVPRO.185f3a95.png",
+    "static/media/Salal.b0ff7d43.png": "/static/media/Salal.b0ff7d43.png",
     "static/media/TAOapp2.0492b05c.png": "/static/media/TAOapp2.0492b05c.png",
     "static/media/UBCAthleteHub2.17c6ad9b.png": "/static/media/UBCAthleteHub2.17c6ad9b.png",
-    "static/media/UBCBodyBanter.6a77be27.png": "/static/media/UBCBodyBanter.6a77be27.png",
     "static/media/UBCCounsellingService.416a5cee.png": "/static/media/UBCCounsellingService.416a5cee.png",
     "static/media/UBCCounsellingServiceBG.727fcb80.jpg": "/static/media/UBCCounsellingServiceBG.727fcb80.jpg",
     "static/media/UBCStudentHealth.b861075d.png": "/static/media/UBCStudentHealth.b861075d.png",
@@ -56,7 +54,6 @@
     "static/media/WesbrookVillageMedical.d8579610.png": "/static/media/WesbrookVillageMedical.d8579610.png",
     "static/media/WesbrookVillageMedicalBG.79d7541b.jpg": "/static/media/WesbrookVillageMedicalBG.79d7541b.jpg",
     "static/media/WomenCentre.410ff81c.png": "/static/media/WomenCentre.410ff81c.png",
-    "static/media/WomenViolence.70edca40.png": "/static/media/WomenViolence.70edca40.png",
     "static/media/YogaClub.3c45b661.png": "/static/media/YogaClub.3c45b661.png",
     "static/media/YogaClubBG.2f70700f.png": "/static/media/YogaClubBG.2f70700f.png",
     "static/media/Zen.aa5c4cf1.png": "/static/media/Zen.aa5c4cf1.png",
@@ -71,6 +68,6 @@
     "static/css/2.bad41965.chunk.css",
     "static/js/2.cf73e137.chunk.js",
     "static/css/main.bdcbdbc2.chunk.css",
-    "static/js/main.7ff1f15e.chunk.js"
+    "static/js/main.82afda9c.chunk.js"
   ]
 }
