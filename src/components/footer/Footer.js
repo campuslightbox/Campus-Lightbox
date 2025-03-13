@@ -58,9 +58,7 @@ const FixedMenuLayout = () => (
                 <Modal.Description>
                   <center>
                     <p>
-                      Campus Lightbox was envisioned and created by{' '}
-                        <b>Project Aurora.</b>
-                      </a>
+                      Campus Lightbox was envisioned and created by <b>Project Aurora.</b>
                     </p>
                     <p>
                       Project Aurora is a registered non-profit aimed at
