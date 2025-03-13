@@ -20,12 +20,10 @@ import KaleidoscopeLogo from "./logos/Kaleidoscope.png";
 import KeltysKey from "./logos/keltyskey.png";
 import MHACLogo from "./logos/MHAC.png";
 import MHNLogo from "./logos/MHNLogo2.png";
-import MHliteracy from "./logos/MHliteracy.png";
 import MeditationLogo from "./logos/Meditation.png";
 import MindHealthBC from "./logos/MindHealthBC.png";
 import NursesBG from "./logos/NursesBG.jpg";
 import NursesLogo from "./logos/Nurses.png";
-import PayFair from "./logos/PayFairLogo.png";
 import PegasusLogo from "./logos/PegasusLogo.png";
 import PrideLogo from "./logos/Pride.png";
 import PsychologyClinicLogo from "./logos/PsychologyClinic.png";
@@ -35,7 +33,6 @@ import SRCLogo from "./logos/SRC_circle3.png";
 import SVPROLogo from "./logos/SVPRO.png";
 import TAOapp from "./logos/TAOapp2.png";
 import UBCAthleteHub from "./logos/UBCAthleteHub2.png";
-import UBCBodyBanter from "./logos/UBCBodyBanter.png";
 import UBCCounsellingServiceBG from "./logos/UBCCounsellingServiceBG.jpg";
 import UBCCounsellingServiceLogo from "./logos/UBCCounsellingService.png";
 import UBCHospital from "./logos/UBCHospital.png";
@@ -49,12 +46,11 @@ import UMCALogo from "./logos/UMCA.png";
 import VCHLogo from "./logos/VCHlogo.jpg";
 import VillageMedicalBG from "./logos/UBCVillageMedicalBG.jpg";
 import VillageMedicalLogo from "./logos/UBCVillageMedical.png";
-import WellnessCan from "./logos/WellCanLogo.png";
 import WellnessCentreLogo from "./logos/WellnessCentre.png";
 import WesbrookVillageMedicalBG from "./logos/WesbrookVillageMedicalBG.jpg";
 import WesbrookVillageMedicalLogo from "./logos/WesbrookVillageMedical.png";
 import WomenCentreLogo from "./logos/WomenCentre.png";
-import WomenViolenceLogo from "./logos/WomenViolence.png";
+import SalalLogo from "./logos/Salal.png";
 import YogaClubBG from "./logos/YogaClubBG.png";
 /*
     ##last updated: May, 7, 2019##
@@ -397,16 +393,16 @@ const resources = [
     },
     email: "student.health@ubc.ca",
     hours: {
-      monday: "3:00pm-6:00pm (Gage)",
-      tuesday: "12:00pm-2:00pm (FNHL), 3:00pm-6:00pm (Vanier)",
-      wednesday: "12:00pm-2:00pm (Life Building), 3:00opm-6:00pm (Totem)",
-      thursday: "3:00opm-6:00pm (Orchard)",
+      monday: "3:00pm-6:00pm (G)",
+      tuesday: "12:00pm-2:00pm (F), 3:00pm-6:00pm (V)",
+      wednesday: "12:00pm-2:00pm (L), 3:00pm-6:00pm (Totem)",
+      thursday: "3:00pm-6:00pm (O)",
       friday: "Closed",
       saturday: "Closed",
       sunday: "Closed",
     },
     notes:
-      "Nurse on Campus service in residences, First Nations House of Learning, and in the Wellness Centre at the UBC Life Building.",
+      "Nurse on Campus service in Gage (G), Vanier (V), Totem (T), First Nations House of Learning (F), and in the Wellness Centre at the UBC Life Building (L).",
   },
   {
     name: "UBC Psychology Clinic",
@@ -664,7 +660,7 @@ const resources = [
       website: "https://svpro.ubc.ca/",
     },
     email: "svpro.vancouver@ubc.ca",
-    address: "6363 Agronomy Road\nRoom 4071 \nVancouver, BC V6T 1T2",
+    address: "6180 Walter Gage Road\nRoom 2110 \nVancouver, BC V6T 1Z1",
     hours: {
       monday: "8:30am-4:30pm",
       tuesday: "8:30am-4:30pm",
@@ -693,11 +689,11 @@ const resources = [
       "peer",
     ],
     social: {
-      website: "https://gss.ubc.ca/helping-students-on-the-road-to-recovery/",
+      website: "https://students.ubc.ca/health/ubc-student-recovery-community/",
       facebook: "https://www.facebook.com/RecoveryUBC/",
       instagram: "https://www.instagram.com/recovery_ubc/",
     },
-    email: "sfudjack@alumni.ubc.ca",
+    email: "src.recovery@ubc.ca",
   },
   {
     name: "UBC Mental Health Network",
@@ -716,12 +712,11 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "https://ubcmhn.ca/",
-      facebook: "https://www.facebook.com/mentalhealthnetworkubc/",
+      facebook: "https://www.facebook.com/ubcmhn/",
       twitter: "https://www.twitter.com/ubcmhn",
       instagram: "https://www.instagram.com/ubcmhn",
     },
-    email: "info@ubcmhn.ca",
+    email: "info.ubcmhn@gmail.com ",
   },
   {
     name: "Mental Health Awareness Club",
@@ -747,7 +742,7 @@ const resources = [
       instagram: "https://www.instagram.com/ubcmhac/"
     },
     email: "ubcmhac@gmail.com",
-    address: "NEST Room 3302G\n6133 University Blvd\nVancouver, BC V6T1Z1",
+    address: "6133 University Blvd\nVancouver, BC V6T1Z1",
   },
   {
     name: "UBC Jack Chapter",
@@ -768,7 +763,7 @@ const resources = [
       "generalAwareness",
     ],
     social: {
-      website: "https://amscampusbase.ubc.ca/jack/home/",
+      instagram: "https://www.instagram.com/jack.orgubc/",
     },
     email: "ubcjackchapater@gmail.com",
   },
@@ -798,10 +793,10 @@ const resources = [
         "https://students.ubc.ca/campus-life/religion-spirituality/chaplains/zen-buddhist-chaplain",
       facebook: "https://www.facebook.com/UBCZen/",
     },
-    email: "gareth@zen.ca",
+    email: "gareth.ubczen@gmail.com",
     hours: {
       others:
-        "Zen Meditation sessions run Mondays in UBC Life Building room 2214 from 4:30 to 5:30pm and Thursdays in room 2212 from 5:00 to 6:00pm.",
+        "Zen Meditation sessions run in UBC Life Building (Room 2214) on Monday and Thursdays from 5:00pm - 6:00pm.",
     },
   },
   {
@@ -854,19 +849,19 @@ const resources = [
       "allday",
       "professional",
     ],
-    phone: "1-800-784-2433",
+    phone: "310-6789",
     social: {
       website: "https://crisiscentre.bc.ca/",
     },
     hours: {
-      others: "24/7, 365 days a year",
+      others: "24/7, 365 days a year. You can call or text the National Suicide Crisis Helpline at 9-8-8.",
     },
   },
   {
-    name: "WAVAW Rape Crisis Centre",
+    name: "Salal Sexual Violence Support Centre",
     description:
       "Support services for survivors of sexualized violence or gender marginalization: cis and trans women, Two-Spirit, trans and/or non-binary people.",
-    logo: WomenViolenceLogo,
+    logo: SalalLogo,
     background: "",
     tags: [
       "free",
@@ -885,43 +880,12 @@ const resources = [
     social: {
       website: "https://www.wavaw.ca/",
     },
-    email: "admin@wavaw.ca",
-    address: "WAVAW Rape Crisis Centre\n1476 BC-7\nVancouver, BC V6H 4E8",
+    email: "admin@salalsvsc.ca",
+    address: "2405 Pine Street\nP.O. Box 46851\nVancouver, BC V6J 5M4",
     hours: {
       others: "24/7",
     },
-    notes: "24-hour crisis and information line is 604-255-6344 in BC and 1-877-392-7583 for the national toll-free line. Virtual, phone, and in-person services available.",
-  },
-  {
-    name: "Wellness Together Canada",
-    description:
-      "Free mental health online assessment, self-guided mental health resources, and free access to counsellors by phone, text or video.",
-    logo: WellnessCan,
-    background: "",
-    tags: [
-      "free",
-      "free4UBC",
-      "general",
-      "substanceAbuse",
-      "depressionAnxiety",
-      "immediate",
-      "sameDay",
-      "low",
-      "medium",
-      "high",
-      "online",
-      "phone",
-      "professional",
-      "allday",
-    ],
-
-    social: {
-      website: "https://ca.portal.gs/",
-    },
-    hours: {
-      others: "24/7",
-    },
-    notes: "Text WELLNESS to 741741 for immediate crisis support",
+    notes: "24-hour crisis and information line is 604-255-6344 in BC and 1-877-392-7583 for the national toll-free line. Virtual (https://www.salalsvsc.ca/connect-chat/), phone, and in-person services available.",
   },
   {
     name: "Here2Talk",
@@ -951,39 +915,10 @@ const resources = [
     },
     notes: "For Canada-wide toll free, please dial: 1-877-857-3397",
   },
-
-  {
-    name: "Pay What Feels Fair",
-    description:
-      "We connect those who want affordable counseling to counselors who offer it.",
-    logo: PayFair,
-    background: "",
-    tags: [
-      "paid",
-      "general",
-      "depressionAnxiety",
-      "substanceAbuse",
-      "eatingDisorder",
-      "lgbt",
-      "less1Month",
-      "low",
-      "medium",
-      "high",
-      "appointment",
-      "professional",
-    ],
-    phone: "604-351-4989",
-    social: {
-      twitter: "https://twitter.com/pwffBC",
-      website: "https://kevinkokoska.com",
-    },
-    email: "kevinkokoska@gmail.com",
-  },
-
   {
     name: "UBC Academic Advising",
     description:
-      "Help with program planning, degree requirements, and other course-related questions.",
+      "Help with course planning, degree/graduation requirements, academic concession and credit tranfers.",
     logo: AcademicLogo,
     background: AcademicBG,
     tags: [
@@ -1004,13 +939,13 @@ const resources = [
     },
     hours: {
       others:
-        "For contact information, address, and hours please refer to your faculty website",
+        "“For contact information, address, and hours, please refer to your faculty website. It can be found through the Academic Advising page linked above.",
     },
   },
   {
     name: "Enrollment Services",
     description:
-      "Get help with budgeting, loans, understanding UBC processes, financial planning.",
+      "Get help with loans, scholarships, tuition payment, understanding UBC processes and financial planning.",
     logo: EnrollmentLogo,
     background: EnrollmentBG,
     tags: [
@@ -1031,11 +966,11 @@ const resources = [
     address:
       "Enrollment Services Advising Centre\nBrock Hall\n1874 East Mall\nVancouver, BC V6T 1Z1",
     hours: {
-      monday: "11:00am-3:00pm",
-      tuesday: "11:00am-3:00pm",
-      wednesday: "11:00am-3:00pm",
-      thursday: "11:00am-3:00pm",
-      friday: "11:00am-3:00pm",
+      monday: "9:30am-4:00pm",
+      tuesday: "10:00am-4:00pm",
+      wednesday: "9:30am-4:00pm",
+      thursday: "9:30am-4:00pm",
+      friday: "9:30am-4:00pm",
       saturday: "Closed",
       sunday: "Closed",
     },
@@ -1043,7 +978,7 @@ const resources = [
   {
     name: "CounsellingBC.com",
     description:
-      "We provide individuals, couples, and families in BC with the counselling assistance via up-to-date information about resources that promote healing and recovery.",
+      "An online resource where you can find information regarding counselling, psychological services, art therapy and psychotherapy provided in British Columbia and professionals who can deliver such services.",
     logo: CounsellingBC,
     background: "",
     tags: [
@@ -1118,7 +1053,7 @@ const resources = [
   {
     name: "Kelty's Key",
     description:
-      "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the support you need to feel better.",
+      "Kelty's Key is a free and confidential online cognitive behavioral therapy service that can provide you with the tailored or self-guided support that best suits your needs.",
     logo: KeltysKey,
     tags: [
       "free",
@@ -1152,18 +1087,17 @@ const resources = [
       "professional",
       "medical",
     ],
-    phone: "604-730-0522",
+    phone: "604-730-0501",
     social: {
-      website: " https://www.psychologists.bc.ca/find_psychologist",
-      facebook: "https://www.facebook.com/bcpsychologists/",
+      website: " https://psychologists.bc.ca/find-psychologist",
     },
     notes:
-      "604-730-0522 or 1-800-730-0522 are BCPA Referral Line, where you can find names and contact information for psychologists in your area. Please call between 9:30 AM and 4:30 PM.",
+      "Please note the number above is for membership related purposes. Use the website above to access a directory of psychologists in British Columbia.",
   },
   {
     name: "Foundry",
     description:
-      "Foundry offers health and wellness resources, services and supports – online and through integrated service centres in eight communities across BC.",
+      "Foundry offers health and wellness resources, services and supports – online and through integrated service centres for youth aged 12-24 in seventeen communities across BC",
     logo: Foundry,
     email: "webinfo@foundrybc.ca",
     tags: [
@@ -1188,7 +1122,7 @@ const resources = [
   {
     name: "Alcohol & Drug Information Referral Service (ADIRS)",
     description:
-      "Free, confidential information and referral services to British Columbians in need of support with any kind of substance use issue.",
+      "Free, confidential, multilingual information and referral regarding community resources for people in BC in need of any kind of substance use and addiction issues.",
     logo: HealthLinkBC,
     tags: [
       "free",
@@ -1202,10 +1136,11 @@ const resources = [
     phone: "604-660-9382",
     social: {
       website:
-        "https://www.healthlinkbc.ca/mental-health-substance-use/resources/adirs",
+        "https://bc.211.ca/result/the-alcohol-and-drug-information-and-referral-service-adirs-9505601/",
     },
+    email: "211-help@uwbc.ca",
     notes:
-      "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available.",
+      "Contact ADIRS toll-free at 1-800-663-1441, or in the lower mainland at 604-660-9382. Free, multilingual telephone assistance is available 365 days a year",
   },
   {
     name: "UBC Athletes Hub",
@@ -1233,7 +1168,7 @@ const resources = [
   {
     name: "MindHealthBC",
     description:
-      "A one stop shop that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
+      "A one stop shop developed by Vancouver Coastal Health and Providence Health that gathers the wealth of evidence based resources available in your community and combines them into one easy to use website.",
     logo: MindHealthBC,
     background: "",
     tags: [
@@ -1259,51 +1194,9 @@ const resources = [
     },
   },
   {
-    name: "UBC Mental Health Literacy",
-    description:
-      "This online modular-based resource can be used as a self-guided course or in individual modules by those wishing to develop their mental health literacy.",
-    logo: MHliteracy,
-    background: "",
-    tags: ["online", "generalAwareness", "allday", "free", "free4UBC"],
-    social: {
-      website: "https://www.teachmentalhealth.org/",
-    },
-    email: "tmentalhealth@gmail.com",
-    notes: "Participation in this online course is FREE.",
-  },
-  {
-    name: " UBC Student Assistance Program (SAP)",
-    description:
-      "Offered by Aspiria, UBC SAP is a free, 24/7 wellness resource for students. Services include personal counselling, life coaching, group programs to support your mental, emotional, physical and financial health.",
-    logo: UBCgeneral,
-    tags: [
-      "free4UBC",
-      "academic",
-      "financial",
-      "depressionAnxiety",
-      "substanceAbuse",
-      "eatingDisorder",
-      "womensHealth",
-      "suicidal",
-      "general",
-      "immediate",
-      "online",
-      "allday",
-      "phone",
-      "low",
-      "medium",
-      "professional",
-    ],
-    social: {
-      website:
-        "https://students.ubc.ca/health/ubc-student-assistance-program-sap",
-    },
-    phone: "1-833-590-1328",
-  },
-  {
     name: "HeretoHelp",
     description:
-      "Find the information you need and explore strategies to manage mental health and substance use problems.",
+      "Find the information you need and explore strategies to better manage mental health and substance use challenges.",
     logo: HeretoHelp,
     background: "",
     tags: [
@@ -1329,12 +1222,11 @@ const resources = [
   {
     name: "UBC Scarfe Free Counselling Clinic",
     description:
-      "We offer help with stress-management (work, home, school stress), anxiety, depression, school and relationship issues.",
+      "Counselling services offered by UBC Counselling Psychology Master’s and Doctoral students to support with stress-management (work, home, school stress), anxiety, depression, school or relationship issues.",
     logo: UBCScarfe,
     background: "",
     tags: [
-      "free",
-      "free4UBC",
+      "paid",
       "depressionAnxiety",
       "general",
       "less1Month",
@@ -1344,17 +1236,18 @@ const resources = [
     ],
     social: {
       website:
-        "https://ecps.educ.ubc.ca/counselling-centres/scarfe-free-counselling-clinic/",
+        "https://psctc.educ.ubc.ca/",
     },
-    phone: "604-827-1523",
-    address: "6174 University Blvd - 3F\nVancouver, BC V6T 1Z4",
+    phone: "604-822-1364",
+    email: "psctc.reception@ubc.ca",
+    address: "Neville Scarfe Education Building\n1100-2125 Main Mall\nVancouver, BC V6T 1Z4",
     notes:
-      "Clinics run from September to April. Daytime and evening appointments available. Please note that all patients must complete a telephone intake prior to first visit.",
+      "Clinics run from September to April with sessions offered primarily in person but with some opportunities for online counselling using Zoom/OWL. Contact office by phone to be added to the waitlist. All patients must complete a telephone intake prior to first visit.",
   },
   {
     name: "UBC Counsellor in Residence",
     description:
-      "If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can email us to make an appointment to see one of UBC’s Counsellors in Residence.",
+      "If you’re a student living in residence and you’re feeling persistently stressed, anxious, or sad, you can make an appointment to see one of UBC’s Counsellors in Residence.",
     logo: UBCgeneral,
     background: "",
     tags: [
@@ -1373,7 +1266,7 @@ const resources = [
     },
     email: "counsellor.residence@ubc.ca",
     notes:
-      "Please include your full name, student number, class schedule and residence/building in your email.",
+      "Use the online booking form available on the website to make an appointment.",
   },
   {
     name: "Henry Chen Counselling",
@@ -1395,12 +1288,15 @@ const resources = [
       website: "https://jcmed.ca/henrychen/",
     },
     phone: "604-261-6000",
+    email: "office@jcmed.ca",
     address: "#360 - 650 West 41st Avenue \nVancouver,BC V5Z 2M9",
+    notes:
+      "UServices available in English, Mandarin and Taiwanese (Hokkien).",
   },
   {
-    name: "UBC Hospital - Koerner Pavilion",
+    name: "UBC Hospital",
     description:
-      "UBC Hospital offers specialized treatment for non-life-threatening emergencies and surgical care.",
+      "UBC Hospital offers specialized treatment for non-life-threatening, life-threatening emergencies and surgical care.",
     logo: UBCHospital,
     background: "",
     tags: [
@@ -1418,19 +1314,19 @@ const resources = [
     phone: "604-822-7121",
     address: "2211 Wesbrook Mall \n Vancouver,BC \n V6T 2B5",
     hours: {
-      monday: "8:00am-10:00pm",
-      tuesday: "8:00am-10:00pm",
-      wednesday: "8:00am-10:00pm",
-      thursday: "8:00am-10:00pm",
-      friday: "8:00am-10:00pm",
-      saturday: "8:00am-10:00pm",
-      sunday: "8:00am-10:00pm",
+      monday: "8:00am-8:00pm",
+      tuesday: "8:00am-8:00pm",
+      wednesday: "8:00am-8:00pm",
+      thursday: "8:00am-8:00pm",
+      friday: "8:00am-8:00pm",
+      saturday: "8:00am-8:00pm",
+      sunday: "8:00am-8:00pm",
     },
   },
   {
     name: "UBC Thrive",
     description:
-      "Thrive is a mindset and a month-long series of events focused on helping everyone at UBC explore their path to mental health.",
+      "Thrive is a campaign dedicated to shining a spotlight ton the incredible resources, groups, and departments at UBC that work year-round to support mental health and wellbeing for the UBC community.",
     logo: UBCwellbeing,
     background: "",
     tags: ["free", "free4UBC", "general", "low", "events", "generalAwareness"],
@@ -1442,34 +1338,6 @@ const resources = [
       "UBC Wellbeing Design Lab \n 2321 - 2260 West Mall \n Vancouver, BC V6T 1Z4",
     notes:
       "Be sure to check out the Thrive calendar for lots of great events and initiatives throughout November!",
-  },
-  {
-    name: "UBC Body Banter",
-    description:
-      "Empower students to change the conversation about body image through self-reflection, open communication, and collaborative action.",
-    logo: UBCBodyBanter,
-    background: "",
-    tags: [
-      "free",
-      "free4UBC",
-      "general",
-      "less1Week",
-      "less1Month",
-      "low",
-      "recurring",
-      "walkIn",
-      "peer",
-    ],
-    social: {
-      website: "http://bodybanter.com/",
-      facebook: "https://www.facebook.com/ubcbodybanter",
-      instagram: "https://www.instagram.com/ubcbodybanter",
-    },
-    address: "IKB Room 193 \nVancouver, BC V6T 1Z1",
-    /*hours: {
-      others: "Weekly meetings are cancelled for the rest of the school year.",
-    },*/
-    //notes:"These meetings are ideal for students who struggle with body image related mental health issues. Everyone is welcome!"
   },
   {
     name: "Therapy Assistance Online (TAO)",
@@ -1495,7 +1363,7 @@ const resources = [
   {
     name: "Suicide Attempt Follow-up, Education & Research ",
     description:
-      "S.A.F.E.R. is a free, time-limited counselling service offered at Mental Health and Substance Use Outpatient Services. Intake is through the Access and Assessment Centre.",
+      "S.A.F.E.R. is a free, time-limited counselling service for individuals aged 19+ who have made a suicide attempt, are currently suicidal or have suicidal ideation.",
     logo: VCHLogo,
     background: "",
     tags: [
@@ -1517,7 +1385,7 @@ const resources = [
         "http://www.vch.ca/Pages/Suicide-Attempt-Follow-up,-Education---Research-SAFER.aspx",
     },
     phone: "604-675-3700",
-    address: "803 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
+    address: "899 West 12th Avenue \n Vancouver,BC \n V5Z 1N1",
     /*hours: {
       monday: "7:30am-11:00pm",
       tuesday: "7:30am-11:00pm",
@@ -1528,7 +1396,7 @@ const resources = [
       sunday: "7:30am-11:00pm",
     },*/
     notes:
-      "Call the Access and Assessment Centre at 604-675-3700 to connect with S.A.F.E.R.",
+      "This service is offered at the Mental Health and Substance Use Outpatient Services at VGH. Intake is through the Access and Assessment Centre.",
   },
 ];
 
