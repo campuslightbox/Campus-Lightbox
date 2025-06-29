@@ -6,3 +6,36 @@
 .mobile-search-bar {
   flex-grow: 1;
 }
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .ui.card,
+body.dark .ui.card .header,
+body.dark .ui.card .description,
+body.dark .ui.card .meta,
+body.dark .ui.card .content,
+body.dark .ui.card .extra,
+body.dark .bottom-button .button,
+body.dark .tag-label.ui.checkbox > label,
+body.dark .ui.modal,
+body.dark .ui.modal .container,
+body.dark .ui.modal .content,
+body.dark .ui.modal .header,
+body.dark .ui.centered.cards,
+body.dark .ui.placeholder.segment {
+  background-color: #000000 !important;
+  color: white !important;
+  border-color: #333 !important;
+}
+
+body.dark .answerOption:hover {
+  background-color: green;
+}

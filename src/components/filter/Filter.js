@@ -65,7 +65,7 @@ function Filter(props) {
                 transitionTime={310}
                 triggerStyle={{
                   cursor: "pointer",
-                  color: "darkblue",
+                  color: "orange",
                   fontWeight: "500",
                 }}
               >
@@ -96,11 +96,15 @@ function Filter(props) {
           {item.show ? (
             ""
           ) : (
-            <Checkbox
+            <div className="tag-label">
+            <Checkbox className={`tag-label tag-${item.tag}`}
               checked={existingItem ? true : false}
               onClick={() => props.onFilterChange(category, item.tag)}
-              label={item.displayName}
+              label={
+                item.displayName
+              }
             />
+            </div>
           )}
         </List.Item>
       );
@@ -123,11 +127,17 @@ function Filter(props) {
       return (
         <List.Item key={item.tag} style={{ marginTop: "5px" }}>
           {item.show ? (
-            <Checkbox
+            <div className="tag-label">
+            <Checkbox 
+              className={`tag-label tag-${item.tag}`}
               checked={existingItem ? true : false}
               onClick={() => props.onFilterChange(category, item.tag)}
-              label={item.displayName}
+              
+              label={
+                item.displayName
+              }
             />
+            </div>
           ) : (
             ""
           )}

@@ -83,7 +83,7 @@ const CardContainer = ({
       </>
     ) : (
       <Segment placeholder>
-        <h3 class="ui center aligned header">
+        <h3 className="ui center aligned header">
           Sorry, we couldn't find any fitting matches.
           <br />          
           <br />
