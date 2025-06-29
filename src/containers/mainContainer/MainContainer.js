@@ -39,7 +39,6 @@ function BackgroundTheme() {
 
 }
 
-
 const styles = {
   container: {
     marginTop: 36,
