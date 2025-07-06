@@ -1,6 +1,7 @@
 import "./MainContainer.css";
 
 import { Button, Container, Grid, Segment } from "semantic-ui-react";
+import { useState, useEffect } from "react";
 
 import CardContainer from "containers/cardContainer/CardContainer";
 import Filter from "components/filter/Filter";
@@ -9,6 +10,34 @@ import MediaQueryHelper from "static/MediaQueryHelper";
 import React from "react";
 import Resources from "static/Resources";
 import SearchBar from "components/searchBar/SearchBar";
+
+function BackgroundTheme() {
+  const [themeSwitch, setThemeSwitch] = useState(false)
+
+  useEffect(() => {
+    if (themeSwitch === true) {
+      document.body.className = "dark"
+    } else {
+      document.body.className = "light"
+    }
+  }, [themeSwitch]);
+
+  return (
+  <Button
+    circular
+    toggle
+    color="grey"
+    size="small"
+    style={styles.filterButton}
+    onClick={() => {
+    setThemeSwitch(!themeSwitch);
+    }}
+  >
+  Switch to {themeSwitch ? "Light" : "Dark"} Mode
+  </Button>
+  );
+
+}
 
 const styles = {
   container: {
@@ -44,6 +73,9 @@ class MainContainer extends React.Component {
           <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             {/* Laptop */}
             <Segment basic>
+              {/*Dark mode theme*/}
+              <BackgroundTheme /> 
+              <div className="ui hidden divider" />
               <SearchBar
                 searchText={this.props.searchText}
                 onSearchTextChange={this.props.onSearchTextChange}
