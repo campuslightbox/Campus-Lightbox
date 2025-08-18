@@ -1,69 +1,42 @@
 import "./MainContainer.css";
-
 import { Button, Container, Grid, Segment } from "semantic-ui-react";
-import { useState, useEffect } from "react";
+import React from "react";
+import MediaQuery from "react-responsive";
+import MediaQueryHelper from "static/MediaQueryHelper";
 
 import CardContainer from "containers/cardContainer/CardContainer";
 import Filter from "components/filter/Filter";
-import MediaQuery from "react-responsive";
-import MediaQueryHelper from "static/MediaQueryHelper";
-import React from "react";
-import Resources from "static/Resources";
 import SearchBar from "components/searchBar/SearchBar";
+import Resources from "static/Resources";
 
-function BackgroundTheme() {
-  const [themeSwitch, setThemeSwitch] = useState(false)
-
-  useEffect(() => {
-    if (themeSwitch === true) {
-      document.body.className = "dark"
-    } else {
-      document.body.className = "light"
-    }
-  }, [themeSwitch]);
-
+function BackgroundTheme({ savedTheme, toggleDarkMode }) {
   return (
-  <Button
-    circular
-    toggle
-    color="grey"
-    size="small"
-    style={styles.filterButton}
-    onClick={() => {
-    setThemeSwitch(!themeSwitch);
-    }}
-  >
-  Switch to {themeSwitch ? "Light" : "Dark"} Mode
-  </Button>
+    <Button
+      circular
+      toggle
+      color="grey"
+      size="small"
+      style={styles.filterButton}
+      onClick={toggleDarkMode}
+    >
+      Switch to {savedTheme ? "Light" : "Dark"} Mode
+    </Button>
   );
-
 }
 
 const styles = {
-  container: {
-    marginTop: 36,
-  },
-  filterButton: {
-    marginRight: 16,
-  },
+  container: { marginTop: 36 },
+  filterButton: { marginRight: 16 },
 };
 
 class MainContainer extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      filterOpen: false,
-    };
+    this.state = { filterOpen: false };
   }
 
-  openMobileFilter = () => {
-    this.setState({ filterOpen: true });
-  };
-
-  closeMobileFilter = () => {
-    this.setState({ filterOpen: false });
-  };
+  openMobileFilter = () => this.setState({ filterOpen: true });
+  closeMobileFilter = () => this.setState({ filterOpen: false });
 
   render = () => (
     <Container style={styles.container}>
@@ -71,10 +44,11 @@ class MainContainer extends React.Component {
       <Grid stackable compact="true">
         <Grid.Column width={4}>
           <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
-            {/* Laptop */}
             <Segment basic>
-              {/*Dark mode theme*/}
-              <BackgroundTheme /> 
+              <BackgroundTheme
+                savedTheme={this.props.savedTheme}
+                toggleDarkMode={this.props.toggleDarkMode}
+              />
               <div className="ui hidden divider" />
               <SearchBar
                 searchText={this.props.searchText}
@@ -91,7 +65,6 @@ class MainContainer extends React.Component {
             </Segment>
           </MediaQuery>
           <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
-            {/* Mobile and tablet */}
             <div className="filter-search-container">
               <Filter
                 filter={this.props.filter}
