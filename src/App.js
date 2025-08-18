@@ -20,7 +20,7 @@ class App extends React.Component {
       }, {}),
       searchText: "",
       trackSearch: "enabled",
-      savedTheme: false // theme state
+      savedTheme: false 
     };
 
     this.resourcesRef = React.createRef();
