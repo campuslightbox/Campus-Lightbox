@@ -1,6 +1,7 @@
+// MainContainer.js
 import "./MainContainer.css";
 import { Button, Container, Grid, Segment } from "semantic-ui-react";
-import React from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import MediaQuery from "react-responsive";
 import MediaQueryHelper from "static/MediaQueryHelper";
 
@@ -29,76 +30,120 @@ const styles = {
   filterButton: { marginRight: 16 },
 };
 
-class MainContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { filterOpen: false };
-  }
+export default function MainContainer(props) {
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [pinned, setPinned] = useState([]);
 
-  openMobileFilter = () => this.setState({ filterOpen: true });
-  closeMobileFilter = () => this.setState({ filterOpen: false });
+  // Load saved pins once when component mounts
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem("pinnedResources")) || [];
+      setPinned(saved);
+    } catch (e) {
+      setPinned([]);
+    }
+  }, []);
 
-  render = () => (
+  // Save pins to localStorage whenever pinned changes
+  useEffect(() => {
+    localStorage.setItem("pinnedResources", JSON.stringify(pinned));
+  }, [pinned]);
+
+  // Toggle pin/unpin by resource name
+  const togglePin = (name) => {
+    setPinned((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
+
+  // Keep pinned items first. useMemo just avoids recomputing unless pinned changes.
+  const sortedResources = useMemo(() => {
+      const pinnedResources = Resources.filter((r) => pinned.includes(r.name));
+      const unpinnedResources = Resources.filter((r) => !pinned.includes(r.name));
+  
+      return {pinnedResources, unpinnedResources};
+    }, [pinned]);
+
+  return (
     <Container style={styles.container}>
-      <div ref={this.props.refProp}></div>
+      {/* change from this.props.refProp to props.refProp */}
+      <div ref={props.refProp}></div>
+
       <Grid stackable compact="true">
         <Grid.Column width={4}>
+          {/* desktop */}
           <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             <Segment basic>
               <BackgroundTheme
-                savedTheme={this.props.savedTheme}
-                toggleDarkMode={this.props.toggleDarkMode}
+                savedTheme={props.savedTheme}
+                toggleDarkMode={props.toggleDarkMode}
               />
               <div className="ui hidden divider" />
               <SearchBar
-                searchText={this.props.searchText}
-                onSearchTextChange={this.props.onSearchTextChange}
-                onClearSearchText={this.props.onClearSearchText}
+                searchText={props.searchText}
+                onSearchTextChange={props.onSearchTextChange}
+                onClearSearchText={props.onClearSearchText}
               />
             </Segment>
+
             <Segment basic>
               <Filter
-                filter={this.props.filter}
-                onFilterChange={this.props.onFilterChange}
-                onClearFilter={this.props.onClearFilter}
+                filter={props.filter}
+                onFilterChange={props.onFilterChange}
+                onClearFilter={props.onClearFilter}
               />
             </Segment>
           </MediaQuery>
+
+          {/* mobile */}
           <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             <div className="filter-search-container">
+
+
+              {/* Dark mode for mobile */}
+              <div>
+                <BackgroundTheme
+                  savedTheme={props.savedTheme}
+                  toggleDarkMode={props.toggleDarkMode}
+                />
+              </div>
+
               <Filter
-                filter={this.props.filter}
-                open={this.state.filterOpen}
-                onFilterChange={this.props.onFilterChange}
-                onClearFilter={this.props.onClearFilter}
-                onCloseFilter={this.closeMobileFilter}
+                filter={props.filter}
+                open={filterOpen}
+                onFilterChange={props.onFilterChange}
+                onClearFilter={props.onClearFilter}
+                onCloseFilter={() => setFilterOpen(false)}
               />
               <Button
                 style={styles.filterButton}
                 color="green"
                 icon="options"
-                onClick={this.openMobileFilter}
+                onClick={() => setFilterOpen(true)}
               />
               <div className="mobile-search-bar">
                 <SearchBar
-                  searchText={this.props.searchText}
-                  onSearchTextChange={this.props.onSearchTextChange}
-                  onClearSearchText={this.props.onClearSearchText}
+                  searchText={props.searchText}
+                  onSearchTextChange={props.onSearchTextChange}
+                  onClearSearchText={props.onClearSearchText}
                 />
               </div>
             </div>
           </MediaQuery>
         </Grid.Column>
+
         <Grid.Column width={12}>
+          {/* IMPORTANT: pass sortedResources, pinned array, and toggle function */}
           <CardContainer
-            resources={Resources}
-            filter={this.props.filter}
-            searchText={this.props.searchText}
+            pinnedResources={sortedResources.pinnedResources}
+            unpinnedResources={sortedResources.unpinnedResources}
+            filter={props.filter}
+            searchText={props.searchText}
+            pinned={pinned}
+            onTogglePin={togglePin}
           />
         </Grid.Column>
       </Grid>
     </Container>
   );
 }
-
-export default MainContainer;
