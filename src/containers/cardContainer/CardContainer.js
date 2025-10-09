@@ -91,11 +91,14 @@ class CardContainer extends React.Component {
   };
 
   render = () => {
-    let resources = this.filterResource(this.props.resources); // tag search
+    let filteredResources = this.filterResource(this.props.unpinnedResources); // tag search
+    filteredResources = this.filterResource(filteredResources) || [];
+
+    const pinnedResources = this.props.pinnedResources || [];
+    
     //console.log(resources, "resouces in render first"); // return array of value object based on filter tags
-    resources = this.searchResource(resources); // if no textsearch then same as tag search
     //console.log(resources, "resouces in render second"); // return array of value object based on filter tags or searchText
-    if (resources.length === 0) {
+    if (filteredResources.length === 0 && pinnedResources.length === 0) {
       if (this.state.trackNoResults === "enabled") {
         ReactGA.event({
           category: "No Reults",
@@ -118,11 +121,29 @@ class CardContainer extends React.Component {
 
     return (
       <Segment basic>
-        <Card.Group>
-          {_.map(resources, (resource, index) => (
-            <InfoCard key={index.toString()} {...resource} /> // spread each found resource to infoCard for display
+         <Card.Group>
+        {/* Always show pinned */}
+        {pinnedResources.map((resource, index) => (
+          <InfoCard
+            key={`pinned-${index}`}
+            {...resource}
+            pinned={true}
+            onTogglePin={() => this.props.onTogglePin(resource.name)}
+          />
+        ))}
+
+        {/* Show filtered results (exclude pinned to avoid duplicates) */}
+        {filteredResources
+          .filter((r) => !this.props.pinned.includes(r.name))
+          .map((resource, index) => (
+            <InfoCard
+              key={`filtered-${index}`}
+              {...resource}
+              pinned={this.props.pinned.includes(resource.name)}
+              onTogglePin={() => this.props.onTogglePin(resource.name)}
+            />
           ))}
-        </Card.Group>
+      </Card.Group>
       </Segment>
     );
   };

@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-
 import Footer from "components/footer/Footer";
 import Header from "./components/header/Header";
 import MainContainer from "containers/mainContainer/MainContainer";
@@ -13,51 +12,76 @@ ReactGA.pageview("Homepage");
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      filter: _.reduce(
-        Tags.getCategories(),
-        (obj, category) => {
-          obj[category] = [];
-          return obj;
-        },
-        {}
-      ),
+      filter: _.reduce(Tags.getCategories(), (obj, category) => {
+        obj[category] = [];
+        return obj;
+      }, {}),
       searchText: "",
       trackSearch: "enabled",
+      savedTheme: false 
     };
-    this.resourcesRef = React.createRef(); // Create a ref object
+
+    this.resourcesRef = React.createRef();
+  }
+
+  componentDidMount() {
+    const savedFilter = localStorage.getItem("filter");
+    const savedSearchText = localStorage.getItem("searchText");
+    const savedTheme = localStorage.getItem("savedTheme");
+
+    if (savedFilter) this.setState({ filter: JSON.parse(savedFilter) });
+    if (savedSearchText) this.setState({ searchText: savedSearchText });
+
+    if (savedTheme) {
+      const savedThemeValue = JSON.parse(savedTheme);
+      this.setState({ savedTheme: savedThemeValue }, () => {
+        document.body.classList.toggle("dark", this.state.savedTheme);
+        document.body.classList.toggle("light", !this.state.savedTheme);
+      });
+    } else {
+      document.body.classList.add("light");
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!_.isEqual(prevState.filter, this.state.filter)) {
+      localStorage.setItem("filter", JSON.stringify(this.state.filter));
+    }
+    if (prevState.searchText !== this.state.searchText) {
+      localStorage.setItem("searchText", this.state.searchText);
+    }
+    if (prevState.savedTheme !== this.state.savedTheme) {
+      localStorage.setItem("savedTheme", JSON.stringify(this.state.savedTheme));
+      document.body.classList.toggle("dark", this.state.savedTheme);
+      document.body.classList.toggle("light", !this.state.savedTheme);
+    }
   }
 
   onFilterChange = (category, item) => {
-    // Find if the filter user clicked on is already selected
-    let existingItem = _.find(this.state.filter[category], (currItem) => {
-      return currItem === item;
+    this.setState((prevState) => {
+      const newFilter = _.mapObject(prevState.filter, (arr) => [...arr]);
+      const existingItem = newFilter[category].includes(item);
+
+      if (existingItem) {
+        newFilter[category] = newFilter[category].filter((currItem) => currItem !== item);
+      } else {
+        ReactGA.event({
+          category: "Filters",
+          action: "Clicked On Filter: " + item,
+        });
+        newFilter[category].push(item);
+      }
+
+      return { filter: newFilter };
     });
-
-    let newState = _.clone(this.state);
-
-    if (existingItem) {
-      // Already selected, unselect it
-      newState.filter[category] = _.filter(
-        newState.filter[category],
-        (currItem) => {
-          return currItem !== existingItem;
-        }
-      );
-    } else {
-      // Not selected, select it
-      ReactGA.event({
-        category: "Filters",
-        action: "Clicked On Filter: " + item,
-      });
-      newState.filter[category].push(item);
-    }
-
-    this.setState(newState);
   };
 
   onClearFilter = () => {
-    this.setState({ filter: _.mapObject(this.state.filter, () => []) });
+    this.setState((prevState) => ({
+      filter: _.mapObject(prevState.filter, () => []),
+    }));
   };
 
   searchTrackGA = () => {
@@ -68,30 +92,25 @@ class App extends React.Component {
   };
 
   onSearchTextChange = (_, data) => {
-    if (this.state.trackSearch === "enabled") {
-      this.searchTrackGA();
-    }
-    this.setState({ trackSearch: "disabled" });
+    if (this.state.trackSearch === "enabled") this.searchTrackGA();
 
-    this.setState({ searchText: data.value });
+    this.setState({ trackSearch: "disabled", searchText: data.value });
   };
 
-  onClearSearchText = () => {
-    this.setState({ searchText: "" });
-  };
+  onClearSearchText = () => this.setState({ searchText: "" });
 
   onPresetFilterChange = (presetFilter) => {
-    // If preset filter is changed, wipe out all filters except the selected one
-    const newState = { filter: _.mapObject(this.state.filter, () => []) };
     const tagObj = Tags.getAllTags()[presetFilter];
-    newState.filter[tagObj.category].push(presetFilter);
-
-    this.setState(newState);
+    const newFilter = _.mapObject(this.state.filter, () => []);
+    newFilter[tagObj.category].push(presetFilter);
+    this.setState({ filter: newFilter });
   };
 
-  scrollToContent = () => {
-    this.resourcesRef.current.scrollIntoView();
+  toggleDarkMode = () => {
+    this.setState((prevState) => ({ savedTheme: !prevState.savedTheme }));
   };
+
+  scrollToContent = () => this.resourcesRef.current.scrollIntoView();
 
   render = () => (
     <Fragment>
@@ -99,6 +118,8 @@ class App extends React.Component {
         onPresetFilterChange={this.onPresetFilterChange}
         scrollToContent={this.scrollToContent}
         refProp={this.resourcesRef}
+        savedTheme={this.state.savedTheme}
+        onToggleDarkMode={this.toggleDarkMode}
       />
       <MainContainer
         onSearchTextChange={this.onSearchTextChange}
@@ -108,10 +129,12 @@ class App extends React.Component {
         filter={this.state.filter}
         searchText={this.state.searchText}
         refProp={this.resourcesRef}
+        savedTheme={this.state.savedTheme}
+        toggleDarkMode={this.toggleDarkMode}
       />
       <Footer />
     </Fragment>
   );
-}
+};
 
 export default App;

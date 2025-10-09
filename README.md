@@ -97,6 +97,8 @@ You should have [Node.js](https://nodejs.org/en/), [Yarn](https://classic.yarnpk
 **Active Members:**
 Vanessa Kong
 
+Jacky Feng - [GitHub](https://github.com/jackyfengg)
+
 <br />
 
 **Past Members:**

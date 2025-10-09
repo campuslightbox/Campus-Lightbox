@@ -27,7 +27,7 @@ export const isOpen = (hours) => {
 
 function InfoCard(props) {
   const [side, setSide] = useState("front");
-  const { name } = props;
+  const { name, pinned, onTogglePin } = props;
 
   const onContactButtonClick = () => {
     ReactGA.event({
@@ -46,12 +46,23 @@ function InfoCard(props) {
       {side === "front" ? (
         <>
           <FrontCard {...props} />
-          <div className="bottom-button">
-            <Button attached="bottom" basic onClick={onContactButtonClick}>
-              <Icon name="angle right" /> View Details
+
+          <div className="bottom-button" style={{ display: "flex", justifyContent: "space-between"}}>
+            <Button
+              basic
+              color={pinned ? "yellow" : "grey"}
+              icon
+              labelPosition="left"
+              onClick={onTogglePin}
+            >
+              <Icon name="pin"></Icon>
+              {pinned ? "Unpin" : "Pin"}      
+            </Button>
+            <Button basic onClick={onContactButtonClick}>
+              <Icon name="angle right" />
             </Button>
           </div>
-        </>
+          </>
       ) : (
         <>
           <BackCard {...props} />
