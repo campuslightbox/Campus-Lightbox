@@ -10,6 +10,10 @@ import Filter from "components/filter/Filter";
 import SearchBar from "components/searchBar/SearchBar";
 import Resources from "static/Resources";
 
+/**
+ * Small presentational component for toggling light/dark mode.
+ * Kept separate to avoid cluttering MainContainer logic.
+ */
 function BackgroundTheme({ savedTheme, toggleDarkMode }) {
   return (
     <Button
@@ -34,7 +38,10 @@ export default function MainContainer(props) {
   const [filterOpen, setFilterOpen] = useState(false);
   const [pinned, setPinned] = useState([]);
 
-  // Load saved pins once when component mounts
+  /**
+   * Load pinned resources from localStorage once on mount.
+   * Wrapped in try/catch to safely handle malformed JSON.
+   */
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem("pinnedResources")) || [];
@@ -56,7 +63,10 @@ export default function MainContainer(props) {
     );
   };
 
-  // Keep pinned items first. useMemo just avoids recomputing unless pinned changes.
+  /**
+   * Split resources into pinned and unpinned groups.
+   * useMemo prevents unnecessary recomputation on re-renders.
+   */
   const sortedResources = useMemo(() => {
       const pinnedResources = Resources.filter((r) => pinned.includes(r.name));
       const unpinnedResources = Resources.filter((r) => !pinned.includes(r.name));
@@ -71,7 +81,7 @@ export default function MainContainer(props) {
 
       <Grid stackable compact="true">
         <Grid.Column width={4}>
-          {/* desktop */}
+          {/* Desktop layout */}
           <MediaQuery minDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             <Segment basic>
               <BackgroundTheme
@@ -95,10 +105,9 @@ export default function MainContainer(props) {
             </Segment>
           </MediaQuery>
 
-          {/* mobile */}
+          {/* Mobile layout */}
           <MediaQuery maxDeviceWidth={MediaQueryHelper.MIN_WIDTH_TABLET}>
             <div className="filter-search-container">
-
 
               {/* Dark mode for mobile */}
               <div>
@@ -108,6 +117,7 @@ export default function MainContainer(props) {
                 />
               </div>
 
+              {/* Filter rendered as an overlay/panel on mobile */}
               <Filter
                 filter={props.filter}
                 open={filterOpen}
@@ -115,6 +125,8 @@ export default function MainContainer(props) {
                 onClearFilter={props.onClearFilter}
                 onCloseFilter={() => setFilterOpen(false)}
               />
+
+              {/* Button that opens the mobile filter panel */}
               <Button
                 style={styles.filterButton}
                 color="green"

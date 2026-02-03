@@ -9,9 +9,21 @@ import defaultbackground from "./mountains.jpg";
 import Tags from "static/Tags";
 import moment from "moment";
 
+/**
+ * FrontCard
+ * ----------
+ * Displays the front face of an info card including:
+ * - Background image + optional logo
+ * - Name and description
+ * - Tags
+ * - Today's open/closed hours
+ */
 const FrontCard = (props) => {
   const { logo, background, name, description, tags, hours } = props;
 
+  /**
+   * Render a single tag label if it should appear on the card.
+   */
   const renderTag = (tag) => {
     const displayName = Tags.getDisplayNameForTag(tag);
     const color = Tags.getColorForTag(tag);
@@ -31,6 +43,10 @@ const FrontCard = (props) => {
       );
     }
   };
+
+  /**
+   * Render today's hours or 24/7 status.
+   */
   const renderTodayHours = () => {
     // Check if resource is 24/7
     const isAllDay = tags.includes("allday");
@@ -68,10 +84,14 @@ const FrontCard = (props) => {
         />
         {logo && <img className="banner-logo" alt="banner logo" src={logo} />}
       </MediaQuery>
+
+      {/* Main content */}
       <Card.Content key="front-content" style={styles.infoCardFrontContent}>
         <Card.Header>{name}</Card.Header>
         <Card.Description>{description}</Card.Description>
       </Card.Content>
+
+      {/* Tags + hours */}
       <Card.Content key="front-extra" style={styles.infoCardFrontContent} extra>
         <Card.Meta style={{ marginBottom: 8 }}>
           {_.map(tags, (tag) => renderTag(tag))}
@@ -83,3 +103,7 @@ const FrontCard = (props) => {
 };
 
 export default FrontCard;
+
+
+
+

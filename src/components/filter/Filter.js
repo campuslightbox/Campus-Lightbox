@@ -37,6 +37,16 @@ const styles = {
   },
 };
 
+/**
+ * Transform raw tag definitions into a structure
+ * that is easier to render in the UI.
+ *
+ * Result shape:
+ * {
+ *   cost: [ { tag, displayName, show, category }, ... ],
+ *   accessibility: [ ... ]
+ * }
+ */
 function Filter(props) {
   const filterList = transformTagsToFilterList(Tags.getAllTags());
 
@@ -49,6 +59,12 @@ function Filter(props) {
     // group by tags' category value, check underscore.js doc for build-in methods
   }
 
+  /**
+   * Desktop filter layout:
+   * - One card per category
+   * - Visible tags shown by default
+   * - Hidden tags revealed via "Show More"
+   */
   function createGroups() {
     return _.map(filterList, (val, category) => {
       return (
@@ -78,12 +94,15 @@ function Filter(props) {
     });
   }
 
-  // rewrite code to make it cleaner
+  // Capitalize category names for desktop headers
   function getDisplayNameForCategory(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
-  // create sublist for hidden tags
+  /**
+   * Render hidden tags inside the "Show More" section.
+   * These are tags where item.show === false.
+   */
   function createSubList(category, items) {
     return items.map((item) => {
       // Find if the item is currently selected
@@ -111,14 +130,10 @@ function Filter(props) {
     });
   }
 
-  // main list
-  // items = the value object
+  // Find if the item is currently selecteds
+  // see App.js (state.filter )
   function createList(category, items) {
-    //console.log(props.filter, "state.filter in app.js");
-    //console.log(props.filter[category],"state.filter with category in app.js");
     return items.map((item) => {
-      // Find if the item is currently selecteds
-      // see App.js (state.filter )
       let existingItem = _.find(props.filter[category], (currItem) => {
         return currItem === item.tag;
       });
@@ -146,6 +161,11 @@ function Filter(props) {
     });
   }
 
+  /**
+   * Mobile filter UI:
+   * - Rendered inside a modal
+   * - Uses toggle buttons instead of checkboxes
+   */
   function renderMobileFilter() {
     return (
       <Modal open={props.open} onClose={props.onCloseFilter}>
@@ -172,6 +192,10 @@ function Filter(props) {
     );
   }
 
+  /**
+   * Mobile groups are flattened and rendered horizontally
+   * for better touch interaction.
+   */
   function createMobileGroups() {
     return _.map(filterList, (val, category) => {
       return (
@@ -193,6 +217,10 @@ function Filter(props) {
     return displayName.toUpperCase();
   }
 
+  /**
+   * Mobile filter buttons:
+   * - Toggle-style buttons instead of checkboxes
+   */
   function createMobileList(category, items) {
     return items.map((item) => {
       // Find if the item is currently selected
