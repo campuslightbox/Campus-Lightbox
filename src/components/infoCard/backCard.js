@@ -7,6 +7,10 @@ import _ from "underscore";
 import moment from "moment";
 import FeedbackModal from "components/feedbackModal/FeedbackModal";
 
+/**
+ * BackCard renders the "back side" of an InfoCard.
+ * It displays contact details, hours, notes, and reporting tools.
+ */
 const BackCard = (props) => {
   const { name, hours, phone, address, email, social, notes } = props;
   const phonelink = "tel://1-" + phone;
@@ -51,6 +55,10 @@ const BackCard = (props) => {
     );
   };
 
+  /**
+   * Unified data structure for rendering contact rows.
+   * Each entry maps to a single Grid row.
+   */
   const elements = [
     ["Phone", phonelink, phone],
     ["Address", addresslink, address],
@@ -58,6 +66,10 @@ const BackCard = (props) => {
     ["Social", null, true, renderSocialButtons(social)],
   ];
 
+  /**
+   * Render social media buttons dynamically based on availability.
+   * Each button opens the corresponding link in a new tab.
+   */
   const renderReportButton = () => {
     return (
       <div id="report-button">
@@ -85,7 +97,10 @@ const BackCard = (props) => {
     }
   };
 
-  // phone email address and social icons are all using the same styling
+  /**
+   * Reusable grid row renderer for contact info.
+   * Handles phone, email, address, and social links consistently.
+   */
   const GridElement = (...args) => {
     const [eleName, URLLink, itemName, fn] = args[0];
     if (itemName) {
@@ -116,6 +131,11 @@ const BackCard = (props) => {
     } else return null;
   };
 
+  /**
+   * Render business hours.
+   * - Highlights the current day
+   * - Shows open/closed indicator using isOpen()
+   */
   const renderHours = () => {
     if (!hours) {
       return;

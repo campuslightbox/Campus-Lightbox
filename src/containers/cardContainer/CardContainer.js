@@ -19,10 +19,20 @@ class CardContainer extends React.Component {
     };
   }
 
+  /**
+   * Filters resources based on selected tags.
+   *
+   * Filtering rules:
+   * - OR within the same category (e.g. free OR paid)
+   * - AND across different categories (e.g. cost AND accessibility)
+   */
   filterResource = (allResources) => {
-    // Filtering: OR within the same category, AND between categories
 
-    // Check if filter is empty
+    /**
+     * Remove filter categories that have no selected values.
+     * Example:
+     * { cost: ["free"], accessibility: [] } -> { cost: ["free"] }
+     */
     const activeFilters = _.omit(
       this.props.filter,
       function (filters, category) {
@@ -35,39 +45,46 @@ class CardContainer extends React.Component {
       return allResources;
     }
 
+    /**
+     * For each category, collect resources that match
+     * ANY tag in that category (OR logic).
+     */
     let categoryMatches = _.map(activeFilters, (filters) => {
-      //console.log(activeFilters, "activeFilters"); {cost: ["free","paid"], Accessibility:[]}
-      //console.log(filters, "filters in categoryMatch");
       return _.filter(allResources, (resource) => {
-        //console.log(resource, "resource in categoryMatches"); // return all resources
         return _.intersection(resource.tags, filters).length > 0;
-        // intersection(multiple arrays)
       });
     });
 
+    /**
+     * Convert each category's matched resources into
+     * arrays of resource names for easier intersection.
+     */
     const categoryWithNames = _.map(categoryMatches, (category) => {
-      //console.log(categoryMatches, "categoryMatches"); //nested array that contain value object that matches the tags
       return _.map(category, (resource) => {
-        //console.log(category, "category in catwithNames"); // return array of value object that matches the selection == resources in render
-        //console.log(resource, "resource in catwithNames"); // return each value object that matches the selection
         return resource.name;
       });
     });
-    //console.log(categoryWithNames, "named category"); // nested array that contain resource name
-    const commonNames = _.intersection(...categoryWithNames);
-    //console.log(commonNames, "commonNames"); // array of filtered result (string value of resource name)
 
-    // We know categoryMatches is not empty, access it to get resources in object format
-    // return object that includes the commonNames
+    /**
+     * Keep only resource names that appear in ALL categories (AND logic).
+     */
+    const commonNames = _.intersection(...categoryWithNames);
+
+    /**
+     * Return full resource objects that match the final intersection.
+     * We can safely use categoryMatches[0] because we know filters exist.
+     */
     return _.filter(categoryMatches[0], (resource) => {
-      //console.log(resource, "resource in filter and catmatches");
       return _.indexOf(commonNames, resource.name) >= 0;
     });
-  }; // end of filterResource function
+  }; 
 
+  /**
+   * Performs fuzzy search on resource name and tag display names.
+   * Uses Fuse.js for typo-tolerant matching.
+   */
   searchResource = (allResources) => {
     if (!this.props.searchText) {
-      // Empty search string
       return allResources;
     }
 
@@ -90,14 +107,21 @@ class CardContainer extends React.Component {
     return searchedPlaced;
   };
 
+  /**
+   * Apply filters to unpinned resources.
+   * Pinned resources are handled separately and always shown.
+   */
   render = () => {
     let filteredResources = this.filterResource(this.props.unpinnedResources); // tag search
     filteredResources = this.filterResource(filteredResources) || [];
 
     const pinnedResources = this.props.pinnedResources || [];
-    
-    //console.log(resources, "resouces in render first"); // return array of value object based on filter tags
-    //console.log(resources, "resouces in render second"); // return array of value object based on filter tags or searchText
+  
+    /**
+     * Track when users see an empty result state.
+     * NOTE: setState in render is generally discouraged,
+     * but guarded here to fire only once.
+     */
     if (filteredResources.length === 0 && pinnedResources.length === 0) {
       if (this.state.trackNoResults === "enabled") {
         ReactGA.event({
